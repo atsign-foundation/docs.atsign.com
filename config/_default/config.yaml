@@ -1,0 +1,63 @@
+# Basic configuration
+baseurl: https://atsign.dev/
+canonifyURLs: false
+disableAliases: true
+disableHugoGeneratorInject: true
+enableEmoji: true
+enableGitInfo: false
+enableRobotsTXT: true
+languageCode: en_US
+paginate: 7
+rssLimit: 10
+
+
+defaultContentLanguage: en
+
+# Sitemap Config
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+taxonomies:
+# TODO
+
+# Relative Permalinks
+# permalinks:
+#   blog: /blog/:title/
+
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+# Import doks theme modules
+module:
+  mounts:
+    - source: node_modules/@hyas/doks/archetypes
+      target: archetypes
+    - source: node_modules/@hyas/doks/assets
+      target: assets
+    # - source: node_modules/@hyas/doks/data
+    #   target: data
+    - source: node_modules/@hyas/doks/layouts
+      target: layouts
+      excludeFiles: index.html
+    - source: node_modules/@hyas/doks/static
+      target: static
+    - source: node_modules/flexsearch
+      target: assets/js/vendor/flexsearch
+    - source: node_modules/katex
+      target: assets/js/vendor/katex
+    - source: assets
+      target: assets
+    - source: static
+      target: static
+    - source: content
+      target: content
+    - source: layouts
+      target: layouts
+    - source: archetypes
+      target: archetypes
+    - source: data
+      target: data

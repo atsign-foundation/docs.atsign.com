@@ -1,0 +1,12 @@
+en:
+  languageName: English
+  weight: 1
+  params:
+    languageISO: EN
+
+'no':
+  languageName: Norsk
+  weight: 2
+  params:
+    languageISO: 'NO'
+

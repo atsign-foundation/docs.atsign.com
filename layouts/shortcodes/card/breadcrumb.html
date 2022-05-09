@@ -1,0 +1,5 @@
+<div class="card my-3">
+  <div class="card-body">
+    <a class="stretched-link" href="{{ .Get "link" }}">{{ .Get "first"}} &rarr; {{ with .Get "second" }}{{.}} &rarr;{{ end }} {{ with .Get "third" }}{{.}} &rarr;{{ end }}</a>
+  </div>
+</div>

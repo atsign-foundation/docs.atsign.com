@@ -1,0 +1,12 @@
+main:
+  - name: Docs
+    weight: 1
+    url: /docs/
+
+docs:
+  - name: Flutter
+    weight: 1
+    url: /docs/flutter/
+  - name: Java
+    weight: 2
+    url: /docs/java/
