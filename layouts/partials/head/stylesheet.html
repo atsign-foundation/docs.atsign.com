@@ -1,0 +1,25 @@
+{{ if eq (hugo.Environment) "development" -}}
+  {{ $options := (dict "targetPath" "main.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
+  {{ $css := resources.Get "scss/app.scss" | toCSS $options -}}
+  <link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
+{{ else -}}
+  {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
+  {{ $css := resources.Get "scss/app.scss" | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
+  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
+{{ end -}}
+<!-- INJECT CODELAB STYLESHEET -->
+{{ if eq .Params.layout "codelab" }}
+  {{ if eq (hugo.Environment) "development" -}}
+    {{ $options := (dict "targetPath" "codelab.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
+    {{ $css2 := resources.Get "scss/codelab.scss" | toCSS $options -}}
+    <link rel="stylesheet" href="{{ $css2.Permalink | relURL }}">
+  {{ else -}}
+    {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
+    {{ $css2 := resources.Get "scss/codelab.scss" | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
+    {{ $secureCSS2 := $css2 | resources.Fingerprint "sha512" -}}
+    <link rel="stylesheet" href="{{ $secureCSS2.Permalink }}" integrity="{{ $secureCSS2.Data.Integrity }}" crossorigin="anonymous">
+  {{ end -}}
+{{ end -}}
+<!-- END INJECT CODELAB STYLESHEET -->
+<noscript><style>img.lazyload { display: none; }</style></noscript>
