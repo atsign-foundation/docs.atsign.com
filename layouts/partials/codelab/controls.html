@@ -24,7 +24,7 @@
     {{ end }}
     <div class="spacer"></div>
     {{if $scratch.Get "isLast"}}
-    <a href="{{ .Params.doneLink | default $section.Params.doneLink | default .Site.BaseURL }}" id="done" title="Codelab complete">Done</a>
+    <a href="{{ $section.Params.doneLink | default $section.Params.exitLink | default .Site.BaseURL }}" id="done" title="Codelab complete">Done</a>
     {{else}}
     <a href="{{($scratch.Get "nextPage").Permalink}}" id="next-step" title="Next step">Next</a>
     {{ end }}

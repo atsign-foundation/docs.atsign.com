@@ -1,29 +1,12 @@
 ---
-# Page Content
-title: 'Step 2'
-lead: ''
-
-# Title in navigation
-linkTitle: (IN NAV LINKS)
-
-# SEO description
-description: |
-  Documentation
-
-# Created date
-date: 2022-05-09
-
-# Last modified
-lastmod: 2022-05-09
-
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-weight: 1
-
-toc: false
-
 layout: codelab
 
-images: []
+title: 'Step 2' # Step Name
+description: | # SEO description for this step
+  Documentation
+
+draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+order: 2 # Ordering of the steps
 ---
 
 

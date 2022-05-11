@@ -1,31 +1,16 @@
 ---
-# Page Content
-title: Get-Started
-lead: |
+layout: list
+
+title: 'Get Started' # The title (ON THE PAGE)
+lead: | # The lead below the title (ON THE PAGE)
   Get Started on the @platform.
 
-# Title in navigation
-linkTitle: (IN NAV LINKS)
+linkTitle: Get Started # The title in the navigation
+description: | # SEO Description of the page (Shows in google and atsign.dev search)
+    My SEO description
 
-# SEO description
-description: |
-  SEO DESCRIPTION (ON GOOGLE SEARCH)
-
-# Created date (YYYY-MM-DD)
-date: 2022-05-09
-
-# Last modified (YYYY-MM-DD)
-lastmod: 2022-05-09
-
-draft: false # TODO CHANGE THIS TO "true" to hide the page
-toc: true
-
-weight: 99
-
-
-images: []
+draft: false # Change this to "true" to hide the page
+toc: true # Change this to "false" to hide the table of contents
+autolinks: true # Change this to "false" to hide the automatic links below your content
+weight: 99 # For list pages, higher is first.
 ---
-
-TODO YOUR CONTENT GOES HERE...
-
-
