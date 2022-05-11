@@ -57,8 +57,18 @@ Has the Description field been filled out?
 
 ### Acknowledgement/Attribution
 
-Have we correctly acknowledged the work of others (and their Trademarks etc.)
-where appropriate (per the conditions of their LICENSE?
+This website uses the following themes:
+
+- ### [doks](https://github.com/h-enk/doks)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+  Copyright (c) 2018-present, Gridsome  
+  Copyright (c) 2020-present, Henk Verlinde
+- ### [gohugo-theme-codelabs](https://github.com/shprink/gohugo-theme-codelabs)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+  Copyright (c) 2019 Julien Renaux
+
+
+
 
 ### LICENSE
 

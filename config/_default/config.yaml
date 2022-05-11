@@ -34,23 +34,6 @@ minify:
 # Import doks theme modules
 module:
   mounts:
-    - source: node_modules/@hyas/doks/archetypes
-      target: archetypes
-    - source: node_modules/@hyas/doks/assets
-      target: assets
-    # - source: node_modules/@hyas/doks/data
-    #   target: data
-    - source: node_modules/@hyas/doks/layouts
-      target: layouts
-      excludeFiles: index.html
-    - source: node_modules/@hyas/doks/static
-      target: static
-    - source: node_modules/flexsearch
-      target: assets/js/vendor/flexsearch
-    - source: node_modules/katex
-      target: assets/js/vendor/katex
-    - source: node_modules/font-awesome
-      target: assets
     - source: assets
       target: assets
     - source: static
@@ -63,3 +46,22 @@ module:
       target: archetypes
     - source: data
       target: data
+    - source: node_modules/@hyas/doks/archetypes
+      target: archetypes
+    - source: node_modules/@hyas/doks/assets
+      target: assets
+    # - source: node_modules/@hyas/doks/data
+    #   target: data
+    - source: node_modules/@hyas/doks/layouts
+      target: layouts
+      excludeFiles:
+        - index.html
+        - partials/sidebar/auto-collapsible-menu.html
+    - source: node_modules/@hyas/doks/static
+      target: static
+    - source: node_modules/flexsearch
+      target: assets/js/vendor/flexsearch
+    - source: node_modules/katex
+      target: assets/js/vendor/katex
+    - source: node_modules/font-awesome
+      target: assets
