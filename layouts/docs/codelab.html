@@ -15,7 +15,7 @@
 
 <div class="codelab">
   <div class="codelab-nav-buttons">
-    <a class="codelab-arrow-back text-decoration-none" href="{{ .Params.doneLink | default $section.Params.doneLink | default .Site.BaseURL }}" id="arrow-back">← Exit Codelab</a>
+    <a class="codelab-arrow-back text-decoration-none" href="{{ $section.Params.exitLink | default $section.Params.doneLink | default .Site.BaseURL }}" id="arrow-back">← Exit Codelab</a>
   </div>
   {{ partial "codelab/timer.html" . }}
   <div class="codelab-title">
