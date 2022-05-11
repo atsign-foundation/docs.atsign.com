@@ -28,10 +28,9 @@ describe.
 
 ### Prerequisites
 
-   ``` sh
-   # show how to install the tools needed to work with the code here
-   ```
+   Install Node.js [here](https://nodejs.org/en/download/).
 
+   For those working with a unix system, we recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) (Node version manager) to install Node.js instead.
 
 ### GitHub Repository Clone
 
@@ -78,6 +77,19 @@ To prepare your dedicated GitHub repository:
 
    **IMPORTANT**: Do this only once, when you start working on new feature as
    the commands above will completely overwrite any local changes in `trunk` content.
+
+1. Update your dependencies before editing the code:
+
+   ```sh
+   npm install
+   ```
+
+1. Run the development server while you make your changes:
+
+   ```sh
+   npm run start
+   ```
+
 1. Edit, edit, edit, and commit your changes to Git:
 
    ```sh
@@ -87,11 +99,11 @@ To prepare your dedicated GitHub repository:
    git push
    ```
 
-1. How to run tests:
+<!-- 1. How to run tests:
 
    ``` sh
    # explain tests here
-   ```
+   ``` -->
 
 1. Open a new Pull Request to the main repository using your `trunk` branch
 
