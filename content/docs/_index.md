@@ -1,20 +1,18 @@
 ---
-# Page Content
-title: '@platform Documentation'
-lead: 'Learn all about how the @platform works.'
+layout: root
 
-# Title in navigation
-linkTitle: Documentation
+title: '@platform Documentation' # The title (ON THE PAGE)
+lead: 'Learn all about how the @platform works.' # The lead below the title (ON THE PAGE)
 
-# SEO description
-description: |
+linkTitle: Docs # The title in the navigation
+description: | # SEO Description of the page (Shows in google and atsign.dev search)
   Documentation for the @platform.
 
-toc: false
-draft: false
-weight: 1
+draft: false # Change this to "true" to hide the page
+toc: false # Change this to "false" to hide the table of contents
+autolinks: false # Change this to "false" to hide the automatic links below your content
+weight: 1 # Weight compared to other sections of the site, this shouldn't affect anything on the facade
 
-layout: root
 ---
 
 #### I want to...

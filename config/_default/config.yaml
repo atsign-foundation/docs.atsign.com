@@ -54,6 +54,7 @@ module:
     - source: node_modules/@hyas/doks/layouts
       target: layouts
       excludeFiles:
+        - /docs/*
         - index.html
         - partials/sidebar/auto-collapsible-menu.html
         - partials/main/docs-navigation.html

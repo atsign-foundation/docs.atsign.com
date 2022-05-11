@@ -10,4 +10,3 @@ order: 1 # Ordering of the steps
 ---
 
 TODO your step content here...
-

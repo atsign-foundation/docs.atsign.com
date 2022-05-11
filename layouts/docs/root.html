@@ -32,21 +32,23 @@
 			</nav>
 			{{ end -}}
 			{{ .Content }}
-			<div class="card-list">
-				{{ $currentSection := .CurrentSection }}
-				{{ $relPermalink := .RelPermalink }}
-				{{ range where $currentSection.Pages.ByWeight.Reverse "Section" .Section }}
-					{{ if in (.RelPermalink | string) $currentSection.RelPermalink  }}
-						{{ if ne (.RelPermalink | string) $relPermalink }}
-							<div class="card my-3">
-								<div class="card-body">
-									<a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
+			{{ if ne .Params.autolinks false -}}
+				<div class="card-list">
+					{{ $currentSection := .CurrentSection }}
+					{{ $relPermalink := .RelPermalink }}
+					{{ range where $currentSection.Pages.ByWeight.Reverse "Section" .Section }}
+						{{ if in (.RelPermalink | string) $currentSection.RelPermalink  }}
+							{{ if ne (.RelPermalink | string) $relPermalink }}
+								<div class="card my-3">
+									<div class="card-body">
+										<a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
+									</div>
 								</div>
-							</div>
+							{{ end }}
 						{{ end }}
 					{{ end }}
-				{{ end }}
-			</div>
+				</div>
+			{{ end -}}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
