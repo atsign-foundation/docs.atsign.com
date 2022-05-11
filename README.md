@@ -33,16 +33,6 @@ done better, feel free to raise a pull request to the trunk branch.
 
 Take a look at [CONTRIBUTING.md](CONTRIBUTING.md) for further instructions.
 
-## How does stuff get from here to the production site?
-
-When changes are merged to trunk they get published to the staging site [devstaging.atsign.wtf](https://devstaging.atsign.wtf/) by running the [HugoBuild](https://github.com/atsign-foundation/atsign.dev/blob/trunk/.github/workflows/HugoBuild.yml) GitHub Action, which publishes to the gh-pages branch in this repo.
-
-When a [release](https://github.com/atsign-foundation/atsign.dev/releases) is tagged with a semanic version number (e.g. 1.0.8) the [DeployProd](https://github.com/atsign-foundation/atsign.dev/blob/trunk/.github/workflows/DeployProd.yml) Action runs, which publishes to the gh-pages branch in the [atsign.dev-prod](https://github.com/atsign-foundation/atsign.dev-prod) repo.
-
-### Automated scraping from pub.dev
-
-Some of the content here is taken from [pub.dev](https://pub.dev/publishers/atsign.org/packages), which is the authorative source for API docs. The [UpdateLibraries](https://github.com/atsign-foundation/atsign.dev/blob/trunk/.github/workflows/UpdateLibraries.yml) Action is set to run at 1415 daily to check for any updates to API docs for our packages.
-
 ### Acknowledgement/Attribution
 
 This website uses the following themes:
