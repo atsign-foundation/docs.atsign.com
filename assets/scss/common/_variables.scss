@@ -12,23 +12,27 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
-$yellow:   #ffe000;
 $black:    #1d2d35;
 $beige:    #fbf7f0;
 
-// $red:      #e55235;
-$purple:   #5d2f86;
-$brown:    #aa9c84;
 
-$blue-300: #8ed6fb;
-$pink-100: #fcfaff;
-$pink-500: #d32e9d;
+// @Company Colors
+$orange: #F05E3E;
+$cream: #FAF8EF;
+$teal: #11B5B8;
+$yellow: #FEAD00;
+$purple: #984EAB;
+$pink: #FD928A;
+$green: #00933F;
 
-$primary: $purple;
+$primary: $orange;
 
-$color-btn-bg: $pink-500;
-$color-btn-border: darken($pink-500, 5%);
+$color-btn-bg: $orange;
+$color-btn-border: darken($color-btn-bg, 5%);
 $color-btn-text: $white;
+
+
+
 
 // Options
 //
@@ -163,28 +167,28 @@ $alert-border-scale:                0;
 $alert-color-scale:                 0;
 
 // docsearch
-$dropdown-config: (
-  main-color: $purple,
-  layout-type: normal,
-  layout-width: normal,
-  layout-alignment: align,
-  background-color: $white,
-  border-radius: 4,
-  border-width: 1,
-  border-color: $gray-200,
-  box-shadow: none,
-  branding-position: bottom,
-  spacing: normal,
-  include-desc: yes,
-  background-category-header: $white,
-  font-size: normal,
-  header-color: $black,
-  title-color: $black,
-  subtitle-color: $black,
-  text-color: $black,
-  highlight-color: $purple,
-  highlight-opacity: 0.1,
-  highlight-type: underline
-);
+// $dropdown-config: (
+//   main-color: $orange,
+//   layout-type: normal,
+//   layout-width: normal,
+//   layout-alignment: align,
+//   background-color: $white,
+//   border-radius: 4,
+//   border-width: 1,
+//   border-color: $gray-200,
+//   box-shadow: none,
+//   branding-position: bottom,
+//   spacing: normal,
+//   include-desc: yes,
+//   background-category-header: $white,
+//   font-size: normal,
+//   header-color: $black,
+//   title-color: $black,
+//   subtitle-color: $black,
+//   text-color: $black,
+//   highlight-color: $orange,
+//   highlight-opacity: 0.1,
+//   highlight-type: underline
+// );
 
 $input-btn-focus-width:       0;

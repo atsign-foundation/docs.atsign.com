@@ -1,0 +1,114 @@
+nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
+  display: none !important;
+}
+
+.codelab {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-areas: 'exit timer' 'menu title' 'menu body';
+  width: 100%;
+  height: 100%;
+
+  .codelab-nav-title span {
+    display: none;
+  }
+
+  @media(max-width: 768px)  {
+    grid-template-areas: 'exit timer' 'title title' 'menu menu' 'body body';
+
+    .codelab-nav-title span {
+      display: inline;
+    }
+
+  }
+
+  .codelab-title {
+    grid-area: title;
+  }
+
+  .codelab-body {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .codelab-steps {
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    ol {
+
+      li, li a {
+        color: $body-color;
+      }
+
+      li[completed] {
+        text-decoration: line-through;
+      }
+
+      li[selected], li[selected] a {
+        color: $primary;
+      }
+    }
+  }
+
+  .codelab-drawer {
+    grid-area: menu;
+    padding-top: 1rem;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    min-width: 256px;
+  }
+
+  .codelab-nav-buttons {
+    grid-area: exit;
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    .codelab-arrow-back {
+      display: flex;
+      text-decoration: none;
+      width: 40;
+    }
+  }
+
+  .codelab-timer {
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .fabs {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    max-width: 1025px;
+
+    .spacer {
+      flex-grow: 1;
+    }
+
+    a[disappear] {
+      transform: scale(0, 0);
+    }
+  }
+}
+
+// DARK MODE COMPATIBILITY
+
+[data-dark-mode] body .codelab {
+
+  .codelab-drawer .codelab-steps ol {
+    li, li a {
+      color: $gray-600;
+    }
+    li[selected], li[selected] a {
+      color: $primary;
+    }
+  }
+}

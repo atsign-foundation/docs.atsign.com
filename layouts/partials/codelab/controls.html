@@ -1,0 +1,32 @@
+{{ $site := .Site }}
+{{ $url := .Permalink }}
+{{ $section := .CurrentSection }}
+
+{{ $scratch := newScratch }}
+{{ $len := (sub (len .CurrentSection.Pages) 1)}}
+{{ $list := sort .CurrentSection.Pages ".Params.order" "asc"}}
+{{ range $index, $element := $list}}
+{{ if eq $url .Permalink }}
+  {{ $scratch.Set "previousPage" (index $list (sub $index 1)) }}
+  {{ $scratch.Set "nextPage" (index $list (add $index 1)) }}
+{{ end }}
+<!--  isFirst-->
+{{ if and (eq $url .Permalink) (eq $index 0)  }}{{ $scratch.Set "isFirst" true }}{{ end }}
+<!--  end isFirst -->
+<!--  isLast-->
+{{ if and (eq $url .Permalink) (eq $index $len)  }}{{ $scratch.Set "isLast" true }}{{ end }}
+<!--  end isLast -->
+{{ end }}
+<div class="codelab-controls">
+  <div class="fabs">
+    {{if not ($scratch.Get "isFirst")}}
+    <a href="{{($scratch.Get "previousPage").Permalink}}" id="previous-step" title="Previous step">Back</a>
+    {{ end }}
+    <div class="spacer"></div>
+    {{if $scratch.Get "isLast"}}
+    <a href="{{ .Params.doneLink | default $section.Params.doneLink | default .Site.BaseURL }}" id="done" title="Codelab complete">Done</a>
+    {{else}}
+    <a href="{{($scratch.Get "nextPage").Permalink}}" id="next-step" title="Next step">Next</a>
+    {{ end }}
+  </div>
+</div>
