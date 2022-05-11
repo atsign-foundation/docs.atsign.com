@@ -13,6 +13,7 @@
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             {{ range .Pages }}
               {{ if eq .Params.layout "codelab-list" }}
+                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                 {{ $list := sort .CurrentSection.Pages ".Params.order" "asc"}}
                 {{ $firstPage := index $list 0 }}
                 {{ $link := $firstPage.RelPermalink }}
@@ -28,6 +29,7 @@
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         {{ range .Pages }}
                           {{ if eq .Params.layout "codelab-list" }}
+                            {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                             {{ $list := sort .CurrentSection.Pages ".Params.order" "asc"}}
                             {{ $firstPage := index $list 0 }}
                             {{ $link := $firstPage.RelPermalink }}
@@ -43,6 +45,7 @@
                                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                     {{ range .Pages }}
                                       {{ if eq .Params.layout "codelab-list" }}
+                                        {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                                         {{ $list := sort .CurrentSection.Pages ".Params.order" "asc"}}
                                         {{ $firstPage := index $list 0 }}
                                         {{ $link := $firstPage.RelPermalink }}
