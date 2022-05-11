@@ -1,29 +1,17 @@
 ---
-# Page Content
-title: SDK Reference
+layout: list
 
-# Title in navigation
-linkTitle: (IN NAV LINKS)
+title: 'SDK Reference' # The title (ON THE PAGE)
+lead: | # The lead below the title (ON THE PAGE)
+  My lead
 
-# SEO description
-description: |
-  SEO DESCRIPTION (ON GOOGLE SEARCH)
+linkTitle: My Link title # The title in the navigation
+description: | # SEO Description of the page (Shows in google and atsign.dev search)
+    My SEO description
 
-# Created date (YYYY-MM-DD)
-date: 2022-05-09
-
-# Last modified (YYYY-MM-DD)
-lastmod: 2022-05-09
-
-draft: false # TODO CHANGE THIS TO "true" to hide the page
-toc: true
-
-weight: 1
-
-
-images: []
+draft: false # Change this to "true" to hide the page
+toc: true # Change this to "false" to hide the table of contents
+weight: 1 # For list pages, higher is first.
 ---
 
 SDK References for each implementation.
-
-
