@@ -2,6 +2,8 @@
 
 ### Now for a little internet optimism
 
+[![GitHub License](https://img.shields.io/badge/license-BSD3-blue.svg)](./LICENSE)
+
 # atsign.dev
 
 The atsign.dev repo is home to the code behind our developer site. As everything we have to offer is open-source, why not make our website open-source too, to prove that we aren't using cookies or anything that tracks your presence.  
@@ -52,11 +54,6 @@ This website uses the following themes:
 - ### [gohugo-theme-codelabs](https://github.com/shprink/gohugo-theme-codelabs)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   Copyright (c) 2019 Julien Renaux
-
-
-### LICENSE
-
-[![GitHub License](https://img.shields.io/badge/license-BSD3-blue.svg)](./LICENSE)
 
 ## Maintainers
 
