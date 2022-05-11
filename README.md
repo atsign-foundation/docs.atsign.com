@@ -2,58 +2,36 @@
 
 ### Now for a little internet optimism
 
-<!-- TODO -->
+[![GitHub License](https://img.shields.io/badge/license-BSD3-blue.svg)](./LICENSE)
 
-# Sample README
+# atsign.dev
 
-Open with intent - we welcome contributions - we want pull requests and to hear about issues.
+The atsign.dev repo is home to the code behind our developer site. As everything we have to offer is open-source, why not make our website open-source too, to prove that we aren't using cookies or anything that tracks your presence.  
 
-## Who is this for?
+## Why is there an atsign.dev?
 
-The README should be addressed to somebody who's never seen this before.
-But also don't assume that they're a novice.
+We hope that this site has the A -> Z of everything you will need to develop with the @platform.
 
-### Code user
+If you are a developer, this is your site -  come join us and help us improve the content and the experience. We are always learning from you.
 
-Does this repo publish to [pub.dev](https://pub.dev) or similar?
-In which case the code user just needs a pointer there - e.g. [at_client on pub.dev](https://pub.dev/packages/at_client)
+## What can you find in atsign.dev?
 
-### Contributor
+If you are new to the @platform, learn about how the platform works and how this can make such a big difference for you by cutting down on time to develop and market applications.
 
-This is the person who we want working with us here.
-[CONTRIBUTING.md](CONTRIBUTING.md) is going to have the detailed guidance on how to setup their tools,
-tests and how to make a pull request.
+The site gives you all the tools, samples, examples and documentation needed to get started on the @platform and SDK. The site also provides access to the various communities where you can collaborate and talk to other developers working on the platform.
 
-## Why, What, How?
+##  Pages we recommend visiting:
 
-### Why?
+If this is your first time here, we strongly recommend navigating through our ‘[getting started](https://atsign.dev/docs/get-started/)’ page. There, you will find all of the steps you will need to take in order to start developing your very own @platform application. 
 
-What is the purpose of this project?
+If you’d like to see what an @platform application looks like, feel free to visit our ‘[sample apps](https://atsign.dev/docs/sample-apps/)’ page! Here, you will find a list of demonstrative applications showing off the many verbs/methods that exist on the @platform. The most basic of this list is ‘[at_hello_world](https://github.com/atsign-foundation/at_demos/tree/trunk/at_hello_world)’ and the most advanced are ‘[at_cookbook](https://github.com/atsign-foundation/at_demos/tree/trunk/at_cookbook)’ and ‘[@mosphere](https://github.com/atsign-foundation/atmosphere)’
 
-### What?
+## How can you contribute?
 
-What is needed to get the project and its dependencies installed?
+If you think there should be a change made, or think there could be anything
+done better, feel free to raise a pull request to the trunk branch.
 
-### How?
-
-How does this work? How is this used to fulfil its intended purpose?
-
-## Checklist
-
-### Writing
-
-Does the writing flow, with proper grammar and correct spelling?
-
-### Links
-
-Are the links to external resources correct?
-Are the links to other parts of the project correct
-(beware stuff carried over from previous repos where the
-project might have lived during earlier development)?
-
-### Description
-
-Has the Description field been filled out?
+Take a look at [CONTRIBUTING.md](CONTRIBUTING.md) for further instructions.
 
 ### Acknowledgement/Attribution
 
@@ -67,21 +45,9 @@ This website uses the following themes:
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   Copyright (c) 2019 Julien Renaux
 
-
-
-
-### LICENSE
-
-Which LICENSE are we using?  
-Is the LICENSE(.md) file present?  
-Does it have the correct dates, legal entities etc.?
-
 ## Maintainers
 
-Who created this?  
-
-Do they have complete GitHub profiles?  
-
-How can they be contacted?  
-
-Who is going to respond to pull requests?  
+@XavierChanth
+@TylerTrott
+@anthonyvprakash
+@cpswan
