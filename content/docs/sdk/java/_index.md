@@ -22,7 +22,7 @@ toc: true
 
 weight: 2
 
-layout: single
+layout: sub-list
 
 images: []
 ---

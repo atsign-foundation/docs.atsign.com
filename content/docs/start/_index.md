@@ -11,19 +11,11 @@ linkTitle: (IN NAV LINKS)
 description: |
   SEO DESCRIPTION (ON GOOGLE SEARCH)
 
-# Created date (YYYY-MM-DD)
-date: 2022-05-09
+draft: false # Change this to "true" to hide the page
+toc: true # Change this to "false" to hide the table of contents
+weight: 99 # For sections, higher comes first.
 
-# Last modified (YYYY-MM-DD)
-lastmod: 2022-05-09
-
-draft: false # TODO CHANGE THIS TO "true" to hide the page
-toc: true
-
-weight: 99
-
-
-images: []
+layout: list
 ---
 
 TODO YOUR CONTENT GOES HERE...

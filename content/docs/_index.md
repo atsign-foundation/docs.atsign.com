@@ -1,29 +1,20 @@
 ---
 # Page Content
 title: '@platform Documentation'
-lead: ''
+lead: 'Learn all about how the @platform works.'
 
 # Title in navigation
-linkTitle: (IN NAV LINKS)
+linkTitle: Documentation
 
 # SEO description
 description: |
-  Documentation
-
-# Created date
-date: 2022-05-09
-
-# Last modified
-lastmod: 2022-05-09
-
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-weight: 1
+  Documentation for the @platform.
 
 toc: false
+draft: false
+weight: 1
 
 layout: root
-
-images: []
 ---
 
 #### I want to...
