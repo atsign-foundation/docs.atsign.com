@@ -47,7 +47,7 @@ This website uses the following themes:
 
 ## Maintainers
 
-@XavierChanth
-@TylerTrott
-@anthonyvprakash
-@cpswan
+[@XavierChanth](https://github.com/XavierChanth)
+[@TylerTrott](https://github.com/TylerTrott)
+[@anthonyvprakash](https://github.com/anthonyvprakash)
+[@cpswan](https://github.com/cpswan)
