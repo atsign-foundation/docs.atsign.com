@@ -24,3 +24,5 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 #### References
 {{<card/breadcrumb link="/docs/sdk/flutter" first="SDK Reference" second="Flutter">}}
 {{<card/breadcrumb link="/docs/sdk/java" first="SDK Reference" second="Java">}}
+
+{{<image src="https://atsign.dev/assets/img/@dev.png?sanitize=true" >}}
