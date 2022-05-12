@@ -1,0 +1,45 @@
+name: DeployStaging
+on:
+  push:
+    branches:
+      - trunk
+
+env:
+  base-repo: atsign-foundation/atsign.dev-3.0
+
+jobs:
+  deploy:
+    if: ${{ github.repository == env.base-repo }}
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build:staging
+        env:
+          HUGO_ENV: staging
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          cname: devstaging.atsign.wtf

@@ -1,0 +1,47 @@
+name: DeployProd
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*.*.*"
+
+env:
+  base-repo: atsign-foundation/atsign.dev-3.0
+
+jobs:
+  deploy:
+    if: ${{ github.repository == env.base-repo }}
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          HUGO_ENV: production
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.REPO_TOKEN }}
+          external_repository: atsign-foundation/atsign.dev-prod
+          publish_dir: ./public
+          publish_branch: gh-pages
+          cname: atsign.dev

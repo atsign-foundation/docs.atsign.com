@@ -1,0 +1,21 @@
+name: DeleteDeployPR
+on:
+  pull_request:
+    branches:
+      - trunk
+    types:
+      - closed
+
+env:
+  PR_REPO_NAME: atsign.dev-pr-${{ github.event.pull_request.node_id }}
+  deploy-org: atsign-foundation
+
+jobs:
+  delete-page-host:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Delete repository for temporary deployment
+        uses: mktcode/delete-repository-action@v1
+        with:
+          name: ${{ env.deploy-org }}/${{ env.PR_REPO_NAME }}
+          access-token: ${{ secrets.REPO_TOKEN }}

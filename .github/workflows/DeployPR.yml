@@ -1,0 +1,60 @@
+name: DeployPR
+on:
+  pull_request:
+    branches:
+      - trunk
+
+env:
+  base-repo: atsign-foundation/atsign.dev-3.0
+  PR_REPO_NAME: atsign.dev-pr-${{ github.event.pull_request.node_id }}
+  deploy-org: atsign-foundation
+
+jobs:
+  create-host-repo:
+   # if: ${{ github.repository == env.base-repo }}
+    if: false
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Create new repository for temporary deployment
+        uses: mktcode/create-repository-action@v1
+        with:
+          name: ${{ env.PR_REPO_NAME }}
+          access-token: ${{ secrets.REPO_TOKEN }}
+          org:  ${{ env.deploy-org }}
+
+  deploy:
+    needs: create-host-repo
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build:staging -b
+        env:
+          HUGO_ENV: staging
+
+      - name: Deploy
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+              personal_token: ${{ secrets.REPO_TOKEN }}
+              external_repository: ${{ env.deploy-org }}/${{ env.PR_REPO_NAME }}
+              publish_dir: ./public
+              publish_branch: gh-pages
+
