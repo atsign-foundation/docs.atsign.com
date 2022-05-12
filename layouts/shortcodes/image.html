@@ -1,0 +1,10 @@
+{{ if (eq (.Get "type") "page") }}
+    {{ $image := .Page.Resources.GetMatch (.Get "src") }}
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+{{ else if eq (.Get "type") "asset" }}
+    {{ $image := resources.Get (.Get "src" ) }}
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+{{ else }}
+    {{ $image := resources.GetRemote (.Get "src") }}
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+{{ end }}
