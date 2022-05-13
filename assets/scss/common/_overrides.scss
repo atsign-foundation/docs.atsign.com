@@ -1,1 +1,6 @@
-
+// Replace the ugly pink color with our orange
+.btn-menu:hover,
+.btn-doks-light:hover,
+.doks-sidebar-toggle:hover {
+  background: $primary;
+}
