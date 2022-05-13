@@ -3,22 +3,28 @@
 // Source: https://material.io/design/color/dark-theme.html
 
 $body-bg-dark: $gray-900;
-$body-overlay-dark: darken($body-bg-dark, 2.5%);
+$border-dark: $gray-800;
+$body-color-dark: $gray-300;
+$link-color-dark: $highlight;
+
+$color-btn-bg-dark: $primary; 
+$color-btn-border-dark: lighten($color-btn-bg-dark, 5%);
+$color-btn-text-dark: #fff;
 
 /*
 $border-dark: darken($body-bg-dark, 2.5%);
 */
-$border-dark: $gray-800;
-$body-color-dark: $gray-300;
+$body-overlay-dark: darken($body-bg-dark, 2.5%);
 $dots-dark: darken($body-color-dark, 50%);
 
-$link-color-dark: $highlight;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
 $navbar-dark-color:                 $body-color-dark;
 $navbar-dark-hover-color:           $link-color-dark;
 $navbar-dark-active-color:          $link-color-dark;
+
+
 
 /** Theme styles */
 

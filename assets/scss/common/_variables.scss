@@ -28,11 +28,10 @@ $beige: $gray-200; // Background color for alert and code components
 
 $primary: $orange;
 
-$color-btn-bg: $primary;
+// Copy button for code blocks
+$color-btn-bg: $highlight; 
 $color-btn-border: darken($color-btn-bg, 5%);
 $color-btn-text: $black;
-
-
 
 
 // Options
