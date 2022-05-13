@@ -1,14 +1,15 @@
 ---
 layout: codelab
 
-title: 'Overview' # Step Name
+title: 'AtClientPreference' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 1 # Ordering of the steps
+order: 2 # Ordering of the steps
 ---
 
+### Overview
 
 AtClientPreference is used to configure the preferences of an @platform application. It offers a variety of attributes to give a developer ultimate flexibility. 
 
@@ -33,4 +34,18 @@ AtClientPreference is used to configure the preferences of an @platform applicat
 
 For Local device paths we recommend the path_provider package. 
 
+## Usage
 
+```
+Future<AtClientPreference> loadAtClientPreference() async {
+ var dir = await getApplicationSupportDirectory();
+ return AtClientPreference()
+       ..rootDomain = 'root.atsign.org'
+       ..namespace = 'sdkExample'
+       ..hiveStoragePath = dir.path
+       ..commitLogPath = dir.path
+       ..isLocalStoreRequired = true
+     // TODO set the rest of your AtClientPreference here
+     ;
+}
+```

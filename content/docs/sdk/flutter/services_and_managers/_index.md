@@ -1,7 +1,7 @@
 ---
 layout: codelab-list
 
-title: AtClientManager # Title of the codelab
+title: Services & Managers # Title of the codelab
 lead:  # Description of the codelab
 description: | # SEO Description of the codelab
     My SEO Description
