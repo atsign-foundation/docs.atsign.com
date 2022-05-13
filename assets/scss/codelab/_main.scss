@@ -39,7 +39,17 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
     flex-direction: column;
     position: relative;
     flex-grow: 1;
-    ol {
+  }
+
+  .codelab-drawer {
+    grid-area: menu;
+    padding-top: 1rem;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    min-width: 256px;
+    
+    .codelab-steps ol {
 
       li, li a {
         color: $body-color;
@@ -53,15 +63,6 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
         color: $primary;
       }
     }
-  }
-
-  .codelab-drawer {
-    grid-area: menu;
-    padding-top: 1rem;
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    min-width: 256px;
   }
 
   .codelab-nav-buttons {
@@ -104,11 +105,14 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
 [data-dark-mode] body .codelab {
 
   .codelab-drawer .codelab-steps ol {
+
     li, li a {
-      color: $gray-600;
+      color: $gray-300;
     }
+
     li[selected], li[selected] a {
       color: $highlight;
     }
+    
   }
 }
