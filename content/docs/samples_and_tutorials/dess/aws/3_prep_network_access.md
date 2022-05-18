@@ -9,43 +9,88 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps
 ---
 
-### Overview
+#### Assignment of Static IP
 
-AtClientPreference is used to configure the preferences of an @platform application. It offers a variety of attributes to give a developer ultimate flexibility. 
+Next up, is to provide our instance with a static IP and linking our domain to it.
 
-| Attributes                | Description |
-| ------------------------- | ----------- |
-| hiveStoragePath           | Local device path of hive storage |
-| commitLogPath             | Local device path of commit log |
-| isLocalStoreRequired      | Specify whether local store is required
-| cramSecret                | Shared secret of the atSign
-| keyStoreSecret            | Secret key to encrypt keystore data
-| privateKey                | Private key of the atSign 
-| namespace                 | Specifies the namespace of an app.
-| rootDomain                | Domain of the root server. Defaults to root.atsign.com
-| rootPort                  | Port of the root server. Defaults to 64
-| syncIntervalMins          | Frequency of sync tasks to run in minutes. Defaults to 10 minutes.
-| outboundConnectionTimeout | Idle time in milliseconds of connection to secondary server. Default to 10 minutes.
-| maxDataSize               | Maximum data size a secondary can store. Temporary solution. Have to fetch this from the server using stats verb.
-|downloadPath               | Default path to download stream files
-|syncRegex                  | regex to perform sync
-|syncBatchSize              | Number of keys to batch for sync to secondary server
-|syncPageLimit              | The number of keys to pull from cloud secondary to local secondary in a single call.
+When you click on your instance name, it will take you to the management console, which should look like this:
 
-For Local device paths we recommend the path_provider package. 
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002-16272853840264.jpg?raw=true)
 
-## Usage
+This is where you control hardware, connectivity and if needed can delete your instance.
 
-```
-Future<AtClientPreference> loadAtClientPreference() async {
- var dir = await getApplicationSupportDirectory();
- return AtClientPreference()
-       ..rootDomain = 'root.atsign.org'
-       ..namespace = 'sdkExample'
-       ..hiveStoragePath = dir.path
-       ..commitLogPath = dir.path
-       ..isLocalStoreRequired = true
-     // TODO set the rest of your AtClientPreference here
-     ;
-}
-```
+Lets configure a static IP address for your new instance. Navigate to Networking and click on Create static IP:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image003.png?raw=true)
+
+Our region and instance is selected, so the only thing left is to name our static IP. I selected the name atsign-static, but it can be any name you like.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image005.jpg?raw=true)
+
+Lets hit create:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image007.jpg?raw=true)
+
+And voila, we now have a static IP address on the internet and it will not change. Now we can link our domain name with it.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image009.jpg?raw=true)
+
+When you click on your instance name and navigate to Networking, the static IP is now assigned.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image011.jpg?raw=true)
+
+#### Assignment of Domain name to your static IP 
+
+We can now move on to linking our static IP address to our domain. This is done via the AWS console which can be accessed in the top right of Lightsail.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image001.png?raw=true)
+
+Verify your email used for registering domain:
+
+By now you should receive verification email that will confirm registration of your domain. Click this link before moving on.
+
+Linking domain with your static address:
+
+Lets navigate to “Route 53” from Services menu.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image003.jpg?raw=true)
+
+From your dashboard click on “Domain” which will take you to the “Registered Domains” tab.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image005-16272854399076.jpg?raw=true)
+
+Here you can click on your registered domain which will take you to overview page with domain status and contacts.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image007-16272854399087.jpg?raw=true)
+
+Click on “Manage DNS”
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image009-16272854399088.jpg?raw=true)
+
+And click on your domain name.
+
+This will show you your DNS records for your domain. We now need to link A type record to your domain linking it to IP address of your instance.
+
+This is done simply by typing your static IP address from previous step into field “Value” and clicking Create record:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image011-16272854399089.jpg?raw=true)
+
+If everything goes well you should see following in your domain dashboard:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image013.jpg?raw=true)
+
+To test if you are successful open command line and ping your domain. You should see your instance static IP address. It will not respond which is normal due to IPv4 firewall. It is actually good thing!
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image014.png?raw=true)
+
+At this point we have created DNS record we will use to link our dess, we created instance name which will be running our dess and we have opened port range which is exposed to the internet and we can communicate with @sign root server and our apps with.
+
+#### Setting up Firewall
+
+Next up we need to make sure we have ports open for our dess to communicate with root server and our apps. In Section networking go to section “IPv4 Firewall” and click “+ Add rule” Our rule will be “Custom” on TCP protocol with Port range in number higher then 1024. In my case I have selected port range 8000-8010. This will enable me to run up to 10 @signs in parallel.
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002-16272854074665.jpg?raw=true)
+
+Click create and verify that your new rule is in list:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002-16272854074665.jpg?raw=true)
