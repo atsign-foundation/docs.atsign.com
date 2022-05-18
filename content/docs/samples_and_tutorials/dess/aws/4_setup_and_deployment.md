@@ -9,31 +9,34 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
 ---
 
-### Overview
 
-The @platform uses secret keys for authenticating an at sign as cryptographically secure replacement for usernames and passwords.To make developers life easier @platform offers [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package which handles secure management of secret keys.If you are developing a new @platform app, we recommend that you use [at_app](https://pub.dev/packages/at_app) which can create  @platform app template that already contains onboarding in it. 
+Open your [LightSail](https://lightsail.aws.amazon.com/) console
 
-## Usage
+By now you should see your instance in “Running state”
 
-Before using the onboarding widget, ensure that your [AtClientPreference](https://docs.google.com/document/d/14PZ-FHV9djBJL1RR8G8aYd6qxiWErBJEvRW9hD0pfNQ/edit#heading=h.yept27gyvv8g) is properly assigned.
-If you need an appAPIKey please email us at.
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002-162728546025210.jpg?raw=true)
 
-```
-Onboarding(
-  context: context,
-  atClientPreference: atClientPreference!,
-  domain: AtEnv.rootDomain,
-  rootEnvironment: AtEnv.rootEnvironment,
-  appAPIKey: AtEnv.appApiKey,
-  onboard: (value, atsign) {
-     _logger.finer('Successfully onboarded $atsign');
-  },
-  onError: (error) {
-     _logger.severe('Onboarding throws $error error');
-  },
-   nextScreen: const HomeScreen(),
-   );
-  },
-  child: const Text('Onboard an @sign'),
-),
-```
+Open it and on tab Connect click on “Connect using SSH”
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image003-162728546025211.png?raw=true)
+
+You should be presented by a new window with command line:
+
+![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image005-162728546025212.jpg?raw=true)
+
+Before we do anything else, we should update the system:
+
+sudo apt update && sudo apt upgrade
+This might take some time, but it will make sure we have latest repository information and the system is up to date.
+
+Next make sure curl is installed, we will use curl to pull the dess installation file:
+
+```sudo apt install curl```
+
+Finally, run the dess installer:
+
+```curl -fsSL https://getdess.atsign.com | sudo bash```
+
+Once the installer is finished you should be prompted like so:
+
+```Dess installed, please move on to the sudo dess-create command.```
