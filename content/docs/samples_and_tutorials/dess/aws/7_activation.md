@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 6 # Ordering of the steps
+order: 7 # Ordering of the steps
 ---
 
 Next up we need to activate it
