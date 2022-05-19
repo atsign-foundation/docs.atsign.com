@@ -63,3 +63,49 @@ pre .btn-copy {
 [data-dark-mode] .btn-copy:active::after {
   color: $color-btn-text-dark;
 }
+
+
+// Adjustments for fa icons
+i.fas,
+i.fa-solid {
+  font-style: normal;
+}
+
+.btn i.fas,
+.btn i.fa-solid {
+  margin-left: 0.5em;
+}
+
+// Button colors
+.btn-primary {
+  color: $white;
+}
+
+.btn-primary:hover {
+  color: $white;
+  background-color: darken($primary, 2.5%);
+}
+
+.btn-secondary {
+  background-color: $secondary;
+}
+
+[data-dark-mode] .btn-secondary {
+  color: $gray-100;
+  background-color: $gray-700;
+  border-color: $gray-700;
+}
+
+[data-dark-mode] .btn-secondary:hover {
+  background-color: darken($gray-700, 2.5%);
+  border-color: darken($gray-700, 2.5%);
+}
+
+// Background for showcase cards
+.bg-secondary {
+  background-color: $secondary;
+}
+
+[data-dark-mode] .bg-secondary {
+  background-color: $gray-700;
+}
