@@ -42,8 +42,12 @@ module:
         - scss/app.scss
         - scss/common/_dark.scss
         - scss/common/_variables.scss
-    - source: node_modules/font-awesome
-      target: assets
+        - scss/common/_fonts.scss
+        - js/highlight.js
+    - source: node_modules/font-awesome/scss
+      target: assets/scss/font-awesome
+    - source: node_modules/font-awesome/fonts
+      target: static/webfonts
 
     # vendor assets
     - source: node_modules/flexsearch

@@ -1,0 +1,16 @@
+<div class="card {{ .Get "class" }}">
+    {{ if (eq (.Get "img-type") "page") }}
+        {{ $image := .Page.Resources.GetMatch (.Get "img-src") }}
+        <img class="card-img-top {{ .Get "img-class" }}" src="{{ $image.RelPermalink }}">
+    {{ else if eq (.Get "img-type") "asset" }}
+        {{ $image := resources.Get (.Get "img-src" ) }}
+        <img class="card-img-top {{ .Get "img-class" }}" src="{{ $image.RelPermalink }}">
+    {{ else }}
+        {{ $image := resources.GetRemote (.Get "img-src") }}
+        <img class="card-img-top {{ .Get "img-class" }}" src="{{ $image.RelPermalink }}">
+    {{ end }}
+    <div class="card-body">
+        <h5 class="card-title">{{ .Get "title" }}</h5>
+        {{ .Inner }}
+    </div>
+</div>

@@ -1,4 +1,3 @@
-
 goldmark:
   extensions:
     linkify: false
@@ -12,9 +11,10 @@ goldmark:
     unsafe: true
 
 highlight:
+  codeFences: true
   lineNos: true
   lineNumbersInTable: false
-  style: dracula
+  noClasses: false
 
 tableOfContents:
   endLevel: 3

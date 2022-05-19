@@ -1,5 +1,5 @@
-<div class="card">
-  <a href="{{ .Get "link" }}">
+<div class="card {{ .Get "class" }}">
+  <a href="{{ .Get "href" }}">
     <div class="card-body">
       <h5 class="card-title" style="margin-top: 0.5em;">{{ .Get "title" }}</h5>
       <p class="card-text">{{ .Get "text" }}</p>
