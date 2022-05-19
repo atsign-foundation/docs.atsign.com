@@ -1,19 +1,18 @@
-/** Import Bootstrap functions */
+// Import Bootstrap functions
 @import "bootstrap/scss/functions";
 
-/** Import theme variables */
+// Import theme variables
 @import "common/variables";
 
-/** Import Bootstrap */
+// Import Bootstrap
 @import "bootstrap/scss/bootstrap";
 
-/** Import highlight.js */
-// @import "highlight.js/scss/github-dark-dimmed";
-
-/** Import KaTeX */
+// Import KaTeX 
 @import "katex/dist/katex";
 
-/** Import theme styles */
+// @import "highlight.js/scss/dracula";
+
+// Import doks theme styles
 @import "common/fonts";
 @import "common/global";
 @import "common/dark";
@@ -33,6 +32,24 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
+
+// Import font-awesome
+@import "font-awesome/variables";
+$fa-font-path: "webfonts";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/larger";
+@import "font-awesome/fixed-width";
+@import "font-awesome/list";
+@import "font-awesome/bordered-pulled";
+@import "font-awesome/animated";
+@import "font-awesome/rotated-flipped";
+@import "font-awesome/stacked";
+@import "font-awesome/icons";
+@import "font-awesome/screen-reader";
+
+@import "common/general";
 
 // OVERRIDE DEFAULT THEME STYLES
 @import "common/overrides";
