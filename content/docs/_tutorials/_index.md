@@ -1,9 +1,9 @@
 ---
 layout: list
 
-title: "Get Started" # The title (ON THE PAGE)
+title: "Samples & Tutorials" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Get Started on the @platform.
+  Samples and tutorials on the @platform.
 
 linkTitle: Get Started # The title in the navigation
 description:
@@ -13,5 +13,5 @@ description:
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
 autolinks: true # Change this to "false" to hide the automatic links below your content
-weight: 99 # For list pages, higher is first.
+weight: 98 # For directories that are list pages, a higher weight is listed first
 ---
