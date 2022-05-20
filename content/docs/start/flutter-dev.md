@@ -1,9 +1,9 @@
 ---
 layout: list
 
-title: "Get Started" # The title (ON THE PAGE)
+title: "Flutter Development" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Get Started on the @platform.
+  Get Started on the @platform as a Flutter Dev.
 
 linkTitle: Get Started # The title in the navigation
 description:
@@ -13,5 +13,5 @@ description:
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
 autolinks: true # Change this to "false" to hide the automatic links below your content
-weight: 99 # For list pages, higher is first.
+weight: 2
 ---
