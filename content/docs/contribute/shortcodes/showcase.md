@@ -3,7 +3,7 @@ layout: codelab
 title: Showcase
 description: Showcase shortcodes used in atsign.dev
 draft: false
-order: 3
+order: 4
 ---
 
 {{<br>}}
