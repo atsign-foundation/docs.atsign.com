@@ -5,7 +5,7 @@ title: 'Java Reference' # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Build an @platform application in Java.
 
-linkTitle: My Link title # The title in the navigation
+
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
     My SEO description
 

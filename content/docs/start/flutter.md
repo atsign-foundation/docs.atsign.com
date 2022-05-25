@@ -1,17 +1,16 @@
 ---
 layout: list
 
-title: "Shortcodes" # The title (ON THE PAGE)
+title: "Flutter Development" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Learn about how we created our shortcodes on the dev site!
+  Get Started with Flutter on the @platform
 
-linkTitle: My Link title # The title in the navigation
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  My SEO description
+  Get started with Flutter on the Atsign platform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
 autolinks: true # Change this to "false" to hide the automatic links below your content
-weight: 1 # For list pages, higher is first.
+weight: 1
 ---

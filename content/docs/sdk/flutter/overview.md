@@ -1,13 +1,11 @@
 ---
 layout: single
 
-title: 'My title' # The title (ON THE PAGE)
-lead: | # The lead below the title (ON THE PAGE)
-  My lead
+title: 'Overview' # The title (ON THE PAGE)
+lead: Learn about the various services in the Flutter SDK
 
 
-description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    My SEO description
+description: Overview of the Atsign platform Flutter SDK
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents

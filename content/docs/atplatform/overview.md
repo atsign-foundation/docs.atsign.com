@@ -1,14 +1,11 @@
 ---
 layout: list
 
-title: "The @ Platform Overview" # The title (ON THE PAGE)
-lead: | # The lead below the title (ON THE PAGE)
-  Learn about what the @platform is!
+title: "The @platform Overview" # The title (ON THE PAGE)
+lead: Learn about the technology that powers the @platform
 
-linkTitle: overview # The title in the navigation
-description:
-  | # SEO Description of the page (Shows in google and atsign.dev search)
-  My SEO description
+
+description: Overview of the Atsign platform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
