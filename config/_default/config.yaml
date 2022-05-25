@@ -46,14 +46,18 @@ module:
         - js/highlight.js
     - source: node_modules/font-awesome/scss
       target: assets/scss/font-awesome
-    - source: node_modules/font-awesome/fonts
-      target: static/webfonts
 
     # vendor assets
     - source: node_modules/flexsearch
       target: assets/js/vendor/flexsearch
     - source: node_modules/katex
       target: assets/js/vendor/katex
+
+    # STATIC
+    - source: node_modules/font-awesome/fonts
+      target: static/webfonts/font-awesome
+    - source: static
+      target: static
 
     # LAYOUTS
     - source: node_modules/@hyas/doks/layouts
@@ -63,13 +67,12 @@ module:
         - docs/single.html
         - partials/main/docs-navigation.html
         - partials/sidebar/auto-collapsible-menu.html
+        - partials/head/resource-hints.html
         - index.html
     - source: layouts
       target: layouts
 
     # OTHER
-    - source: static
-      target: static
     - source: content
       target: content
     - source: archetypes
