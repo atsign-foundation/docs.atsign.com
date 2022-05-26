@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://dev3.atsign.wtf/no/</loc><changefreq>monthly</changefreq><priority>0.5</priority><xhtml:link rel="alternate" hreflang="en" href="https://dev3.atsign.wtf/"/><xhtml:link rel="alternate" hreflang="no" href="https://dev3.atsign.wtf/no/"/></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/no/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://dev3.atsign.wtf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="no"
+                href="https://dev3.atsign.wtf/no/"
+                />
+  </url>
+  
+</urlset>

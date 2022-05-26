@@ -1,38 +1,881 @@
-<!doctype html><html lang=en_us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=https://dev3.atsign.wtf/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://dev3.atsign.wtf/fonts/vendor/jost/jost-v4-latin-500.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://dev3.atsign.wtf/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin><script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script><link rel=stylesheet href=https://dev3.atsign.wtf/main.a4cbb4aa526e9cc60e555e235065a523939daa5120acb68dacc6de023585ba9747c44fe2135582c331556ed398d5e6985948583be3e6ea004adeaf1350498e21.css integrity="sha512-pMu0qlJunMYOVV4jUGWlI5OdqlEgrLaNrMbeAjWFupdHxE/iE1WCwzFVbtOY1eaYWUhYO+Pm6gBK3q8TUEmOIQ==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>Key Basics - @platform</title><meta name=description content="Documentation
-"><link rel=canonical href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Key Basics"><meta property="og:description" content="Documentation
-"><meta property="og:url" content="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"><meta property="og:site_name" content="@platform"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="atsigncompany"><meta name=twitter:creator content="atsigncompany"><meta name=twitter:title content="Key Basics"><meta name=twitter:description content="Documentation
-"><meta name=twitter:card content="summary"><meta name=twitter:image:alt content="Key Basics"><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://dev3.atsign.wtf/#/schema/person/1","name":"","url":"https://dev3.atsign.wtf/","sameAs":[],"image":{"@type":"ImageObject","@id":"https://dev3.atsign.wtf/#/schema/image/1","url":"https://dev3.atsign.wtf/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"https://dev3.atsign.wtf/#/schema/website/1","url":"https://dev3.atsign.wtf/","name":"@platform","description":"The @platform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.\n","publisher":{"@id":"https://dev3.atsign.wtf/#/schema/person/1"}},{"@type":"WebPage","@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/","url":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/","name":"Key Basics","description":"Documentation\n","isPartOf":{"@id":"https://dev3.atsign.wtf/#/schema/website/1"},"about":{"@id":"https://dev3.atsign.wtf/#/schema/person/1"},"datePublished":"0001-01-01T00:00:00CET","dateModified":"0001-01-01T00:00:00CET","breadcrumb":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"]}]},{"@type":"BreadcrumbList","@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://dev3.atsign.wtf/","url":"https://dev3.atsign.wtf/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://dev3.atsign.wtf/docs/","url":"https://dev3.atsign.wtf/docs/","name":"Docs"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://dev3.atsign.wtf/docs/sdk/","url":"https://dev3.atsign.wtf/docs/sdk/","name":"Sdk"}},{"@type":"ListItem","position":4,"item":{"@type":"WebPage","@id":"https://dev3.atsign.wtf/docs/sdk/flutter/","url":"https://dev3.atsign.wtf/docs/sdk/flutter/","name":"Flutter"}},{"@type":"ListItem","position":5,"item":{"@type":"WebPage","@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/","url":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/","name":"Services and Managers"}},{"@type":"ListItem","position":6,"item":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://dev3.atsign.wtf/#/schema/article/1","headline":"Key Basics","description":"Documentation\n","isPartOf":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"},"mainEntityOfPage":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"},"datePublished":"0001-01-01T00:00:00CET","dateModified":"0001-01-01T00:00:00CET","author":{"@id":"https://dev3.atsign.wtf/#/schema/person/2"},"publisher":{"@id":"https://dev3.atsign.wtf/#/schema/person/1"},"image":{"@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://dev3.atsign.wtf/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2","url":null,"contentUrl":null,"caption":"Key Basics"}]}]}</script><meta name=theme-color content="#fff"><link rel=apple-touch-icon sizes=180x180 href=https://dev3.atsign.wtf/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dev3.atsign.wtf/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dev3.atsign.wtf/favicon-16x16.png><link rel=manifest crossorigin=use-credentials href=https://dev3.atsign.wtf/site.webmanifest></head><body class="docs single"><div class=header-bar></div><header class="navbar navbar-expand-md navbar-light doks-navbar"><nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation"><a class="navbar-brand p-0 me-auto" href=https://dev3.atsign.wtf/ aria-label=@platform>@platform</a>
-<button class="btn btn-menu d-block d-md-none order-5" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasDoks aria-controls=offcanvasDoks aria-label="Open main menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="offcanvas offcanvas-end border-0 py-md-1" tabindex=-1 id=offcanvasDoks data-bs-backdrop=true aria-labelledby=offcanvasDoksLabel><div class="header-bar d-md-none"></div><div class="offcanvas-header d-md-none"><h2 class="h5 offcanvas-title ps-2" id=offcanvasDoksLabel><a class=text-dark href=https://dev3.atsign.wtf/>@platform</a></h2><button type=button class="btn-close text-reset me-2" data-bs-dismiss=offcanvas aria-label="Close main menu"></button></div><div class="offcanvas-body px-4"><h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3><ul class="nav flex-column flex-md-row ms-md-n3"><li class=nav-item><a class="nav-link ps-0 py-1 active" href=https://dev3.atsign.wtf/docs/>Docs</a></li></ul><hr class="text-black-50 my-4 d-md-none"><h3 class="h6 text-uppercase mb-3 d-md-none">Socials</h3><ul class="nav flex-column flex-md-row ms-md-auto me-md-n5 pe-md-2"></ul></div></div><button id=mode class="btn btn-link order-md-1" type=button aria-label="Toggle user interface mode">
-<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span><span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></button><div class="dropdown order-md-2"><button class="btn btn-doks-light dropdown-toggle" id=doks-languages data-bs-toggle=dropdown aria-expanded=false data-bs-display=static>
-EN
-<span class=dropdown-caret><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg></span></button><ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby=doks-languages><li><a class="dropdown-item current" aria-current=true href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/>English</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item rel=alternate href=https://dev3.atsign.wtf/no hreflang=no lang=no>Norsk</a></li></ul></div></nav></header><nav class="doks-subnavbar py-2 sticky-lg-top" aria-label="Secondary navigation"><div class="container-xxl d-flex align-items-md-center"><form class="doks-search position-relative flex-grow-1 me-auto"><input id=search class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off><div id=suggestions class="shadow bg-white rounded d-none"></div></form><button class="btn doks-sidebar-toggle d-lg-none ms-3 order-3 collapsed" type=button data-bs-toggle=collapse data-bs-target=#doks-docs-nav aria-controls=doks-docs-nav aria-expanded=false aria-label="Toggle documentation navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></button></div></nav><div class=container-xxl><aside class=doks-sidebar><nav id=doks-docs-nav class="collapse d-lg-none" aria-label="Tertiary navigation"><ul class="list-unstyled collapsible-sidebar"><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-e0c4332e8c13be976552a059f106354f aria-expanded=false>
-Get Started</button><div class=collapse id=section-e0c4332e8c13be976552a059f106354f><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/start/flutter/>Flutter Development</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/start/java/>Java Development</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/start/iot/>IOT devices</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/start/other/>Other</a></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-c0953da1565f6a97a0ad71261063f893 aria-expanded=false>
-Samples & Tutorials</button><div class=collapse id=section-c0953da1565f6a97a0ad71261063f893><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href>@mosphere pro</a></li><li><a class="docs-link rounded" href>@dude Tutorial</a></li><li class="my-1 ms-3"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-5a5c507983026cf2af9f40acb713f707 aria-expanded=false>
-at_demos</button><div class=collapse id=section-5a5c507983026cf2af9f40acb713f707><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"></ul></div></li><li class="my-1 ms-3"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-76633bb1ac6de866df853afb3570dcd5 aria-expanded=false>
-dess</button><div class=collapse id=section-76633bb1ac6de866df853afb3570dcd5><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/tutorials/dess/aws/1_introduction/>Setup dess on AWS (Amazon Web Services) Platform</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/tutorials/dess/gcp/1_introduction/>Setup dess on GCP (Google Cloud) Platform</a></li></ul></div></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-e0d05f991f966012c2faab6947c0f48e aria-expanded=true>
-SDK Reference</button><div class="collapse show" id=section-e0d05f991f966012c2faab6947c0f48e><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li class="my-1 ms-3"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-bc7b262f5ab8ae35343bdca044098569 aria-expanded=true>
-Flutter Reference</button><div class="collapse show" id=section-bc7b262f5ab8ae35343bdca044098569><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/sdk/flutter/overview/>Overview</a></li><li><a class="docs-link rounded active" href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/>Core SDK Services</a></li></ul></div></li><li class="my-1 ms-3"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-1d29bcc70ee3310d724c5d30f2aa23df aria-expanded=false>
-Java Reference</button><div class=collapse id=section-1d29bcc70ee3310d724c5d30f2aa23df><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"></ul></div></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-f363f309576976d1430a43f6744fcb59 aria-expanded=false>
-The @Platform</button><div class=collapse id=section-f363f309576976d1430a43f6744fcb59><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/atplatform/overview/>The @platform Overview</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/atplatform/architecture/>Architecture</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/atplatform/specification/>Protocol Specification</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/atplatform/root-server/>Root Server</a></li><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/atplatform/secondary-server/>Secondary Server</a></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-08d4b7213318a54c01606a0fa91412ef aria-expanded=false>
-Contribute to this Site</button><div class=collapse id=section-08d4b7213318a54c01606a0fa91412ef><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://dev3.atsign.wtf/docs/contribute/shortcodes/button/>Shortcodes tutorial</a></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-31d109d162629f8d0cfc8ce8316c0567 aria-expanded=false>
-Glossary</button><div class=collapse id=section-31d109d162629f8d0cfc8ce8316c0567><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"></ul></div></li></ul></nav></aside></div><div class="wrap container-xxl" role=document><div class=content><link rel=stylesheet href=https://dev3.atsign.wtf/main.9cfb867205a288836dc47e47f369544668d11baa204f7c820d8fbf49c538116d5b090a5052a2aaa01f71d54e8e46618db36fa798dd1f204625185c5298c34f4e.css integrity="sha512-nPuGcgWiiINtxH5H82lURmjRG6ogT3yCDY+/ScU4EW1bCQpQUqKqoB9x1U6ORmGNs2+nmN0fIEYlGFxSmMNPTg==" crossorigin=anonymous><div class=codelab><div class=codelab-nav-buttons><a class="codelab-arrow-back text-decoration-none" href=https://dev3.atsign.wtf/docs/sdk/flutter/ id=arrow-back>← Exit Codelab</a></div><div class=codelab-timer>⏱
-10 mins remaining</div><div class=codelab-title><h1>Core SDK Services</h1><p class=lead>Learn about the core services of the Flutter SDK</p></div><div class=codelab-drawer><h3 class=codelab-nav-title>Steps <span>in this module</span></h3><div class=codelab-steps><ol><li completed><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/><span class=codelab-step><span>Introduction</span></span></a></li><li completed><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_manager/><span class=codelab-step><span>AtClientManager</span></span></a></li><li completed><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_preference/><span class=codelab-step><span>AtClientPreference</span></span></a></li><li completed><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/><span class=codelab-step><span>Onboarding</span></span></a></li><li selected><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/><span class=codelab-step><span>Key Basics</span></span></a></li></ol></div></div><div class=codelab-body><div class=codelab-steps><div class=codelab-step><div class=codelab-instructions><h2 class=codelab-step-title>Key Basics</h2><h3 id=overview>Overview <a href=#overview class=anchor aria-hidden=true>#</a></h3><p>To store data, @platform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.</p><p><strong>AtKey Structure:</strong></p><table><thead><tr><th>Attributes</th><th>Description</th><th>Return Type</th></tr></thead><tbody><tr><td>key</td><td>Unique Identifier for the data</td><td>String</td></tr><tr><td>sharedWith</td><td>The @sign to share with</td><td>String</td></tr><tr><td>sharedBy</td><td>The @sign that is sharing</td><td>String</td></tr><tr><td>namespace</td><td>The namespace of the app</td><td>String</td></tr><tr><td>metadata</td><td></td><td>Metadata</td></tr><tr><td>isRef</td><td></td><td>Bool</td></tr></tbody></table><h3 id=metadata>Metadata <a href=#metadata class=anchor aria-hidden=true>#</a></h3><p>Metadata In AtKey allows you to add more aspects of AtKey. If you want your data to live for a given period of time, or if you want it to be born/deleted after a set amount of time, metaData can help you with that.</p><p><strong>Metadata Structure:</strong></p><table><thead><tr><th>Attributes</th><th>Capabilities</th><th>Return Type</th></tr></thead><tbody><tr><td>ttl</td><td></td><td>int</td></tr><tr><td>ttb</td><td></td><td>int</td></tr><tr><td>ttr</td><td></td><td>int</td></tr><tr><td>ccd</td><td></td><td>bool</td></tr><tr><td>availableAt</td><td></td><td>DateTime</td></tr><tr><td>expiresAt</td><td></td><td>DateTime</td></tr><tr><td>refreshAt</td><td></td><td>DateTime</td></tr><tr><td>createdAt</td><td></td><td>DateTime</td></tr><tr><td>updatedAt</td><td></td><td>DateTime</td></tr><tr><td>dataSignature</td><td></td><td>String</td></tr><tr><td>sharedKeyStatus</td><td></td><td>bool</td></tr><tr><td>isPublic</td><td></td><td>bool</td></tr><tr><td>isHidden</td><td></td><td>bool</td></tr><tr><td>namespaceAware</td><td></td><td>bool</td></tr><tr><td>isBinary</td><td></td><td>bool</td></tr><tr><td>isEncrypted</td><td></td><td>bool</td></tr><tr><td>isCached</td><td></td><td>bool</td></tr></tbody></table><p><strong>Key Creation rules</strong></p><p>A key in @protocol has the structure described below.</p><p><code>&lt;Key Visibility>|&lt;sharedWith>:&lt;entity>.&lt;namespace>@&lt;sharedBy/owner></code></p><p><a name=keyrules>A key in @protocol should adhere to following rules:</a></p><ol><li>Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)</li><li>Max of fifty five 7-bit characters for the @sign</li><li>Allowed characters in an entity are: [\w._,-’”<emoji list>] <to do : sitaram></li><li>Namespace is mandatory in the current implementation of the protocol</li><li>If cached then the owner of the key should not be same as current @sign</li><li>sharedWith and sharedBy/owner cannot be same for a shared key</li><li>sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (_), Just self)</li><li>Reserved keys in protocol, private keys and hidden keys cannot be notified
+<!doctype html>
+<html lang="en_US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.d4b01df3b6839a9c74147219fcec5d429d054a3e57db7dc8012060e0f962ea1143473e74ca19411fed7608aad48b3b0a5d9c70c43933dab5ce27260930c2d2bf.css" integrity="sha512-1LAd87aDmpx0FHIZ/OxdQp0FSj5X233IASBg4Pli6hFDRz50yhlBH&#43;12CKrUizsKXZxwxDkz2rXOJyYJMMLSvw==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Key Basics - @platform</title>
+<meta name="description" content="Documentation
+">
+<link rel="canonical" href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Key Basics">
+<meta property="og:description" content="Documentation
+">
+<meta property="og:url" content="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/">
+<meta property="og:site_name" content="@platform">
+
+  
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="atsigncompany">
+<meta name="twitter:creator" content="atsigncompany">
+<meta name="twitter:title" content="Key Basics">
+<meta name="twitter:description" content="Documentation
+">
+<meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="Key Basics">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://dev3.atsign.wtf/#/schema/person/1",
+      "name": "",
+      "url": "https://dev3.atsign.wtf/",
+      "sameAs": [
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://dev3.atsign.wtf/#/schema/image/1",
+          "url": "https://dev3.atsign.wtf/\u003cnil\u003e",
+          "width":  null ,
+          "height":  null ,
+          "caption": ""
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://dev3.atsign.wtf/#/schema/website/1",
+      "url": "https://dev3.atsign.wtf/",
+      "name": "@platform",
+      "description": "The @platform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.\n",
+      "publisher": {
+          "@id": "https://dev3.atsign.wtf/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/",
+      "url": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/",
+      "name": "Key Basics",
+      "description": "Documentation\n",
+      "isPartOf": {
+        "@id": "https://dev3.atsign.wtf/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://dev3.atsign.wtf/#/schema/person/1"
+        },
+      "datePublished": "0001-01-01T00:00:00CET",
+      "dateModified": "0001-01-01T00:00:00CET",
+      "breadcrumb": {
+        "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2"
+      },
+      "inLanguage": "",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/",
+          "url": "https://dev3.atsign.wtf/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/docs/",
+          "url": "https://dev3.atsign.wtf/docs/",
+          "name": "Docs"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/docs/sdk/",
+          "url": "https://dev3.atsign.wtf/docs/sdk/",
+          "name": "Sdk"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/",
+          "url": "https://dev3.atsign.wtf/docs/sdk/flutter/",
+          "name": "Flutter"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/",
+          "url": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/",
+          "name": "Services and Managers"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  6 ,
+        "item": {
+          "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://dev3.atsign.wtf/#/schema/article/1",
+          "headline": "Key Basics",
+          "description": "Documentation\n",
+          "isPartOf": {
+            "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/"
+          },
+          "datePublished": "0001-01-01T00:00:00CET",
+          "dateModified": "0001-01-01T00:00:00CET",
+          "author": {
+            "@id": "https://dev3.atsign.wtf/#/schema/person/2"
+          },
+          "publisher": {
+              "@id": "https://dev3.atsign.wtf/#/schema/person/1"
+            },
+          "image": {
+            "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://dev3.atsign.wtf/#/schema/person/2",
+          "name":  null ,
+          "sameAs": [
+            ]
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/#/schema/image/2",
+          "url":  null ,
+          "contentUrl":  null ,
+          "caption": "Key Basics"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="apple-touch-icon" sizes="180x180" href="https://dev3.atsign.wtf/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dev3.atsign.wtf/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dev3.atsign.wtf/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://dev3.atsign.wtf/site.webmanifest">
+
+</head>
+  <body class="docs single">
+    <div class="header-bar"></div>
+
+<header class="navbar navbar-expand-md navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-auto" href="https://dev3.atsign.wtf/" aria-label="@platform">
+      @platform
+    </a>
+
+    <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <div class="offcanvas offcanvas-end border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-md-none"></div>
+      <div class="offcanvas-header d-md-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="https://dev3.atsign.wtf/">@platform</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body px-4">
+        <h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3>
+        <ul class="nav flex-column flex-md-row ms-md-n3">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="https://dev3.atsign.wtf/docs/">Docs</a>
+              </li>
+            
+          </ul>
+        <hr class="text-black-50 my-4 d-md-none">
+        <h3 class="h6 text-uppercase mb-3 d-md-none">Socials</h3>
+        <ul class="nav flex-column flex-md-row ms-md-auto me-md-n5 pe-md-2">
+          </ul>
+      </div>
+    </div>
+    <button id="mode" class="btn btn-link order-md-1" type="button" aria-label="Toggle user interface mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <div class="dropdown order-md-2">
+      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+        EN
+        <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
+
+        <li><a class="dropdown-item current" aria-current="true" href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/">English</a></li>
+
+        <li><hr class="dropdown-divider"></li>
+
+      
+            <li><a class="dropdown-item" rel="alternate" href="https://dev3.atsign.wtf/no" hreflang="no" lang="no">Norsk</a></li>
+          
+      </ul>
+    </div>
+    </nav>
+</header>
+
+<nav class="doks-subnavbar py-2 sticky-lg-top" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+
+    <form class="doks-search position-relative flex-grow-1 me-auto">
+      <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+      <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+    </form>
+    <button class="btn doks-sidebar-toggle d-lg-none ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doks-docs-nav" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle documentation navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </button>
+
+  </div>
+</nav>
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-e0c4332e8c13be976552a059f106354f" aria-expanded="false">
+          Get Started
+        </button>
+        <div class="collapse" id="section-e0c4332e8c13be976552a059f106354f">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/flutter/">Flutter Development</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/java/">Java Development</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/iot/">IOT devices</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/other/">Other</a></li>
+                
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-c0953da1565f6a97a0ad71261063f893" aria-expanded="false">
+          Samples &amp; Tutorials
+        </button>
+        <div class="collapse" id="section-c0953da1565f6a97a0ad71261063f893">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                
+                
+                
+                <li><a class="docs-link rounded" href="">@mosphere pro</a></li>
+              
+            
+              
+                
+                
+                
+                
+                <li><a class="docs-link rounded" href="">@dude Tutorial</a></li>
+              
+            
+              
+                
+                  
+                  <li class="my-1 ms-3">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-5a5c507983026cf2af9f40acb713f707" aria-expanded="false">
+                      at_demos
+                    </button>
+                    <div class="collapse" id="section-5a5c507983026cf2af9f40acb713f707">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        
+                      </ul>
+                    </div>
+                  </li>
+                
+              
+            
+              
+                
+                  
+                  <li class="my-1 ms-3">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-76633bb1ac6de866df853afb3570dcd5" aria-expanded="false">
+                      dess
+                    </button>
+                    <div class="collapse" id="section-76633bb1ac6de866df853afb3570dcd5">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        
+                          
+                            
+                            
+                            
+                            
+                            <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/tutorials/dess/aws/1_introduction/">Setup dess on AWS (Amazon Web Services) Platform</a></li>
+                          
+                        
+                          
+                            
+                            
+                            
+                            
+                            <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/tutorials/dess/gcp/1_introduction/">Setup dess on GCP (Google Cloud) Platform</a></li>
+                          
+                        
+                      </ul>
+                    </div>
+                  </li>
+                
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-e0d05f991f966012c2faab6947c0f48e" aria-expanded="true">
+          SDK Reference
+        </button>
+        <div class="collapse show" id="section-e0d05f991f966012c2faab6947c0f48e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                  
+                  <li class="my-1 ms-3">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-bc7b262f5ab8ae35343bdca044098569" aria-expanded="true">
+                      Flutter Reference
+                    </button>
+                    <div class="collapse show" id="section-bc7b262f5ab8ae35343bdca044098569">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        
+                          
+                            
+                              
+                              <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/sdk/flutter/overview/">Overview</a></li>
+                            
+                          
+                        
+                          
+                            
+                            
+                            
+                            
+                            <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/">Core SDK Services</a></li>
+                          
+                        
+                      </ul>
+                    </div>
+                  </li>
+                
+              
+            
+              
+                
+                  
+                  <li class="my-1 ms-3">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-1d29bcc70ee3310d724c5d30f2aa23df" aria-expanded="false">
+                      Java Reference
+                    </button>
+                    <div class="collapse" id="section-1d29bcc70ee3310d724c5d30f2aa23df">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        
+                      </ul>
+                    </div>
+                  </li>
+                
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-f363f309576976d1430a43f6744fcb59" aria-expanded="false">
+          The @Platform
+        </button>
+        <div class="collapse" id="section-f363f309576976d1430a43f6744fcb59">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/atplatform/overview/">The @platform Overview</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/atplatform/architecture/">Architecture</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/atplatform/specification/">Protocol Specification</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/atplatform/root-server/">Root Server</a></li>
+                
+              
+            
+              
+                
+                  
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/atplatform/secondary-server/">Secondary Server</a></li>
+                
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-08d4b7213318a54c01606a0fa91412ef" aria-expanded="false">
+          Contribute to this Site
+        </button>
+        <div class="collapse" id="section-08d4b7213318a54c01606a0fa91412ef">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                
+                
+                
+                <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/contribute/shortcodes/button/">Shortcodes tutorial</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-31d109d162629f8d0cfc8ce8316c0567" aria-expanded="false">
+          Glossary
+        </button>
+        <div class="collapse" id="section-31d109d162629f8d0cfc8ce8316c0567">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+          
+  
+  
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.cb049d83f21805903f425681a168bd0b1e37615df3eb495e1cb8c9782937ab1c50a7746146ae5f55813eee038efb4c7cde99b4d4caf52b43f14a530bae2349de.css" integrity="sha512-ywSdg/IYBZA/QlaBoWi9Cx43YV3z60leHLjJeCk3qxxQp3RhRq5fVYE&#43;7gOO&#43;0x83pm01Mr1K0PxSlMLriNJ3g==" crossorigin="anonymous">
+  <div class="codelab">
+  <div class="codelab-nav-buttons">
+    <a class="codelab-arrow-back text-decoration-none" href="https://dev3.atsign.wtf/docs/sdk/flutter/" id="arrow-back">← Exit Codelab</a>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="codelab-timer">
+  
+  ⏱
+  
+  10 mins remaining
+  
+</div>
+
+  <div class="codelab-title">
+    
+    <h1>Core SDK Services</h1>
+    
+    
+    <p class="lead">Learn about the core services of the Flutter SDK</p>
+    
+  </div>
+  
+<div class="codelab-drawer">
+  <h3 class="codelab-nav-title">Steps <span>in this module</span></h3>
+  <div class="codelab-steps">
+    <ol>
+          
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/">
+          <span class="codelab-step">
+            <span>Introduction</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_manager/">
+          <span class="codelab-step">
+            <span>AtClientManager</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_preference/">
+          <span class="codelab-step">
+            <span>AtClientPreference</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/">
+          <span class="codelab-step">
+            <span>Onboarding</span>
+          </span>
+        </a>
+      </li>
+          
+      <li selected >
+        <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/">
+          <span class="codelab-step">
+            <span>Key Basics</span>
+          </span>
+        </a>
+      </li>
+      
+    </ol>
+  </div>
+</div>
+
+  <div class="codelab-body">
+    <div class="codelab-steps">
+      <div class="codelab-step">
+        <div class="codelab-instructions">
+          <h2 class="codelab-step-title">Key Basics</h2>
+          <h3 id="overview">Overview <a href="#overview" class="anchor" aria-hidden="true">#</a></h3>
+<p>To store data, @platform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.</p>
+<p><strong>AtKey Structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+<th>Return Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>Unique Identifier for the data</td>
+<td>String</td>
+</tr>
+<tr>
+<td>sharedWith</td>
+<td>The @sign to share with</td>
+<td>String</td>
+</tr>
+<tr>
+<td>sharedBy</td>
+<td>The @sign that is sharing</td>
+<td>String</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>The namespace of the app</td>
+<td>String</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td></td>
+<td>Metadata</td>
+</tr>
+<tr>
+<td>isRef</td>
+<td></td>
+<td>Bool</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadata">Metadata <a href="#metadata" class="anchor" aria-hidden="true">#</a></h3>
+<p>Metadata In AtKey allows you to add more aspects of AtKey. If you want your data to live for a given period of time, or if you want it to be born/deleted after a set amount of time, metaData can help you with that.</p>
+<p><strong>Metadata Structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Capabilities</th>
+<th>Return Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ttl</td>
+<td></td>
+<td>int</td>
+</tr>
+<tr>
+<td>ttb</td>
+<td></td>
+<td>int</td>
+</tr>
+<tr>
+<td>ttr</td>
+<td></td>
+<td>int</td>
+</tr>
+<tr>
+<td>ccd</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>availableAt</td>
+<td></td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>expiresAt</td>
+<td></td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>refreshAt</td>
+<td></td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td></td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td></td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>dataSignature</td>
+<td></td>
+<td>String</td>
+</tr>
+<tr>
+<td>sharedKeyStatus</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>isPublic</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>isHidden</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>namespaceAware</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>isBinary</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>isEncrypted</td>
+<td></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>isCached</td>
+<td></td>
+<td>bool</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Creation rules</strong></p>
+<p>A key in @protocol has the structure described below.</p>
+<p><code>&lt;Key Visibility&gt;|&lt;sharedWith&gt;:&lt;entity&gt;.&lt;namespace&gt;@&lt;sharedBy/owner&gt;</code></p>
+<p><a name="keyrules">A key in @protocol should adhere to following rules:</a></p>
+<ol>
+<li>Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)</li>
+<li>Max of fifty five 7-bit characters for the @sign</li>
+<li>Allowed characters in an entity are: [\w._,-’”<emoji list>] <TO DO : Sitaram></li>
+<li>Namespace is mandatory in the current implementation of the protocol</li>
+<li>If cached then the owner of the key should not be same as current @sign</li>
+<li>sharedWith and sharedBy/owner cannot be same for a shared key</li>
+<li>sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (_), Just self)</li>
+<li>Reserved keys in protocol, private keys and hidden keys cannot be notified
 Ex: notify:_secret@jagan:sitaram
-9.Protocol prevents creation of a key with a owner/sharedBy using an @sign that’s not owned by the current user.</li><li>Key cannot be a reserved key.</li></ol><p>List of reserved keys:</p><ul><li>privatekey:at_pkam_privatekey</li><li>privatekey:at_pkam_publickey</li><li>public:publickey</li><li>privatekey:privatekey</li><li>shared_key</li><li>privatekey:self_encryption_key</li><li>signing_privatekey</li><li>public:signing_publickey</li><li>privatekey:at_secret</li><li>privatekey:at_secret_deleted</li></ul><p><strong>@protocol data visibility</strong></p><p>The @protocol saves data created in a key-value pair format. @protocol lets you create data with three levels of visibility. They are public, shared and self data.
-In the @protocol a piece of data is identified as a certain data type based on the key structure. In the SDK, AtKey exposes abstractions to create keys for the various data types. Below sections describe this in detail.</p><p><strong>Public data</strong></p><p>Public data can be looked up without authentication. I.e. if @bob wants to lookup public data in the secondary server of @alice, @bob does not need to prove to @alice that he is @bob to see the data publicly shared by @alice. Public view of the @alice’s data will be the same for any user on the @platform. I.e. if @jane and @john look up some public data from @alice, it will be exactly the same as what @bob sees.</p><p>Good examples of public data in the real world are “first name” and the “last name”. We often don’t mind sharing our name with people, even random strangers.</p><p><strong>Signing of public data</strong>
-Public data is signed with the “private keys” of the user. Which means when @alice looks up @bob’s public data, @alice knows for sure that the data is indeed from @bob.</p><p><strong>Creating a public key in @protocol</strong></p><pre tabindex=0><code>var publicKey = AtKey.public(&#39;phone&#39;, namespace: &#39;wavi&#39;)
+9.Protocol prevents creation of a key with a owner/sharedBy using an @sign that’s not owned by the current user.</li>
+<li>Key cannot be a reserved key.</li>
+</ol>
+<p>List of reserved keys:</p>
+<ul>
+<li>privatekey:at_pkam_privatekey</li>
+<li>privatekey:at_pkam_publickey</li>
+<li>public:publickey</li>
+<li>privatekey:privatekey</li>
+<li>shared_key</li>
+<li>privatekey:self_encryption_key</li>
+<li>signing_privatekey</li>
+<li>public:signing_publickey</li>
+<li>privatekey:at_secret</li>
+<li>privatekey:at_secret_deleted</li>
+</ul>
+<p><strong>@protocol data visibility</strong></p>
+<p>The @protocol saves data created in a key-value pair format. @protocol lets you create data with three levels of visibility. They are public, shared and self data.
+In the @protocol a piece of data is identified as a certain data type based on the key structure. In the SDK, AtKey exposes abstractions to create keys for the various data types. Below sections describe this in detail.</p>
+<p><strong>Public data</strong></p>
+<p>Public data can be looked up without authentication. I.e. if @bob wants to lookup public data in the secondary server of @alice, @bob does not need to prove to @alice that he is @bob to see the data publicly shared by @alice. Public view of the @alice’s data will be the same for any user on the @platform. I.e. if @jane and @john look up some public data from @alice, it will be exactly the same as what @bob sees.</p>
+<p>Good examples of public data in the real world are “first name” and the “last name”. We often don’t mind sharing our name with people, even random strangers.</p>
+<p><strong>Signing of public data</strong>
+Public data is signed with the “private keys” of the user. Which means when @alice looks up @bob’s public data, @alice knows for sure that the data is indeed from @bob.</p>
+<p><strong>Creating a public key in @protocol</strong></p>
+<pre tabindex="0"><code>var publicKey = AtKey.public(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                 .build();
-</code></pre><p><strong>Persisting public data in @protocol</strong></p><pre tabindex=0><code>final atClientManager = await AtClientManager.getInstance()
+</code></pre><p><strong>Persisting public data in @protocol</strong></p>
+<pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
 var phoneKey = AtKey.public(&#39;phone&#39;, namespace: &#39;wavi&#39;)
              .build();;
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
-</code></pre><p><strong>Shared data</strong></p><p>Shared data does exactly what it says it does! It is created in order to share it with other people. These are the people we typically know and trust. When @bob shares his phone number with @alice, then only @alice can see that piece of data.
-Good examples of shared data in the real world are “phone number” and “email”. We only share these details with the people we know and trust.</p><p><strong>Encryption of shared data</strong></p><p>When @bob shares data to @alice, @bob generates a shared key for @alice and encrypts the data with the shared key. Further, the shared key is encrypted with the @alice public key. So the data shared is cryptographically secure.</p><p><strong>Creating a shared key in @protocol</strong></p><pre tabindex=0><code>var sharedKey = AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)                      
+</code></pre><p><strong>Shared data</strong></p>
+<p>Shared data does exactly what it says it does! It is created in order to share it with other people. These are the people we typically know and trust. When @bob shares his phone number with @alice, then only @alice can see that piece of data.
+Good examples of shared data in the real world are “phone number” and “email”. We only share these details with the people we know and trust.</p>
+<p><strong>Encryption of shared data</strong></p>
+<p>When @bob shares data to @alice, @bob generates a shared key for @alice and encrypts the data with the shared key.  Further, the shared key is encrypted with the @alice public key. So the data shared is cryptographically secure.</p>
+<p><strong>Creating a shared key in @protocol</strong></p>
+<pre tabindex="0"><code>var sharedKey = AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)                      
                 ..sharedWith(&#39;@bob&#39;).build();
-</code></pre><p><strong>Persisting shared data in @protocol</strong></p><pre tabindex=0><code>final atClientManager = await AtClientManager.getInstance()
+</code></pre><p><strong>Persisting shared data in @protocol</strong></p>
+<pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
 var phoneKey = AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)                                  
@@ -41,17 +884,29 @@ var phoneKey = AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
 </code></pre><p><strong>Self data</strong>
-Self data is created for self. If @bob creates data for self, only @bob and no one else can see the data.</p><p>Good examples of self data are “passwords” and “financial data”. We keep these details to ourselves.</p><p><strong>Encryption of self data</strong></p><p>When @bob creates data for self it is encrypted using @bob’s self encryption key.</p><p><strong>Creating a self key in @protocol</strong></p><pre tabindex=0><code>var selfKey = AtKey.self(&#39;phone&#39;, namespace: &#39;wavi&#39;)
+Self data is created for self.  If @bob creates data for self, only @bob and no one else can see the data.</p>
+<p>Good examples of self data are “passwords” and “financial data”. We keep these details to ourselves.</p>
+<p><strong>Encryption of self data</strong></p>
+<p>When @bob creates data for self it is encrypted using @bob’s self encryption key.</p>
+<p><strong>Creating a self key in @protocol</strong></p>
+<pre tabindex="0"><code>var selfKey = AtKey.self(&#39;phone&#39;, namespace: &#39;wavi&#39;)
               .build();
-</code></pre><p><strong>Persisting self data in @protocol</strong></p><pre tabindex=0><code>final atClientManager = await AtClientManager.getInstance()
+</code></pre><p><strong>Persisting self data in @protocol</strong></p>
+<pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
 var phoneKey = AtKey.self(&#39;phone&#39;, namespace: &#39;wavi&#39;)
              .build();
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
-</code></pre><sita lets add list of reserved keys><request your feedback on what to keep and what to throw away><pre><code>   All of the above rules are implemented and exposed using the validate() method on AtKey. These rules are enforced during creation of the data.
-</code></pre><p><strong>Key attributes of @protocol data</strong></p><p><em><strong>TTL - Time to live</strong></em></p><p>TTL (Time To Live) is the duration of time for which the key will be available. TTL is expressed in milliseconds. Adding TTL during the key creation results in the time at which the key expires.</p><pre tabindex=0><code>// Below key expires in 1 minute
+</code></pre><Sita lets add list of reserved keys>
+<Request your feedback on what to keep and what to throw away>
+<pre><code>   All of the above rules are implemented and exposed using the validate() method on AtKey. These rules are enforced during creation of the data.
+</code></pre>
+<p><strong>Key attributes of @protocol data</strong></p>
+<p><em><strong>TTL - Time to live</strong></em></p>
+<p>TTL (Time To Live) is the duration of time for which the key will be available. TTL is expressed in milliseconds. Adding TTL during the key creation results in the time at which the key expires.</p>
+<pre tabindex="0"><code>// Below key expires in 1 minute
 
 var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                ..sharedWith(&#39;bob&#39;)
@@ -60,8 +915,12 @@ var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
 </code></pre><p><strong>Scan/List behavior with TTL</strong>
-A key whose ttl has been set will be listed until a background job that runs at frequent time intervals deletes all the expired keys</p><p><strong>Lookup/Get behavior with TTL</strong>
-As long as the key has not expired, a “lookup” of the key returns the value that was set originally. After the key expiry, ‘null’ is returned when the key is looked up for a value.</p><p><em><strong>TTB - Time to birth</strong></em></p><p>TTB (Time To Birth) is the span of time within which the key’s value is not available. TTB is expressed in milliseconds. Adding TTB during the key creation results in the time at which the key&rsquo;s value is available.</p><pre tabindex=0><code>// Below key is available after 1 minute
+A key whose ttl has been set will be listed until a background job that runs at frequent time intervals deletes all the expired keys</p>
+<p><strong>Lookup/Get behavior with TTL</strong>
+As long as the key has not expired, a “lookup” of the key returns the value that was set originally. After the key expiry, ‘null’ is returned when the key is looked up for a value.</p>
+<p><em><strong>TTB - Time to birth</strong></em></p>
+<p>TTB (Time To Birth) is the span of time within which the key’s value is not available. TTB is expressed in milliseconds. Adding TTB during the key creation results in the time at which the key&rsquo;s value is available.</p>
+<pre tabindex="0"><code>// Below key is available after 1 minute
 
 var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                ..sharedWith(&#39;bob&#39;)
@@ -69,7 +928,15 @@ var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                .build();
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
-</code></pre><p><strong>Scan/List behavior with TTB</strong></p><p>A key whose ttb has been set will be listed.</p><p><strong>Lookup/Get behavior with TTB</strong></p><p>Until the key’s TTB is met, a “lookup” of the key returns ‘null’. After which the original value of the key is returned.</p><p><em><strong>TTR - Time to refresh</strong></em></p><p>TTR (Time To Refresh) is the span of time that represents the time interval at which the cached key will be refreshed with a new value(if the original key&rsquo;s value is updated). TTR is expressed in seconds. Further, TTR can also be set to &lsquo;-1&rsquo; which represents the value of the original key will not be updated and therefore the cached key need not be refreshed.</p><p><strong>Cacheability</strong></p><p>All of the data created resides in the secondary server of an @sign. The owner of an @sign can choose to allow the public and the shared data to be cached in the another @sign</p><pre tabindex=0><code>// Below key refreshes everyday
+</code></pre><p><strong>Scan/List behavior with TTB</strong></p>
+<p>A key whose ttb has been set will be listed.</p>
+<p><strong>Lookup/Get behavior with TTB</strong></p>
+<p>Until the key’s TTB is met, a “lookup” of the key returns ‘null’. After which the original value of the key is returned.</p>
+<p><em><strong>TTR - Time to refresh</strong></em></p>
+<p>TTR (Time To Refresh) is the span of time that represents the time interval at which the cached key will be refreshed with a new value(if the original key&rsquo;s value is updated). TTR is expressed in seconds. Further, TTR can also be set to &lsquo;-1&rsquo; which represents the value of the original key will not be updated and therefore the cached key need not be refreshed.</p>
+<p><strong>Cacheability</strong></p>
+<p>All of the data created resides in the secondary server of an @sign. The owner of an @sign can choose to allow the public and the shared data to be cached in the another @sign</p>
+<pre tabindex="0"><code>// Below key refreshes everyday
 // TTR accepts time units in seconds
 
 var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
@@ -78,12 +945,171 @@ var phoneKey = (AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                .build();
 var value = &#39;+1 100 200 300&#39;;
 var putResult = await atClient.put(phoneKey, value);
-</code></pre><p><strong>Scan/List behavior with TTR</strong></p><p>All the keys with TTR and the cached keys that are created as a result of TTR are listed.</p><p><strong>Lookup/Get behavior with TTR</strong></p><p>During lookup of a key, fetches for availability of the corresponding cached key. If a cached key is available, the value is returned. If cached is not available, fetches the value from the original key.</p><p><strong>Update behavior with TTR</strong>
-Only the owner of the key reserves the right to update the value. Updating the cached key’s value is prohibited.</p><p><strong>Propagation of an update to the cached key</strong></p><p>When an original key is updated by the creator, the ones who have cached it need to update the cached copy too. This can happen in two ways:</p><ol><li>The Auto-Notify notifies the updated value to another @sign, thereby the cached key’s value is updated.</li><li>The refresh job in the secondary server</li></ol><p><em><strong>CCD - Cascade delete</strong></em></p><p>CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the origi</p><p><strong>@protocol CRUD operations</strong></p><p><strong>Create/Update Data</strong>
-SDK of @protocol exposes two methods to create the data. They are:</p><ul><li>put</li><li>putMeta</li></ul><p><em><strong>put</strong></em></p><p>Update’s value of key is if it is already present. Otherwise creates a new key.</p><p>To share a key to another @sign, use AtKey.shared() factory method or populate AtKey.sharedWith with the @sign to whom the data has to be shared. Further, notifies the sharedWith @sign that a key has been created.</p><p><strong>Signature</strong></p><p><code>Future&lt;bool> put(AtKey key, dynamic value);</code></p><p>Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.</p><p>AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. <a href=#keyrules>key rules</a></p><p>The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.</p><p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p><p><em><strong>putMeta</strong></em></p><p>Updates the metadata of the key.</p><p><em>Signature</em></p><p><code>Future&lt;bool> putMeta(AtKey key);</code></p><p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].</p><p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.</p><p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p><p><strong>Read Data</strong></p><p><em><strong>get</strong></em></p><p>Get the value of the key from the user&rsquo;s cloud secondary.
+</code></pre><p><strong>Scan/List behavior with TTR</strong></p>
+<p>All the keys with TTR and the cached keys that are created as a result of TTR are listed.</p>
+<p><strong>Lookup/Get behavior with TTR</strong></p>
+<p>During lookup of a key, fetches for availability of the corresponding cached key. If a cached key is available, the value is returned. If cached is not available, fetches the value from the original key.</p>
+<p><strong>Update behavior with TTR</strong>
+Only the owner of the key reserves the right to update the value. Updating the cached key’s value is prohibited.</p>
+<p><strong>Propagation of an update to the cached key</strong></p>
+<p>When an original key is updated by the creator, the ones who have cached it need to update the cached copy too. This can happen in two ways:</p>
+<ol>
+<li>The Auto-Notify notifies the updated value to another @sign, thereby the cached key’s value is updated.</li>
+<li>The refresh job in the secondary server</li>
+</ol>
+<p><em><strong>CCD - Cascade delete</strong></em></p>
+<p>CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the origi</p>
+<p><strong>@protocol CRUD operations</strong></p>
+<p><strong>Create/Update Data</strong>
+SDK of @protocol exposes two methods to create the data. They are:</p>
+<ul>
+<li>put</li>
+<li>putMeta</li>
+</ul>
+<p><em><strong>put</strong></em></p>
+<p>Update’s value of key is if it is already present. Otherwise creates a new key.</p>
+<p>To share a key to another @sign, use AtKey.shared() factory method or populate AtKey.sharedWith with the @sign to whom the data has to be shared. Further, notifies the sharedWith @sign that a key has been created.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future&lt;bool&gt; put(AtKey key, dynamic value);</code></p>
+<p>Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.</p>
+<p>AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. <a href="#keyrules">key rules</a></p>
+<p>The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><em><strong>putMeta</strong></em></p>
+<p>Updates the metadata of the key.</p>
+<p><em>Signature</em></p>
+<p><code>Future&lt;bool&gt; putMeta(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].</p>
+<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>Read  Data</strong></p>
+<p><em><strong>get</strong></em></p>
+<p>Get the value of the key from the user&rsquo;s cloud secondary.
 Signature
-<code>Future&lt;AtValue> get (AtKey key);</code></p><p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.</p><p>Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.</p><p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p><p><em><strong>getMeta</strong></em></p><p>Gets the metadata of the key.</p><p><strong>Signature</strong></p><p><code>Future &lt;bool> getMeta(AtKey key);</code></p><p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.</p><p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.</p><p>Throws <em>AtClientException</em> with an error code and error description that describes that cause of the exception.</p><p><strong>Delete Data</strong></p><p>Deletes the key.</p><p><strong>Signature</strong>
-<code>Future&lt;bool> delete(AtKey key);</code></p><p>Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another @sign, notifies the other @sign on the deletion of the key.</p><p>Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.</p><p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p><p><strong>List of Keys</strong></p><p><em><strong>getKeys</strong></em></p><p>Get all the keys stored in the user&rsquo;s secondary in string format.</p><p><em>Signature</em></p><p><code>Future &lt;&lt;List&lt;String>> getKeys({String? regex, String? sharedBy, String? sharedWith});</code></p><p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p><p><em><strong>getAtKeys</strong></em></p><p>Get all the keys stored in the user&rsquo;s secondary in [AtKey] format.</p><p><strong>Signature</strong></p><p><code>Future &lt;&lt;List&lt;AtKey>> getAtKeys({String? regex, String? sharedBy, String? sharedWith});</code></p><p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p><p><strong>Notification</strong></p></div></div></div><div class=codelab-controls><div class=fabs><a href=https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/ id=previous-step title="Previous step">Back</a><div class=spacer></div><a href=https://dev3.atsign.wtf/docs/sdk/flutter/ id=done title="Codelab complete">Done</a></div></div></div></div></div></div><footer class="footer text-muted"><div class=container-xxl><div class=row><div class="col-lg-8 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>TODO - FOOTER INFO</li></ul></div><div class="col-lg-8 order-first order-lg-last text-lg-end"><ul class=list-inline></ul></div></div></div></footer><script src=https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js integrity="sha512-+T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs+38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin=anonymous defer></script>
-<script src=https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin=anonymous defer></script>
-<script src=https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin=anonymous defer></script>
-<script src=https://dev3.atsign.wtf/index.min.0e4aeff3dace80dda829e015ae4649fa4818973dc4267349e8845229ad91153efce8a0b4f8d3f21ce54bac24962fa339facf61806491e01cce984f2190fef439.js integrity="sha512-Dkrv89rOgN2oKeAVrkZJ+kgYlz3EJnNJ6IRSKa2RFT786KC0+NPyHOVLrCSWL6M5+s9hgGSR4BzOmE8hkP70OQ==" crossorigin=anonymous defer></script></body></html>
+<code>Future&lt;AtValue&gt; get (AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.</p>
+<p>Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><em><strong>getMeta</strong></em></p>
+<p>Gets  the metadata of the key.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future &lt;bool&gt; getMeta(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.</p>
+<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.</p>
+<p>Throws <em>AtClientException</em> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>Delete Data</strong></p>
+<p>Deletes the key.</p>
+<p><strong>Signature</strong>
+<code>Future&lt;bool&gt; delete(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another @sign, notifies the other @sign on the deletion of the key.</p>
+<p>Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>List of Keys</strong></p>
+<p><em><strong>getKeys</strong></em></p>
+<p>Get all the keys stored in the user&rsquo;s secondary in string format.</p>
+<p><em>Signature</em></p>
+<p><code>Future &lt;&lt;List&lt;String&gt;&gt; getKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
+<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
+<p><em><strong>getAtKeys</strong></em></p>
+<p>Get all the keys stored in the user&rsquo;s secondary in [AtKey] format.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future &lt;&lt;List&lt;AtKey&gt;&gt; getAtKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
+<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
+<p><strong>Notification</strong></p>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+<div class="codelab-controls">
+  <div class="fabs">
+    
+    <a href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/" id="previous-step" title="Previous step">Back</a>
+    
+    <div class="spacer"></div>
+    
+    <a href="https://dev3.atsign.wtf/docs/sdk/flutter/" id="done" title="Codelab complete">Done</a>
+    
+  </div>
+</div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">TODO - FOOTER INFO
+</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.0e4aeff3dace80dda829e015ae4649fa4818973dc4267349e8845229ad91153efce8a0b4f8d3f21ce54bac24962fa339facf61806491e01cce984f2190fef439.js" integrity="sha512-Dkrv89rOgN2oKeAVrkZJ&#43;kgYlz3EJnNJ6IRSKa2RFT786KC0&#43;NPyHOVLrCSWL6M5&#43;s9hgGSR4BzOmE8hkP70OQ==" crossorigin="anonymous" defer></script>
+  
+  </body>
+</html>
