@@ -10,7 +10,7 @@ const safelist = [
   // Details shortcode
   'disappear',
   'open',
-  // Global announcment
+  // Global announcement
   'announcement',
   'data-global-alert',
   // Content headers
