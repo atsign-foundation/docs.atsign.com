@@ -22,7 +22,8 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 {{% /card/group %}}
 
 ### Samples & Tutorials
-{{<card/breadcrumb link="/docs/samples_and_tutorials/dess" first="Dess">}}
+{{<card/breadcrumb href="/docs/_tutorials/_at_dude" first="at_dude">}}
+{{<card/breadcrumb href="/docs/_tutorials/_dess" first="Dess">}}
 #### References
 {{<card/breadcrumb href="/docs/sdk/flutter" first="SDK Reference" second="Flutter">}}
 {{<card/breadcrumb href="/docs/sdk/java" first="SDK Reference" second="Java">}}
