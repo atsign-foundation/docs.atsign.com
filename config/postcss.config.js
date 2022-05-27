@@ -1,19 +1,27 @@
 const autoprefixer = require('autoprefixer');
 const purgecss = require('@fullhuman/postcss-purgecss');
 
-const attributes = [
+const safelist = [
+  // DOM attributes
   'data-dark-mode',
   'completed',
   'selected',
   'disappear',
   'open',
+  'announcement',
   'data-global-alert',
-  'id'
-];
-
-const highlightJs = [
+  'id',
+  // Highlight JS
   'hljs',
-  /^hljs-.*/
+  /^hljs-.*/,
+  // Search bar
+  'suggestions',
+  /suggestion__.*/,
+  // Mermaid diagrams
+  'language-mermaid',
+  // Scroll-lock
+  'sidebar-default',
+  'sidebar-scroll',
 ];
 
 module.exports = {
@@ -29,10 +37,7 @@ module.exports = {
           ...(els.ids || []),
         ];
       },
-      safelist: [
-        ...attributes,
-        ...highlightJs,
-      ]
+      safelist,
     }),
   ],
 };
