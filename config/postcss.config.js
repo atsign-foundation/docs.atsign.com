@@ -2,14 +2,18 @@ const autoprefixer = require('autoprefixer');
 const purgecss = require('@fullhuman/postcss-purgecss');
 
 const safelist = [
-  // DOM attributes
+  // Dark mode
   'data-dark-mode',
+  // Codelab sidebar selectors
   'completed',
   'selected',
+  // Details shortcode
   'disappear',
   'open',
+  // Global announcment
   'announcement',
   'data-global-alert',
+  // Content headers
   'id',
   // Highlight JS
   'hljs',
