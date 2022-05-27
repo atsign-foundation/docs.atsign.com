@@ -11,6 +11,11 @@ const attributes = [
   'id'
 ];
 
+const highlightJs = [
+  'hljs',
+  /^hljs-.*/
+];
+
 module.exports = {
   plugins: [
     autoprefixer(),
@@ -22,10 +27,12 @@ module.exports = {
           ...(els.tags || []),
           ...(els.classes || []),
           ...(els.ids || []),
-          ...attributes,
         ];
       },
-      safelist: []
+      safelist: [
+        ...attributes,
+        ...highlightJs,
+      ]
     }),
   ],
 };
