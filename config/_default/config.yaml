@@ -44,6 +44,7 @@ module:
         - scss/common/_variables.scss
         - scss/common/_fonts.scss
         - js/highlight.js
+        - js/mermaid.js
     - source: node_modules/font-awesome/scss
       target: assets/scss/font-awesome
 
