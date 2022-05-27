@@ -14,6 +14,7 @@ const safelist = [
   // Highlight JS
   'hljs',
   /^hljs-.*/,
+  'btn-copy',
   // Search bar
   'suggestions',
   /suggestion__.*/,
