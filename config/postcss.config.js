@@ -1,14 +1,32 @@
 const autoprefixer = require('autoprefixer');
 const purgecss = require('@fullhuman/postcss-purgecss');
 
-const attributes = [
+const safelist = [
+  // Dark mode
   'data-dark-mode',
+  // Codelab sidebar selectors
   'completed',
   'selected',
+  // Details shortcode
   'disappear',
   'open',
+  // Global announcement
+  'announcement',
   'data-global-alert',
-  'id'
+  // Content headers
+  'id',
+  // Highlight JS
+  'hljs',
+  /^hljs-.*/,
+  'btn-copy',
+  // Search bar
+  'suggestions',
+  /suggestion__.*/,
+  // Mermaid diagrams
+  'language-mermaid',
+  // Scroll-lock
+  'sidebar-default',
+  'sidebar-scroll',
 ];
 
 module.exports = {
@@ -22,10 +40,9 @@ module.exports = {
           ...(els.tags || []),
           ...(els.classes || []),
           ...(els.ids || []),
-          ...attributes,
         ];
       },
-      safelist: []
+      safelist,
     }),
   ],
 };
