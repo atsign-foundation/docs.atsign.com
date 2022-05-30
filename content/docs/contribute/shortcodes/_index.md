@@ -1,8 +1,8 @@
 ---
 layout: codelab-list
-title: Atsign.dev shortcodes
+title: Shortcodes tutorial
 lead: Learn about the various shortcodes used on this website
-description: "Atsign.dev shortcodes"
+description: "Atsign.dev shortcodes tutorial"
 doneLink: /docs/contribute
 exitLink: /docs/contribute
 weight: 1

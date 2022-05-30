@@ -1,38 +1,48 @@
 const autoprefixer = require('autoprefixer');
 const purgecss = require('@fullhuman/postcss-purgecss');
-const whitelister = require('purgecss-whitelister');
+
+const safelist = [
+  // Dark mode
+  'data-dark-mode',
+  // Codelab sidebar selectors
+  'completed',
+  'selected',
+  // Details shortcode
+  'disappear',
+  'open',
+  // Global announcement
+  'announcement',
+  'data-global-alert',
+  // Content headers
+  'id',
+  // Highlight JS
+  'hljs',
+  /^hljs-.*/,
+  'btn-copy',
+  // Search bar
+  'suggestions',
+  /suggestion__.*/,
+  // Mermaid diagrams
+  'language-mermaid',
+  // Scroll-lock
+  'sidebar-default',
+  'sidebar-scroll',
+];
 
 module.exports = {
   plugins: [
     autoprefixer(),
     purgecss({
-      content: [
-        './node_modules/@hyas/doks/layouts/**/*.html',
-        './node_modules/@hyas/doks/content/**/*.md',
-        './layouts/**/*.html',
-        './content/**/*.md',
-      ],
-      safelist: [
-        'lazyloaded',
-        'table',
-        'thead',
-        'tbody',
-        'tr',
-        'th',
-        'td',
-        ...whitelister([
-          './node_modules/@hyas/doks/assets/scss/common/_variables.scss',
-          './node_modules/@hyas/doks/assets/scss/components/_doks.scss',
-          './node_modules/@hyas/doks/assets/scss/components/_code.scss',
-          './node_modules/@hyas/doks/assets/scss/components/_buttons.scss',
-          './node_modules/@hyas/doks/assets/scss/components/_search.scss',
-          './node_modules/@hyas/doks/assets/scss/common/_dark.scss',
-          './assets/scss/common/_variables.scss',
-          './assets/scss/components/_overrides.scss',
-          './assets/scss/common/_dark.scss',
-          './node_modules/katex/dist/katex.css',
-        ]),
-      ],
+      content: ['./hugo_stats.json'],
+      defaultExtractor: content => {
+        const els = JSON.parse(content).htmlElements;
+        return [
+          ...(els.tags || []),
+          ...(els.classes || []),
+          ...(els.ids || []),
+        ];
+      },
+      safelist,
     }),
   ],
 };

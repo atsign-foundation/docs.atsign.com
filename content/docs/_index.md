@@ -4,7 +4,7 @@ layout: root
 title: '@platform Documentation' # The title (ON THE PAGE)
 lead: 'Learn all about how the @platform works.' # The lead below the title (ON THE PAGE)
 
-linkTitle: Docs # The title in the navigation
+
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
   Documentation for the @platform.
 
@@ -15,10 +15,25 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 
 ---
 
-#### I want to...
+### I want to...
 {{% card/group %}}
-  {{< card/feature href="/docs/get-started" title="Get Started" text="This is a card with lots of inner text to determine whether it fits nicely within the card itself." >}}
-  {{< card/feature href="/docs/get-started" title="Get Started" text="This is a card with lots of inner text to determine whether it fits nicely within the card itself.">}}
+  {{< card/feature href="/docs/start" title="Get Started" text="Follow our getting started guide here" >}}
+  {{< card/feature href="/docs/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
+{{% /card/group %}}
+{{% card/group %}}
+  {{< card/feature href="/docs/atplatform" title="Learn the platform" text="See our infrastructure overview here" >}}
+  {{< card/feature href="/docs/tutorials" title="Follow a tutorial" text="Find a specific tutorial here">}}
+{{% /card/group %}}
+
+### Featured Tutorials
+
+{{% card/group %}}
+  {{< card/feature href="/docs/tutorials/atmosphere-pro" title="@moshere pro" text="An open source end-to-end encrypted file sharing app" >}}
+  {{< card/feature href="/docs/tutorials/at-dude" title="@dude app" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
+{{% /card/group %}}
+{{% card/group %}}
+  {{< card/feature href="/docs/tutorials/dess/aws" title="dess - AWS" text="Host your own secondary server on Amazon Web Services" >}}
+  {{< card/feature href="/docs/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
 
 ### Samples & Tutorials
@@ -28,7 +43,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 {{<card/breadcrumb href="/docs/sdk/flutter" first="SDK Reference" second="Flutter">}}
 {{<card/breadcrumb href="/docs/sdk/java" first="SDK Reference" second="Java">}}
 
-{{<image class="bg-white" src="https://atsign.dev/assets/img/@dev.png?sanitize=true" >}}
+### More Options
+{{<card/breadcrumb link="/docs/contribute" first="Contribute to this site">}}
+{{<card/breadcrumb link="/docs/glossary" first="Glossary">}}
 
-{{<button/link type="secondary" href="/docs/sdk/java" text="Go to Java">}}
-{{<button/link href="/docs/sdk/flutter" text="Go to Flutter">}}

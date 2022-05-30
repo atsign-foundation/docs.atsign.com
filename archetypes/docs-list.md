@@ -5,7 +5,7 @@ title: 'My title' # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   My lead
 
-linkTitle: My Link title # The title in the navigation
+
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
     My SEO description
 

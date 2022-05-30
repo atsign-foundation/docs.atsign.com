@@ -8,5 +8,5 @@ description: | # SEO Description of the codelab (Shows in google and atsign.dev 
 
 doneLink: /docs/ # Where to send them if they press "Done" at the end of the Codelab
 exitLink: /docs/ # Where to send them if they press "Exit Codelab"
-weight: 2
+weight: 1
 ---

@@ -1,2 +1,5 @@
 baseurl: "https://atsign.dev/"
 canonifyURLs: true
+build:
+  writeStats: true
+  
