@@ -267,27 +267,6 @@ Lines 5 to 8 creates the Profile `Metadata` and lines 10 to 13 creates the Profi
       if (dude.duration > profileModel.longestDude) {
         profileModel.saveLongestDude(dude.duration);
       }
-    }
-    ...
-```
-
-
-
-
-```dart
-  Future<bool> putDude(
-      DudeModel dude, String contactAtsign, BuildContext context) async {
-        ...
-    try {
-      AtValue profileAtValue = await atClient!.get(profileKey);
-      ProfileModel profileModel =
-          ProfileModel.fromJson(jsonDecode(profileAtValue.value));
-      profileModel.saveId(dude.sender);
-      profileModel.dudesSent += 1;
-      profileModel.dudeHours += dude.duration;
-      if (dude.duration > profileModel.longestDude) {
-        profileModel.saveLongestDude(dude.duration);
-      }
       await atClient!
           .put(
             profileKey,
@@ -297,6 +276,28 @@ Lines 5 to 8 creates the Profile `Metadata` and lines 10 to 13 creates the Profi
           )
           .whenComplete(() => isCompleted = true)
           .onError((error, stackTrace) => isCompleted = false);
+    }
+    ...
+  )
+```
+Lines 5 to 7 retrieves the `ProfileModel` data from the remote secondary. We will discuss the `AtClient!.get()` method later in this code lab. 
+
+Lines 9 to 10 updated the `ProfileModel` by incrementing the previous values.
+
+Lines 11 to 12 compare the current `dude.duration` with the previous `profileModel.longestDude` and saves the current `dude.duration` if it is the longest duration of the two.
+
+Lines 14 to 22 saves the `profileModel` to remote secondary.
+
+The code was placed in a try block because it will throw an exception if there is no `ProfileModel` in remote secondary.
+
+
+
+
+```dart
+  Future<bool> putDude(
+      DudeModel dude, String contactAtsign, BuildContext context) async {
+        ...
+    
     } catch (e) {
       // Exception should be thrown the first time a profile is created for an atsign
       await atClient!
@@ -317,6 +318,55 @@ Lines 5 to 8 creates the Profile `Metadata` and lines 10 to 13 creates the Profi
     return isCompleted;
     }
 ```
+Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only execute the first time a profileModel is created for an @sign.
+
+```dart
+  /// Receives all dudes sent to the current atsign.
+  Future<List<DudeModel>> getDudes() async {
+    List<AtKey> receivedKeysList = [];
+    var key = await atClient!.getAtKeys(
+      regex: '^cached:.*@.+\$',
+      // sharedBy: atsign,
+    );
+
+    receivedKeysList.addAll(key);
+    ...
+  }
+```
+    // @blizzard30:some_uuid.at_skeleton_app@assault30
+    // @blizzard30:signing_privatekey@blizzard30
+
+This method retrieves the `DudeModel` thats stored on remote secondary.
+
+Lines 3 instantiates an empty list that will eventually store `AtKeys`.
+
+Lines 4 to 7 grabs all the `AtKey` stored in the current @sign remote secondary.
+
+Line 9 add the keys to the `receivedKeysList`.
+
+```dart
+  /// Receives all dudes sent to the current atsign.
+  Future<List<DudeModel>> getDudes() async {
+    ...
+    List<DudeModel> dudes = [];
+    for (AtKey key in receivedKeysList) {
+      try {
+        if (key.sharedBy != null && key.key!.length == 36) {
+          AtValue _keyValue = await atClient!.get(AtKey()..key = key.key!);
+
+          dudes.add(DudeModel.fromJson(jsonDecode(_keyValue.value)));
+        }
+      } on Exception catch (e) {
+        ScaffoldMessenger(child: SnackBar(content: Text(e.toString())));
+      }
+    }
+    return dudes;
+  }
+```
+
+Line 4 instantiates an empty list that will eventually store the `DudeModel` extracted from remote secondary.
+
+Lines 5 to 15 loops through every `AtKey` in the  `receivedKeysList`.
 
 #### LocalNotificationService
 
