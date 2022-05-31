@@ -36,12 +36,6 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
   {{< card/feature href="/docs/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
 
-### Samples & Tutorials
-{{<card/breadcrumb href="/docs/_tutorials/_at_dude" first="at_dude">}}
-{{<card/breadcrumb href="/docs/_tutorials/_dess" first="Dess">}}
-#### References
-{{<card/breadcrumb href="/docs/sdk/flutter" first="SDK Reference" second="Flutter">}}
-{{<card/breadcrumb href="/docs/sdk/java" first="SDK Reference" second="Java">}}
 
 ### More Options
 {{<card/breadcrumb link="/docs/contribute" first="Contribute to this site">}}

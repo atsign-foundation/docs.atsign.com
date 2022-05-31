@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 7 # Ordering of the steps
+order: 8 # Ordering of the steps
 ---
 
 At this step you should already have your @sign registered at [atsign.com](http://atsign.com). If not go do it!

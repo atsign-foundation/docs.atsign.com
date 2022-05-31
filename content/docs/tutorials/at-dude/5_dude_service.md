@@ -1,16 +1,16 @@
 ---
 layout: codelab
 
-title: 'Services' # Step Name
+title: 'Dude Service' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 4 # Ordering of the steps
+order: 5 # Ordering of the steps
 ---
 | TOC                              |
 |----------------------------------|
-|  [Navigation Service](#navigationservice)       |
+
 |  [Dude Service](#dudeservice)         |
 |  [Dude Service Imports](#imports)             |
 |  [Dude Service Properties](#properties-of-dudeservice) |
@@ -20,22 +20,6 @@ order: 4 # Ordering of the steps
 
 
 They are three service classes in the dude app, they are `NavigationServices()`, `DudeServices()` and `LocalNotificationServices()`. In this code lab we will explore the properties of these classes.
-
-
-#### NavigationService
-
-```dart
-import 'package:flutter/material.dart';
-
-class NavigationService {
-  static GlobalKey<NavigatorState> navKey = GlobalKey();
-
-  static GlobalKey<NavigatorState> nesteNavKey = GlobalKey();
-}
-
-```
-
-This Class contains two static properties of type `GlobalKey`. It allows us to get the current context without being inside a builder method.
 
 #### DudeService
 
@@ -320,6 +304,7 @@ The code was placed in a try block because it will throw an exception if there i
 ```
 Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only execute the first time a profileModel is created for an @sign.
 
+##### Getting Dudes from remote secondary
 ```dart
   /// Receives all dudes sent to the current atsign.
   Future<List<DudeModel>> getDudes() async {
@@ -368,56 +353,104 @@ Line 4 instantiates an empty list that will eventually store the `DudeModel` ext
 
 Lines 5 to 15 loops through every `AtKey` in the  `receivedKeysList`.
 
-#### LocalNotificationService
+line 7 filters the receivedKeysList to only select `AtKey` that was shared and where the key/id is a UUID.
 
-This class contains the configurations required to send in app notification on Android and IOS.
+line 8 extract the `AtValue` of the `AtKey`
 
-##### imports
+line 10 converts the value of the `AtValue` to a `DudeModel` and add it to the empty dudes list.
+
+line 13 shows a SnackBar with the exception message if an error occurs.
+
+Line 16 returns the `List` of `DudeModel`.
+
+#### Monitor Notification
+
+The @platform has its own Notification Service that monitors being sent to the current @sign.
 
 ```dart
-import 'dart:io';
+void monitorNotifications(BuildContext context) {
+    atClientManager.notificationService
+        .subscribe(regex: 'at_skeleton_app')
+        .listen(
+      (AtNotification notification) async {
+        String? currentAtsign =
+            DudeService.getInstance().atClient!.getCurrentAtSign();
 
-import 'package:flutter/material.dart';
-
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
-
-import '../screens/history_screen.dart';
-import 'navigation_service.dart';
+        if (currentAtsign == notification.to) {
+          await LocalNotificationService().showNotifications(
+              notification.id.length,
+              'Dude',
+              '${notification.from} sent you a dude',
+              1);
+        }
+      },
+    );
+  }
 ```
 
-The flutter_local_notification` package is used to send notifications.
+Line 3 subscribe to data being sent over the dude app. 
 
-##### Properties of LocalNotificationService
+In line the listen method expects an option function. This function receives an `AtNotification` that allows us to control what data we want to listen for as show in lines 5 to 16.
+
+In line 6 to 7 we get the current atsign. In line 9 we filter the notification to ensure the notification is being sent to the current atsign.
+
+In lines 10 to 14 we show the user a notification that a dude was sent to them by the @sign of the sender.
+
+#### Get Contacts
+
 ```dart
-class LocalNotificationService {
-  static final LocalNotificationService _notificationService =
-      LocalNotificationService._internal();
-
-  factory LocalNotificationService.getInstance() {
-    return _notificationService;
+  /// Fetch the current atsign contacts.
+  Future<List<AtContact>?> getContactList() {
+    return contactService.fetchContacts();
   }
-
-  factory LocalNotificationService() {
-    return _notificationService;
-  }
-
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-      FlutterLocalNotificationsPlugin();
-
-  LocalNotificationService._internal();
-  
-  Future<void> initNotification() async {...}
-
-  _requestIOSPermission() {...}
-
-  /// Shows notification when dude is sent to the current atsign.
-  ///
-  /// Notification currently only works in app on android.
-  Future<void> showNotifications(
-      int id, String title, String body, int seconds) async {...}
-}
 ```
 
-Similar to `DudeService()` this class is a singleton. Lines 13 and 14 instantiates the `FlutterLocalNotificationsPlugin`.
+Line 3 returns a list of `AtContacts`. An AtContact is a class containing properties of other atsigns that was selected as a contact.
+
+#### Get Profile
+
+This method retrieves the `ProfileModel` of the current atsign.
+```dart
+  /// Get the profile stats for the current atsign
+  Future<ProfileModel> getProfile() async {
+    return await atClient!
+        .getAtKeys(
+          regex: 'dude_profile_',
+          sharedBy: atClient!.getCurrentAtSign(),
+        )
+        .then(
+          (value) => atClient!.get(value[0]).then(
+                (value) => ProfileModel.fromJson(
+                  jsonDecode(value.value),
+                ),
+              ),
+        );
+  }
+```
+Lines 3 to 7 gets a list profile models AtKeys, there only one AtKey in the list. Line 9 returns the AtValue and lines 10 to 11 returns the `ProfileModel` class. 
+
+
+### Delete Dude
+
+This dude deletes a dude from remote secondary.
+```dart
+ /// Delete dude sent to the current atsign.
+  Future<bool> deleteDude(DudeModel dude) async {
+    try {
+      List<AtKey> dudeAtKey = await atClient!.getAtKeys(regex: dude.id);
+      bool isDeleted = await atClient!.delete(dudeAtKey[0]);
+
+      return isDeleted;
+    } on AtClientException catch (atClientExcep) {
+      _logger.severe('❌ AtClientException : ${atClientExcep.errorMessage}');
+      return false;
+    } catch (e) {
+      _logger.severe('❌ Exception : ${e.toString()}');
+      return false;
+    }
+  }
+```
+
+Line 4 returns a list containing a dude AtKey that corresponds with the uuid of the DudeModel. Line 5 deletes it.
+
+Lines 8 to 13 logs the exception if an error occurs.
