@@ -65,9 +65,9 @@ No attributes for this shortcode.
 #### Example
 
 {{% card/group %}}
-  {{< card/feature class="w-25" href="/docs/contribute/shortcodes/card" 
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card" 
     title="Feature Card 1" text="This is the first card to show the deck example.">}}
-  {{< card/feature class="w-25" href="/docs/contribute/shortcodes/card" 
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card" 
     title="Feature Card 2" text="This is the second card to show the deck example.">}}
 {{% /card/group %}}
 
@@ -75,9 +75,9 @@ No attributes for this shortcode.
 
 ```go-html-template
   {{%/* card/group */%}}
-    {{</* card/feature class="w-25" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example."*/>}}
-    {{</* card/feature class="w-25" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example."*/>}}
   {{%/* /card/group */%}}
 ```
@@ -95,14 +95,14 @@ A card for linking to a social platform.
 
 #### Example
 
-{{< card/social href="https://github.com/" class="w-25" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" >}}
+{{< card/social href="https://github.com/" class="w-25 min-w-250" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" >}}
   Start contributing, this is where the code hits the fan.
 {{< /card/social >}}
 
 {{<br>}}
 
 ```go-html-template
-  {{</* card/social href="https://github.com/" class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
+  {{</* card/social href="https://github.com/" class="w-25 min-w-250" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
     Start contributing, this is where the code hits the fan.
   {{</* /card/social */>}}
 ```
