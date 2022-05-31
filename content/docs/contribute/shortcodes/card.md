@@ -64,22 +64,22 @@ No attributes for this shortcode.
 
 #### Example
 
-{{% card/group %}}
+{{< card/group >}}
   {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card" 
     title="Feature Card 1" text="This is the first card to show the deck example.">}}
   {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card" 
     title="Feature Card 2" text="This is the second card to show the deck example.">}}
-{{% /card/group %}}
+{{< /card/group >}}
 
 {{<br>}}
 
 ```go-html-template
-  {{%/* card/group */%}}
+  {{</* card/group */>}}
     {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example."*/>}}
     {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example."*/>}}
-  {{%/* /card/group */%}}
+  {{</* /card/group */>}}
 ```
 ### card/social
 

@@ -1,0 +1,13 @@
+.full-width-content {
+  width: calc(100% - 4em);
+  margin: auto 2em;
+
+  .justify-content-center {
+    display: grid;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+}
