@@ -32,6 +32,7 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
     flex-direction: column;
     flex-grow: 1;
     position: relative;
+    overflow-x: auto;
   }
 
   .codelab-steps {
