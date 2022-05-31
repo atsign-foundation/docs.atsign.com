@@ -1,12 +1,14 @@
 main:
   - name: Docs
-    weight: 1
     url: /docs/
-
-docs:
-  - name: Flutter
     weight: 1
-    url: /docs/flutter/
-  - name: Java
+
+  - name: Showcase
+    url: /showcase/
     weight: 2
-    url: /docs/java/
+
+  - name: Community
+    url: /community/
+    weight: 3
+
+  
