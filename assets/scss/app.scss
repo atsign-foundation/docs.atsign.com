@@ -12,6 +12,8 @@
 
 // @import "highlight.js/scss/dracula";
 
+
+
 // Import doks theme styles
 @import "common/fonts";
 @import "common/global";
@@ -50,6 +52,8 @@ $fa-font-path: "webfonts/font-awesome";
 @import "font-awesome/screen-reader";
 
 @import "common/general";
+@import "common/layout";
 
 // OVERRIDE DEFAULT THEME STYLES
 @import "common/overrides";
+

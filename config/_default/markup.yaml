@@ -12,7 +12,7 @@ goldmark:
 
 highlight:
   codeFences: true
-  lineNos: true
+  lineNos: false
   lineNumbersInTable: false
   noClasses: false
 

@@ -64,23 +64,65 @@ No attributes for this shortcode.
 
 #### Example
 
-{{% card/group %}}
-  {{< card/feature class="w-25" href="/docs/contribute/shortcodes/card" 
+{{< card/group >}}
+{{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
     title="Feature Card 1" text="This is the first card to show the deck example.">}}
-  {{< card/feature class="w-25" href="/docs/contribute/shortcodes/card" 
+{{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
     title="Feature Card 2" text="This is the second card to show the deck example.">}}
-{{% /card/group %}}
+{{< /card/group >}}
 
 {{<br>}}
 
 ```go-html-template
-  {{%/* card/group */%}}
-    {{</* card/feature class="w-25" href="/docs/contribute/shortcodes/card"
+  {{</* card/group */>}}
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example."*/>}}
-    {{</* card/feature class="w-25" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example."*/>}}
-  {{%/* /card/group */%}}
+  {{</* /card/group */>}}
 ```
+
+### card/grid
+
+A css-grid based wrapper for cards best used for an even number of cards.
+
+| Attribute | Description                                     |
+| --------- | ----------------------------------------------- |
+| class     | Additional css classes to apply to the wrapper. |
+
+{{< card/grid class="grid-col-4 grid-col-md-2 grid-col-sm-1">}}
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+      title="Feature Card 1" text="This is the first card to show the deck example.">}}
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+      title="Feature Card 2" text="This is the second card to show the deck example.">}}
+{{< /card/grid >}}
+
+#### Example
+
+```go-html-template
+  {{</* card/grid class="grid-col-4 grid-col-md-2 grid-col-sm-1"*/>}}
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+        title="Feature Card 1" text="This is the first card to show the deck example." */>}}
+    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+        title="Feature Card 2" text="This is the second card to show the deck example." */>}}
+  {{</* /card/grid */>}}
+```
+
+### card/flex
+
+A css flexbox based wrapper to automatically layout cards.
+
+| Attribute | Description                                     |
+| --------- | ----------------------------------------------- |
+| class     | Additional css classes to apply to the wrapper. |
+
+{{< card/flex class="justify-content-space-evenly">}}
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+      title="Feature Card 1" text="This is the first card to show the deck example.">}}
+  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+      title="Feature Card 2" text="This is the second card to show the deck example.">}}
+{{< /card/flex >}}
+
 ### card/social
 
 A card for linking to a social platform.
@@ -92,17 +134,55 @@ A card for linking to a social platform.
 | img-src   | The src for the img element.                                            |
 | img-class | Additional css classes to apply to the img tag.                         |
 | img-type  | The type of image, can be one of 'page', 'asset', or 'remote' (default) |
+| bg-class  | Additional css classes to apply to the img container                    |
 
 #### Example
 
-{{< card/social href="https://github.com/" class="w-25" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" >}}
-  Start contributing, this is where the code hits the fan.
+{{< card/social href="https://github.com/" class="w-25 min-w-250" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" >}}
+Start contributing, this is where the code hits the fan.
 {{< /card/social >}}
 
 {{<br>}}
 
 ```go-html-template
-  {{</* card/social href="https://github.com/" class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
+  {{</* card/social href="https://github.com/" class="w-25 min-w-250" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
     Start contributing, this is where the code hits the fan.
   {{</* /card/social */>}}
+```
+
+### card/showcase
+
+A card for showcasing a single item.
+
+| Attribute | Description                                                             |
+| --------- | ----------------------------------------------------------------------- |
+| class     | Additional css classes to apply to the bootstrap card element.          |
+| title     | The title for the card.                                                 |
+| img-src   | The src for the img element.                                            |
+| img-class | Additional css classes to apply to the img tag.                         |
+| img-type  | The type of image, can be one of 'page', 'asset', or 'remote' (default) |
+| bg-class  | Additional css classes to apply to the img container                    |
+
+#### Example
+
+{{< card/showcase class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" >}}
+
+{{< card/showcase-item >}}Your space on the privacy-first web.{{< /card/showcase-item >}}
+
+{{< card/showcase-link href="https://atsign.com/apps/wavi" >}}Learn more{{< /card/showcase-link >}}
+{{< card/showcase-link href="https://wavi.ng/@wavi" >}}Wavi.ng{{< /card/showcase-link >}}
+
+{{< /card/showcase >}}
+
+{{<br>}}
+
+```go-html-template
+  {{</* showcase/card class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
+
+    {{</* showcase/item >}}Your space on the privacy-first web.{{< /showcase/item */>}}
+
+    {{</* showcase/link href="https://atsign.com/apps/wavi" >}}Learn more{{< /showcase/link */>}}
+    {{</* showcase/link href="https://wavi.ng/@wavi" >}}Wavi.ng{{< /showcase/link */>}}
+
+  {{</* /showcase/card */>}}
 ```
