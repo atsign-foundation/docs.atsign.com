@@ -18,13 +18,13 @@ weight: 1 # For single pages, lower is first.
 
 {{< card/grid class="grid-col-2 grid-col-sm-1" >}}
 
-  {{< card/social href="https://github.com/atsign-foundation" class="w-100" title="GitHub" img-type="page" img-src="github.png" img-class="px-5 my-2 py-3 max-h-100" bg-class="bg-white min-h-250">}}
+  {{< card/social href="https://github.com/atsign-foundation" class="w-100" title="GitHub" img-type="page" img-src="github.png" img-class="px-5 py-2 max-h-100" bg-class="bg-white min-h-250 max-h-250">}}
     Start contributing,
     {{<br>}}
     This is where the code hits the fan.
   {{< /card/social >}}
 
-  {{< card/social href="https://discord.gg/55sHTQFxfz" class="w-100" title="Discord" img-type="page" img-src="discord.png" img-class="px-5 my-4 max-h-100" bg-class="bg-white min-h-250">}}
+  {{< card/social href="https://discord.gg/55sHTQFxfz" class="w-100" title="Discord" img-type="page" img-src="discord.png" img-class="px-5 py-2 max-h-100" bg-class="bg-white min-h-250 max-h-250">}}
     Learn how it works,
     {{<br>}}
     Hangout with other developers!

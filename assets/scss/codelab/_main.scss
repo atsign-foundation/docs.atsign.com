@@ -9,6 +9,14 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
   width: 100%;
   height: 100%;
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+  }
+
+  table {
+    margin-top: 1em;
+  }
+
   .codelab-nav-title span {
     display: none;
   }
