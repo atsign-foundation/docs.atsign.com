@@ -229,6 +229,24 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/6_controller/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/5_dude_service/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/9_history_screen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/image/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -253,6 +271,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/1_introduction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/1_introduction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -271,7 +295,31 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/4_local_notification_services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/2_model/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/3_navigation_service/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/7_onboarding/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -313,6 +361,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/10_profile_screen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/6_registration/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -320,6 +374,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/6_registration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/8_send_dude_srcreen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
