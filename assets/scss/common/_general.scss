@@ -1,0 +1,149 @@
+// sizing limits
+
+.min-w-250 {
+  min-width: 250px !important;
+}
+.min-w-300 {
+  min-width: 300px !important;
+}
+.min-w-400 {
+  min-width: 400px !important;
+}
+.min-w-500 {
+  min-width: 500px !important;
+}
+.min-w-750 {
+  min-width: 750px !important;
+}
+
+.min-h-250 {
+  min-height: 250px !important;
+}
+.min-h-300 {
+  min-height: 300px !important;
+}
+.min-h-400 {
+  min-height: 400px !important;
+}
+.min-h-500 {
+  min-height: 500px !important;
+}
+.min-h-750 {
+  min-height: 750px !important;
+}
+
+.max-h-100 {
+  max-height: 100px !important;
+}
+.max-h-150 {
+  max-height: 150px !important;
+}
+.max-h-200 {
+  max-height: 200px !important;
+}
+.max-h-250 {
+  max-height: 250px !important;
+}
+.max-h-300 {
+  max-height: 300px !important;
+}
+
+// grids
+
+.card-flex {
+  margin: auto 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.card-flex-300 {
+  .card {
+    flex-basis: 300px !important;
+    flex-grow: 1;
+  }
+}
+
+.card-grid {
+  margin: auto 1rem;
+  display: grid;
+  gap: 1em;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.grid-col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media(max-width: 1100px) {
+  .grid-col-md-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-col-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-col-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-col-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .grid-col-sm-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-col-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-col-sm-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-col-sm-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// backgrounds 
+
+.bg-true-light {
+  background-color: $gray-200;
+}
+
+[data-dark-mode] body .bg-true-light {
+  background-color: $white !important;
+}
+
+// social card
+
+.img-contain {
+  object-fit: contain;
+}
+
+.flex-basis-0 {
+  flex-basis: 0;
+}

@@ -30,6 +30,12 @@
   color: $primary;
 }
 
+.highlight pre {
+  overflow-x: auto;
+  max-width: 100%;
+  height: fit-content;
+}
+
 // Copy button colors
 pre .btn-copy {
   color: $color-btn-text;

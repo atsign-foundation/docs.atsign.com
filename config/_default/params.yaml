@@ -21,11 +21,8 @@ alertText: |
 
 # Site Footer
 
-footer: |
-  TODO - FOOTER INFO
-
 copyRight: |
-  TODO - Copyright (c) 2022 The @ Company
+  © 2022 The @ Company All Rights Reserved
 
 
 # Menu Config
@@ -60,7 +57,7 @@ options:
   breadCrumb: false
   highLight: true
   kaTex: false
-  fullWidth: false
+  fullWidth: true
 
 
 # Disable Google's Sitelinks Search Box (Using flexsearch instead)

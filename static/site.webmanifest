@@ -1,6 +1,7 @@
 {
   "name": "Atsign Platform",
   "short_name": "@platform",
+  "start_url": "./index.html",
   "icons": [
     {
       "src": "/favicon-16x16.png",
@@ -30,5 +31,5 @@
   ],
   "theme_color": "#F05E3E",
   "background_color": "#FFFFFF",
-  "display": "browser"
+  "display": "standalone"
 }
