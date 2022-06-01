@@ -10,6 +10,15 @@ const safelist = [
   // Details shortcode
   'disappear',
   'open',
+  // Bootstrap dropdown
+  'btn-toggle',
+  'data-bs-toggle',
+  'data-bs-target',
+  'collapse',
+  'collapsed',
+  'collapsing',
+  'aria-expanded',
+  'show',
   // Global announcement
   'announcement',
   'data-global-alert',
