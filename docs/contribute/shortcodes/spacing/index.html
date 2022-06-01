@@ -7,7 +7,7 @@
   
   <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
 
-  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.46f48cd64cbc9ce03fccddf45208136732caa24b3ee5c853a9c79fcd3827bb1e679c17801b4c535d066cd4efac8e482026bbafd8e0769f8f65875872b052adb7.css" integrity="sha512-RvSM1ky8nOA/zN30UggTZzLKoks&#43;5chTqcefzTgnux5nnBeAG0xTXQZs1O&#43;sjkggJruv2OB2n49lh1hysFKttw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.920ecc170c438dac93985cfe9383d3c2811ab930848eae01d5a73a892a77a02586b58bf917f8e55bc37068f38750d1a2be49224a729a2449a052250827dea197.css" integrity="sha512-kg7MFwxDjayTmFz&#43;k4PTwoEauTCEjq4B1ac6iSp3oCWGtYv5F/jlW8NwaPOHUNGivkkiSnKaJEmgUiUIJ96hlw==" crossorigin="anonymous">
 <noscript><style>img.lazyload { display: none; }</style></noscript>
   <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -203,7 +203,7 @@
     <div class="header-bar"></div>
 
 <header class="navbar navbar-expand-md navbar-light doks-navbar">
-  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <nav class="container-fluid flex-wrap flex-md-nowrap" aria-label="Main navigation">
     <a class="navbar-brand p-0 me-auto" href="https://dev3.atsign.wtf/" aria-label="@platform">
       @platform
     </a>
@@ -223,6 +223,16 @@
         <ul class="nav flex-column flex-md-row ms-md-n3">
               <li class="nav-item">
                 <a class="nav-link ps-0 py-1 active" href="https://dev3.atsign.wtf/docs/">Docs</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="https://dev3.atsign.wtf/showcase/">Showcase</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="https://dev3.atsign.wtf/community/">Community</a>
               </li>
             
           </ul>
@@ -256,7 +266,7 @@
 </header>
 
 <nav class="doks-subnavbar py-2 sticky-lg-top" aria-label="Secondary navigation">
-  <div class="container-xxl d-flex align-items-md-center">
+  <div class="container-fluid d-flex align-items-md-center">
 
     <form class="doks-search position-relative flex-grow-1 me-auto">
       <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
@@ -270,7 +280,7 @@
   </div>
 </nav>
 
-<div class="container-xxl">
+<div class="container-fluid">
   <aside class="doks-sidebar">
     <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
       
@@ -539,22 +549,17 @@
 </div>
 
 
-    <div class="wrap container-xxl" role="document">
+    <div class="wrap container-fluid" role="document">
       <div class="content">
           
   
   
-  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.797965057813372711b7ace5b250c13be7a3bd293f59daa7a31e65c026d11dd11b56ea1b2e3c90af517f0894a92c75b622f9e3d4822d0e65bbb4f924f12481a3.css" integrity="sha512-eXllBXgTNycRt6zlslDBO&#43;ejvSk/Wdqnox5lwCbRHdEbVuobLjyQr1F/CJSpLHW2Ivnj1IItDmW7tPkk8SSBow==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.d7733abafc35a39a31bdad2fd85f52a32756063a8d040c90a9dfb3a67b531a0d7b2da8aedd81233ba79681d1864638f5bc4290ad3de3d26ad0ae016eed0524f9.css" integrity="sha512-13M6uvw1o5oxva0v2F9SoydWBjqNBAyQqd&#43;zpntTGg17Laiu3YEjO6eWgdGGRjj1vEKQrT3j0mrQrgFu7QUk&#43;Q==" crossorigin="anonymous">
   <div class="codelab">
   <div class="codelab-nav-buttons">
     <a class="codelab-arrow-back text-decoration-none" href="https://dev3.atsign.wtf/docs/contribute" id="arrow-back">← Exit Codelab</a>
   </div>
   
-
-
-
-
-
 
 
 
@@ -636,14 +641,6 @@
           </span>
         </a>
       </li>
-        
-      <li  completed>
-        <a href="https://dev3.atsign.wtf/docs/contribute/shortcodes/showcase/">
-          <span class="codelab-step">
-            <span>Showcase</span>
-          </span>
-        </a>
-      </li>
           
       <li selected >
         <a href="https://dev3.atsign.wtf/docs/contribute/shortcodes/spacing/">
@@ -662,25 +659,17 @@
       <div class="codelab-step">
         <div class="codelab-instructions">
           <h2 class="codelab-step-title">Spacing</h2>
-          <br/>
+          <br>
 <h3 id="line-break-br">Line Break (br) <a href="#line-break-br" class="anchor" aria-hidden="true">#</a></h3>
 <p>Insert a simple line break.</p>
 <h4 id="example">Example <a href="#example" class="anchor" aria-hidden="true">#</a></h4>
-<p>Some text here <br/> and then a line break.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="ln">1</span><span class="cl">  Some text here <span class="cp">{{</span><span class="err">&lt;</span><span class="nx">br</span><span class="err">&gt;</span><span class="cp">}}</span> and then a line break.
+<p>Some text here <br> and then a line break.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">  Some text here <span class="cp">{{</span><span class="err">&lt;</span><span class="nx">br</span><span class="err">&gt;</span><span class="cp">}}</span> and then a line break.
 </span></span></code></pre></div>
         </div>
       </div>
     </div>
     
-
-
-
-
-
-
-
-
 
 
 
@@ -726,7 +715,7 @@
 <div class="codelab-controls">
   <div class="fabs">
     
-    <a href="https://dev3.atsign.wtf/docs/contribute/shortcodes/showcase/" id="previous-step" title="Previous step">Back</a>
+    <a href="https://dev3.atsign.wtf/docs/contribute/shortcodes/image/" id="previous-step" title="Previous step">Back</a>
     
     <div class="spacer"></div>
     
@@ -743,12 +732,11 @@
     
     
     <footer class="footer text-muted">
-  <div class="container-xxl">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 order-last order-lg-first">
         <ul class="list-inline">
-          <li class="list-inline-item">TODO - FOOTER INFO
-</li>
+          <li class="list-inline-item"></li>
         </ul>
       </div>
       <div class="col-lg-8 order-first order-lg-last text-lg-end">
@@ -761,7 +749,7 @@
     <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
-  <script src="https://dev3.atsign.wtf/index.min.0e4aeff3dace80dda829e015ae4649fa4818973dc4267349e8845229ad91153efce8a0b4f8d3f21ce54bac24962fa339facf61806491e01cce984f2190fef439.js" integrity="sha512-Dkrv89rOgN2oKeAVrkZJ&#43;kgYlz3EJnNJ6IRSKa2RFT786KC0&#43;NPyHOVLrCSWL6M5&#43;s9hgGSR4BzOmE8hkP70OQ==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.2edcc8b0ceb22a517f31e3a68d00232366e81e5269df12fd8389a8e5c0a3e4d52abae6b3e9355b32b4ba89bb3fdadd1d2ad8cd0519faf82e08093b1e08224658.js" integrity="sha512-LtzIsM6yKlF/MeOmjQAjI2boHlJp3xL9g4mo5cCj5NUquuaz6TVbMrS6ibs/2t0dKtjNBRn6&#43;C4ICTseCCJGWA==" crossorigin="anonymous" defer></script>
   
   </body>
 </html>

@@ -27,6 +27,18 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/community/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/showcase/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/overview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -181,12 +193,6 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/showcase/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/7_activation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -314,12 +320,6 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/6_registration/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/showcase/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
