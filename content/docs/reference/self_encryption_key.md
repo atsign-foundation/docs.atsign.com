@@ -6,7 +6,7 @@ lead: | # The lead below the title (ON THE PAGE)
     What is a self encryption key?
 
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    self Encryption Key
+    Definition of Self Encrypted Keys at AtSign
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents

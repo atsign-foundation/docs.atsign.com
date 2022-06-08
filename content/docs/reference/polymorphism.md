@@ -3,11 +3,11 @@ layout: single
 
 title: 'Polymorphism' # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Polymorphism
+  Definition of Polymorphism and its role in the @platform
 
 
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    Privacy
+    Definition of Polymorphism
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents

@@ -3,10 +3,10 @@ layout: single
 
 title: "Namespace" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-    What is a namespace?
+    Namespaces in the @platform
 
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    Namespace
+    Definition of Namespace in the @platform
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents
