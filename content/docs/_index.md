@@ -12,7 +12,6 @@ draft: false # Change this to "true" to hide the page
 toc: false # Change this to "false" to hide the table of contents
 autolinks: false # Change this to "false" to hide the automatic links below your content
 weight: 1 # Weight compared to other sections of the site, this shouldn't affect anything on the facade
-
 ---
 
 ### I want to...
@@ -36,8 +35,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
   {{< card/feature href="/docs/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
 
-
 ### More Options
-{{<card/breadcrumb link="/docs/contribute" first="Contribute to this site">}}
-{{<card/breadcrumb link="/docs/glossary" first="Glossary">}}
 
+{{< card/breadcrumb href="/docs/contribute" first="Contribute to this site">}}
+{{< card/breadcrumb href="/docs/reference/" first="Reference">}}
