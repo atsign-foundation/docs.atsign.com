@@ -11,7 +11,7 @@ description: | # SEO Description of the page (Shows in google and atsign.dev sea
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents
-weight: 1 # For single pages, lower is first.
+weight: 205 # For single pages, lower is first.
 ---
 
 A private key is used in asymmetric key cryptography. Asymmetric key cryptography is based on applying mathematical functions to numbers to achieve personal secrecy. It uses two keys, one being the private key. If you think of decryption as locking and unlocking padlocks with keys, then the padlock that is locked with a public key can only be unlocked with its corresponding private key.
