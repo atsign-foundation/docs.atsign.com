@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "Glossary" # The title (ON THE PAGE)
+title: "Reference" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Learn about our unique terminology on the @platform
 
