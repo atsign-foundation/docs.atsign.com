@@ -18,4 +18,4 @@ A private key is used in asymmetric key cryptography. Asymmetric key cryptograph
 
 On the other hand, public keys are distributed to the trusted masses. This is done through a public-key distribution channel. This channel should provide authentication and integrity. Someone should not send their public key to the community pretending to have a different public key. Everyone should have their own private and public keys. For example, Colin only needs one private key to receive all correspondence in the community, but Barbara needs *n* public keys to communicate with *n* entities in the community, one public key for each entity. In other words, Barbara needs a ring of public keys.
 
-{{< card/showcase class="bg-white" img-src="E2EE.png" img-type="page"  >}}
+{{< card/showcase class="bg-white" img-src="img/reference/E2EE.png" img-type="asset"  >}}
