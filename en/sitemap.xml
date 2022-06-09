@@ -15,12 +15,6 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/glossary/terms/encryption/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/docs/start/flutter/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -46,18 +40,6 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/overview/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/docs/glossary/terms/privacy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/docs/glossary/terms/public-private-keys/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -153,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/glossary/</loc>
+    <loc>https://dev3.atsign.wtf/docs/reference/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -190,6 +172,78 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/start/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/atsign/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/encryption/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/privacy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/polymorphism/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/public_private_keys/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/cram/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/pkam/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/namespace/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/synchronization/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/reference/notification/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

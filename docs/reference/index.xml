@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on </title>
+    <link>https://dev3.atsign.wtf/docs/reference/</link>
+    <description>Recent content in Reference on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@sign</title>
+      <link>https://dev3.atsign.wtf/docs/reference/atsign/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/atsign/</guid>
+      <description>TODO @sign definition goes here</description>
+    </item>
+    
+    <item>
+      <title>Pricing / Costs</title>
+      <link>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</guid>
+      <description>TODO pricing / costs goes here</description>
+    </item>
+    
+    <item>
+      <title>Encryption</title>
+      <link>https://dev3.atsign.wtf/docs/reference/encryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/encryption/</guid>
+      <description>Encryption is a means of achieving privacy. It is a part of cryptography which has the Greek origin meaning of &amp;ldquo;secret writing&amp;rdquo;. The goal of encryption is that assuming that an unwanted third party is eavesdropping on an insecure channel, said person would not be able to comprehend the transmitted information. Decryption is the process of converted encrypted information into a comprehensible format. Encryption and Decryption algorithms are known as ciphers.</description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://dev3.atsign.wtf/docs/reference/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/privacy/</guid>
+      <description>Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change. Availability: Available to an authorized party when needed. Authentication/Liveness: Ensuring the session is &amp;ldquo;current&amp;rdquo; rather than a replay of an earlier session. For example, if you are chatting with a certain person, it would be beneficial to know that the person you are chatting with is indeed who they say they are ano not an unwanted intruder posing as the trusted person.</description>
+    </item>
+    
+    <item>
+      <title>Polymorphism</title>
+      <link>https://dev3.atsign.wtf/docs/reference/polymorphism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/polymorphism/</guid>
+      <description>TODO Polymorphism definition goes here</description>
+    </item>
+    
+    <item>
+      <title>Public and Private Keys</title>
+      <link>https://dev3.atsign.wtf/docs/reference/public_private_keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/public_private_keys/</guid>
+      <description>A private key is used in asymmetric key cryptography. Asymmetric key cryptography is based on applying mathematical functions to numbers to achieve personal secrecy. It uses two keys, one being the private key. If you think of decryption as locking and unlocking padlocks with keys, then the padlock that is locked with a public key can only be unlocked with its corresponding private key.
+On the other hand, public keys are distributed to the trusted masses.</description>
+    </item>
+    
+    <item>
+      <title>Self-Encryption Key</title>
+      <link>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</guid>
+      <description>TODO self encryption key description goes here</description>
+    </item>
+    
+    <item>
+      <title>CRAM</title>
+      <link>https://dev3.atsign.wtf/docs/reference/cram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/cram/</guid>
+      <description>TODO CRAM goes here</description>
+    </item>
+    
+    <item>
+      <title>PKAM</title>
+      <link>https://dev3.atsign.wtf/docs/reference/pkam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/pkam/</guid>
+      <description>TODO PKAM goes here</description>
+    </item>
+    
+    <item>
+      <title>Namespace</title>
+      <link>https://dev3.atsign.wtf/docs/reference/namespace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/reference/namespace/</guid>
+      <description>Definition #Namespace is a common term that may occur when reading about the @platform. To put it simply, a namespace is a unique container to place data in. More in the context of the @platform, namespaces are just @ signs associated with each app so a secondary server can be aware of which data belongs to who.
+AtSign&amp;rsquo;s CTO, Colin Constable says this in an interview on Namespaces: &amp;ldquo;Most people are familiar with DNS (domain name system): for example, if you type “cnn.</description>
+    </item>
+    
+  </channel>
+</rss>
