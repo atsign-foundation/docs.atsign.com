@@ -38,13 +38,13 @@ A key in the @protocol can be formed by using any alphanumeric and special chara
     > The owner of the secondary should be allowed to update or delete the value of a public key.
 
 
-2. Private Key
+2. Self Key
         
-    - A private key is a key which cannot be looked up any @sign holder other than the one created it.
+    - A Self key is a key which cannot be looked up any @sign holder other than the one created it.
     
-    - A private key should not be returned in a *scan* verb result.
+    - A Self key should not be returned in a *scan* verb result.
     
-    - Format of the private key should be **privatekey**:\<identifier>:**<@sign>**
+    - Format of the Self key should be **privatekey**:\<identifier>:**<@sign>**
 
     **Example:**    
 
@@ -53,9 +53,9 @@ A key in the @protocol can be formed by using any alphanumeric and special chara
     > The owner of the secondary should be allowed to update or delete the value of a private key.
 
 
-3. User key
-    - A user key can only be looked up by an @sign holder with whom the data has been shared.
-    - A user key should be part of the *scan* verb result only for the person who created it and the specific person it has been shared with.
+3. Shared key
+    - A shared key can only be looked up by an @sign holder with whom the data has been shared.
+    - A shared key should be part of the *scan* verb result only for the person who created it and the specific person it has been shared with.
     - Format of the key shared with someone else should be   
     **cached**:**<Shared with @sign>**:\<identifier>:**<Created by @sign>**
 
@@ -68,9 +68,9 @@ A key in the @protocol can be formed by using any alphanumeric and special chara
     > The owner of the secondary should be allowed to update or delete the value of a user key.
  
 
-4. Internal Key
+4. Private Key
 
-    - Internal keys start with an underscore(_) and are not displayed in scan results. Internal keys can only be looked up by the owner of the secondary
+    - Private keys start with an underscore(_) and are not displayed in scan results. Private keys can only be looked up by the owner of the secondary
 
 
 5. Cached Key
