@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/reference/encryption/</guid>
-      <description>Encryption is a means of achieving privacy. It is a part of cryptography which has the Greek origin meaning of &amp;ldquo;secret writing&amp;rdquo;. The goal of encryption is that assuming that an unwanted third party is eavesdropping on an insecure channel, said person would not be able to comprehend the transmitted information. Decryption is the process of converted encrypted information into a comprehensible format. Encryption and Decryption algorithms are known as ciphers.</description>
+      <description>Definition #Encryption is a means of achieving privacy. It is a part of cryptography which has the Greek origin meaning of &amp;ldquo;secret writing&amp;rdquo;. The goal of encryption is that assuming that an unwanted third party is eavesdropping on an insecure channel, said person would not be able to comprehend the transmitted information. Decryption is the process of converted encrypted information into a comprehensible format. Encryption and Decryption algorithms are known as ciphers.</description>
     </item>
     
     <item>
@@ -39,7 +39,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/reference/privacy/</guid>
-      <description>Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change. Availability: Available to an authorized party when needed. Authentication/Liveness: Ensuring the session is &amp;ldquo;current&amp;rdquo; rather than a replay of an earlier session. For example, if you are chatting with a certain person, it would be beneficial to know that the person you are chatting with is indeed who they say they are ano not an unwanted intruder posing as the trusted person.</description>
+      <description>We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
+ Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change.</description>
     </item>
     
     <item>
@@ -53,11 +54,11 @@
     
     <item>
       <title>Public and Private Keys</title>
-      <link>https://dev3.atsign.wtf/docs/reference/public_private_keys/</link>
+      <link>https://dev3.atsign.wtf/docs/reference/public-private-keys/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/docs/reference/public_private_keys/</guid>
-      <description>A private key is used in asymmetric key cryptography. Asymmetric key cryptography is based on applying mathematical functions to numbers to achieve personal secrecy. It uses two keys, one being the private key. If you think of decryption as locking and unlocking padlocks with keys, then the padlock that is locked with a public key can only be unlocked with its corresponding private key.
+      <guid>https://dev3.atsign.wtf/docs/reference/public-private-keys/</guid>
+      <description>Definition #A private key is used in asymmetric key cryptography. Asymmetric key cryptography is based on applying mathematical functions to numbers to achieve personal secrecy. It uses two keys, one being the private key. If you think of decryption as locking and unlocking padlocks with keys, then the padlock that is locked with a public key can only be unlocked with its corresponding private key.
 On the other hand, public keys are distributed to the trusted masses.</description>
     </item>
     
