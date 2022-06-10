@@ -43,6 +43,7 @@ module:
         - scss/common/_dark.scss
         - scss/common/_variables.scss
         - scss/common/_fonts.scss
+        - scss/common/_global.scss
         - js/highlight.js
         - js/mermaid.js
     - source: node_modules/font-awesome/scss
