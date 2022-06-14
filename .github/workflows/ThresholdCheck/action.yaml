@@ -1,0 +1,29 @@
+name: ThresholdCheck
+description: Checks a number against a lower bound threshold
+
+inputs:
+  threshold:
+    required: true
+    description: The threshold to check against
+  value:
+    required: true
+    description: The value to check
+  name:
+    required: true
+    description: The name of the value
+
+runs:
+  using: composite
+  steps:
+    - if: ${{ inputs.value >= inputs.threshold }}
+      shell: bash
+      run: |
+        echo ${{ inputs.name }} meets the threshold
+    - if: ${{ inputs.value < inputs.threshold }}
+      shell: bash
+      run: |
+        echo ${{ inputs.name }} is below the threshold
+        echo actual: ${{ inputs.value }}
+        echo threshold: ${{ inputs.threshold }}
+        exit 1
+      
