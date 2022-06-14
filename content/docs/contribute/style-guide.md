@@ -40,6 +40,10 @@ In addition to Hugo's default list & single layouts, the docs section also suppo
   There may be some exceptions, but keep this in mind when contributing.
 3. Examples should be clear and concise.  
   Make sure to use examples that are accurate to the topic, and are easy to understand.
+4. File names should be concise and prioritize '-' over '_'
+  We've opted to use '-' instead of '_' in link names to keep things consistent.  
+  The only exception to this is when '_' is part of a name, like in 'at_server', this also allows us to distinguish between names and spaces in the url.  
+  Links should be as pretty as possible for sharing purposes.
 
 ## Building Layouts
 
