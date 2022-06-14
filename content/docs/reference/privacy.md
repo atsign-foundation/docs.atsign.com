@@ -11,7 +11,7 @@ draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents
 weight: 203 # For single pages, lower is first.
 ---
-We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
+We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
   - **Confidentiality**: Hidden from unauthorized access.
   - **Integrity**: Protected from unauthorized change.
   - **Availability**: Available to an authorized party when needed.
