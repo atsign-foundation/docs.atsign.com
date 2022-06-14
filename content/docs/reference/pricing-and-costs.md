@@ -46,5 +46,5 @@ For a FREE @sign there exists an @sign generator which creates a new set of @sig
     * Modest89rackets
     * 90bossaball
 
-<!-- TODO: This button should link to the get an @sign page and figure out a shortcode that centers this.git -->
+
 {{< button/link href="https://my.atsign.com/go" type="primary" text="Get started for free" >}}
