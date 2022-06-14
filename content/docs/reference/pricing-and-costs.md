@@ -13,7 +13,7 @@ toc: true # Change this to "true" to show the table of contents
 weight: 201 # For single pages, lower is first.
 ---
 
-Since the @platform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the @platform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that **AtSign** generates revenue is by using our special identifier which is knows as an @sign. An @sign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000. If you opt-in for the vanity @sign the prices increase as the @sign of your liking decreases in length and complexity. For each paid @sign you own, there is a $10 annual renewal fee. This fee does not apply to the free @signs. What makes @signs so awesome is that if your app is the first one someone pairs an @sign with, after buying their @sign, we pay you commission on that. Yep, you don't pay us, we pay you.  
+Since the @platform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the @platform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that **AtSign** generates revenue is by using our special identifier which is known as an @sign. An @sign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000. If you opt-in for the vanity @sign the prices increase as the @sign of your liking decreases in length and complexity. For each paid @sign you own, there is a $10 annual renewal fee. This fee does not apply to the free @signs. What makes @signs so awesome is that if your app is the first one someone pairs an @sign with, after buying their @sign, we pay you commission on that. Yep, you don't pay us, we pay you.  
 ## Paid @signs
 For paid @signs the options are listed below:
 
@@ -46,6 +46,7 @@ For a FREE @sign there exists an @sign generator which creates a new set of @sig
     * Modest89rackets
     * 90bossaball
 
+<!-- TODO: This button should link to the get an @sign page -->
 </div>
 <center>
 {{< button/link href="#" type="primary" text="Get started for free" >}}
