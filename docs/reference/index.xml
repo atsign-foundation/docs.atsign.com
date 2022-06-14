@@ -17,11 +17,11 @@
     
     <item>
       <title>Pricing / Costs</title>
-      <link>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</link>
+      <link>https://dev3.atsign.wtf/docs/reference/pricing-and-costs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</guid>
-      <description>TODO pricing / costs goes here</description>
+      <guid>https://dev3.atsign.wtf/docs/reference/pricing-and-costs/</guid>
+      <description>Since the @platform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the @platform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that AtSign generates revenue is by using our special identifier which is known as an @sign. An @sign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000.</description>
     </item>
     
     <item>
@@ -39,8 +39,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/reference/privacy/</guid>
-      <description>We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
- Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change.</description>
+      <description>We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
+ Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change. Availability: Available to an authorized party when needed. Authentication/Liveness: Ensuring the session is &amp;ldquo;current&amp;rdquo; rather than a replay of an earlier session.</description>
     </item>
     
     <item>
@@ -64,10 +64,10 @@ On the other hand, public keys are distributed to the trusted masses.</descripti
     
     <item>
       <title>Self-Encryption Key</title>
-      <link>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</link>
+      <link>https://dev3.atsign.wtf/docs/reference/self-encryption-key/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</guid>
+      <guid>https://dev3.atsign.wtf/docs/reference/self-encryption-key/</guid>
       <description>TODO self encryption key description goes here</description>
     </item>
     

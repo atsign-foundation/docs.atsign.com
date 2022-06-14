@@ -183,7 +183,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/reference/pricing_and_costs/</loc>
+    <loc>https://dev3.atsign.wtf/docs/reference/pricing-and-costs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -213,7 +213,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/reference/self_encryption_key/</loc>
+    <loc>https://dev3.atsign.wtf/docs/reference/self-encryption-key/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
