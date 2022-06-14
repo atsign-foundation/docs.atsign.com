@@ -60,10 +60,6 @@ Learn more about the cram verb
 -   **.atKeys file**: holds encryption keys for PKAM authenticating
 -   **OTP**: one-time password
 
-CRAM secret<sup>CRAM secret</sup>
-
-test<sub>test</sub>
-
 ## Related Resources
 
 {{< card/breadcrumb href="/docs/atplatform/specification" first="Protocol Specification" >}}
