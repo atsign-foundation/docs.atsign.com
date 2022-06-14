@@ -20,7 +20,7 @@ Links in your paragraphs
 
 #### Example
 
-{{< a target="_blank" href="https://atsign.com/" >}} atsign.com {{< /a >}}
+{{</* a rel="calonical" target="_blank" href="https://atsign.com/" */>}} atsign.com {{</* /a */>}}
 
 ```go-html-template
   {{</* a rel="calonical" target="_blank" href="https://atsign.com/" */>}} atsign.com {{</* /a */>}}

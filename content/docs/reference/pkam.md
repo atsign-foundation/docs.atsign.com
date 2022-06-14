@@ -18,7 +18,7 @@ weight: 208 # For single pages, lower is first.
 
 ## @platform
 
-The @platform's packages and SDKs help apps generate a RSA PKAM public/private keypair and save this in a `.atKeys` file containing these keys. Since Atsign provided the CRAM secret, this poses an invulnerability (because Atsign essentialy generated your password for you). To oppose this invulnerability, an RSA PKAM keypair is generated for subsequent authentications and the [CRAM](/docs/reference/cram) secret is voided. 
+The @platform's packages and SDKs help apps generate a RSA PKAM public/private keypair and save this in a `.atKeys` file containing these keys. Since Atsign provided the CRAM secret, this poses an vulnerability since this is a shared secret between you and Atsign. To avert this, a new RSA PKAM keypair is generated on your device and the CRAM secret is no longer valid. The PKAM keypair is used for all subsequent authentications, and as you are the only one with access to the private key, you are the only one who is able to authenticate.
 
 The PKAM public key is given out to other clients who want to send data to you. The data they send to you is encrypted using your public key and is decrypted using your private key. Read more on asymmetric encryption [here](/docs/reference/encryption).
 
@@ -40,4 +40,8 @@ Learn more about the pkam verb {{< a target="_blank" href="https://github.com/at
 - **RSA**: "Rivest-Shamir-Aldeman" is an assymetric encryption algorithm. Read more {{< a target="_blank" href="/docs/reference/encryption" >}} here{{< /a >}}
 
 ## Related Resources
+{{< card/breadcrumb href="/docs/atplatform/specification" first="Protocol Specification" >}}
+{{< card/breadcrumb href="/docs/atplatform/secondary-server" first="Secondary Server" >}}
+{{< card/breadcrumb href="/docs/reference/encryption" first="Encryption" >}}
+{{< card/breadcrumb href="/docs/reference/cram" first="CRAM" >}}
 
