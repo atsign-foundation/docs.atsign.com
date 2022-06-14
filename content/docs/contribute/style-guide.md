@@ -56,3 +56,9 @@ In addition to Hugo's default list & single layouts, the docs section also suppo
 
 This site is using purgeCSS for the staging and production builds.
 If you write JavaScript that modifies the DOM in any way, ensure that all style selectors are added to the safelist in `config/postcss.config.js`.
+
+## Assets
+
+1. External assets and images should be stored in the static folder.  
+  Site-only images should be stored at page level where possible, or in the assets folder if it is used in multiple places across the site.
+  See [here](/docs/contribute/shortcodes/image/) for more information.
