@@ -53,29 +53,29 @@ runs:
       with:
         name: performance
         threshold: ${{ inputs.performance_threshold }}
-        value: ${{ fromJson(fromJson(steps.results.outputs.content).categories["performance"].score) }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["performance"].score }}
 
     - uses: ./.github/ThresholdCheck
       with:
         name: accessibility
         threshold: ${{ inputs.accessibility_threshold }}
-        value: ${{ fromJson(fromJson(steps.results.outputs.content).categories["accessibility"].score) }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["accessibility"].score }}
 
     - uses: ./.github/ThresholdCheck
       with:
         name: best-practices
         threshold: ${{ inputs.practices_threshold }}
-        value: ${{ fromJson(fromJson(steps.results.outputs.content).categories["best-practices"].score) }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["best-practices"].score }}
 
     - uses: ./.github/ThresholdCheck
       with:
         name: seo
         threshold: ${{ inputs.seo_threshold }}
-        value: ${{ fromJson(fromJson(steps.results.outputs.content).categories["seo"].score) }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["seo"].score }}
 
     - uses: ./.github/ThresholdCheck
       with:
         name: pwa
         threshold: ${{ inputs.pwa_threshold }}
-        value: ${{ fromJson(fromJson(steps.results.outputs.content).categories["pwa"].score) }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["pwa"].score }}
 

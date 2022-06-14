@@ -15,11 +15,11 @@ inputs:
 runs:
   using: composite
   steps:
-    - if: ${{ inputs.value >= inputs.threshold }}
+    - if: ${{ fromJson(inputs.value) >= fromJson(inputs.threshold) }}
       shell: bash
       run: |
         echo ${{ inputs.name }} meets the threshold
-    - if: ${{ inputs.value < inputs.threshold }}
+    - if: ${{ fromJson(inputs.value) < fromJson(inputs.threshold) }}
       shell: bash
       run: |
         echo ${{ inputs.name }} is below the threshold
