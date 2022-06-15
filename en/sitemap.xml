@@ -51,6 +51,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/contribute/style-guide/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/atplatform/overview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
