@@ -36,10 +36,7 @@ Read more on keys [here](/docs/reference/public-private-keys)
 Read more about Encryption and how it works on the @platform in this [Medium](https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49) article.
 
 ## Related Resources
-<!-- The redirects for this site do not work yet! -->
 
-{{< card/breadcrumb link="/docs/reference/public_private_keys/" first="Public and Private Keys" >}}
+{{< card/breadcrumb href="/docs/reference/public-private-keys/" first="Public and Private Keys" >}}
 
-{{< card/breadcrumb link="/docs/reference/self_encryption_key/" first="Self-Encryption Key" >}}
-
-{{< card/breadcrumb link="/docs/reference/privacy/" first="Privacy" >}}
+{{< card/breadcrumb href="/docs/reference/privacy/" first="Privacy" >}}
