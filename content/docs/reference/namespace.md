@@ -13,7 +13,7 @@ toc: true # Change this to "true" to show the table of contents
 weight: 209 # For single pages, lower is first.
 ---
 
-### Definition
+## Definition
 Namespace is a common term that may occur when reading about the @platform. To put it simply, a namespace is a unique container to place data in. More in the context of the @platform, namespaces are just @ signs associated with each app so a secondary server can be aware of which data belongs to who. 
 
 AtSign's CTO, Colin Constable says this in an interview on Namespaces: 
@@ -22,7 +22,7 @@ AtSign's CTO, Colin Constable says this in an interview on Namespaces:
 
 Feel free to read more on namespaces <a href="https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09" type="_blank">here.</a>
 
-### Example
+## Example
 
 When you ask someone “What is my name?” you will get a different answer for every person you ask. If you ask your parents, they may answer with a sweet nickname they gave you. If you ask your friends, they may answer with your first name. This is how namespaces work. You can ask different namespaces for data and get a different answer every time.
 
@@ -34,3 +34,11 @@ Example:
 - `phone@wavi` (phone is the key, wavi is the namespace) will answer with data=`555-555-5555`
 
 This is the beauty of the @protocol. Each namespace replied with different information. People control their own data and which applications get what data. With the @platform, the people become in control of their own data privacy.
+
+## Related Resources
+
+{{< card/breadcrumb href="/docs/atplatform/root-server/" first="Root Server" >}}
+
+{{< card/breadcrumb href="/docs/atplatform/secondary-server/" first="Secondary Server" >}}
+
+{{< card/breadcrumb href="/docs/reference/polymorphism/" first="Polymorphism" >}}
