@@ -31,8 +31,8 @@ If you want to read more about Encryption and how it works on the @platform chec
 ## Related Sources
 <!-- The redirects for this site do not work yet! -->
 
-{{<card/breadcrumb link="/docs/reference/public_private_keys/" first="Public and Private Keys">}}
+{{< card/breadcrumb link="/docs/reference/public_private_keys/" first="Public and Private Keys" >}}
 
-{{<card/breadcrumb link="/docs/reference/self_encryption_key/" first="Self-Encryption Key">}}
+{{< card/breadcrumb link="/docs/reference/self_encryption_key/" first="Self-Encryption Key" >}}
 
-{{<card/breadcrumb link="/docs/reference/privacy/" first="Privacy">}}
+{{< card/breadcrumb link="/docs/reference/privacy/" first="Privacy" >}}
