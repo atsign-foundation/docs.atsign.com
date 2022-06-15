@@ -15,8 +15,12 @@ weight: 204 # For single pages, lower is first.
 ---
 
 ### Definition
-The ability within a coding language to have one variable, object, or function take on multiple forms within the same program, presenting the same interface for different underlying data types. Sometimes referred to as programming in the general, rather than in the specific. 
+The condition of occuring in several different forms. 
+
+Polymorphism on the @platform is the ability to share different data depending on the context of who’s asking. @platform applications enable you to setup multiple personas for different areas of your life. When you share data with someone else, the value of that data may be different depending on the person receiving that data.
 
 ### Example
-A class “Vehicle” with a function “Move”. Different subclasses of the class “Vehicle” such as “Car”, “Boat”, or “Plane” would have their own implementations of the same function “Move”, with the car driving, the boat sailing, and the plane flying. 
+@alice’s work persona may have a different value for email than her personal persona. When she shares her email to her colleagues, they will receive her work email, however when she shares it to her friends and family, they will see her personal email. As she updates the data in each of her personas, the changes will be reflected to each person that she has shared the data with.
+
+To learn more about polymorphism see [this article post](https://medium.com/flutter-community/building-flutter-apps-with-no-backend-9715b764a81e#67d3)
 
