@@ -1,0 +1,19 @@
+name: CheckDeployStaging
+on:
+  push:
+    branches:
+      - gh-pages
+
+env:
+  DEPLOY_URL: "dev3.atsign.wtf"
+
+jobs:
+  audit:
+    if: ${{ github.repository == 'atsign-foundation/atsign.dev-3.0' }}
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+      - uses: ./.github/LighthouseAudit
+        with:
+          url: ${{ env.DEPLOY_URL }}
