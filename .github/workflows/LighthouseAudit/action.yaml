@@ -1,0 +1,81 @@
+name: LighthouseAudit
+description: Audit a URL with Lighthouse
+
+inputs:
+  url:
+    required: true
+    description: The url to audit
+  performance_threshold:
+    required: false
+    description: The performance threshold
+    default: '0.8'
+  accessibility_threshold:
+    required: false
+    description: The accessibility threshold
+    default: '0.8'
+  practices_threshold: 
+    required: false
+    description: The best-practices threshold
+    default: '0.7'
+  seo_threshold: 
+    required: false
+    description: The seo threshold
+    default: '0.8'
+  pwa_threshold:
+    required: false
+    description: The pwa threshold
+    default: '0'
+
+runs:
+  using: composite
+  steps:
+    - name: Perform Lighthouse Audit
+      uses: jakejarvis/lighthouse-action@v0
+      with:
+        url: ${{ inputs.url}}
+
+    - name: Get output file name
+      shell: bash
+      id: filename
+      env:
+        OUTPUT_URL: ${{ inputs.url}}
+      run: |
+        OUTPUT_FILENAME=$(echo "$REPORT_URL" | sed 's/[^a-zA-Z0-9]/_/g')
+        run: echo "::set-output name=filename::$OUTPUT_FILENAME"
+
+    - name: Read Audit Results
+      id: results
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ${{ format'./report/{0}', steps.filename.outputs.filename }}
+
+    - uses: ./.github/ThresholdCheck
+      with:
+        name: performance
+        threshold: ${{ inputs.performance_threshold }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["performance"].score }}
+
+    - uses: ./.github/ThresholdCheck
+      with:
+        name: accessibility
+        threshold: ${{ inputs.accessibility_threshold }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["accessibility"].score }}
+
+    - uses: ./.github/ThresholdCheck
+      with:
+        name: best-practices
+        threshold: ${{ inputs.practices_threshold }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["best-practices"].score }}
+
+    - uses: ./.github/ThresholdCheck
+      with:
+        name: seo
+        threshold: ${{ inputs.seo_threshold }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["seo"].score }}
+
+    - uses: ./.github/ThresholdCheck
+      with:
+        name: pwa
+        threshold: ${{ inputs.pwa_threshold }}
+        value: ${{ fromJson(steps.results.outputs.content).categories["pwa"].score }}
+
