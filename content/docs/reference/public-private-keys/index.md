@@ -6,7 +6,7 @@ lead: | # The lead below the title (ON THE PAGE)
   Providing access to information
 
 
-description: | # SEO Description of the page (Shows in google and atsign.dev search)
+description: | # SEO Description of the page (Shows in google and Atsign.dev search)
     Definition of public and private keys
 
 draft: false # Change this to "true" to hide the page
@@ -67,13 +67,13 @@ A key in the @protocol can be formed by using any alphanumeric and special chara
 
     > The owner of the secondary should be allowed to update or delete the value of a user key.  
 
-    **More context on shared keys**: We know that AtSign uses *[AES-256 & RSA-2048](docs/reference/encryption)* for symmetric and asymmetric encryption respectfully.  
+    **More context on shared keys**: We know that Atsign uses *[AES-256 & RSA-2048](docs/reference/encryption)* for symmetric and asymmetric encryption respectfully.  
     
     * RSA-2048 can encrypt up to 214 bytes which does not constitute for a lot of data. However, because it is asymmetric, we can use it to ensure that you are you by verifying that you have your private key.
 
     * AES-256 can encrypt around a whopping 250 million terabytes which is practically unlimited. The downside is that because this is a symmetric key, we cannot use it to authorize that you are you since this is shared with the recipient.
 
-    To remediate this, we can generate an AES(shared) key, and encrypt it using your public RSA key. Then, we can decrypt said AES key using your private RSA key. Since you are the only holder of your private key, I can ensure that only the two of us hold the AES key. Now we can share information back-and-forth safely using the AES as a means of encryption/decryption. 
+    To remediate this, I can generate an AES(shared) key, and encrypt it using your public RSA key. Then we can decrypt said AES key using your private RSA key. Since you are the only holder of your private key, I can ensure that only the two of us hold the AES key. Now we can share information back-and-forth safely using the AES key as a means of encryption/decryption. 
 
 4. Private Key
 
