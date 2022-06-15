@@ -49,5 +49,17 @@ Example #Some text here and then a line break.
 Some text here {{&amp;lt;br&amp;gt;}} and then a line break. </description>
     </item>
     
+    <item>
+      <title>Superscripts</title>
+      <link>https://dev3.atsign.wtf/docs/contribute/shortcodes/superscripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/contribute/shortcodes/superscripts/</guid>
+      <description>
+Superscripts (sup) #Superscript go next to text.
+Example #Regular TextSuperscript
+Regular Text{{&amp;lt;sup&amp;gt;}}Superscript{{&amp;lt;/sup&amp;gt;}} </description>
+    </item>
+    
   </channel>
 </rss>
