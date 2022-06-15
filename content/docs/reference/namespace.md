@@ -25,7 +25,7 @@ want to type “bbc.com” and get sent to Amazon’s home page. That’s why th
 namespace with @Namespace."
 
 Feel free to read more on namespaces {{< a 
-    rel="calonical" 
+    rel="canonical" 
     target="_blank" 
     href="https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09" >}}here{{< /a >}}.
 
