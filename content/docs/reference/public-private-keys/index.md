@@ -19,7 +19,7 @@ A private key is used in asymmetric key cryptography. Asymmetric key cryptograph
 
 On the other hand, public keys are distributed to the trusted masses. This is done through a public-key distribution channel. This channel should provide authentication and integrity. Someone should not send their public key to the community pretending to have a different public key. Everyone should have their own private and public keys. For example, Bob only needs one private key to receive all correspondence in the community, but Alice needs *n* public keys to communicate with *n* entities in the community, one public key for each entity. In other words, Alice needs a ring of public keys.
 
-## How We Do It
+## How it works at Atsign
 
 A key in the @protocol can be formed by using any alphanumeric and special characters (UTF-8) excluding "@", ":" and a white space (" "). A key in a secondary can be any of the following 5 types:
 

@@ -22,7 +22,7 @@ Decryption is the process of converting encrypted information into a comprehensi
 Encryption and Decryption algorithms are known as ciphers. Encryption uses a key which is a set of values that the cipher, as an algorithm, will operate on. 
 Encryption and Decryption go back a long way with one of the most well known ciphers being the [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
-## How We Do It
+## How it works at Atsign
 The @platform implements end-to-end encryption that is best illustrated with the following example: @alice wishes to share her phone number with her friend @bob. To do this, @alice, who is on her own device, prompts her own secondary server to direct `phone@alice` at, her friend, @bob's secondary server. From here, a shared key is generated for @bob (`@bob:shared_key@alice`).
 
 This shared key uses the same encryption process as the Symmetric Key Encryption, which is called AES (Advanced Encryption Standard) and involves three block ciphers: AES-128, AES-192 and AES-256.
