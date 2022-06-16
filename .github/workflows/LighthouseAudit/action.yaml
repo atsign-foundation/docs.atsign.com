@@ -1,0 +1,93 @@
+name: LighthouseAudit
+description: Audit a URL with Lighthouse
+
+inputs:
+  url:
+    required: true
+    description: The url to audit
+  performance_threshold:
+    required: false
+    description: The performance threshold
+    default: '0'
+  accessibility_threshold:
+    required: false
+    description: The accessibility threshold
+    default: '0.8'
+  practices_threshold: 
+    required: false
+    description: The best-practices threshold
+    default: '0.7'
+  seo_threshold: 
+    required: false
+    description: The seo threshold
+    default: '0.8'
+  pwa_threshold:
+    required: false
+    description: The pwa threshold
+    default: '0.7'
+
+runs:
+  using: composite
+  steps:
+    - name: Perform Lighthouse Audit
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: ${{ inputs.url }}
+
+    - name: Get output file name
+      shell: bash
+      id: results
+      env:
+        OUTPUT_URL: ${{ inputs.url }}
+      run: |
+        OUTPUT_PATH="./report/$(echo "$OUTPUT_URL" | sed 's/[^a-zA-Z0-9]/_/g')"
+
+        SCORE_PERFORMANCE=$(jq '.categories["performance"].score' "$OUTPUT_PATH".report.json)
+        echo "::set-output name=performance::$SCORE_PERFORMANCE"
+
+        SCORE_ACCESSIBILITY=$(jq '.categories["accessibility"].score' "$OUTPUT_PATH".report.json)
+        echo "::set-output name=accessibility::$SCORE_ACCESSIBILITY"
+
+        SCORE_PRACTICES=$(jq '.categories["best-practices"].score' "$OUTPUT_PATH".report.json)
+        echo "::set-output name=practices::$SCORE_PRACTICES"
+
+        SCORE_SEO=$(jq '.categories["seo"].score' "$OUTPUT_PATH".report.json)
+        echo "::set-output name=seo::$SCORE_SEO"
+
+        SCORE_PWA=$(jq '.categories["pwa"].score' "$OUTPUT_PATH".report.json)
+        echo "::set-output name=pwa::$SCORE_PWA"
+
+    - uses: ./.github/workflows/ThresholdCheck
+      with:
+        name: performance
+        threshold: ${{ inputs.performance_threshold }}
+        value: ${{ steps.results.outputs.performance }}
+
+    - uses: ./.github/workflows/ThresholdCheck
+      with:
+        name: accessibility
+        threshold: ${{ inputs.accessibility_threshold }}
+        value: ${{ steps.results.outputs.accessibility }}
+
+    - uses: ./.github/workflows/ThresholdCheck
+      with:
+        name: best-practices
+        threshold: ${{ inputs.practices_threshold }}
+        value: ${{ steps.results.outputs.practices }}
+
+    - uses: ./.github/workflows/ThresholdCheck
+      with:
+        name: seo
+        threshold: ${{ inputs.seo_threshold }}
+        value: ${{ steps.results.outputs.seo }}
+
+    - uses: ./.github/workflows/ThresholdCheck
+      with:
+        name: pwa
+        threshold: ${{ inputs.pwa_threshold }}
+        value: ${{ steps.results.outputs.pwa }}
+
+    - name: Print deployment url
+      shell: bash
+      if: always()
+      run: echo ${{ inputs.url }}
