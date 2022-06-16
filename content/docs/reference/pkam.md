@@ -47,6 +47,7 @@ Learn more about the pkam verb {{< a
 - **RSA**: "Rivest-Shamir-Aldeman" is an assymetric encryption algorithm. Read more {{< a target="_blank" href="/docs/reference/encryption" >}} here{{< /a >}}
 
 ## Related Resources
+<!-- todo: add breadcrumb to onboarding widget-->
 {{< card/breadcrumb href="/docs/atplatform/specification" first="Protocol Specification" >}}
 {{< card/breadcrumb href="/docs/atplatform/secondary-server" first="Secondary Server" >}}
 {{< card/breadcrumb href="/docs/reference/encryption" first="Encryption" >}}
