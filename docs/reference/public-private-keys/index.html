@@ -1002,7 +1002,7 @@
     <li>
       <ul>
         <li><a href="#definition">Definition</a></li>
-        <li><a href="#how-we-do-it">How we do it</a></li>
+        <li><a href="#how-it-works-at-atsign">How it works at Atsign</a></li>
       </ul>
     </li>
   </ul>
@@ -1023,7 +1023,7 @@
     <li>
       <ul>
         <li><a href="#definition">Definition</a></li>
-        <li><a href="#how-we-do-it">How we do it</a></li>
+        <li><a href="#how-it-works-at-atsign">How it works at Atsign</a></li>
       </ul>
     </li>
   </ul>
@@ -1034,7 +1034,7 @@
 			<h2 id="definition">Definition <a href="#definition" class="anchor" aria-hidden="true">#</a></h2>
 <p>A private key is used in asymmetric key cryptography. Asymmetric key cryptography is based on applying mathematical functions to numbers to achieve personal secrecy. It uses two keys, one being the private key. If you think of decryption as locking and unlocking padlocks with keys, then the padlock that is locked with a public key can only be unlocked with its corresponding private key.</p>
 <p>On the other hand, public keys are distributed to the trusted masses. This is done through a public-key distribution channel. This channel should provide authentication and integrity. Someone should not send their public key to the community pretending to have a different public key. Everyone should have their own private and public keys. For example, Bob only needs one private key to receive all correspondence in the community, but Alice needs <em>n</em> public keys to communicate with <em>n</em> entities in the community, one public key for each entity. In other words, Alice needs a ring of public keys.</p>
-<h2 id="how-we-do-it">How we do it <a href="#how-we-do-it" class="anchor" aria-hidden="true">#</a></h2>
+<h2 id="how-it-works-at-atsign">How it works at Atsign <a href="#how-it-works-at-atsign" class="anchor" aria-hidden="true">#</a></h2>
 <p>A key in the @protocol can be formed by using any alphanumeric and special characters (UTF-8) excluding &ldquo;@&rdquo;, &ldquo;:&rdquo; and a white space (&quot; &ldquo;). A key in a secondary can be any of the following 5 types:</p>
 <ol>
 <li>
@@ -1091,6 +1091,16 @@
 <blockquote>
 <p>The owner of the secondary should be allowed to update or delete the value of a user key.</p>
 </blockquote>
+<p><strong>More context on shared keys</strong>: We know that Atsign uses <em><a href="docs/reference/encryption">AES-256 &amp; RSA-2048</a></em> for symmetric and asymmetric encryption respectfully.</p>
+<ul>
+<li>
+<p>RSA-2048 can encrypt up to 214 bytes which does not constitute for a lot of data. However, because it is asymmetric, we can use it to ensure that you are you by verifying that you have your private key.</p>
+</li>
+<li>
+<p>AES-256 can encrypt around a whopping 250 million terabytes which is practically unlimited. The downside is that because this is a symmetric key, we cannot use it to authorize that you are you since this is shared with the recipient.</p>
+</li>
+</ul>
+<p>To remediate this, I can generate an AES(shared) key, and encrypt it using your public RSA key. Then we can decrypt said AES key using your private RSA key. Since you are the only holder of your private key, I can ensure that only the two of us hold the AES key. Now we can share information back-and-forth safely using the AES key as a means of encryption/decryption.</p>
 </li>
 <li>
 <p>Private Key</p>
@@ -1180,7 +1190,7 @@
     <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
-  <script src="https://dev3.atsign.wtf/index.min.7cbe68444aca6cbfce692f7bc6d55233b7a3d58403608ae9dcef238bc770037a5ae717c55a610dbb8ddc7be761b9c431d98be18b73243a25b660ae57f9ad9523.js" integrity="sha512-fL5oRErKbL/OaS97xtVSM7ej1YQDYIrp3O8ji8dwA3pa5xfFWmENu43ce&#43;dhucQx2Yvhi3MkOiW2YK5X&#43;a2VIw==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.b88f72a1ae9e2709ec712220884f776fbc6dca8e81200b953f56cda46657f22aeacf49b107c958de5d92c6a2df839b3fd6129a347eeb0c3adf0bce02ae423d64.js" integrity="sha512-uI9yoa6eJwnscSIgiE93b7xtyo6BIAuVP1bNpGZX8irqz0mxB8lY3l2SxqLfg5s/1hKaNH7rDDrfC84CrkI9ZA==" crossorigin="anonymous" defer></script>
   
   </body>
 </html>
