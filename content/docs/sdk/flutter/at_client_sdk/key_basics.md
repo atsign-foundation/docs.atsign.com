@@ -1,5 +1,5 @@
 ---
-layout: codelab
+layout: single
 
 title: 'AtKey' # Step Name
 description: | # SEO Description for this step
@@ -7,7 +7,7 @@ description: | # SEO Description for this step
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 toc: true
-weight: 3
+weight: 4
 ---
 
 

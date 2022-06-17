@@ -1,15 +1,14 @@
 ---
 layout: single
 
-title: 'AtClientPreference' # Step Name
+title: 'Overview' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 toc: true
-weight: 2
+weight: 1
 ---
-
 
 ### Overview
 
@@ -37,6 +36,7 @@ AtClientPreference is used to configure the preferences of an @platform applicat
 For Local device paths we recommend the path_provider package. 
 
 ## Usage
+
 
 ```
 Future<AtClientPreference> loadAtClientPreference() async {

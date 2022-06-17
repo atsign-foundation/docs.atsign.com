@@ -1,5 +1,5 @@
 ---
-layout: codelab
+layout: single
 
 title: 'Onboarding' # Step Name
 description: | # SEO Description for this step
@@ -7,7 +7,7 @@ description: | # SEO Description for this step
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 toc: true
-order: 2
+weight: 2
 ---
 
 ### Overview
