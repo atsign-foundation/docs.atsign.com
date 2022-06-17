@@ -271,7 +271,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/7_activation/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/7-activation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/5_setup_and_deployment/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/5-setup-and-deployment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -355,7 +355,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/1_introduction/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/1-introduction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -403,7 +403,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/2_prerequisites/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/2-prerequisites/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -415,7 +415,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/3_prep_aws_instance/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/3-prep-aws-instance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -427,7 +427,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/4_prep_network_access/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/4-prep-network-access/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -445,7 +445,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/6_registration/</loc>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/6-registration/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
