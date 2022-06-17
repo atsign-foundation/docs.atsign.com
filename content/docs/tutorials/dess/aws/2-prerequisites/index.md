@@ -48,24 +48,24 @@ In your AWS console navigate to services in top left corner and select `Route 53
 
 In your AWS console search for `Route 53`.
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/aws-route53.png?raw=true)
+{{< image class="bg-white contain" type="page" src="aws-route53.png" >}}
 
 You can start looking for your domain directly from here:
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/image-20210726083635919.png?raw=true)
+{{< image class="bg-white contain" type="page" src="image-20210726083635919.png" >}}
 
 Based on the domain name you search, AWS will give you similar options, and their pricing. As I am looking for the best deal, the .link domain seems like a good option at a cost of 5$ / year.
 
 In my case 4atsign.link is free and I will register it by clicking “Add to cart” and continue.
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002.jpg?raw=true)
+{{< image type="page" src="clip_image002.jpg" >}}
 
 Fill out DNS registration form:
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image004.jpg?raw=true)
+{{< image type="page" src="clip_image004.jpg" >}}
 
 Continue review details and order. At this point if all is fine you should see your domain request pending:
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image006.jpg?raw=true)
+{{< image type="page" src="clip_image006.jpg" >}}
 
 This can take some time so why don’t we move on to next step!
