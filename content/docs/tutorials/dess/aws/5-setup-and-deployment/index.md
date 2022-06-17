@@ -14,15 +14,15 @@ Open your [LightSail](https://lightsail.aws.amazon.com/) console
 
 By now you should see your instance in “Running state”
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image002-162728546025210.jpg?raw=true)
+{{< image type="page" src="clip_image002-162728546025210.jpg" >}}
 
 Open it and on tab Connect click on “Connect using SSH”
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image003-162728546025211.png?raw=true)
+{{< image type="page" src="clip_image003-162728546025211.png" >}}
 
 You should be presented by a new window with command line:
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image005-162728546025212.jpg?raw=true)
+{{< image type="page" src="clip_image005-162728546025212.jpg" >}}
 
 Before we do anything else, we should update the system:
 
