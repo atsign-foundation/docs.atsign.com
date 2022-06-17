@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: codelab-list
 
 title: at_onboarding_flutter # Title of the codelab
 lead: Learn about the core services of the Flutter SDK
