@@ -1,14 +1,14 @@
 ---
-layout: single
+layout: codelab
 
 title: 'AtClientManager' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-toc: true
-weight: 3
+order: 2 # Ordering of the steps
 ---
+
 
 ### Overview
 

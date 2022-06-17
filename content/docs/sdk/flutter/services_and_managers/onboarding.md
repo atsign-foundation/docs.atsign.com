@@ -1,13 +1,12 @@
 ---
-layout: single
+layout: codelab
 
 title: 'Onboarding' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-toc: true
-weight: 2
+order: 4 # Ordering of the steps
 ---
 
 ### Overview
@@ -38,4 +37,3 @@ Onboarding(
   child: const Text('Onboard an @sign'),
 ),
 ```
-

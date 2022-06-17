@@ -1,15 +1,13 @@
 ---
-layout: single
+layout: codelab
 
-title: 'AtKey' # Step Name
+title: 'Key Basics' # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-toc: true
-weight: 4
+order: 5 # Ordering of the steps
 ---
-
 
 ### Overview
 
