@@ -373,6 +373,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/links/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/4_local_notification_services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

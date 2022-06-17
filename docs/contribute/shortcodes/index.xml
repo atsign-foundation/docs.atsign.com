@@ -38,6 +38,17 @@ Example #Secondary   Primary</description>
     </item>
     
     <item>
+      <title>Links</title>
+      <link>https://dev3.atsign.wtf/docs/contribute/shortcodes/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/contribute/shortcodes/links/</guid>
+      <description>
+Anchor Tag (a) #Links in your paragraphs
+   Attribute Description     href The html href to the content when the link is clicked.   target (optional) &amp;ldquo;_blank&amp;rdquo; for new tab, &amp;ldquo;_self&amp;rdquo; for same frame (default, *use markdown for self links: [here](www.google.com)),   rel (optional) &amp;ldquo;canonical&amp;rdquo; for canonical links    Example #atsign.com  {{&amp;lt;arel=&amp;#34;canonical&amp;#34;target=&amp;#34;_blank&amp;#34;href=&amp;#34;https://atsign.com/&amp;#34;&amp;gt;}} atsign.com {{&amp;lt;/a&amp;gt;}} </description>
+    </item>
+    
+    <item>
       <title>Spacing</title>
       <link>https://dev3.atsign.wtf/docs/contribute/shortcodes/spacing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
