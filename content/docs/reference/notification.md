@@ -3,10 +3,10 @@ layout: single
 
 title: "Notification" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-    Notifications and their service in the @platform
+    Definition of Notification, the notify verb, and Monitor
 
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    Definition of Notificaton in the @platform
+    Definition of Notificaton in the @platform, the notify verb in the @protocol, and Definition of Monitor in the @platform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
@@ -25,9 +25,25 @@ Read more [here](https://blog.atsign.dev/part-1-the-notify-verb-cko97bv8f00l5gws
 
 The notify verb enables you to notify the atsign user of some data event.
 
-The follwing is the regex for the `notify` verb.
+The following is the regex for the `notify` verb.
 
 `notify:((?<operation>update|delete):)?(ttl:(?<ttl>\d+):)?(ttb:(?<ttb>\d+):)?(ttr:(?<ttr>(-)?\d+):)?(ccd:(?<ccd>true|false):)?(@(?<forAtSign>[^@:\s]-)):(?<atKey>[^:]((?!:{2})[^@])+)@(?<atSign>[^@:\s]+)(:(?<value>.+))?`
+
+| Regex Snippet                                              | Explanation, [argument details], (example) |
+|------------------------------------------------------------|-----------------------------------------------------------------------|
+| `(?<operation>update\|delete):)?`     | Operation of the notification (update\|delete) |
+| `(ttl:(?<ttl>\d+):)?`                 | TTL (time to live), [integer, 1 or more digits, optional argument] |
+| `(ttb:(?<ttb>\d+):)?`                 | TTB (time to birth), [integer, 1 or more digits, optional argument] |
+| `(ttr:(?<ttr>(-)?\d+):)?`             | TTR (time to refresh), [integer, 1 or more digits, can be negative, optional argument], (e.g.: 86400 will refresh once a day) |
+| `(ccd:(?<ccd>true\|false):)?`         | CCD (casecade delete), [boolean, true\|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender's server and the recipient's server) |
+| `(@(?<forAtSign>[^@:\s]-))`           | The @sign the notification is for, [string, negate @ character, required argument] |
+| `(?<atKey>[^:]((?!:{2})[^@])+)@(?<atSign>[^@:\s]+)(:(?<value>.+))?`| AtKey details, see below, [optional], (``) |
+
+| AtKey Regex Snippet | Explanation, [argument details], (example) |
+|---------------------------------------|-----------------------------------------------------------------------|
+| `(?<atKey>[^:]((?!:{2})[^@])+)` | AtKey details, [], (e.g. '') |
+| `@` | at separator |
+| `(?<atSign>[^@:\s]+)(:(?<value>.+))` | namespace @sign, [string, negate @ character], (e.g. 'alice') |
 
 Response:
 
