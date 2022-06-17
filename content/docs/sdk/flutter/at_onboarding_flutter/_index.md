@@ -7,7 +7,6 @@ description: Learn about the core Atsign platform Flutter SDK services
 
 doneLink: /docs/sdk/flutter/ # Where to send them if they press "Done" at the end of the Codelab
 exitLink: /docs/sdk/flutter/ # Where to send them to if they press "Exit Codelab"
-weight: 2
-order: 1
+weight: 1
 ---
 
