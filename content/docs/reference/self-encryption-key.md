@@ -3,10 +3,10 @@ layout: single
 
 title: "Self-Encryption Key" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-    What is a self encryption key?
+    What is a Self-Encryption Key?
 
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    Definition of Self Encrypted Keys at AtSign
+    Definition of Self-Encryption Key at Atsign
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
