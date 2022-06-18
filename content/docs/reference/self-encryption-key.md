@@ -9,8 +9,23 @@ description: | # SEO Description of the page (Shows in google and atsign.dev sea
     Definition of Self Encrypted Keys at AtSign
 
 draft: false # Change this to "true" to hide the page
-toc: false # Change this to "true" to show the table of contents
+toc: true # Change this to "true" to show the table of contents
 weight: 206 # For single pages, lower is first.
 ---
 
-TODO self encryption key description goes here
+## Definition
+
+Self-Encryption key is an AES symmetric key that you own for encrypting data for yourself.
+
+## @platform
+
+In the @platform, the self-encryption key is used to encrypt data that is stored in your own secondary server. It is crucial that this key is kept secret and owned only by you so that third parties like Atsign cannot see your data. 
+
+The self-encryption key is generated during the [CRAM](/docs/reference/cram) process when your [PKAM](/docs/reference/pkam) RSA keypair is generated and your [@sign](/docs/reference/atsign) is activated.
+
+## Related Resources
+{{< card/breadcrumb href="/docs/atplatform/atsign" first="@sign" >}}
+{{< card/breadcrumb href="/docs/atplatform/encryption" first="Encryption" >}}
+{{< card/breadcrumb href="/docs/atplatform/public-private-keys" first="Public and Private Keys" >}}
+{{< card/breadcrumb href="/docs/reference/cram" first="CRAM" >}}
+{{< card/breadcrumb href="/docs/reference/pkam" first="PKAM" >}}
