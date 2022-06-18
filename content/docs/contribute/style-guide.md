@@ -54,7 +54,7 @@ In addition to Hugo's default list & single layouts, the docs section also suppo
 
 ## JavaScript
 
-This site is using purgeCSS for the staging and production builds.
+This site is using {{< a target="_blank" href="https://purgecss.com/" >}}purgeCSS{{</ a >}} for the staging and production builds.
 If you write JavaScript that modifies the DOM in any way, ensure that all style selectors are added to the safelist in `config/postcss.config.js`.
 
 ## Assets
