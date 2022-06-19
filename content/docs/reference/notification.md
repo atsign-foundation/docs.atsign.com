@@ -37,13 +37,13 @@ The following is the regex for the `notify` verb.
 | `(ttr:(?<ttr>(-)?\d+):)?`             | TTR (time to refresh), [integer, 1 or more digits, can be negative, optional argument], (e.g.: 86400 will refresh once a day) |
 | `(ccd:(?<ccd>true\|false):)?`         | CCD (casecade delete), [boolean, true\|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender's server and the recipient's server) |
 | `(@(?<forAtSign>[^@:\s]-))`           | The @sign the notification is for, [string, negate @ character, required argument] |
-| `(?<atKey>[^:]((?!:{2})[^@])+)@(?<atSign>[^@:\s]+)(:(?<value>.+))?`| AtKey details, see below, [optional], (``) |
+| `(?<atKey>[^:]((?!:{2})[^@])+)@(?<atSign>[^@:\s]+)(:(?<value>.+))?`| AtKey details, see below, [optional], (`signing_publickey@alice`) |
 
 | AtKey Regex Snippet | Explanation, [argument details], (example) |
 |---------------------------------------|-----------------------------------------------------------------------|
-| `(?<atKey>[^:]((?!:{2})[^@])+)` | AtKey details, [], (e.g. '') |
+| `(?<atKey>[^:]((?!:{2})[^@])+)` | AtKey name, [], (e.g. 'signing_publickey') |
 | `@` | at separator |
-| `(?<atSign>[^@:\s]+)(:(?<value>.+))` | namespace @sign, [string, negate @ character], (e.g. 'alice') |
+| `(?<atSign>[^@:\s]+)(:(?<value>.+))` | namespace @sign that key belongs to, [string, negate @ character], (e.g. 'alice') |
 
 Response:
 
