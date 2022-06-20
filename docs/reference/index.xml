@@ -70,7 +70,9 @@ On the other hand, public keys are distributed to the trusted masses.</descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/reference/self-encryption-key/</guid>
-      <description>TODO self encryption key description goes here</description>
+      <description>Definition #Self-Encryption key is an AES symmetric key that you own for encrypting data for yourself.
+@platform #In the @platform, the self-encryption key is used to encrypt data that is stored in your own secondary server. It is crucial that this key is kept secret and owned only by you so that third parties like Atsign cannot see your data.
+The self-encryption key is generated during the CRAM process when your PKAM RSA keypair is generated and your @sign is activated.</description>
     </item>
     
     <item>
