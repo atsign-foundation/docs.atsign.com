@@ -186,3 +186,24 @@ A card for showcasing a single item.
 
   {{</* /showcase/card */>}}
 ```
+
+### card/blogpost
+A card for showing a blogpost
+
+| Attribute   | Description                                                               |
+| ----------- | ------------------------------------------------------------------------- |
+| class       | Additional css classes to apply to the bootstrap card element.            |
+| title       | The title of the blogpost                                                 |
+| description | The description for the blogpost                                          |
+| author      | The author of the blogpost                                                |
+| href        | Link to the blogpost                                                      |
+| rel         | Rel for anchor tag (a), "canonical" for canonical links                   |
+| newtab      | "true" to open new tab when user clicks card, "false" (default) otherwise | 
+
+#### Example
+<!-- TODO example -->
+{{< card/blogpost >}}
+
+```go-html-template
+  {{< card/blogpost >}}
+```
