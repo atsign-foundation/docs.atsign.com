@@ -198,12 +198,12 @@ A card for showing a blogpost
 | author      | The author of the blogpost                                                |
 | href        | Link to the blogpost                                                      |
 | rel         | Rel for anchor tag (a), "canonical" for canonical links                   |
-| newtab      | "true" to open new tab when user clicks card, "false" (default) otherwise | 
+| target      | "_blank" to open new tab when user clicks card                            | 
 
 #### Example
-<!-- TODO example -->
-{{< card/blogpost >}}
+{{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+
 
 ```go-html-template
-  {{< card/blogpost >}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
 ```

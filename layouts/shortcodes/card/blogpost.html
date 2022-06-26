@@ -1,3 +1,17 @@
-<div>
-    Blogpost
+<div class="card {{ .Get "class" }}" style="width: 24rem;">
+    <div class="flex-grow-1 justify-content-center h-100 mb-0">
+        <a href="{{ .Get "href" }}" target="{{ .Get "target" }}">
+            <img class="img-thumbnail" src="{{ .Get "img-src" }}">
+        </a>
+    </div>
+
+    <div class="card-body">
+        <a href="{{ .Get "href" }}" target="{{ .Get "target" }}">
+            <h5 class="card-title">{{ .Get "title" }}</h5>
+        </a>
+        <h6 class="card-subtitle">by {{ .Get "author" }}</h6>
+        <p class="card-body">
+            {{ .Get "description"}}
+        </p>
+    </div>
 </div>
