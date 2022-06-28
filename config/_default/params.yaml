@@ -1,23 +1,9 @@
-title: '@platform'
-titleSeparator: '-'
-titleAddition: Build end-to-end encrypted apps quickly
-
-description: |
-  The @platform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.
-
-
 # Theme Color for Chrome Browser
 
 themeColor: '#fff'
 
 # Alert Banner
 # Alert text also supports HTML
-
-alert: false
-alertDismissable: true
-alertText: |
-  My custom banner text here...
-
 
 # Site Footer
 
@@ -93,7 +79,3 @@ twitterCreator: atsigncompany
 # facebookAuthor: verlinde.henk
 # facebookPublisher: verlinde.henk
 ogLocale: en_US
-
-
-
-

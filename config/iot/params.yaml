@@ -1,0 +1,11 @@
+title: 'atProtocol'
+titleSeparator: '-'
+titleAddition: Simple and Secure IoT Administration
+
+description: |
+  The atProtocol is the simplest and secure way to administer IoT administration.
+
+alert: false
+alertDismissable: true
+alertText: |
+  My custom banner text here...
