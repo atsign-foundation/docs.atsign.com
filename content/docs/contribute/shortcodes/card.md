@@ -201,9 +201,23 @@ A card for showing a blogpost
 | target      | "_blank" to open new tab when user clicks card                            | 
 
 #### Example
-{{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+{{< row >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+  {{< card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" >}}
+{{</ row >}}
 
 
 ```go-html-template
+{{</* card/blog-grid class="" */>}}
   {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+  {{</* card/blogpost title="A little, big island" description="How someone from the small island of Bermuda found themselves in the Silicon Valley" author="Tyler Trott" href="https://medium.com/@tyler.trott/a-little-big-island-ae101eda7b06" img-src="https://miro.medium.com/max/700/1*C9s33bNRoPx5rV0cGhR3nw.png" target="_blank" */>}}
+{{</* / card/blog-grid */>}}
 ```
