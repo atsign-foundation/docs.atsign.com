@@ -50,12 +50,11 @@ async function getMediumItems(mediumUrl) {
     const items = json.items;
     let toReturnItems = [];
     for(let i = 0; i < items.length; i++) {
-        const {title, author, thumbnail, pubDate} = items[i];
+        const {title, author, thumbnail, pubDate, link} = items[i];
         const description = getMediumDescription(items[i].description, 150);
-        const objToAdd = {title, pubDate, author, thumbnailUrl: thumbnail, description};
+        const objToAdd = {title, pubDate, author, thumbnailUrl: thumbnail, description, link};
         toReturnItems.push(objToAdd);
     }
-    console.log(toReturnItems.length);
     return toReturnItems;
 }
 // write process medium items function
