@@ -7,8 +7,6 @@ main:
     url: /showcase/
     weight: 2
 
-  - name: Community
-    url: /community/
+  - name: Flutter
+    url: https://atsign.dev/
     weight: 3
-
-  
