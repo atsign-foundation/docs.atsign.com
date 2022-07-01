@@ -198,7 +198,6 @@ A card for showing a blogpost
 | author      | The author of the blogpost (eg: Atsign)                                   |
 | img-src     | Thumbnail image URL                                                       |
 | description | The description for the blogpost                                          |
-| author      | The author of the blogpost                                                |
 | href        | Link to the blogpost                                                      |
 | rel         | Rel for anchor tag (a), "canonical" for canonical links                   |
 | target      | "_blank" to open new tab when user clicks card                            | 
