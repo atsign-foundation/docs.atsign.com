@@ -194,6 +194,9 @@ A card for showing a blogpost
 | ----------- | ------------------------------------------------------------------------- |
 | class       | Additional css classes to apply to the bootstrap card element.            |
 | title       | The title of the blogpost                                                 |
+| publishDate | Date string this was published (eg June 23, 2022)                         |
+| author      | The author of the blogpost (eg: Atsign)                                   |
+| img-src     | Thumbnail image URL                                                       |
 | description | The description for the blogpost                                          |
 | author      | The author of the blogpost                                                |
 | href        | Link to the blogpost                                                      |
