@@ -1,15 +1,18 @@
-import fetch from 'node-fetch'; // https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined
+// import fetch from 'node-fetch'; // https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined
 // const fetch = require('node-fetch');
+
+require('isomorphic-fetch');
 
 // https://medium.com/@KonradDaWo/how-to-display-medium-posts-on-a-website-with-plain-vanilla-js-basic-api-usage-example-865507848c2
 
 const main = async () =>  {
     const ATSIGN = '@atsigncompany';
+    // const TYLER='@tyler.trott';
 
     const user = ATSIGN;
     const mediumUrl = `https://medium.com/feed/${user}`;
 
-    const items = await getItems(mediumUrl);
+    const items = await getMediumItems(mediumUrl);
     for(let i = 0; i < items.length; i++) {
         const item = items[i];
         console.log(item);
@@ -33,6 +36,7 @@ const main = async () =>  {
         // const description = item.description;
     }
 }
+main();
 
 /// Usage:
 /// const items = getItems('https://medium.com/feed/@atsigncompany')
@@ -40,24 +44,25 @@ const main = async () =>  {
 /// `items` is a list of objects where each object has the following properties: 
 /// {title, pubDate, author, thumbnailUrl, description} which represent what is in the article
 /// 
-async function getItems(mediumUrl) {
+async function getMediumItems(mediumUrl) {
     const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${mediumUrl}`, {});
     const json = await response.json();
     const items = json.items;
     let toReturnItems = [];
     for(let i = 0; i < items.length; i++) {
-        const title = items[i].title;
-        const pubDate = items[i].pubDate;
-        const author = items[i].author;
-        const thumbnailUrl = items[i].thumbnail;
-        const description = getDescription(items[i].description, 150);
-        const objToAdd = {title, pubDate, author, thumbnailUrl, description};
+        const {title, author, thumbnail, pubDate} = items[i];
+        const description = getMediumDescription(items[i].description, 150);
+        const objToAdd = {title, pubDate, author, thumbnailUrl: thumbnail, description};
         toReturnItems.push(objToAdd);
     }
+    console.log(toReturnItems.length);
     return toReturnItems;
 }
+// write process medium items function
 
-function getDescription(longDescription, maxLength) {
+// sort by publish date
+
+function getMediumDescription(longDescription, maxLength) {
     let toReturn = '';
     toReturn = removeTags(longDescription); // remove html tags
     toReturn = toReturn.replace(/(\r\n|\n|\r)/gm, " "); // replace \n with space (https://stackoverflow.com/questions/10805125/how-to-remove-all-line-breaks-from-a-string)
@@ -77,3 +82,5 @@ function removeTags(str) {
     // HTML tag with a null string.
     return str.replace( /(<([^>]+)>)/ig, ''); // (https://stackoverflow.com/a/822464/9854899)
 }
+
+module.exports = { getMediumItems };
