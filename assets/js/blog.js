@@ -152,4 +152,4 @@ async function runHashnodeQuery(query, variables = {}) {
 
 // main();
 
-module.exports = { getMediumItems };
+module.exports = { getMediumItems, getHashnodeItems };
