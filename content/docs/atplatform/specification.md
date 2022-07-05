@@ -2,8 +2,7 @@
 layout: list
 
 title: "Protocol Specification" # The title (ON THE PAGE)
-lead: Learn about the specification of the @protocol
-
+lead: Learn about the specification of the atProtocol
 
 description: The specification of the Atsign protocol on the Atsign platform
 
