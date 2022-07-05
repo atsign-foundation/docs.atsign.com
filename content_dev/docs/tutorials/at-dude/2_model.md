@@ -1,7 +1,7 @@
 ---
 layout: codelab
 
-title: 'Models' # Step Name
+title: "Models" # Step Name
 description: | # SEO Description for this step
   Documentation
 
@@ -9,13 +9,13 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
 ---
 
-| TOC                              |
-|----------------------------------|
-|  [Dude Model](#dude-model)       |
-|  [From Json](#from-json)         |
-|  [To Json](#to-json)             |
-|  [Other Methods](#other-methods) |
-|  [Profile Model](#profile-model) |
+| TOC                             |
+| ------------------------------- |
+| [Dude Model](#dude-model)       |
+| [From Json](#from-json)         |
+| [To Json](#to-json)             |
+| [Other Methods](#other-methods) |
+| [Profile Model](#profile-model) |
 
 This app uses two model for data management, the dude model and the profile model.
 
@@ -43,11 +43,11 @@ class DudeModel {
 ...
 ```
 
-The value of these properties will be sent to the @platform as a string.
+The value of these properties will be sent to the atPlatform as a string.
 
-The receiver and sender properties are necessary for the @platform to determine on will send and receive the data and on whose server the data will be saved.
+The receiver and sender properties are necessary for the atPlatform to determine on will send and receive the data and on whose server the data will be saved.
 
-The duration property will determine which voiceover will be played. A voiceover will be played to reflect the duration of the dude message. 
+The duration property will determine which voiceover will be played. A voiceover will be played to reflect the duration of the dude message.
 
 ##### From Json
 
@@ -64,8 +64,7 @@ The duration property will determine which voiceover will be played. A voiceover
 ...
 ```
 
-This method converts the json received from the @platform to the `DudeModel()` class.
-
+This method converts the json received from the atPlatform to the `DudeModel()` class.
 
 ##### To Json
 
@@ -87,6 +86,7 @@ This method converts the json received from the @platform to the `DudeModel()` c
 This method converts the `DudeModel()` instance into a Map.
 
 ##### Other Methods
+
 ```dart
 ...
 void saveId() => id = const Uuid().v4();
@@ -102,7 +102,8 @@ void saveId() => id = const Uuid().v4();
   }
   ...
 ```
-These methods will save the values received from the app and save it to an instance of the `DudeModel()` that will be sent to the @Platform.
+
+These methods will save the values received from the app and save it to an instance of the `DudeModel()` that will be sent to the atPlatform.
 
 #### Profile model
 
@@ -156,6 +157,3 @@ class ProfileModel {
   }
 }
 ```
-
-
-

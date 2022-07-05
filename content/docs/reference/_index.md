@@ -3,8 +3,7 @@ layout: list
 
 title: "Reference" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Learn about our unique terminology on the @platform
-
+  Learn about our unique terminology on the atPlatform
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)

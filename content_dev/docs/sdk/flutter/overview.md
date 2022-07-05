@@ -1,11 +1,10 @@
 ---
 layout: single
 
-title: 'Overview' # The title (ON THE PAGE)
+title: "Overview" # The title (ON THE PAGE)
 lead: Learn about the various services in the Flutter SDK
 
-
-description: Overview of the Atsign platform Flutter SDK
+description: Overview of the atPlatform Flutter SDK
 
 draft: false # Change this to "true" to hide the page
 toc: false # Change this to "true" to show the table of contents

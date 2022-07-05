@@ -3,11 +3,11 @@ layout: list
 
 title: "Get Started" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Get Started on the @platform.
+  Get Started on the atPlatform.
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Get started on the Atsign platform
+  Get started on the atPlatform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

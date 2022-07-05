@@ -1,29 +1,29 @@
 ---
 layout: codelab
 
-title: 'Dude Service' # Step Name
+title: "Dude Service" # Step Name
 description: | # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
 ---
-| TOC                              |
-|----------------------------------|
 
-|  [Dude Service](#dudeservice)         |
-|  [Dude Service Imports](#imports)             |
-|  [Dude Service Properties](#properties-of-dudeservice) |
-|  [Local Notification](#localnotificationservice) |
-|  [Local Notification imports](#imports-1) |
-|  [Properties of LocalNotificationService](#properties-of-localnotificationservice) |
+| TOC |
+| --- |
 
+| [Dude Service](#dudeservice) |
+| [Dude Service Imports](#imports) |
+| [Dude Service Properties](#properties-of-dudeservice) |
+| [Local Notification](#localnotificationservice) |
+| [Local Notification imports](#imports-1) |
+| [Properties of LocalNotificationService](#properties-of-localnotificationservice) |
 
 They are three service classes in the dude app, they are `NavigationServices()`, `DudeServices()` and `LocalNotificationServices()`. In this code lab we will explore the properties of these classes.
 
 #### DudeService
 
-This class is a singleton that makes all the network calls to the @platform.
+This class is a singleton that makes all the network calls to the atPlatform.
 
 ##### Imports
 
@@ -44,10 +44,10 @@ import '../models/profile_model.dart';
 import 'local_notification_service.dart';
 ```
 
-All the packages that starts with `at_` are packages that allows us to interact with the @platform.
+All the packages that starts with `at_` are packages that allows us to interact with the atPlatform.
 
 at_app_flutter
-: A library that help developers build flutter applications on the @platform.
+: A library that help developers build flutter applications on the atPlatform.
 
 at_client
 : The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the @protocol.
@@ -65,8 +65,7 @@ at_contacts_flutter
 : A Flutter plugin project to provide ease of managing contacts for an @‎sign using @‎platform.
 
 at_utils
-: A Dart library that contains various utility classes such as atSign, atmetadata, configuration, and logger. 
-
+: A Dart library that contains various utility classes such as atSign, atmetadata, configuration, and logger.
 
 We discussed the dude and profile model in the previous codelab.
 
@@ -124,7 +123,7 @@ class DudeService {
 
 Line 2 - 6 creates a singleton pattern. Every time `DudeService.getInstance()` is called it will always return the same object. You can read more about it in on [stackoverflow](https://stackoverflow.com/questions/65868841/why-must-the-internal-be-called-in-the-class).
 
-The `AtSignLogger` in line 9 is used to generate server logs. It also helps to classify logs into subclasses live severe, info and warning based on importance. 
+The `AtSignLogger` in line 9 is used to generate server logs. It also helps to classify logs into subclasses live severe, info and warning based on importance.
 
 Lines 11 to 14 creates instances of `AtClient()`, `AtClientService()`, `AtClientManager()` and `ContactService()`.
 
@@ -139,11 +138,11 @@ AtClientManager
 
 ##### DudeService Methods
 
-We'll now discuss the network calls that are made to the @platform to perform various CRUD operation.
+We'll now discuss the network calls that are made to the atPlatform to perform various CRUD operation.
 
 ###### putDude Method
 
-This method saves the `DudeModel` and `ProfileModel` on the @platform.
+This method saves the `DudeModel` and `ProfileModel` on the atPlatform.
 
 ```dart
   /// Saves Dude to the receiver's remote secondary and stats to the sender's local secondary.
@@ -156,6 +155,7 @@ This method saves the `DudeModel` and `ProfileModel` on the @platform.
     ...
   }
 ```
+
 Line 4 instantiates `isCompleted` to false. This is to display a `CircularProgressIndicator` on the UI while this method is being executed.
 
 Line 5 saves the currentAtsign or signed in user to the `DudeModel.receiver` property.
@@ -165,6 +165,7 @@ Line 6 saves the `contactAtsign` to the `DudeModel.receiver` property. The `cont
 line 7 generates a UUID and saves it to the `DudeModel.id` property.
 
 ##### Metadata & AtKeys
+
 ```dart
   Future<bool> putDude(
       DudeModel dude, String contactAtsign, BuildContext context) async {
@@ -186,9 +187,10 @@ line 7 generates a UUID and saves it to the `DudeModel.id` property.
     ...
     }
 ```
-Lines 4 to 8 creates the `MetaData`. This class describes the characteristics of the `AtKey` being saved on the @platform. eg. The `AtKey` will not be available to everyone on the @platform because `isPublic` is set to false. The list of `Metadata` properties can be viewed here<add metadata link here>.
 
-Lines 10 to 15 creates the `AtKey`. This class acts as an unique identifier of the data being saved to the @platform. If the @platform was a table the @key would represent the row.
+Lines 4 to 8 creates the `MetaData`. This class describes the characteristics of the `AtKey` being saved on the atPlatform. eg. The `AtKey` will not be available to everyone on the atPlatform because `isPublic` is set to false. The list of `Metadata` properties can be viewed here<add metadata link here>.
+
+Lines 10 to 15 creates the `AtKey`. This class acts as an unique identifier of the data being saved to the atPlatform. If the atPlatform was a table the @key would represent the row.
 
 It is important to remember that the atsign that creates the data owns the data. Therefore, the sharedWith property controls who the data is being shared with and the shareBy property determine who the owner of the data is. This is not true in every case, I'll explain the exception next.
 
@@ -196,7 +198,7 @@ Line 17 saves the current time to the `DudeModel.timeSent` property.
 
 ##### Notify
 
-They are two ways to save data on the @platform. It can be saved on the sender secondary server or the receiver secondary server, We'll discuss the latter
+They are two ways to save data on the atPlatform. It can be saved on the sender secondary server or the receiver secondary server, We'll discuss the latter
 
 ```dart
   Future<bool> putDude(
@@ -211,9 +213,10 @@ They are two ways to save data on the @platform. It can be saved on the sender s
     ...
     }
 ```
+
 Lines 4 to 9 saves the the method we use to save data on the receiver secondary server. The reason we want to save the dude on the receiver server is because we want the receiver to have the permission to delete the dude after listening to it.
 
-The `NotificationParams.forUpdate()` method accepts an `Atkey` and a value arguments. We pass the `AtKey` we created previously in line 6 and in line 7 we pass in a string as the value. 
+The `NotificationParams.forUpdate()` method accepts an `Atkey` and a value arguments. We pass the `AtKey` we created previously in line 6 and in line 7 we pass in a string as the value.
 
 `json.encode(dude.toJson())` converts the `DudeModel` to a string.
 
@@ -223,7 +226,7 @@ The `NotificationParams.forUpdate()` method accepts an `Atkey` and a value argum
   Future<bool> putDude(
       DudeModel dude, String contactAtsign, BuildContext context) async {
         ...
-   
+
     var profileMetaData = Metadata()
       ..isEncrypted = true
       ..namespaceAware = true
@@ -235,6 +238,7 @@ The `NotificationParams.forUpdate()` method accepts an `Atkey` and a value argum
       ..metadata = profileMetaData;
     ...
 ```
+
 Lines 5 to 8 creates the Profile `Metadata` and lines 10 to 13 creates the Profile `AtKey`. No `sharedWith` property was provided because the data will not be shared with any other atsign.
 
 ```dart
@@ -264,7 +268,8 @@ Lines 5 to 8 creates the Profile `Metadata` and lines 10 to 13 creates the Profi
     ...
   )
 ```
-Lines 5 to 7 retrieves the `ProfileModel` data from the remote secondary. We will discuss the `AtClient!.get()` method later in this code lab. 
+
+Lines 5 to 7 retrieves the `ProfileModel` data from the remote secondary. We will discuss the `AtClient!.get()` method later in this code lab.
 
 Lines 9 to 10 updated the `ProfileModel` by incrementing the previous values.
 
@@ -274,14 +279,11 @@ Lines 14 to 22 saves the `profileModel` to remote secondary.
 
 The code was placed in a try block because it will throw an exception if there is no `ProfileModel` in remote secondary.
 
-
-
-
 ```dart
   Future<bool> putDude(
       DudeModel dude, String contactAtsign, BuildContext context) async {
         ...
-    
+
     } catch (e) {
       // Exception should be thrown the first time a profile is created for an atsign
       await atClient!
@@ -302,9 +304,11 @@ The code was placed in a try block because it will throw an exception if there i
     return isCompleted;
     }
 ```
+
 Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only execute the first time a profileModel is created for an @sign.
 
 ##### Getting Dudes from remote secondary
+
 ```dart
   /// Receives all dudes sent to the current atsign.
   Future<List<DudeModel>> getDudes() async {
@@ -318,6 +322,7 @@ Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only e
     ...
   }
 ```
+
     // @blizzard30:some_uuid.at_skeleton_app@assault30
     // @blizzard30:signing_privatekey@blizzard30
 
@@ -351,7 +356,7 @@ Line 9 add the keys to the `receivedKeysList`.
 
 Line 4 instantiates an empty list that will eventually store the `DudeModel` extracted from remote secondary.
 
-Lines 5 to 15 loops through every `AtKey` in the  `receivedKeysList`.
+Lines 5 to 15 loops through every `AtKey` in the `receivedKeysList`.
 
 line 7 filters the receivedKeysList to only select `AtKey` that was shared and where the key/id is a UUID.
 
@@ -365,7 +370,7 @@ Line 16 returns the `List` of `DudeModel`.
 
 #### Monitor Notification
 
-The @platform has its own Notification Service that monitors being sent to the current @sign.
+The atPlatform has its own Notification Service that monitors being sent to the current @sign.
 
 ```dart
 void monitorNotifications(BuildContext context) {
@@ -388,7 +393,7 @@ void monitorNotifications(BuildContext context) {
   }
 ```
 
-Line 3 subscribe to data being sent over the dude app. 
+Line 3 subscribe to data being sent over the dude app.
 
 In line the listen method expects an option function. This function receives an `AtNotification` that allows us to control what data we want to listen for as show in lines 5 to 16.
 
@@ -410,6 +415,7 @@ Line 3 returns a list of `AtContacts`. An AtContact is a class containing proper
 #### Get Profile
 
 This method retrieves the `ProfileModel` of the current atsign.
+
 ```dart
   /// Get the profile stats for the current atsign
   Future<ProfileModel> getProfile() async {
@@ -427,12 +433,13 @@ This method retrieves the `ProfileModel` of the current atsign.
         );
   }
 ```
-Lines 3 to 7 gets a list profile models AtKeys, there only one AtKey in the list. Line 9 returns the AtValue and lines 10 to 11 returns the `ProfileModel` class. 
 
+Lines 3 to 7 gets a list profile models AtKeys, there only one AtKey in the list. Line 9 returns the AtValue and lines 10 to 11 returns the `ProfileModel` class.
 
 ### Delete Dude
 
 This dude deletes a dude from remote secondary.
+
 ```dart
  /// Delete dude sent to the current atsign.
   Future<bool> deleteDude(DudeModel dude) async {
