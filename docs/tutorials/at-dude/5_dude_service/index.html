@@ -863,12 +863,12 @@
 </tr>
 </thead>
 </table>
-<p>|  <a href="#dudeservice">Dude Service</a>         |
-|  <a href="#imports">Dude Service Imports</a>             |
-|  <a href="#properties-of-dudeservice">Dude Service Properties</a> |
-|  <a href="#localnotificationservice">Local Notification</a> |
-|  <a href="#imports-1">Local Notification imports</a> |
-|  <a href="#properties-of-localnotificationservice">Properties of LocalNotificationService</a> |</p>
+<p>| <a href="#dudeservice">Dude Service</a> |
+| <a href="#imports">Dude Service Imports</a> |
+| <a href="#properties-of-dudeservice">Dude Service Properties</a> |
+| <a href="#localnotificationservice">Local Notification</a> |
+| <a href="#imports-1">Local Notification imports</a> |
+| <a href="#properties-of-localnotificationservice">Properties of LocalNotificationService</a> |</p>
 <p>They are three service classes in the dude app, they are <code>NavigationServices()</code>, <code>DudeServices()</code> and <code>LocalNotificationServices()</code>. In this code lab we will explore the properties of these classes.</p>
 <h4 id="dudeservice">DudeService <a href="#dudeservice" class="anchor" aria-hidden="true">#</a></h4>
 <p>This class is a singleton that makes all the network calls to the @platform.</p>
@@ -892,7 +892,7 @@
 <dt>at_app_flutter</dt>
 <dd>A library that help developers build flutter applications on the @platform.</dd>
 <dt>at_client</dt>
-<dd>The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the @protocol.</dd>
+<dd>The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the atProtocol.</dd>
 <dt>at_client_mobile</dt>
 <dd>A Flutter extension to the at_client library which adds support for mobile, desktop and IoT devices.</dd>
 <dt>at_commons</dt>
@@ -1025,7 +1025,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">putDude</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">      <span class="n">DudeModel</span> <span class="n">dude</span><span class="p">,</span> <span class="kt">String</span> <span class="n">contactAtsign</span><span class="p">,</span> <span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="p">...</span>
-</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">profileMetaData</span> <span class="o">=</span> <span class="n">Metadata</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">isEncrypted</span> <span class="o">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">namespaceAware</span> <span class="o">=</span> <span class="kc">true</span>
@@ -1070,7 +1070,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">putDude</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">      <span class="n">DudeModel</span> <span class="n">dude</span><span class="p">,</span> <span class="kt">String</span> <span class="n">contactAtsign</span><span class="p">,</span> <span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="p">...</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="c1">// Exception should be thrown the first time a profile is created for an atsign
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">await</span> <span class="n">atClient</span><span class="o">!</span>
@@ -1128,7 +1128,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dudes</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></div><p>Line 4 instantiates an empty list that will eventually store the <code>DudeModel</code> extracted from remote secondary.</p>
-<p>Lines 5 to 15 loops through every <code>AtKey</code> in the  <code>receivedKeysList</code>.</p>
+<p>Lines 5 to 15 loops through every <code>AtKey</code> in the <code>receivedKeysList</code>.</p>
 <p>line 7 filters the receivedKeysList to only select <code>AtKey</code> that was shared and where the key/id is a UUID.</p>
 <p>line 8 extract the <code>AtValue</code> of the <code>AtKey</code></p>
 <p>line 10 converts the value of the <code>AtValue</code> to a <code>DudeModel</code> and add it to the empty dudes list.</p>
@@ -1333,7 +1333,7 @@
     <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
-  <script src="https://dev3.atsign.wtf/index.min.71a1c3cdcc424b750ebe1eb1a0a41004fca8b889936da636e8338486cdc1f570704bd57d7360879f36651ef85bd9416ec0c8c44e5b4ceb7c99b7c41f7be1c425.js" integrity="sha512-caHDzcxCS3UOvh6xoKQQBPyouImTbaY26DOEhs3B9XBwS9V9c2CHnzZlHvhb2UFuwMjETltM63yZt8Qfe&#43;HEJQ==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.189f0d38be9647b17c45841f209577bf61a459c8d424e74dbd359bbfc5bbdb31c32de95e8bcab808a33301d57614051a1df30afbd7ab7ab551128d8e915a844f.js" integrity="sha512-GJ8NOL6WR7F8RYQfIJV3v2GkWcjUJOdNvTWbv8W72zHDLelei8q4CKMzAdV2FAUaHfMK&#43;9ererVREo2OkVqETw==" crossorigin="anonymous" defer></script>
   
   </body>
 </html>
