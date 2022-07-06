@@ -50,7 +50,7 @@ at_app_flutter
 : A library that help developers build flutter applications on the atPlatform.
 
 at_client
-: The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the @protocol.
+: The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the atProtocol.
 
 at_client_mobile
 : A Flutter extension to the at_client library which adds support for mobile, desktop and IoT devices.

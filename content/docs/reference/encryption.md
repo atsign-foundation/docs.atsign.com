@@ -24,9 +24,9 @@ The atPlatform implements end-to-end encryption that is best illustrated with th
 
 This shared key uses the same encryption process as the Symmetric Key Encryption, which is called AES (Advanced Encryption Standard) and involves three block ciphers: AES-128, AES-192 and AES-256.
 
-The @protocol specifically uses AES-256 for Data Encryption Keys.
+The atProtocol specifically uses AES-256 for Data Encryption Keys.
 
-The RSA (Rivest-Shamir-Adleman) encryption algorithm is then used to encrypt the shared key from the above example with @bob's public key. The @protocol specifically utilizes RSA 2048. Note, that because the RSA algorithm is an Asymmetric Key Encryption method, a public and private key are generated.
+The RSA (Rivest-Shamir-Adleman) encryption algorithm is then used to encrypt the shared key from the above example with @bob's public key. The atProtocol specifically utilizes RSA 2048. Note, that because the RSA algorithm is an Asymmetric Key Encryption method, a public and private key are generated.
 
 If you want to read more about Encryption and how it works on the atPlatform check this [Medium](https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49) article!
 

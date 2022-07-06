@@ -42,7 +42,7 @@ When you ask someone “What is my name?” you will get a different answer for 
 with a sweet nickname they gave you. If you ask your friends, they may answer with your first name. This is how namespaces work. You can ask
 different namespaces for data and get a different answer every time.
 
-In the context of the @protocol, refer to the example below to improve your understanding.
+In the context of the atProtocol, refer to the example below to improve your understanding.
 
 Example:
 
@@ -50,7 +50,7 @@ Example:
 - `phone@alice` (phone is the key, alice is the namespace) will answer with data=`444-444-4444`
 - `phone@wavi` (phone is the key, wavi is the namespace) will answer with data=`555-555-5555`
 
-This is the beauty of the @protocol. Each namespace replied with different information. People control their own data and which applications
+This is the beauty of the atProtocol. Each namespace replied with different information. People control their own data and which applications
 get what data. With the atPlatform, the people become in control of their own data privacy.
 
 ## Related Resources

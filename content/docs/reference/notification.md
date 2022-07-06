@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of Notificaton in the atPlatform, the notify verb in the @protocol, and Definition of Monitor in the atPlatform
+  Definition of Notificaton in the atPlatform, the notify verb in the atProtocol, and Definition of Monitor in the atPlatform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
@@ -22,7 +22,7 @@ The atPlatform takes care of all of the heavy lifting with encryption, verb buil
 
 Read more [here](https://blog.atsign.dev/part-1-the-notify-verb-cko97bv8f00l5gws13umb0nvz).
 
-## @protocol
+## atProtocol
 
 The notify verb enables you to notify the atsign user of some data event.
 
@@ -64,7 +64,7 @@ Monitor is used to receive notifications from the other secondary server.
 
 Read more {{< a href="https://github.com/atsign-foundation/at_client_sdk/blob/trunk/at_client/lib/src/manager/monitor.dart" target="_blank" rel="canonical" >}}here{{</ a >}}.
 
-### @protocol
+### atProtocol
 
 The monitor verb streams received notifications.
 

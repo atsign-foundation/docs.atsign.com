@@ -52,11 +52,11 @@ Metadata In AtKey allows you to add more aspects of AtKey. If you want your data
 
 **Key Creation rules**
 
-A key in @protocol has the structure described below.
+A key in atProtocol has the structure described below.
 
 `<Key Visibility>|<sharedWith>:<entity>.<namespace>@<sharedBy/owner>`
 
-<a name="keyrules">A key in @protocol should adhere to following rules:</a>
+<a name="keyrules">A key in atProtocol should adhere to following rules:</a>
 
 1. Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)
 2. Max of fifty five 7-bit characters for the @sign
@@ -83,10 +83,10 @@ List of reserved keys:
 - privatekey:at_secret
 - privatekey:at_secret_deleted
 
-**@protocol data visibility**
+**atProtocol data visibility**
 
-The @protocol saves data created in a key-value pair format. @protocol lets you create data with three levels of visibility. They are public, shared and self data.
-In the @protocol a piece of data is identified as a certain data type based on the key structure. In the SDK, AtKey exposes abstractions to create keys for the various data types. Below sections describe this in detail.
+The atProtocol saves data created in a key-value pair format. atProtocol lets you create data with three levels of visibility. They are public, shared and self data.
+In the atProtocol a piece of data is identified as a certain data type based on the key structure. In the SDK, AtKey exposes abstractions to create keys for the various data types. Below sections describe this in detail.
 
 **Public data**
 
@@ -97,14 +97,14 @@ Good examples of public data in the real world are “first name” and the “l
 **Signing of public data**
 Public data is signed with the “private keys” of the user. Which means when @alice looks up @bob’s public data, @alice knows for sure that the data is indeed from @bob.
 
-**Creating a public key in @protocol**
+**Creating a public key in atProtocol**
 
 ```
 var publicKey = AtKey.public('phone', namespace: 'wavi')
                 .build();
 ```
 
-**Persisting public data in @protocol**
+**Persisting public data in atProtocol**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -125,14 +125,14 @@ Good examples of shared data in the real world are “phone number” and “ema
 
 When @bob shares data to @alice, @bob generates a shared key for @alice and encrypts the data with the shared key. Further, the shared key is encrypted with the @alice public key. So the data shared is cryptographically secure.
 
-**Creating a shared key in @protocol**
+**Creating a shared key in atProtocol**
 
 ```
 var sharedKey = AtKey.shared('phone', namespace: 'wavi')
                 ..sharedWith('@bob').build();
 ```
 
-**Persisting shared data in @protocol**
+**Persisting shared data in atProtocol**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -154,14 +154,14 @@ Good examples of self data are “passwords” and “financial data”. We keep
 
 When @bob creates data for self it is encrypted using @bob’s self encryption key.
 
-**Creating a self key in @protocol**
+**Creating a self key in atProtocol**
 
 ```
 var selfKey = AtKey.self('phone', namespace: 'wavi')
               .build();
 ```
 
-**Persisting self data in @protocol**
+**Persisting self data in atProtocol**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -178,7 +178,7 @@ var putResult = await atClient.put(phoneKey, value);
  
        All of the above rules are implemented and exposed using the validate() method on AtKey. These rules are enforced during creation of the data.
 
-**Key attributes of @protocol data**
+**Key attributes of atProtocol data**
 
 **_TTL - Time to live_**
 
@@ -266,10 +266,10 @@ When an original key is updated by the creator, the ones who have cached it need
 
 CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the origi
 
-**@protocol CRUD operations**
+**atProtocol CRUD operations**
 
 **Create/Update Data**
-SDK of @protocol exposes two methods to create the data. They are:
+SDK of atProtocol exposes two methods to create the data. They are:
 
 - put
 - putMeta
