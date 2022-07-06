@@ -50,7 +50,7 @@ rel="canonical"
 target="\_blank"
 href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md#the-cram-verb"
 
-> }}
+>}}
 
     here{{< /a >}}.
 
