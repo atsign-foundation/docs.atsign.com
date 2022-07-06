@@ -21,7 +21,7 @@ This app uses two model for data management, the dude model and the profile mode
 
 #### Dude Model
 
-The dude model is a class that represent a dude or a message that will be sent to others on the at platform.The dude model class contains the following properties.
+The dude model is a class that represent a dude or a message that will be sent to others on the atPlatform.The dude model class contains the following properties.
 
 ```dart
 class DudeModel {

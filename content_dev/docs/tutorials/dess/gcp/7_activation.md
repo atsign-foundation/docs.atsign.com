@@ -1,7 +1,7 @@
 ---
 layout: codelab
 
-title: 'Activation of @sign' # Step Name
+title: 'Activation of atSign' # Step Name
 description: | # SEO Description for this step
   Documentation
 
@@ -13,12 +13,12 @@ Next up we need to activate it
 
 Login to your dashboard at https://my.atsign.com/dashboard
 
-Open “my @signs”
+Open “my atSigns”
 
 
 ![gcp-atsign-dashboard](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-dashboard.png?raw=true)
 
-Open “managed” of @sign you are registering”
+Open “managed” of atSign you are registering”
 
 
 ![gcp-atsign-nonactive](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-nonactive.png?raw=true)
@@ -28,16 +28,16 @@ Navigate to Advance settings:
 
 ![gcp-atsign-active](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-active.png?raw=true)
 
-If you have already activated your @sign you will be prompted to erase all your data first
+If you have already activated your atSign you will be prompted to erase all your data first
 
 ![gcp-atsign-erase](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-erase.png?raw=true)
 
-Once done you are able to link your @sign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate
+Once done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate
 
 
 ![gcp-atsign-advance](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-advance.png?raw=true)
 
-You should see that your @sign is being activated in your dashboard:
+You should see that your atSign is being activated in your dashboard:
 
 
 ![gcp-atsign-activating](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-atsign-activating.png?raw=true)

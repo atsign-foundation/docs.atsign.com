@@ -6,7 +6,7 @@ lead: | # The lead below the title (ON THE PAGE)
   Synchronization in the atPlatform
 
 description:
-  | # SEO Description of the page (Shows in google and Atsign.dev search)
+  | # SEO Description of the page (Shows in google and atsign.dev search)
   Definition of Synchronization in the atPlatform
 
 draft: false # Change this to "true" to hide the page
@@ -23,7 +23,7 @@ On at the atProtocol, your data is encrypted with your self [encryption](/docs/r
 First we need to touch up on what local & remote secondaries are:
 
 1. **Remote Secondary**: A microservice with a DNS address which makes it addressable, provides a backup of your data in case of loss on the phone, provides a joining place to synchronize data if you have more than one device.
-2. **Local Secondary**: A copy of data that allows for fast interactivity and offline support. Every activated @sign gets their own remote secondary which runs on Atsign's servers. All of your data is signed and encrypted, so Atsign cannot see it.
+2. **Local Secondary**: A copy of data that allows for fast interactivity and offline support. Every activated atSign gets their own remote secondary which runs on Atsign's servers. All of your data is signed and encrypted, so Atsign cannot see it.
 
 Synchronization aims to keep both local and remote secondaries with the same data. If by any chance the device is lost, then the data can be retrieved from the remote secondary:
 

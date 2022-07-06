@@ -134,7 +134,7 @@ AtClientService
 : Class that manages your atsigns.
 
 AtClientManager
-: Factory class responsible for giving the instances of AtClient and other services for a given @sign.
+: Factory class responsible for giving the instances of AtClient and other services for a given atSign.
 
 ##### DudeService Methods
 
@@ -305,7 +305,7 @@ The code was placed in a try block because it will throw an exception if there i
     }
 ```
 
-Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only execute the first time a profileModel is created for an @sign.
+Lines 8 to 20 saves the `profileModel` to the remote secondary. This code only execute the first time a profileModel is created for an atSign.
 
 ##### Getting Dudes from remote secondary
 
@@ -330,7 +330,7 @@ This method retrieves the `DudeModel` thats stored on remote secondary.
 
 Lines 3 instantiates an empty list that will eventually store `AtKeys`.
 
-Lines 4 to 7 grabs all the `AtKey` stored in the current @sign remote secondary.
+Lines 4 to 7 grabs all the `AtKey` stored in the current atSign remote secondary.
 
 Line 9 add the keys to the `receivedKeysList`.
 
@@ -370,7 +370,7 @@ Line 16 returns the `List` of `DudeModel`.
 
 #### Monitor Notification
 
-The atPlatform has its own Notification Service that monitors being sent to the current @sign.
+The atPlatform has its own Notification Service that monitors being sent to the current atSign.
 
 ```dart
 void monitorNotifications(BuildContext context) {
@@ -399,7 +399,7 @@ In line the listen method expects an option function. This function receives an 
 
 In line 6 to 7 we get the current atsign. In line 9 we filter the notification to ensure the notification is being sent to the current atsign.
 
-In lines 10 to 14 we show the user a notification that a dude was sent to them by the @sign of the sender.
+In lines 10 to 14 we show the user a notification that a dude was sent to them by the atSign of the sender.
 
 #### Get Contacts
 

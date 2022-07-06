@@ -16,13 +16,13 @@ weight: 209 # For single pages, lower is first.
 
 ## Definition
 
-AtSign's CTO, Colin Constable says this in an interview on Namespaces:
+Atsign's CTO, Colin Constable says this in an interview on Namespaces:
 {{<br>}}
 "Most people are familiar with DNS (domain name system): for example, if you type “cnn.com”, “fox.com”, or “bbc.com”, you get news sites.
 But you can’t just type in “news” and expect the Internet to tell you which particular flavor of news you want. We need to create namespaces
 so that humans can remember the name and computers can translate it to Internet protocol. Once there is a namespace like “bbc.com,” you can
 reliably know that somebody owns that particular space, and it needs to be managed so that there are no clashes. For instance, you don’t
-want to type “bbc.com” and get sent to Amazon’s home page. That’s why they have to be unique, and we at The @ Company created a new
+want to type “bbc.com” and get sent to Amazon’s home page. That’s why they have to be unique, and we at Atsign created a new
 namespace with @Namespace."
 
 Feel free to read more on namespaces {{< a
@@ -33,7 +33,7 @@ Feel free to read more on namespaces {{< a
 ## atPlatform
 
 Namespace is a common term that may occur when reading about the atPlatform. To put it simply, a namespace is a unique container to place
-data in. More in the context of the apps, namespaces are just @ signs associated with each app so a secondary server can be aware of which
+data in. More in the context of the apps, namespaces are just atSigns associated with each app so a secondary server can be aware of which
 data belongs to who. See an example below.
 
 ## Example

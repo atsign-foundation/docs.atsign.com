@@ -13,7 +13,7 @@ order: 2 # Ordering of the steps
 * Have google account
 * Have registered Fully Qualified Domain Name (FQDN)
 
-#### 1. Registering your @sign
+#### 1. Registering your atSign
 
 This topic is already well documented. Please follow the guidance of Our [FAQs](https://atsign.com/faqs/) and register via [the registrar site](https://atsign.com/get-an-sign/).
 

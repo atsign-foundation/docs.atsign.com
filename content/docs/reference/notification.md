@@ -16,7 +16,7 @@ weight: 211 # For single pages, lower is first.
 
 ## atPlatform
 
-Notification enables developers to **notify** another @ sign of some data event. It is used to send data from one @ sign's secondary server to another @ sign's secondary server.
+Notification enables developers to **notify** another atSign of some data event. It is used to send data from one atSign's secondary server to another atSign's secondary server.
 
 The atPlatform takes care of all of the heavy lifting with encryption, verb building, transmission, etc,.
 
@@ -37,14 +37,14 @@ The following is the regex for the `notify` verb.
 | `(ttb:(?<ttb>\d+):)?`                                               | TTB (time to birth), [integer, 1 or more digits, optional argument]                                                                                                                                                    |
 | `(ttr:(?<ttr>(-)?\d+):)?`                                           | TTR (time to refresh), [integer, 1 or more digits, can be negative, optional argument], (e.g.: 86400 will refresh once a day)                                                                                          |
 | `(ccd:(?<ccd>true\|false):)?`                                       | CCD (casecade delete), [boolean, true\|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender's server and the recipient's server) |
-| `(@(?<forAtSign>[^@:\s]-))`                                         | The @sign the notification is for, [string, negate @ character, required argument]                                                                                                                                     |
+| `(@(?<forAtSign>[^@:\s]-))`                                         | The atSign the notification is for, [string, negate @ character, required argument]                                                                                                                                    |
 | `(?<atKey>[^:]((?!:{2})[^@])+)@(?<atSign>[^@:\s]+)(:(?<value>.+))?` | AtKey details, see below, [optional], (`signing_publickey@alice`)                                                                                                                                                      |
 
-| AtKey Regex Snippet                  | Explanation, [argument details], (example)                                        |
-| ------------------------------------ | --------------------------------------------------------------------------------- |
-| `(?<atKey>[^:]((?!:{2})[^@])+)`      | AtKey name, [], (e.g. 'signing_publickey')                                        |
-| `@`                                  | at separator                                                                      |
-| `(?<atSign>[^@:\s]+)(:(?<value>.+))` | namespace @sign that key belongs to, [string, negate @ character], (e.g. 'alice') |
+| AtKey Regex Snippet                  | Explanation, [argument details], (example)                                         |
+| ------------------------------------ | ---------------------------------------------------------------------------------- |
+| `(?<atKey>[^:]((?!:{2})[^@])+)`      | AtKey name, [], (e.g. 'signing_publickey')                                         |
+| `@`                                  | at separator                                                                       |
+| `(?<atSign>[^@:\s]+)(:(?<value>.+))` | namespace atSign that key belongs to, [string, negate @ character], (e.g. 'alice') |
 
 Response:
 
