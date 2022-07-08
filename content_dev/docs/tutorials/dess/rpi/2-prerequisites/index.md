@@ -9,13 +9,13 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
 ---
 
-* Registered @sign(s) to setup
+* Registered atSign(s) to setup
 * A No-IP account
 * A Fully Qualified Domain Name (FQDN)
 * Raspberry Pi (model 3B+ used for this tutorial)
 
 
-#### 1. Registering your @sign
+#### 1. Registering your atSign
 
 This topic is already well documented. Please follow the guidance of Our FAQs and register via [the registrar site](https://atsign.com/get-an-sign/).
 
@@ -54,7 +54,7 @@ We will end the No-IP configuration later.
 
 #### 3. Register your own fully qualified domain name (FQDN) 
 
-This step can be performed at a variety of sites, all with different pricing models. You can use sites like [Go Daddy](http://www.godaddy.com/), [Namecheap](https://www.namecheap.com/), and many others. The following configuration has been done in Cloudflare:
+This step can be performed at a variety of sites, all with different pricing models. You can use sites like [Go Daddy](http://www.godaddy.com/), [Namecheap](https://www.namecheap.com/), and many others. The following configuration has been done in [Cloudflare](https://www.cloudflare.com/products/registrar/):
 On the DNS panel, click on 'Add record':
 {{< image type="page" src="addrecord.jpg">}}
 

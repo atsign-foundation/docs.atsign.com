@@ -1,7 +1,7 @@
 ---
 layout: codelab
 
-title: 'Registration of @sign in your private dess' # Step Name
+title: 'Registration of atSign in your private dess' # Step Name
 description: | # SEO Description for this step
   Documentation
 
@@ -23,22 +23,22 @@ Once the installer is finished you should be prompted like so:
 
 
 
-At this step you should already have your @sign registered at [atsign.com](http://atsign.com). If not go do it!
+At this step you should already have your atSign registered at [atsign.com](http://atsign.com). If not go do it!
 
-I have registered my own free @sign (@44likelycanary) which I will link to my dess.
+I have registered my own free atSign (@44likelycanary) which I will link to my dess.
 
 In your instance console, navigate to dess folder. If you were following this guide it will be located in:
 
-We now need to create the service that will host our @sign by executing the dess-create command:
+We now need to create the service that will host our atSign by executing the dess-create command:
 
-	sudo dess-create <@your-atsign> <your-domain> <opened-port> <email-address> <service-name: your atsign with no '@'>```
+	sudo dess-create <@your-atSign> <your-domain> <opened-port> <email-address> <service-name: your atsign with no '@'>```
 
 For instance:
 ```sudo dess-create @44likelycanary 4atsign.link 8000 tutorial@example.com likelycanary```
 
 To make it more understandable:
 
-- I will be registering my @sign @44likelycanary.
+- I will be registering my atSign @44likelycanary.
 
 - I will be using my domain 4atsign.link which I have registered.
 
@@ -54,4 +54,4 @@ If everything is successful you should see output like this:
 
 
 
-At this moment your @sign is registered on your dess.
+At this moment your atSign is registered on your dess.
