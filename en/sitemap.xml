@@ -283,6 +283,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/7-activation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_manager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -302,6 +308,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/card/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/5-rasp-connection/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -367,6 +379,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/1-introduction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -421,6 +439,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/2-prerequisites/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/aws/3-prep-aws-instance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -428,6 +452,18 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/3_prep_aws_instance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/4-prep-rasp/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/3-prep-router-config/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -463,7 +499,19 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/6-registration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/8_send_dude_srcreen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

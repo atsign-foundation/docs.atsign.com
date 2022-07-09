@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Setup dess on a Raspberry Pi on </title>
+    <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/</link>
+    <description>Recent content in Setup dess on a Raspberry Pi on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/tutorials/dess/rpi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Activation of atSign</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/7-activation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/7-activation/</guid>
+      <description>Next up we need to activate it
+Login to your dashboard at atsign.com/dashboard
+Open “my atSigns”
+Open “managed” of atSign you are registering”
+Navigate to Advance settings:
+If you have already activated your atSign you will be prompted to erase all your data first
+Once done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate.</description>
+    </item>
+    
+    <item>
+      <title>Connection to Raspberry Pi</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/5-rasp-connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/5-rasp-connection/</guid>
+      <description>Now we will connect to our Raspberry Pi (which should be connected via ethernet or wireless to our network). We will be using Putty, although there are other options such as OpenSSH. To begin with, let&amp;rsquo;s download the software.
+We will choose SSH (port 22) and our Raspberry Pi local IP address: If you are using a public-key (if not, this step is not necessary), you will have to choose the directory where it is located, in SSH-&amp;gt;Auth options: After that, click &amp;lsquo;Open&amp;rsquo; button, located in the main menu.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/1-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/1-introduction/</guid>
+      <description>In this step-by-step guide I will walk you through all steps required to setup your own private dess using a Raspberry Pi.</description>
+    </item>
+    
+    <item>
+      <title>Pre-requisites</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/2-prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/2-prerequisites/</guid>
+      <description>Registered atSign(s) to setup A No-IP account A Fully Qualified Domain Name (FQDN) Raspberry Pi (model 3B+ used for this tutorial)  1. Registering your atSign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
+2. Check if your IP address is static or dynamic #In case it is static, you can skip the rest of this step.</description>
+    </item>
+    
+    <item>
+      <title>Preparing Raspberry Pi configuration</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/4-prep-rasp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/4-prep-rasp/</guid>
+      <description>For this part of the tutorial, I&amp;rsquo;m going to be using a Raspberry Pi model 3B+, although some other Raspberry Pi which runs an OS version compatible with dess will also work. This time we are going to be using Raspbian (Raspberry Pi OS Lite (32-bit) version), along with the Raspberry Pi Imager program, which will help us to install the OS.
+First of all, we need to download the Raspberry Pi Imager program for our current PC OS: We can install the Lite or the Full version.</description>
+    </item>
+    
+    <item>
+      <title>Preparing router configuration</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/3-prep-router-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/3-prep-router-config/</guid>
+      <description>Now we will need to do the proper configuration in our home router. We will need to do two things:
+ Open port 80, and a port for the dess (typically 6464) Associate Dynamic DNS to No-IP  After logging in into the home router (In my case, navigating to &amp;ldquo;192.168.1.1&amp;rdquo; in any web browser. You will find that information on the back of your router), We can start the configuration.</description>
+    </item>
+    
+    <item>
+      <title>Registration of atSign in your private dess</title>
+      <link>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/6-registration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/6-registration/</guid>
+      <description>Now, we will proceed to install dess, following the official instructions. Make sure curl is installed, we will use curl to pull the dess installation file:
+sudo apt install curl  Finally, run the dess installer:
+curl -fsSL https://getdess.atsign.com | sudo bash  Once the installer is finished you should be prompted like so:
+Dess installed, please move on to the sudo dess-create command.
+At this step you should already have your atSign registered at atsign.</description>
+    </item>
+    
+  </channel>
+</rss>
