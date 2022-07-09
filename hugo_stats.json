@@ -283,7 +283,9 @@
       "wrap"
     ],
     "ids": [
+      "1-registering-your-atsign",
       "1-registering-your-sign",
+      "2-check-if-your-ip-address-is-static-or-dynamic",
       "2-sign-up-for-aws-account",
       "2-sign-up-for-gcp-account",
       "3-register-your-own-fully-qualified-domain-name-fqdn",
