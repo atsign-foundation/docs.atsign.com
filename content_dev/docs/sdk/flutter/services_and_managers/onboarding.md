@@ -1,7 +1,7 @@
 ---
 layout: codelab
 
-title: 'Onboarding' # Step Name
+title: "Onboarding" # Step Name
 description: | # SEO Description for this step
   Documentation
 
@@ -11,7 +11,7 @@ order: 4 # Ordering of the steps
 
 ### Overview
 
-The @platform uses secret keys for authenticating an at sign as cryptographically secure replacement for usernames and passwords.To make developers life easier @platform offers [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package which handles secure management of secret keys.If you are developing a new @platform app, we recommend that you use [at_app](https://pub.dev/packages/at_app) which can create  @platform app template that already contains onboarding in it. 
+The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords.To make developers life easier atPlatform offers [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package which handles secure management of secret keys.If you are developing a new atPlatform app, we recommend that you use [at_app](https://pub.dev/packages/at_app) which can create atPlatform app template that already contains onboarding in it.
 
 ## Usage
 
@@ -34,6 +34,6 @@ Onboarding(
    nextScreen: const HomeScreen(),
    );
   },
-  child: const Text('Onboard an @sign'),
+  child: const Text('Onboard an atSign'),
 ),
 ```

@@ -18,9 +18,9 @@ weight: 208 # For single pages, lower is first.
 
 PKAM stands for public key authentication mechanism. It is a mechanism for encrypting/decrypting data between two parties.
 
-## @platform
+## atPlatform
 
-The @platform's packages and SDKs help apps generate a RSA PKAM public/private keypair and save this in a `.atKeys` file containing these
+The atPlatform's packages and SDKs help apps generate a RSA PKAM public/private keypair and save this in a `.atKeys` file containing these
 keys. Since Atsign provided the CRAM secret, this poses an vulnerability since this is a shared secret between you and Atsign. To avert
 this, a new RSA PKAM keypair is generated on your device and the CRAM secret is no longer valid. The PKAM keypair is used for all subsequent
 authentications, and as you are the only one with access to the private key, you are the only one who is able to authenticate.

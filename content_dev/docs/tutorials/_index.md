@@ -3,8 +3,7 @@ layout: list
 
 title: "Samples & Tutorials" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Samples and tutorials on the @platform.
-
+  Samples and tutorials on the atPlatform.
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)

@@ -21,7 +21,7 @@ Based on your need you can either  install at_client_mobile or at_client and imp
 AtClientManager.getInstance().setCurrentAtSign('@alice', 'wavi', <preference>);
 ```
 
- The setCurrentAtSign method accepts the following arguments: currentAtSign, namespace and the preferences. The currentAtsign argument accepts an @sign , namespace accepts the namespace of the app and the preference accepts AtClientPreference value which we are going to discuss next.
+ The setCurrentAtSign method accepts the following arguments: currentAtSign, namespace and the preferences. The currentAtsign argument accepts an atSign , namespace accepts the namespace of the app and the preference accepts AtClientPreference value which we are going to discuss next.
 
 After Initializing you are ready to make calls of client methods and services. The AtClientManger Instance has a getter atClient which returns an instance of AtClient. 
 

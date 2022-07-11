@@ -6,7 +6,7 @@ lead: | # The lead below the title (ON THE PAGE)
   Providing access to information
 
 description:
-  | # SEO Description of the page (Shows in google and Atsign.dev search)
+  | # SEO Description of the page (Shows in google and atsign.dev search)
   Definition of public and private keys
 
 draft: false # Change this to "true" to hide the page
@@ -26,11 +26,11 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
 1. Public Key
 
-   - A public key is a key which can be looked up by any @sign holder.
+   - A public key is a key which can be looked up by any atSign holder.
 
    - A public key should be part of the _scan_ verb result.
 
-   - Format of the public key should be **public**:\<identifier>:**<@sign>**
+   - Format of the public key should be **public**:\<identifier>:**<atSign>**
 
    **Example:**
 
@@ -40,11 +40,11 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
 2. Self Key
 
-   - A Self key is a key which cannot be looked up any @sign holder other than the one created it.
+   - A Self key is a key which cannot be looked up any atSign holder other than the one created it.
 
    - A Self key should not be returned in a _scan_ verb result.
 
-   - Format of the Self key should be **privatekey**:\<identifier>:**<@sign>**
+   - Format of the Self key should be **privatekey**:\<identifier>:**<atSign>**
 
    **Example:**
 
@@ -54,10 +54,10 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
 3. Shared key
 
-   - A shared key can only be looked up by an @sign holder with whom the data has been shared.
+   - A shared key can only be looked up by an atSign holder with whom the data has been shared.
    - A shared key should be part of the _scan_ verb result only for the person who created it and the specific person it has been shared with.
    - Format of the key shared with someone else should be  
-     **cached**:**<Shared with @sign>**:\<identifier>:**<Created by @sign>**
+     **cached**:**<Shared with atSign>**:\<identifier>:**<Created by atSign>**
 
    **Example:**
 
@@ -81,12 +81,12 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
 5. Cached Key
 
-   - A cached key is a key that was originally created by another @sign owner but is now cached on the Secondary Server of another person's @sign as they were given permission to cache it.
+   - A cached key is a key that was originally created by another atSign owner but is now cached on the Secondary Server of another person's atSign as they were given permission to cache it.
 
-   - A cached key should be listed in the _scan_ verb result for the @sign owner who cached it.
+   - A cached key should be listed in the _scan_ verb result for the atSign owner who cached it.
 
    - Format of the key shared with someone else should be  
-     **cached**:**<Shared with @sign>**:\<identifier>:**<Created by @sign>**
+     **cached**:**<Shared with atSign>**:\<identifier>:**<Created by atSign>**
 
    **Example:**
 
@@ -94,7 +94,7 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
    > The person who has cached the key should not be allowed to update the cached key.
 
-   > An @sign owner who has created and shared the key should be allowed to update a cached key, and if the "autoNotify" config parameters is set to true, the updated value should be notified (please refer to the `notify` verb) and the cached key updated with the new value.
+   > An atSign owner who has created and shared the key should be allowed to update a cached key, and if the "autoNotify" config parameters is set to true, the updated value should be notified (please refer to the `notify` verb) and the cached key updated with the new value.
 
    > If the person who originally shared the keys set the CCD (Cascade delete) to true, the cached key will be deleted when the original key is deleted.
 
