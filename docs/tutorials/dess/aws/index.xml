@@ -7,18 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/tutorials/dess/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Activation of @sign</title>
+      <title>Activation of atSign</title>
       <link>https://dev3.atsign.wtf/docs/tutorials/dess/aws/7-activation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/aws/7-activation/</guid>
       <description>Next up we need to activate it
 Login to your dashboard at atsign.com/dashboard
-Open “my @signs”
-Open “managed” of @sign you are registering”
+Open “my atSigns”
+Open “managed” of atSign you are registering”
 Navigate to Advance settings:
-If you have already activated your @sign you will be prompted to erase all your data first
-Once done you are able to link your @sign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate.</description>
+If you have already activated your atSign you will be prompted to erase all your data first
+Once done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ sudo apt update &amp;amp;&amp;amp; sudo apt upgrade This might take some time, b
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/aws/2-prerequisites/</guid>
-      <description>Registered @sign(s) to setup An AWS account A Fully Qualified Domain Name (FQDN)  1. Registering your @sign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
+      <description>Registered atSign(s) to setup An AWS account A Fully Qualified Domain Name (FQDN)  1. Registering your atSign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
 2. Sign-up for AWS account #If you are new to AWS, signing up for an account is free! The cost of running dess is about 10$/month. You can create your account at Amazon Web Services and as of June 6th, 2021 there is a “free tier” available which was used during the making of this guide.</description>
     </item>
     
@@ -79,15 +79,15 @@ Lets configure a static IP address for your new instance. Navigate to Networking
     </item>
     
     <item>
-      <title>Registration of @sign in your private dess</title>
+      <title>Registration of atSign in your private dess</title>
       <link>https://dev3.atsign.wtf/docs/tutorials/dess/aws/6-registration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/aws/6-registration/</guid>
-      <description>At this step you should already have your @sign registered at atsign.com. If not go do it!
-I have registered my own free @sign (@44likelycanary) which I will link to my dess.
+      <description>At this step you should already have your atSign registered at atsign.com. If not go do it!
+I have registered my own free atSign (@44likelycanary) which I will link to my dess.
 In your instance console, navigate to dess folder. If you were following this guide it will be located in:
-We now need to create the service that will host our @sign by executing the dess-create command:
+We now need to create the service that will host our atSign by executing the dess-create command:
 $ sudo dess-create @44likelycanary 4atsign.</description>
     </item>
     

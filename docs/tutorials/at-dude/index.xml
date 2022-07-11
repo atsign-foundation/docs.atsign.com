@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>@dude Tutorial on </title>
+    <title>atDude Tutorial on </title>
     <link>https://dev3.atsign.wtf/docs/tutorials/at-dude/</link>
-    <description>Recent content in @dude Tutorial on </description>
+    <description>Recent content in atDude Tutorial on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/tutorials/at-dude/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -25,7 +25,7 @@ Dude Controller #The DudeController() class controls the state management for t
       <guid>https://dev3.atsign.wtf/docs/tutorials/at-dude/5_dude_service/</guid>
       <description>TOC    | Dude Service | | Dude Service Imports | | Dude Service Properties | | Local Notification | | Local Notification imports | | Properties of LocalNotificationService |
 They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
-DudeService #This class is a singleton that makes all the network calls to the @platform.</description>
+DudeService #This class is a singleton that makes all the network calls to the atPlatform.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ DudeService #This class is a singleton that makes all the network calls to the 
       <guid>https://dev3.atsign.wtf/docs/tutorials/at-dude/1_introduction/</guid>
       <description>In this tutorial we will cover the main aspect of the at_dude app. This app is a secure, end-to-end encrypted, peer-to-peer application that allows you to send &amp;lsquo;dudes&amp;rsquo; to your contacts!
 The longer you press and hold the Dude button, the longer your sent dude will be! you can Keep up-to-date with your &amp;lsquo;dude&amp;rsquo; stats to see how much duding you&amp;rsquo;ve done!.
-This app is build on the @platform. The @platform is an open source backend platform that allows developers to build end to end encrypted application.</description>
+This app is build on the atPlatform. The atPlatform is an open source backend platform that allows developers to build end to end encrypted application.</description>
     </item>
     
     <item>
@@ -65,7 +65,7 @@ LocalNotificationService #This class contains the configurations required to se
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/at-dude/2_model/</guid>
       <description>TOC     Dude Model   From Json   To Json   Other Methods   Profile Model    This app uses two model for data management, the dude model and the profile model.
-Dude Model #The dude model is a class that represent a dude or a message that will be sent to others on the at platform.The dude model class contains the following properties.</description>
+Dude Model #The dude model is a class that represent a dude or a message that will be sent to others on the atPlatform.The dude model class contains the following properties.</description>
     </item>
     
     <item>

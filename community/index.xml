@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Join the @platform developer community on </title>
+    <title>Join the atPlatform developer community on </title>
     <link>https://dev3.atsign.wtf/community/</link>
-    <description>Recent content in Join the @platform developer community on </description>
+    <description>Recent content in Join the atPlatform developer community on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/community/index.xml" rel="self" type="application/rss+xml" />
   </channel>

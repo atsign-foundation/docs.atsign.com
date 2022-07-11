@@ -22,7 +22,7 @@ Based on your need you can either install at_client_mobile or at_client and impo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_preference/</guid>
-      <description>Overview #AtClientPreference is used to configure the preferences of an @platform application. It offers a variety of attributes to give a developer ultimate flexibility.
+      <description>Overview #AtClientPreference is used to configure the preferences of an atPlatform application. It offers a variety of attributes to give a developer ultimate flexibility.
    Attributes Description     hiveStoragePath Local device path of hive storage   commitLogPath Local device path of commit log   isLocalStoreRequired Specify whether local store is required   cramSecret Shared secret of the atSign   keyStoreSecret Secret key to encrypt keystore data   privateKey Private key of the atSign   namespace Specifies the namespace of an app.</description>
     </item>
     
@@ -41,9 +41,9 @@ Based on your need you can either install at_client_mobile or at_client and impo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/</guid>
-      <description>Overview #To store data, @platform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
+      <description>Overview #To store data, atPlatform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
 AtKey Structure:
-   Attributes Description Return Type     key Unique Identifier for the data String   sharedWith The @sign to share with String   sharedBy The @sign that is sharing String   namespace The namespace of the app String   metadata  Metadata   isRef  Bool    Metadata #Metadata In AtKey allows you to add more aspects of AtKey.</description>
+   Attributes Description Return Type     key Unique Identifier for the data String   sharedWith The atSign to share with String   sharedBy The atSign that is sharing String   namespace The namespace of the app String   metadata  Metadata   isRef  Bool    Metadata #Metadata In AtKey allows you to add more aspects of AtKey.</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ AtKey Structure:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/</guid>
-      <description>Overview #The @platform uses secret keys for authenticating an at sign as cryptographically secure replacement for usernames and passwords.To make developers life easier @platform offers at_onboarding_flutter package which handles secure management of secret keys.If you are developing a new @platform app, we recommend that you use at_app which can create @platform app template that already contains onboarding in it.
+      <description>Overview #The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords.To make developers life easier atPlatform offers at_onboarding_flutter package which handles secure management of secret keys.If you are developing a new atPlatform app, we recommend that you use at_app which can create atPlatform app template that already contains onboarding in it.
 Usage #Before using the onboarding widget, ensure that your AtClientPreference is properly assigned.</description>
     </item>
     

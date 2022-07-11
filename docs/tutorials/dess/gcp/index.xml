@@ -7,18 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/tutorials/dess/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Activation of @sign</title>
+      <title>Activation of atSign</title>
       <link>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/7_activation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/7_activation/</guid>
       <description>Next up we need to activate it
 Login to your dashboard at https://my.atsign.com/dashboard
-Open “my @signs”
-Open “managed” of @sign you are registering”
+Open “my atSigns”
+Open “managed” of atSign you are registering”
 Navigate to Advance settings:
-If you have already activated your @sign you will be prompted to erase all your data first
-Once done you are able to link your @sign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate</description>
+If you have already activated your atSign you will be prompted to erase all your data first
+Once done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ This might take some time, but it will make sure we have latest repository infor
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/1_introduction/</guid>
-      <description>dess stands for “Distributed Edge Secondary Server” and it is used to host your @signs on your own secondary server. Refer to the Setup dess guide under Options to learn more.
+      <description>dess stands for “Distributed Edge Secondary Server” and it is used to host your atSigns on your own secondary server. Refer to the Setup dess guide under Options to learn more.
 In this step-by-step guide we will walk you through all steps required to setup your own private dess in GCP cloud from scratch. Please use index to skip some steps in case you have done them in another way.</description>
     </item>
     
@@ -52,7 +52,7 @@ In this step-by-step guide we will walk you through all steps required to setup 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/2_prerequisites/</guid>
-      <description>Register Atsign at atsign.com Have google account Have registered Fully Qualified Domain Name (FQDN)  1. Registering your @sign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
+      <description>Register Atsign at atsign.com Have google account Have registered Fully Qualified Domain Name (FQDN)  1. Registering your atSign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
 2. Sign-up for GCP account #a) Account Creation #If you are new to cloud like me and need to create new GCP account, I have good news! The creation is for free.</description>
     </item>
     
@@ -81,15 +81,15 @@ In search bar look for External IP addresses.
     </item>
     
     <item>
-      <title>Registration of @sign in your private dess</title>
+      <title>Registration of atSign in your private dess</title>
       <link>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/6_registration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/tutorials/dess/gcp/6_registration/</guid>
-      <description>At this step you should already have your @sign registered at atsign.com. If not go do it!
-I have registered my own free @sign (@44likelycanary) which I will link to my dess.
+      <description>At this step you should already have your atSign registered at atsign.com. If not go do it!
+I have registered my own free atSign (@44likelycanary) which I will link to my dess.
 In your instance console, navigate to dess folder. If you were following this guide it will be located in:
-We now need to create the service that will host our @sign by executing the dess-create command:
+We now need to create the service that will host our atSign by executing the dess-create command:
 $ sudo dess-create @44likelycanary 4atsign.</description>
     </item>
     
