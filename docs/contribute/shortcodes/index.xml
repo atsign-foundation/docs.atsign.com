@@ -49,6 +49,16 @@ Anchor Tag (a) #Links in your paragraphs
     </item>
     
     <item>
+      <title>Panel</title>
+      <link>https://dev3.atsign.wtf/docs/contribute/shortcodes/panel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/contribute/shortcodes/panel/</guid>
+      <description>panel/feature #A large format feature panel.
+   Attribute Description     class Additional css classes to apply to the panel   title Title to be displayed in the panel   footnote Optional text to be displayed below the inner text   img-src The src for the img element.   img-type The type of image, can be one of &amp;lsquo;page&amp;rsquo;, &amp;lsquo;asset&amp;rsquo;, or &amp;lsquo;remote&amp;rsquo; (default)   img-class Additional css classes to apply to the img tag.</description>
+    </item>
+    
+    <item>
       <title>Spacing</title>
       <link>https://dev3.atsign.wtf/docs/contribute/shortcodes/spacing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
