@@ -20,7 +20,7 @@ Encryption is a means of achieving privacy. It is a part of cryptography which h
 
 ## How we do it
 
-The @platform implements end-to-end encryption that is best illustrated with the following example: @alice wishes to share her phone number with her friend @bob. To do this, @alice, who is on her own device, prompts her own secondary server to direct phone @alice at her friend @bob's secondary server. From here, a shared key is generated for @bob (@bob:shared_key@alice).
+The atPlatform implements end-to-end encryption that is best illustrated with the following example: @alice wishes to share her phone number with her friend @bob. To do this, @alice, who is on her own device, prompts her own secondary server to direct phone @alice at her friend @bob's secondary server. From here, a shared key is generated for @bob (@bob:shared_key@alice).
 
 This shared key uses the same encryption process as the Symmetric Key Encryption, which is called AES (Advanced Encryption Standard) and involves three block ciphers: AES-128, AES-192 and AES-256.
 
@@ -28,7 +28,7 @@ The atProtocol specifically uses AES-256 for Data Encryption Keys.
 
 The RSA (Rivest-Shamir-Adleman) encryption algorithm is then used to encrypt the shared key from the above example with @bob's public key. The atProtocol specifically utilizes RSA 2048. Note, that because the RSA algorithm is an Asymmetric Key Encryption method, a public and private key are generated.
 
-If you want to read more about Encryption and how it works on the @platform check this [Medium](https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49) article!
+If you want to read more about Encryption and how it works on the atPlatform check this [Medium](https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49) article!
 
 ## Related Sources
 

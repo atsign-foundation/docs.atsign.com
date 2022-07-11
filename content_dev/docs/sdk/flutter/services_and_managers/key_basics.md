@@ -11,15 +11,15 @@ order: 5 # Ordering of the steps
 
 ### Overview
 
-To store data, @platform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
+To store data, atPlatform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
 
 **AtKey Structure:**
 
 | Attributes | Description                    | Return Type |
 | ---------- | ------------------------------ | ----------- |
 | key        | Unique Identifier for the data | String      |
-| sharedWith | The @sign to share with        | String      |
-| sharedBy   | The @sign that is sharing      | String      |
+| sharedWith | The atSign to share with       | String      |
+| sharedBy   | The atSign that is sharing     | String      |
 | namespace  | The namespace of the app       | String      |
 | metadata   |                                | Metadata    |
 | isRef      |                                | Bool        |
@@ -59,15 +59,15 @@ A key in atProtocol has the structure described below.
 <a name="keyrules">A key in atProtocol should adhere to following rules:</a>
 
 1. Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)
-2. Max of fifty five 7-bit characters for the @sign
+2. Max of fifty five 7-bit characters for the atSign
 3. Allowed characters in an entity are: [\w\._,-’”<emoji list>] <TO DO : Sitaram>
 4. Namespace is mandatory in the current implementation of the protocol
-5. If cached then the owner of the key should not be same as current @sign
+5. If cached then the owner of the key should not be same as current atSign
 6. sharedWith and sharedBy/owner cannot be same for a shared key
 7. sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (\_), Just self)
 8. Reserved keys in protocol, private keys and hidden keys cannot be notified
    Ex: notify:\_secret@jagan:sitaram
-   9.Protocol prevents creation of a key with a owner/sharedBy using an @sign that’s not owned by the current user.
+   9.Protocol prevents creation of a key with a owner/sharedBy using an atSign that’s not owned by the current user.
 9. Key cannot be a reserved key.
 
 List of reserved keys:
@@ -90,7 +90,7 @@ In the atProtocol a piece of data is identified as a certain data type based on 
 
 **Public data**
 
-Public data can be looked up without authentication. I.e. if @bob wants to lookup public data in the secondary server of @alice, @bob does not need to prove to @alice that he is @bob to see the data publicly shared by @alice. Public view of the @alice’s data will be the same for any user on the @platform. I.e. if @jane and @john look up some public data from @alice, it will be exactly the same as what @bob sees.
+Public data can be looked up without authentication. I.e. if @bob wants to lookup public data in the secondary server of @alice, @bob does not need to prove to @alice that he is @bob to see the data publicly shared by @alice. Public view of the @alice’s data will be the same for any user on the atPlatform. I.e. if @jane and @john look up some public data from @alice, it will be exactly the same as what @bob sees.
 
 Good examples of public data in the real world are “first name” and the “last name”. We often don’t mind sharing our name with people, even random strangers.
 
@@ -230,7 +230,7 @@ TTR (Time To Refresh) is the span of time that represents the time interval at w
 
 **Cacheability**
 
-All of the data created resides in the secondary server of an @sign. The owner of an @sign can choose to allow the public and the shared data to be cached in the another @sign
+All of the data created resides in the secondary server of an atSign. The owner of an atSign can choose to allow the public and the shared data to be cached in the another atSign
 
 ```
 // Below key refreshes everyday
@@ -259,7 +259,7 @@ Only the owner of the key reserves the right to update the value. Updating the c
 
 When an original key is updated by the creator, the ones who have cached it need to update the cached copy too. This can happen in two ways:
 
-1. The Auto-Notify notifies the updated value to another @sign, thereby the cached key’s value is updated.
+1. The Auto-Notify notifies the updated value to another atSign, thereby the cached key’s value is updated.
 2. The refresh job in the secondary server
 
 **_CCD - Cascade delete_**
@@ -278,7 +278,7 @@ SDK of atProtocol exposes two methods to create the data. They are:
 
 Update’s value of key is if it is already present. Otherwise creates a new key.
 
-To share a key to another @sign, use AtKey.shared() factory method or populate AtKey.sharedWith with the @sign to whom the data has to be shared. Further, notifies the sharedWith @sign that a key has been created.
+To share a key to another atSign, use AtKey.shared() factory method or populate AtKey.sharedWith with the atSign to whom the data has to be shared. Further, notifies the sharedWith atSign that a key has been created.
 
 **Signature**
 
@@ -341,7 +341,7 @@ Deletes the key.
 **Signature**
 `Future<bool> delete(AtKey key);`
 
-Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another @sign, notifies the other @sign on the deletion of the key.
+Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another atSign, notifies the other atSign on the deletion of the key.
 
 Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.
 

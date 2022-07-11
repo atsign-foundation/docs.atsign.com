@@ -1,9 +1,9 @@
-title: '@platform'
+title: 'atPlatform'
 titleSeparator: '-'
 titleAddition: Build end-to-end encrypted apps quickly
 
 description: |
-  The @platform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.
+  The atPlatform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.
 
 alert: false
 alertDismissable: true

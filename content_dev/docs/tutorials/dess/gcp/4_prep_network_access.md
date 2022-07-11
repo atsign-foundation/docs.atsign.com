@@ -78,7 +78,7 @@ To test if you are successful open command line and ping your domain. You should
 
 ![gcp-dns-test](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-dns-test.png?raw=true)
 
-At this point we have created DNS record we will use to link our dess, we created instance name which will be running our dess and we have opened port range which is exposed to the internet and we can communicate with @sign root server and our apps with.
+At this point we have created DNS record we will use to link our dess, we created instance name which will be running our dess and we have opened port range which is exposed to the internet and we can communicate with atSign root server and our apps with.
 
 #### c) Setting up Firewall 
 Search for Firewall in search bar.
@@ -91,7 +91,7 @@ Click on Create firewall rule
 
 ![gcp-firewall-create](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-firewall-create.png?raw=true)
 
-Lets create firewall rule that will enable the @sign root server communicate with our dess.
+Lets create firewall rule that will enable the atSign root server communicate with our dess.
 
 
 ![gcp-networking-firewall-settings](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-networking-firewall-settings.png?raw=true)
@@ -102,7 +102,7 @@ Ingress translates to incoming traffic.
 
 Selecting IP range as ```0.0.0.0/0``` will allow traffic from anywhere on the internet.
 
-For my use case I will enable port range ```8000 – 8010``` allowing me to register up to 10 @signs.
+For my use case I will enable port range ```8000 – 8010``` allowing me to register up to 10 atSigns.
 
 
 ![gcp-firewall-ranges](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-firewall-ranges.png?raw=true)

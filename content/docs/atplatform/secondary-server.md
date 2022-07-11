@@ -2,10 +2,9 @@
 layout: list
 
 title: "Secondary Server" # The title (ON THE PAGE)
-lead: Learn about the secondary servers on the @platform
+lead: Learn about the secondary servers on the atPlatform
 
-
-description: Learn about Atsign platform secondary edge servers
+description: Learn about atPlatform secondary edge servers
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
