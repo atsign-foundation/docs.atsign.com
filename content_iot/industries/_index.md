@@ -57,7 +57,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 
 {{< /panel/feature >}}
 
-{{< panel/feature title="Energy: Maximizing Efficiency" footnote="Reduce the impact on the environment by applying IoT-based solutions" img-src="energy-panel.jpg" img-type="page" theme="light" img-class="bg-white" >}}
+{{< panel/feature title="Energy: Maximizing Efficiency" footnote="Reduce the impact on the environment by applying IoT-based solutions" img-src="energy-panel.jpg" img-type="page" theme="light" img-class="bg-white" img-right="true" >}}
 
 IoT in the energy sector is responsible for supporting energy production and consumption. It is through smart monitoring of facilities that energy consumption can be optimized and help reduce unnecessary power waste.
 
