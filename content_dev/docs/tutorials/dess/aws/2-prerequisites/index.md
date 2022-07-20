@@ -9,12 +9,12 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
 ---
 
-* Registered @sign(s) to setup
+* Registered atSign(s) to setup
 * An AWS account
 * A Fully Qualified Domain Name (FQDN)
 
 
-#### 1. Registering your @sign
+#### 1. Registering your atSign
 
 This topic is already well documented. Please follow the guidance of Our FAQs and register via [the registrar site](https://atsign.com/get-an-sign/).
 
