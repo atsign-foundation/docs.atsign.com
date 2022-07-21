@@ -25,5 +25,5 @@ try {
 
 There are a number of other factory methods for creating an AtClient instance to suit your needs. See the image below.
 
-{{< image type="remote" src="https://i.imgur.com/oc0YZfL.png" >}}
+{{< image type="page" src="oc0YZfL.png" >}}
 
