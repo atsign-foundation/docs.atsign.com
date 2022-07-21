@@ -14,7 +14,7 @@ SharedKeys are for data you want to share with another atSign. The sharedBy atSi
 ### Putting SharedKey Example
 ```java
 // 1. establish constants
-String ROOT_URL = "root.atsign.wtf:64";
+String ROOT_URL = "root.atsign.org:64";
 String ATSIGN_STR_SHARED_BY = "@33thesad"; // my atSign (sharedBy)
 String ATSIGN_STR_SHARED_WITH = "@farinataanxious"; // other atSign (sharedWith)
 boolean VERBOSE = true;
@@ -50,7 +50,7 @@ System.out.println(response);
 Getting a SharedKey that was sent by another atSign being sent to you.
 ```java
 // 1. establish constants
-String ROOT_URL = "root.atsign.wtf:64";
+String ROOT_URL = "root.atsign.org:64";
 String ATSIGN_STR_SHARED_BY = "@33thesad"; // their atSign (key is sharedBy this atSign)
 String ATSIGN_STR_SHARED_WITH = "@farinataanxious"; // your atSign (key is sharedWith you)
 boolean VERBOSE = true;
@@ -89,7 +89,7 @@ System.out.println(response);
 Getting a SharedKey that is shared by you and is sent to another atSign.
 ```java
 // 1. establish constants
-String ROOT_URL = "root.atsign.wtf:64";
+String ROOT_URL = "root.atsign.org:64";
 String ATSIGN_STR_SHARED_BY = "@33thesad"; // my atSign (sharedBy)
 String ATSIGN_STR_SHARED_WITH = "@farinataanxious"; // other atSign (sharedWith)
 boolean VERBOSE = true;
@@ -127,7 +127,7 @@ You can only delete SharedKeys that are sharedBy and created by you. If it is a 
 
 ```java
 // 1. establish constants
-String ROOT_URL = "root.atsign.wtf:64";
+String ROOT_URL = "root.atsign.org:64";
 String ATSIGN_STR_SHARED_BY = "@33thesad"; // my atSign (sharedBy)
 String ATSIGN_STR_SHARED_WITH = "@farinataanxious"; // other atSign (sharedWith)
 boolean VERBOSE = true;
