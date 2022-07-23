@@ -15,7 +15,7 @@ SelfKeys hold data that are intended for the atSign owner of the secondary serve
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
-String ATSIGN_STR = "@33thesad";
+String ATSIGN_STR = "@bob";
 boolean VERBOSE = true;
 String KEY_NAME = "test";
 String VALUE = "I hate pineapple on pizza!!!";
@@ -51,7 +51,7 @@ System.out.println(response);
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
-String ATSIGN_STR = "@33thesad";
+String ATSIGN_STR = "@bob";
 boolean VERBOSE = true;
         
 String KEY_NAME = "test";
@@ -87,7 +87,7 @@ System.out.println(response);
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
-String ATSIGN_STR = "@33thesad"; // atSign that we will pkam auth (must have keys in keys/)
+String ATSIGN_STR = "@bob"; // atSign that we will pkam auth (must have keys in keys/)
 boolean VERBOSE = true; // true for more print logs 
         
 String KEY_NAME = "test"; // name of the key we will create and put

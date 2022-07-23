@@ -15,7 +15,7 @@ PublicKeys are meant for public data. Authorized or unauthorized users are able 
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
-String ATSIGN_STR = "@33thesad"; // atSign that we will pkam auth (must have keys in keys directory) 
+String ATSIGN_STR = "@bob"; // atSign that we will pkam auth (must have keys in keys directory) 
 boolean VERBOSE = true; // true for more print logs 
 String KEY_NAME = "test"; // name of the key we will create and put
 String VALUE = "I love pineapple on pizza 12345"; // value we will associate with the key
@@ -50,7 +50,7 @@ System.out.println(response); // data:<CommitId>
 ```java
 // 1. establish arguments
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
-String ATSIGN_STR = "@33thesad"; // atSign that we will pkam auth (must have keys in keys directory)
+String ATSIGN_STR = "@bob"; // atSign that we will pkam auth (must have keys in keys directory)
 boolean VERBOSE = true; // true for more print logs
 String KEY_NAME = "test"; // name of the key we will get
 
@@ -84,7 +84,7 @@ System.out.println(response);
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
-String ATSIGN_STR = "@33thesad";
+String ATSIGN_STR = "@bob";
 boolean VERBOSE = true;
 String KEY_NAME = "test";
 
