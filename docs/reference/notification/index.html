@@ -1022,12 +1022,17 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#atplatform">atPlatform</a></li>
-        <li><a href="#atprotocol">atProtocol</a></li>
-        <li><a href="#monitor">Monitor</a>
+        <li><a href="#atplatform">atPlatform</a>
           <ul>
-            <li><a href="#atplatform-1">atPlatform</a></li>
-            <li><a href="#atprotocol-1">atProtocol</a></li>
+            <li><a href="#notification">Notification</a></li>
+            <li><a href="#monitor">Monitor</a></li>
+          </ul>
+        </li>
+        <li><a href="#atprotocol">atProtocol</a>
+          <ul>
+            <li><a href="#notify-verb">notify verb</a></li>
+            <li><a href="#notifylist-verb">notify:list verb</a></li>
+            <li><a href="#monitor-verb">monitor verb</a></li>
           </ul>
         </li>
       </ul>
@@ -1040,7 +1045,7 @@
 		<main class="docs-content col-lg-11 col-xl">
 		
 			<h1>Notification</h1>
-			<p class="lead">Definition of Notification, the notify verb, and Monitor
+			<p class="lead">atPlatform & atProtocol Information on Notification
 </p>
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
 				<div class="page-links">
@@ -1049,12 +1054,17 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#atplatform">atPlatform</a></li>
-        <li><a href="#atprotocol">atProtocol</a></li>
-        <li><a href="#monitor">Monitor</a>
+        <li><a href="#atplatform">atPlatform</a>
           <ul>
-            <li><a href="#atplatform-1">atPlatform</a></li>
-            <li><a href="#atprotocol-1">atProtocol</a></li>
+            <li><a href="#notification">Notification</a></li>
+            <li><a href="#monitor">Monitor</a></li>
+          </ul>
+        </li>
+        <li><a href="#atprotocol">atProtocol</a>
+          <ul>
+            <li><a href="#notify-verb">notify verb</a></li>
+            <li><a href="#notifylist-verb">notify:list verb</a></li>
+            <li><a href="#monitor-verb">monitor verb</a></li>
           </ul>
         </li>
       </ul>
@@ -1065,14 +1075,20 @@
 
 			</nav>
 			<h2 id="atplatform">atPlatform <a href="#atplatform" class="anchor" aria-hidden="true">#</a></h2>
-<p>Notification enables developers to <strong>notify</strong> another atSign of some data event. It is used to send data from one atSign&rsquo;s secondary server to another atSign&rsquo;s secondary server.</p>
+<h3 id="notification">Notification <a href="#notification" class="anchor" aria-hidden="true">#</a></h3>
+<p>Notification enables developers to <strong>notify</strong> another atSign of some data event. It is used to <strong>notify</strong> another atSign that data from your secondary server was modified (updated or deleted). Some example notifications include: the key&rsquo;s value updated, the key was deleted, the key&rsquo;s metadata changed, and more.</p>
 <p>The atPlatform takes care of all of the heavy lifting with encryption, verb building, transmission, etc,.</p>
 <p>Read more <a href="https://blog.atsign.dev/part-1-the-notify-verb-cko97bv8f00l5gws13umb0nvz">here</a>.</p>
+<h3 id="monitor">Monitor <a href="#monitor" class="anchor" aria-hidden="true">#</a></h3>
+<p>Monitor uses notifications.</p>
+<p>Monitor is used to receive notifications from the other secondary server.</p>
+<p>Read more <a target="_blank" rel="canonical" href="https://github.com/atsign-foundation/at_client_sdk/blob/trunk/at_client/lib/src/manager/monitor.dart">here</a>.</p>
 <h2 id="atprotocol">atProtocol <a href="#atprotocol" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="notify-verb">notify verb <a href="#notify-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p>The notify verb enables you to notify the atsign user of some data event.</p>
 <p>The following is the regex for the <code>notify</code> verb.</p>
-<p><code>notify:((?&lt;operation&gt;update|delete):)?(ttl:(?&lt;ttl&gt;\d+):)?(ttb:(?&lt;ttb&gt;\d+):)?(ttr:(?&lt;ttr&gt;(-)?\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?(@(?&lt;forAtSign&gt;[^@:\s]-)):(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))?</code></p>
-<table>
+<pre tabindex="0"><code>notify:((?&lt;operation&gt;update|delete):)?(ttl:(?&lt;ttl&gt;\d+):)?(ttb:(?&lt;ttb&gt;\d+):)?(ttr:(?&lt;ttr&gt;(-)?\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?(@(?&lt;forAtSign&gt;[^@:\s]-)):(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))?
+</code></pre><table>
 <thead>
 <tr>
 <th>Regex Snippet</th>
@@ -1100,16 +1116,9 @@
 <td><code>(ccd:(?&lt;ccd&gt;true|false):)?</code></td>
 <td>CCD (casecade delete), [boolean, true|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender&rsquo;s server and the recipient&rsquo;s server)</td>
 </tr>
-<tr>
-<td><code>(@(?&lt;forAtSign&gt;[^@:\s]-))</code></td>
-<td>The atSign the notification is for, [string, negate @ character, required argument]</td>
-</tr>
-<tr>
-<td><code>(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))?</code></td>
-<td>AtKey details, see below, [optional], (<code>signing_publickey@alice</code>)</td>
-</tr>
 </tbody>
 </table>
+<p>Following the metadata for creating the notification, next, we mention the AtKey the notification pertains to.</p>
 <table>
 <thead>
 <tr>
@@ -1119,8 +1128,12 @@
 </thead>
 <tbody>
 <tr>
+<td><code>(@(?&lt;forAtSign&gt;[^@:\s]-))</code></td>
+<td>The atSign the notification is for, [string, required argument], (<code>@alice</code>)</td>
+</tr>
+<tr>
 <td><code>(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)</code></td>
-<td>AtKey name, [], (e.g. &lsquo;signing_publickey&rsquo;)</td>
+<td>AtKey name, [string, required argument], (e.g. &lsquo;signing_publickey&rsquo;)</td>
 </tr>
 <tr>
 <td><code>@</code></td>
@@ -1128,27 +1141,31 @@
 </tr>
 <tr>
 <td><code>(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))</code></td>
-<td>namespace atSign that key belongs to, [string, negate @ character], (e.g. &lsquo;alice&rsquo;)</td>
+<td>sharedBy/creator atSign, [string], (e.g. &lsquo;bob&rsquo;)</td>
 </tr>
 </tbody>
 </table>
-<p>Response:</p>
-<p>If the user is the owner, returns a list of received notifications. If a user is pol authenticated user, returns a list of sent notifications.</p>
-<p><code>data:[{&quot;id&quot;:&quot;0e5e9e89-c9cb-423b-8972-8c5487215990&quot;,&quot;from&quot;:&quot;@alice&quot;,&quot;to&quot;:&quot;@bob&quot;,&quot;key&quot;:&quot;@bob:phone@alice&quot;,&quot;value&quot;:12345,&quot;operation&quot;:&quot;update&quot;,&quot;epochMillis&quot;:1603714122636}]</code></p>
-<p>Read more <a target="_blank" rel="canonical" href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md#the-sync-verb">here</a>.</p>
-<h2 id="monitor">Monitor <a href="#monitor" class="anchor" aria-hidden="true">#</a></h2>
-<h3 id="atplatform-1">atPlatform <a href="#atplatform-1" class="anchor" aria-hidden="true">#</a></h3>
-<p>Monitor uses notifications.</p>
-<p>Monitor is used to receive notifications from the other secondary server.</p>
-<p>Read more <a target="_blank" rel="canonical" href="https://github.com/atsign-foundation/at_client_sdk/blob/trunk/at_client/lib/src/manager/monitor.dart">here</a>.</p>
-<h3 id="atprotocol-1">atProtocol <a href="#atprotocol-1" class="anchor" aria-hidden="true">#</a></h3>
+<p>Example use of the <code>notify</code> verb:</p>
+<pre tabindex="0"><code>notify:update:@farinataanxious:test@33thesad
+</code></pre><p>Response:</p>
+<p>If the notification was successfully sent, then the id of the notification is returned.</p>
+<pre tabindex="0"><code>data:0ce0d150-52bf-4f09-a473-5c64777b1c53
+</code></pre><p>Read more <a target="_blank" rel="canonical" href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md#the-sync-verb">here</a>.</p>
+<h3 id="notifylist-verb">notify:list verb <a href="#notifylist-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p>Notify list returns a list of notifications</p>
+<p>Regex</p>
+<pre tabindex="0"><code>notify:(list (?&lt;regex&gt;.-)|list$)
+</code></pre><p>Response:</p>
+<p>If the user is the owner, returns a list of received notifications. if a user is pol authenticated user, return a list of sent notifications</p>
+<pre tabindex="0"><code>data:[{&#34;id&#34;:&#34;0e5e9e89-c9cb-423b-8972-8c5487215990&#34;,&#34;from&#34;:&#34;@alice&#34;,&#34;to&#34;:&#34;@bob&#34;,&#34;key&#34;:&#34;@bob:phone@alice&#34;,&#34;value&#34;:12345,&#34;operation&#34;:&#34;update&#34;,&#34;epochMillis&#34;:1603714122636}]
+</code></pre><h3 id="monitor-verb">monitor verb <a href="#monitor-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p>The monitor verb streams received notifications.</p>
-<p>The following is the regex
-<code>^monitor$|^monitor ?(?&lt;regex&gt;.-)?)$</code></p>
-<p>Response:</p>
+<p>The following is the regex</p>
+<pre tabindex="0"><code>^monitor$|^monitor ?(?&lt;regex&gt;.-)?)$
+</code></pre><p>Response:</p>
 <p>Returns a stream of notifications</p>
-<p><code>@alice@monitor notification: {&quot;id&quot;:&quot;773e226d-dac2-4269-b1ee-64d7ce93a42f&quot;,&quot;from&quot;:&quot;@bob&quot;,&quot;to&quot;:&quot;@alice&quot;,&quot;key&quot;:&quot;@alice:phone@bob&quot;,&quot;value&quot;:null,&quot;operation&quot;:&quot;update&quot;,&quot;epochMillis&quot;:1603714720965}</code></p>
-<p>Read more here.
+<pre tabindex="0"><code>@alice@monitor notification: {&#34;id&#34;:&#34;773e226d-dac2-4269-b1ee-64d7ce93a42f&#34;,&#34;from&#34;:&#34;@bob&#34;,&#34;to&#34;:&#34;@alice&#34;,&#34;key&#34;:&#34;@alice:phone@bob&#34;,&#34;value&#34;:null,&#34;operation&#34;:&#34;update&#34;,&#34;epochMillis&#34;:1603714720965}
+</code></pre><p>Read more
 <a target="_blank" rel="canonical" href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md">here</a>.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
@@ -1197,7 +1214,7 @@
     <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
-  <script src="https://dev3.atsign.wtf/index.min.890546603fcc9292f8c462c0785c9e856cf01936432a70e668728bc7de0513200fe48aec60042fd32335b0b9a5aefd3dde0a41565f94696878350973d623ae3a.js" integrity="sha512-iQVGYD/MkpL4xGLAeFyehWzwGTZDKnDmaHKLx94FEyAP5IrsYAQv0yM1sLmlrv093gpBVl&#43;UaWh4NQlz1iOuOg==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.07f22ea3897184b5abfcc009e2d43233849da52cd5879ef0d30399ff5fa00719b57706a48d656cbde306b4c78c9e262abd937a2ae3012e382c6aa357644d3b13.js" integrity="sha512-B/Iuo4lxhLWr/MAJ4tQyM4SdpSzVh57w0wOZ/1&#43;gBxm1dwakjWVsveMGtMeMniYqvZN6KuMBLjgsaqNXZE07Ew==" crossorigin="anonymous" defer></script>
   
   </body>
 </html>
