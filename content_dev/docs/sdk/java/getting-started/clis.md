@@ -15,7 +15,7 @@ There are various CLIs (command-line interfaces) that uses the Java SDK to inter
 To run the CLIs:
 1. Edit settings in `at_client/src/main/resources/config.yaml`
 2. cd to `at_java/at_client` and run `mvn install`
-3. Run `java -cp "target/client-1.0-SNAPSHOT.jar:target/lib/*" org.atsign.client.cli.<CLI> <args>`. Replace “<CLI>” with one of the CLIs (Register, Get, Scan,...) and “<args>” with 
+3. Run `java -cp "target/client-1.0-SNAPSHOT.jar:target/lib/*" org.atsign.client.cli.<CLI> <args>`. Replace “`<CLI>`” with one of the CLIs (Register, Get, Scan,...) and “`<args>`” with 
 
 ### List of CLIs
 
