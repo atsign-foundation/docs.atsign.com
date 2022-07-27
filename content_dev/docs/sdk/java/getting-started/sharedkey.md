@@ -3,7 +3,7 @@ layout: codelab
 
 title: SharedKey interactions # Step Name
 description: | # SEO Description for this step
-  Keys in Java are different from the Dart SDK AtKeys
+  Learn how to put, get-self, get-other, and delete a SharedKey in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps

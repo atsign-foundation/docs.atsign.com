@@ -10,6 +10,7 @@ order: 1 # Ordering of the steps
 ---
 
 To create an instance of AtClient, use one of the factory methods. Note: you must have the `.atKeys` file in a `keys/` directory. You can generate a .atKeys file from using the Register CLI or Onboaring CLI if you already own the atSign.
+
 ```
 String ATSIGN_STR = "@bob";
 AtSign atSign = new AtSign(ATSIGN_STR);

@@ -3,7 +3,7 @@ layout: codelab
 
 title: Key Types # Step Name
 description: | # SEO Description for this step
-  Keys in Java are different from the Dart SDK AtKeys
+  Learn about how Keys work in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps

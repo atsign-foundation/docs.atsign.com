@@ -3,7 +3,7 @@ layout: codelab
 
 title: PublicKey interactions # Step Name
 description: | # SEO Description for this step
-  Keys in Java are different from the Dart SDK AtKeys
+  Learn how to put, get, and delete a PublicKey in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
