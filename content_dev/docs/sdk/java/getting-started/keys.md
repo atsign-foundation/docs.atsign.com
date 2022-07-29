@@ -11,7 +11,7 @@ order: 3 # Ordering of the steps
 
 ### Overview
 
-If you’ve ever used our dart library before, you’ll be familiar with `AtKey`. at_java does AtKeys similarly but has few differences.
+If you’ve ever used our dart library before, you’ll be familiar with `AtKey`.
 
 Just like how hash maps have a key-value pair, the secondary server holds an AtKey-AtValue pair. To access the AtValue, you must provide an AtKey containing data like the keyName, sharedBy, and/or sharedWith.
 
