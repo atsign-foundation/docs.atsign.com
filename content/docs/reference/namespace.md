@@ -46,9 +46,9 @@ In the context of the atProtocol, refer to the example below to improve your und
 
 Example:
 
-- `phone@bob` (phone is the key, bob is the namespace) will answer with data=`123-123-1234`
-- `phone@alice` (phone is the key, alice is the namespace) will answer with data=`444-444-4444`
-- `phone@wavi` (phone is the key, wavi is the namespace) will answer with data=`555-555-5555`
+- `phone.mospherepro` (phone is the key, mospherepro is the namespace) will answer with data=`123-123-1234`
+- `phone.alice` (phone is the key, alice is the namespace) will answer with data=`444-444-4444`
+- `phone.wavi` (phone is the key, wavi is the namespace) will answer with data=`555-555-5555`
 
 This is the beauty of the atProtocol. Each namespace replied with different information. People control their own data and which applications
 get what data. With the atPlatform, the people become in control of their own data privacy.
