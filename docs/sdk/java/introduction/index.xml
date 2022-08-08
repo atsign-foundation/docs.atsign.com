@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on </title>
+    <link>https://dev3.atsign.wtf/docs/sdk/java/introduction/</link>
+    <description>Recent content in Introduction on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/sdk/java/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>atProtocol</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/introduction/atprotocol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/introduction/atprotocol/</guid>
+      <description>Overview #The atProtocol is the underlying network protocol used by the atPlatform. The atPlatform provides people, entities, and things with unique identifiers called atSigns.
+Each atSign creates its own public and private cryptographic key pair. The private keys are kept private and public keys made available globally through the atProtocol.
+The atProtocol provides verbs for interacting with fully qualified atSigns and the data in their secondary servers.
+Root Secondary #When asking a Root Server for the lookup of a particular atSign the Root Server should respond with a null if the name does not exist and if the name exists the DNS name or address of the @server and the IP port number for that @sign should be returned.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/introduction/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/introduction/overview/</guid>
+      <description>What is at_java? #at_java is Atsign’s implementation of the atProtocol. Just like Atsign’s dart libraries, at_java allows you to interact with Atsign’s services like registering atSigns, onboarding, communicating with the root &amp;amp; secondary servers, and more.
+Where can at_java be used? #As long as the device running at_java has
+ Internet Java 8 or higher  Then at_java can be used to add simplicity and security to your Java applications and/or IoT devices running Java.</description>
+    </item>
+    
+  </channel>
+</rss>

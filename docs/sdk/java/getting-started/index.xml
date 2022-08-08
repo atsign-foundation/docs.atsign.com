@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on </title>
+    <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/</link>
+    <description>Recent content in Getting Started on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/sdk/java/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CLIs</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/clis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/clis/</guid>
+      <description>There are various CLIs (command-line interfaces) that uses the Java SDK to interact with a secondary server.
+Prerequisite #To run the CLIs:
+ Edit settings in at_client/src/main/resources/config.yaml cd to at_java/at_client and run mvn install Run java -cp &amp;quot;target/client-1.0-SNAPSHOT.jar:target/lib/*&amp;quot; org.atsign.client.cli.&amp;lt;CLI&amp;gt; &amp;lt;args&amp;gt;. Replace “&amp;lt;CLI&amp;gt;” with one of the CLIs (Register, Get, Scan,&amp;hellip;) and “&amp;lt;args&amp;gt;” with  List of CLIs #If you want to interact with the atProtocol through a command-line experience, see our CLIs in src/main/java/org/atsign/client/cli/.</description>
+    </item>
+    
+    <item>
+      <title>Creating an instance of AtClient</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/instance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/instance/</guid>
+      <description>To create an instance of AtClient, use one of the factory methods. Note: you must have the .atKeys file in a keys/ directory. You can generate a .atKeys file from using the Register CLI or Onboaring CLI if you already own the atSign.
+String ATSIGN_STR = &amp;#34;@bob&amp;#34;; AtSign atSign = new AtSign(ATSIGN_STR); AtClient atClient = null; try { atClient = AtClient.withRemoteSecondary(atSign); } catch (AtException e) { System.err.println(e); e.printStackTrace(); } // use atClient There are a number of other factory methods for creating an AtClient instance to suit your needs.</description>
+    </item>
+    
+    <item>
+      <title>Getting Secondary.Address</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/getting-secondary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/getting-secondary/</guid>
+      <description>There are a number to get the address of a secondary server belonging to an atSign.
+ You have the atSign and rootUrl  // Use Secondary.AddressFinder String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR = &amp;#34;@bob&amp;#34;; AtSign atSign = new AtSign(ATSIGN_STR); Secondary.AddressFinder saFinder = ArgsUtil.createAddressFinder(ROOT_URL); Secondary.Address sAddress = null; try { sAddress = saFinder.findSecondary(atSign); } catch (NoSuchSecondaryException | IOException e) { System.err.println(e); e.printStackTrace(); } // use sAddress  You have the host and port of the secondary server  // Use Secondary.</description>
+    </item>
+    
+    <item>
+      <title>Key Types</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/keys/</guid>
+      <description>Overview #If you’ve ever used our dart library before, you’ll be familiar with AtKey.
+Just like how hash maps have a key-value pair, the secondary server holds an AtKey-AtValue pair. To access the AtValue, you must provide an AtKey containing data like the keyName, sharedBy, and/or sharedWith.
+There are 4 types of keys in at_java. Each key type represents what kind of data it holds and also exhibits different properties.</description>
+    </item>
+    
+    <item>
+      <title>PrivateHiddenKey interactions</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/privatehiddenkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/privatehiddenkey/</guid>
+      <description>Putting a PrivateHiddenKey Example #Getting a PrivateHiddenKey Example #Deleting a PrivateHiddenKey Example #</description>
+    </item>
+    
+    <item>
+      <title>PublicKey interactions</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/publickey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/publickey/</guid>
+      <description>PublicKeys are meant for public data. Authorized or unauthorized users are able to know of the existence of these keys (via scan) and the data is not encrypted.
+Putting a PublicKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; // root url of the atsign server for fetching secondary address String ATSIGN_STR = &amp;#34;@bob&amp;#34;; // atSign that we will pkam auth (must have keys in keys directory) boolean VERBOSE = true; // true for more print logs String KEY_NAME = &amp;#34;test&amp;#34;; // name of the key we will create and put String VALUE = &amp;#34;I love pineapple on pizza 12345&amp;#34;; // value we will associate with the key  // 2.</description>
+    </item>
+    
+    <item>
+      <title>SelfKey interactions</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/selfkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/selfkey/</guid>
+      <description>SelfKeys hold data that are intended for the atSign owner of the secondary server. Data is encrypted with the symmetric selfEncryptionKey.
+Putting a SelfKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR = &amp;#34;@bob&amp;#34;; boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; String VALUE = &amp;#34;I hate pineapple on pizza!!!&amp;#34;; int ttl = 30 * 60 * 1000; // 2. create AtSign object AtSign atSign = new AtSign(ATSIGN_STR); // 3.</description>
+    </item>
+    
+    <item>
+      <title>SharedKey interactions</title>
+      <link>https://dev3.atsign.wtf/docs/sdk/java/getting-started/sharedkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/sharedkey/</guid>
+      <description>SharedKeys are for data you want to share with another atSign. The sharedBy atSign should be you. The sharedWith atSign should be the receiver.
+Putting SharedKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR_SHARED_BY = &amp;#34;@bob&amp;#34;; // my atSign (sharedBy) String ATSIGN_STR_SHARED_WITH = &amp;#34;@alice&amp;#34;; // other atSign (sharedWith) boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; int ttl = 30 * 60 * 1000; // 30 minutes String VALUE = &amp;#34;I love cheese and pepperoni salads 12345&amp;#34;; // 2.</description>
+    </item>
+    
+  </channel>
+</rss>

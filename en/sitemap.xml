@@ -27,6 +27,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/installation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/community/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -81,6 +87,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/introduction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/start/java/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -106,6 +118,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at_demos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -301,6 +319,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/introduction/atprotocol/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/button/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -308,6 +332,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/contribute/shortcodes/card/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/clis/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -325,7 +355,19 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/instance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/5_dude_service/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/getting-secondary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -385,7 +427,19 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/installation/compile-jar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/keys/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -422,6 +476,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/7_onboarding/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/introduction/overview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -487,7 +547,19 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/privatehiddenkey/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/10_profile_screen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/publickey/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -511,6 +583,18 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/installation/requirements/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/selfkey/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/8_send_dude_srcreen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -518,6 +602,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/dess/rpi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/sharedkey/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
