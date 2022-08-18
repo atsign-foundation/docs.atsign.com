@@ -2,10 +2,9 @@
 layout: list
 
 title: "Root Server" # The title (ON THE PAGE)
-lead: Learn about the root server behind the @platform
+lead: Learn about the root server behind the atPlatform
 
-
-description: Learn about the Atsign platform root server
+description: Learn about the atPlatform root server
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

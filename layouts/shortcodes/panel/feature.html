@@ -1,0 +1,29 @@
+{{ $bgClass := .Get "class" }}
+{{ $imgClass := .Get "img-class" }}
+<div class="panel-feature-background panel-theme-{{ (.Get "theme") | default "clear" }} {{with (.Get "img-right")}}panel-feature-background-reversed{{end}} {{$bgClass}}">
+    <div class="panel-feature-img">
+      {{ if (eq (.Get "img-type") "page") }}
+        {{ $image := .Page.Resources.GetMatch (.Get "img-src") }}
+        {{ with $image }}
+            <img class="img-contain {{$imgClass}}" src="{{ $image.RelPermalink }}">
+        {{ end }}
+    {{ else if eq (.Get "img-type") "asset" }}
+        {{ $image := resources.Get (.Get "img-src" ) }}
+        {{ with $image }}
+            <img class="img-contain {{$imgClass}}" src="{{ $image.RelPermalink }}">
+        {{ end }}
+    {{ else }}
+        {{ $image := resources.GetRemote (.Get "img-src") }}
+        {{ with $image }}
+            <img class="img-contain {{$imgClass}}" src="{{ $image.RelPermalink }}">
+        {{ end }}
+    {{ end }}
+    </div>
+    <div class="panel-feature-body">
+      <h3>{{ .Get "title" }}</h3>
+      <p class="panel-feature-text">{{.Inner}}</p>
+      {{ with ( .Get "footnote" ) }}
+        <p class="panel-feature-footnote">{{.}}</p>
+      {{ end }}
+    </div>
+</div>
