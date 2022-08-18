@@ -51,8 +51,7 @@ Learn more about the pkam verb {{< a
 
 ## Related Resources
 
-<!-- todo: add breadcrumb to onboarding widget-->
-
+<!-- TODO add breadcrumb to onboarding widget-->
 {{< card/breadcrumb href="/docs/atplatform/specification" first="Protocol Specification" >}}
 {{< card/breadcrumb href="/docs/atplatform/secondary-server" first="Secondary Server" >}}
 {{< card/breadcrumb href="/docs/reference/encryption" first="Encryption" >}}
