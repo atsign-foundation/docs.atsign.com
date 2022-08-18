@@ -17,7 +17,7 @@ weight: 1 # For single pages, lower is first.
 
 Definition goes here
 
-## @platform / How we do it / How we use it here at Atsign
+## atPlatform
 
 how we use this definition/topic
 
@@ -25,10 +25,12 @@ how we use this definition/topic
 
 (optional) example goes here (if applicable)
 
-## @protocol
+## atProtocol
 
 (optional) protocol description here (with regex, if applicable)
 
-## Related Resources / Related Sources
+## Related Resources
 
 use breadcrumbs here
+<!-- Example -->
+{{< card/breadcrumb link="/docs/atplatform/specification/" first="Protocol Specification" >}}
