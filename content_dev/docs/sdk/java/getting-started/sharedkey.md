@@ -12,6 +12,7 @@ order: 5 # Ordering of the steps
 SharedKeys are for data you want to share with another atSign. The sharedBy atSign should be you. The sharedWith atSign should be the receiver. 
 
 ### Putting SharedKey Example
+Learn how to create a SharedKey in your secondary. The `sharedBy` atSign should be you, the authenticated creator of the key, while the `sharedWith` atSign should be the recipient of the key.
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
@@ -20,7 +21,7 @@ String ATSIGN_STR_SHARED_WITH = "@alice"; // other atSign (sharedWith)
 boolean VERBOSE = true;
 String KEY_NAME = "test";
 int ttl = 30 * 60 * 1000; // 30 minutes
-String VALUE = "I love cheese and pepperoni salads 12345";
+String VALUE = "I love cheese 12345";
 // 2. create AtSign objects
 AtSign sharedBy = new AtSign(ATSIGN_STR_SHARED_BY);
 AtSign sharedWith = new AtSign(ATSIGN_STR_SHARED_WITH);
@@ -47,7 +48,7 @@ System.out.println(response);
 ```
 
 ### Getting a SharedKey Other Example
-Getting a SharedKey that was sent by another atSign being sent to you.
+Learn how to get a SharedKey that was sent by another atSign being sent to you. The `sharedBy` atSign should be the other atSign (the atSign that is sending the data to YOU), while the `sharedWith` atSign should be YOU.
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
@@ -86,7 +87,7 @@ System.out.println(response);
 ```
 
 ### Getting a SharedKey Self Example
-Getting a SharedKey that is shared by you and is sent to another atSign.
+Learn how to get a SharedKey that is shared by you and is sent to another atSign. The `sharedBy` atSign should be YOU, the person sending the data, while the `sharedWith` atSign should be the other atSign, the atSign you are sharing the data with.
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
@@ -123,8 +124,7 @@ System.out.println(response);
 ```
 
 ### Deleting a SharedKey Example
-You can only delete SharedKeys that are sharedBy and created by you. If it is a SharedKey created by another atSign, you cannot delete it because it lives on their secondary server. 
-
+Learn how to delete a SharedKey from your secondary server. You can only delete SharedKeys that are sharedBy and created by you. If it is a SharedKey created by another atSign, you cannot delete it because it lives on their secondary server. 
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";

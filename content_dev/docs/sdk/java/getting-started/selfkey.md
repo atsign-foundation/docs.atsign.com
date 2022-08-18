@@ -12,6 +12,7 @@ order: 6 # Ordering of the steps
 SelfKeys hold data that are intended for the atSign owner of the secondary server. Data is encrypted with the symmetric selfEncryptionKey. 
 
 ### Putting a SelfKey Example
+Learn how to create and put a SelfKey associated with some value. This value will be encrypted with your selfEncryptionKey and only the creator of the AtKey will be able to see and decrypt the data. Ensure that the `sharedBy` atsign is an atSign you have the keys to. If you decide to make a shared-with-self key, (e.g. `@bob:location@bob`), then make the `sharedWith` atSign the same object as the `sharedBy` atSign.
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
@@ -48,6 +49,7 @@ System.out.println(response);
 ```
 
 ### Getting a SelfKey Example
+Learn how to get the data belonging to a self key. SelfKeys refer to keys in the secondary that hold encrypted data for self use. This data is encrypted with your selfEncryptionKey. 
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";
@@ -69,7 +71,7 @@ try {
 }
         
 // 4. create selfkey
-SelfKey sk = new KeyBuilders.SelfKeyBuilder(atSign).key(KEY_NAME).build(
+SelfKey sk = new KeyBuilders.SelfKeyBuilder(atSign).key(KEY_NAME).build();
         
 // 5. get the key
 String response = null;
@@ -83,7 +85,7 @@ System.out.println(response);
 ```
 
 ### Deleting a SelfKey Example
-
+Learn how to delete a SelfKey from your secondary.
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
