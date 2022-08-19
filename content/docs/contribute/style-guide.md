@@ -54,7 +54,7 @@ In addition to Hugo's default list & single layouts, the docs section also suppo
 
 ## JavaScript
 
-This site is using purgeCSS for the staging and production builds.
+This site is using {{< a target="_blank" href="https://purgecss.com/" >}}purgeCSS{{</ a >}} for the staging and production builds.
 If you write JavaScript that modifies the DOM in any way, ensure that all style selectors are added to the safelist in `config/postcss.config.js`.
 
 ## Assets
@@ -63,3 +63,13 @@ If you write JavaScript that modifies the DOM in any way, ensure that all style 
   Site-only images should be stored at page level where possible, or in the assets folder if it is used in multiple places across the site.
   See [here](/docs/contribute/shortcodes/image/) for more information.
 2. Use [FontAwesome](https://fontawesome.com/v4/) for icons.
+
+## Reference
+If you want to add your own definition/topic to the reference section, please adhere to the following guidelines.
+1. Follow all rules in [Content](/docs/contribute/style-guide/#content)
+2. Copy the `docs-reference-single.md` archetype and use it in `/docs/reference/` when you make your own page.
+3. Ensure `toc` property to `true`. (See [Frontmatter](/docs/contribute/style-guide/#frontmatter))
+4. Use `##` markdown headings for main titles on the page and `###` and `####` for any sub headings.
+5. For links, use markdown (e.g. `[here](https://atsign.com)`) or the [anchor tag (a) shortcode](/docs/contribute/shortcodes/links/).
+6. For `canonical` links, be sure to use the [anchor tag (a) shortcode](/docs/contribute/shortcodes/links/) for better SEO.
+

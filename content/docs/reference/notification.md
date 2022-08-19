@@ -131,3 +131,7 @@ Returns a stream of notifications
 
 Read more 
 {{< a href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md" target="_blank" rel="canonical" >}}here{{</ a >}}.
+
+## Related Resources
+
+{{< card/breadcrumb link="/docs/atplatform/specification/" first="Protocol Specification" >}}

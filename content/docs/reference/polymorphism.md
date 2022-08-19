@@ -30,6 +30,6 @@ The [@buzz app](https://atsign.com/apps/buzz/) is a stellar example of polymorph
 
 To learn more about polymorphism see [this article post](https://medium.com/flutter-community/building-flutter-apps-with-no-backend-9715b764a81e#67d3)
 
-## Related Sources
+## Related Resources
 
-{{<card/breadcrumb href="/docs/reference/namespace/" first="Namespace">}}
+{{< card/breadcrumb href="/docs/reference/namespace/" first="Namespace" >}}
