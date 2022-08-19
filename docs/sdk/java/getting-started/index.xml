@@ -64,7 +64,8 @@ There are 4 types of keys in at_java. Each key type represents what kind of data
       
       <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/publickey/</guid>
       <description>PublicKeys are meant for public data. Authorized or unauthorized users are able to know of the existence of these keys (via scan) and the data is not encrypted.
-Putting a PublicKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; // root url of the atsign server for fetching secondary address String ATSIGN_STR = &amp;#34;@bob&amp;#34;; // atSign that we will pkam auth (must have keys in keys directory) boolean VERBOSE = true; // true for more print logs String KEY_NAME = &amp;#34;test&amp;#34;; // name of the key we will create and put String VALUE = &amp;#34;I love pineapple on pizza 12345&amp;#34;; // value we will associate with the key  // 2.</description>
+Putting a PublicKey Example #Sample code on how to put a public key associated with a public non-encrypted value into your secondary server. Any unauthenticated/authenticated atSign will be able to see the data without decrypting anything.
+// 1. establish constants String ROOT_URL = &amp;#34;root.</description>
     </item>
     
     <item>
@@ -74,7 +75,7 @@ Putting a PublicKey Example #// 1. establish constants String ROOT_URL = &amp;#
       
       <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/selfkey/</guid>
       <description>SelfKeys hold data that are intended for the atSign owner of the secondary server. Data is encrypted with the symmetric selfEncryptionKey.
-Putting a SelfKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR = &amp;#34;@bob&amp;#34;; boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; String VALUE = &amp;#34;I hate pineapple on pizza!!!&amp;#34;; int ttl = 30 * 60 * 1000; // 2. create AtSign object AtSign atSign = new AtSign(ATSIGN_STR); // 3.</description>
+Putting a SelfKey Example #Learn how to create and put a SelfKey associated with some value. This value will be encrypted with your selfEncryptionKey and only the creator of the AtKey will be able to see and decrypt the data. Ensure that the sharedBy atsign is an atSign you have the keys to.</description>
     </item>
     
     <item>
@@ -84,7 +85,8 @@ Putting a SelfKey Example #// 1. establish constants String ROOT_URL = &amp;#34
       
       <guid>https://dev3.atsign.wtf/docs/sdk/java/getting-started/sharedkey/</guid>
       <description>SharedKeys are for data you want to share with another atSign. The sharedBy atSign should be you. The sharedWith atSign should be the receiver.
-Putting SharedKey Example #// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR_SHARED_BY = &amp;#34;@bob&amp;#34;; // my atSign (sharedBy) String ATSIGN_STR_SHARED_WITH = &amp;#34;@alice&amp;#34;; // other atSign (sharedWith) boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; int ttl = 30 * 60 * 1000; // 30 minutes String VALUE = &amp;#34;I love cheese and pepperoni salads 12345&amp;#34;; // 2.</description>
+Putting SharedKey Example #Learn how to create a SharedKey in your secondary. The sharedBy atSign should be you, the authenticated creator of the key, while the sharedWith atSign should be the recipient of the key.
+// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR_SHARED_BY = &amp;#34;@bob&amp;#34;; // my atSign (sharedBy) String ATSIGN_STR_SHARED_WITH = &amp;#34;@alice&amp;#34;; // other atSign (sharedWith) boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; int ttl = 30 * 60 * 1000; // 30 minutes String VALUE = &amp;#34;I love cheese 12345&amp;#34;; // 2.</description>
     </item>
     
   </channel>
