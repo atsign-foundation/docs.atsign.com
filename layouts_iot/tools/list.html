@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="full-width-content">
+      <div class="justify-content-center">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.lead | safeHTML }}</p>
+      </div>
+      {{ .Content }}
+</div>
+
+{{ end }}

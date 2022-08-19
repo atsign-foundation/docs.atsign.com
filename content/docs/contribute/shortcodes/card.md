@@ -177,14 +177,14 @@ A card for showcasing a single item.
 {{<br>}}
 
 ```go-html-template
-  {{</* showcase/card class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
+  {{</* card/showcase class="w-50" title="Wavi" img-src="https://wavi.ng/assets/img/wavimetalogo.jpeg" img-class="bg-white p-5" */>}}
 
-    {{</* showcase/item >}}Your space on the privacy-first web.{{< /showcase/item */>}}
+    {{</* card/showcase-item >}}Your space on the privacy-first web.{{< /card/showcase-item */>}}
 
-    {{</* showcase/link href="https://atsign.com/apps/wavi" >}}Learn more{{< /showcase/link */>}}
-    {{</* showcase/link href="https://wavi.ng/@wavi" >}}Wavi.ng{{< /showcase/link */>}}
+    {{</* card/showcase-link href="https://atsign.com/apps/wavi" >}}Learn more{{< /card/showcase-link */>}}
+    {{</* card/showcase-link href="https://wavi.ng/@wavi" >}}Wavi.ng{{< /card/showcase-link */>}}
 
-  {{</* /showcase/card */>}}
+  {{</* /card/showcase */>}}
 ```
 
 ### card/blogpost

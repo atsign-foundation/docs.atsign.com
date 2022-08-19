@@ -5,7 +5,8 @@ on:
       - trunk
 
 env:
-  DEPLOY_URL: 'dev3.atsign.wtf'
+  DEV_URL: 'dev3.atsign.wtf'
+  IOT_URL: 'iot3.atsign.wtf'
 
 jobs:
   deploy:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
-          
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -40,4 +41,16 @@ jobs:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          cname: ${{ env.DEPLOY_URL }}
+          cname: ${{ env.DEV_URL }}
+
+      - name: Build IoT Staging
+        run: npm run build:staging:iot
+
+      - name: Deploy IoT Staging
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          external_repository: atsign-foundation/iot.atsign.dev
+          publish_dir: ./public
+          publish_branch: gh-pages
+          cname: ${{ env.IOT_URL }}

@@ -2,10 +2,9 @@
 layout: list
 
 title: "Protocol Specification" # The title (ON THE PAGE)
-lead: Learn about the specification of the @protocol
+lead: Learn about the specification of the atProtocol
 
-
-description: The specification of the Atsign protocol on the Atsign platform
+description: The specification of the atProtocol on the atPlatform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

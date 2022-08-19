@@ -2,10 +2,9 @@
 layout: list
 
 title: "Architecture" # The title (ON THE PAGE)
-lead: Learn about the architecture behind the @platform
+lead: Learn about the architecture behind the atPlatform
 
-
-description: Architectural overview of the Atsign platform
+description: Architectural overview of the atPlatform
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
