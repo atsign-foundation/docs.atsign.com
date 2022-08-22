@@ -2,16 +2,16 @@
 {{ if (eq (.Get "type") "page") }}
     {{ $image := .Page.Resources.GetMatch (.Get "src") }}
     {{ with $image }}
-        <img class="{{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        <img class="img-contain {{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
     {{ end }}
 {{ else if eq (.Get "type") "asset" }}
     {{ $image := resources.Get (.Get "src" ) }}
     {{ with $image }}
-        <img class="{{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        <img class="img-contain {{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
     {{ end }}
 {{ else }}
     {{ $image := resources.GetRemote (.Get "src") }}
     {{ with $image }}
-        <img class="{{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        <img class="img-contain {{$class}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
     {{ end }}
 {{ end }}

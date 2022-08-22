@@ -1,6 +1,6 @@
 {
-  "name": "Atsign Platform",
-  "short_name": "@platform",
+  "name": "atPlatform",
+  "short_name": "atPlatform",
   "start_url": "./index.html",
   "icons": [
     {

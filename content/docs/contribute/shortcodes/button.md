@@ -5,7 +5,7 @@ description: Button shortcodes used in atsign.dev
 draft: false
 order: 1
 ---
-<br/>
+{{<br>}}
 
 ### button/link
 

@@ -1,10 +1,9 @@
 ---
 layout: list
 
-title: "The @Platform" # The title (ON THE PAGE)
+title: "The atPlatform" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Learn about how we created our shortcodes on the dev site!
-
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)

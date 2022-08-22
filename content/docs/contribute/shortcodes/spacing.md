@@ -3,7 +3,7 @@ layout: codelab
 title: Spacing
 description: Spacing shortcodes used in atsign.dev
 draft: false
-order: 5
+order: 4
 ---
 
 {{<br>}}

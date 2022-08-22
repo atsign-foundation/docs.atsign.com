@@ -7,7 +7,7 @@ description: "How to contribute to atsign.dev"
 draft: false
 toc: true
 autolinks: true
-weight: 95
+weight: 94
 ---
 
 
