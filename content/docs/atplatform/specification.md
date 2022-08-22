@@ -601,6 +601,10 @@ Following regex represents the syntax of the `pkam` verb:
 
 `^pkam:(?<signature>.+$)`
 
+**Example:**
+
+`pkam:<digest>`
+
 **Response:**
 
 If the user gets the challenge right, the prompt should change to the atSign of the user.
