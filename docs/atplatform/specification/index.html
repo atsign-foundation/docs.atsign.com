@@ -308,7 +308,7 @@
               
                 
                   
-                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/iot/">IOT devices</a></li>
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/iot/">IoT Devices</a></li>
                 
               
             
@@ -703,7 +703,7 @@
               
                 
                   
-                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/iot/">IOT devices</a></li>
+                  <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/docs/start/iot/">IoT Devices</a></li>
                 
               
             
@@ -1061,16 +1061,773 @@
 			</nav>
 		</div>
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			
+			<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#root-server">Root Server</a></li>
+        <li><a href="#secondary-server">Secondary Server</a>
+          <ul>
+            <li><a href="#1-key-store">1. Key Store</a></li>
+            <li><a href="#2-commit-log">2. Commit Log</a></li>
+            <li><a href="#3-access-log">3. Access Log</a></li>
+            <li><a href="#4-notification-log">4. Notification Log</a></li>
+          </ul>
+        </li>
+        <li><a href="#standard-keys">Standard Keys</a></li>
+        <li><a href="#configuration-parameters">Configuration Parameters</a></li>
+        <li><a href="#block-list">Block List</a></li>
+        <li><a href="#verbs">Verbs</a>
+          <ul>
+            <li><a href="#the-from-verb">The <code>from</code> verb</a></li>
+            <li><a href="#the-cram-verb">The <code>cram</code> verb</a></li>
+            <li><a href="#the-pol-verb">The <code>pol</code> verb</a></li>
+            <li><a href="#the-scan-verb">The <code>scan</code> verb</a></li>
+            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
+            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
+            <li><a href="#the-lookup-verb">The <code>lookup</code> verb</a></li>
+            <li><a href="#the-plookup-verb">The <code>plookup</code> verb</a></li>
+            <li><a href="#the-llookup-verb">The <code>llookup</code> verb</a></li>
+            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
+            <li><a href="#the-stats-verb">The <code>stats</code> verb</a></li>
+            <li><a href="#the-sync-verb">The <code>sync</code> verb</a></li>
+            <li><a href="#the-notify-verb">The <code>notify</code> verb</a></li>
+            <li><a href="#the-monitor-verb">The <code>monitor</code> verb</a></li>
+          </ul>
+        </li>
+        <li><a href="#error-codes">Error Codes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
 		</nav>
 		<main class="docs-content col-lg-11 col-xl">
 		
 			<h1>Protocol Specification</h1>
-			<p class="lead">Learn about the specification of the atProtocol</p>
+			<p class="lead">Learn about how the atProtocol works</p>
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
-				
+				<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#root-server">Root Server</a></li>
+        <li><a href="#secondary-server">Secondary Server</a>
+          <ul>
+            <li><a href="#1-key-store">1. Key Store</a></li>
+            <li><a href="#2-commit-log">2. Commit Log</a></li>
+            <li><a href="#3-access-log">3. Access Log</a></li>
+            <li><a href="#4-notification-log">4. Notification Log</a></li>
+          </ul>
+        </li>
+        <li><a href="#standard-keys">Standard Keys</a></li>
+        <li><a href="#configuration-parameters">Configuration Parameters</a></li>
+        <li><a href="#block-list">Block List</a></li>
+        <li><a href="#verbs">Verbs</a>
+          <ul>
+            <li><a href="#the-from-verb">The <code>from</code> verb</a></li>
+            <li><a href="#the-cram-verb">The <code>cram</code> verb</a></li>
+            <li><a href="#the-pol-verb">The <code>pol</code> verb</a></li>
+            <li><a href="#the-scan-verb">The <code>scan</code> verb</a></li>
+            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
+            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
+            <li><a href="#the-lookup-verb">The <code>lookup</code> verb</a></li>
+            <li><a href="#the-plookup-verb">The <code>plookup</code> verb</a></li>
+            <li><a href="#the-llookup-verb">The <code>llookup</code> verb</a></li>
+            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
+            <li><a href="#the-stats-verb">The <code>stats</code> verb</a></li>
+            <li><a href="#the-sync-verb">The <code>sync</code> verb</a></li>
+            <li><a href="#the-notify-verb">The <code>notify</code> verb</a></li>
+            <li><a href="#the-monitor-verb">The <code>monitor</code> verb</a></li>
+          </ul>
+        </li>
+        <li><a href="#error-codes">Error Codes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
 			</nav>
-			
+			<h2 id="introduction">Introduction <a href="#introduction" class="anchor" aria-hidden="true">#</a></h2>
+<p>The atProtcol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.</p>
+<p>See our <a href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md">Protocol Specification</a> on our GitHub page under our <a href="https://github.com/atsign-foundation/at_protocol">at_protocol</a> repository.</p>
+<p>If you see a typo, mistake, or want to suggest a feature, please see our <a href="https://dev3.atsign.wtf/docs/start/other/#contributing-to-the-developer-site">contributing guidelines</a>. All contributions are welcome.</p>
+<h2 id="root-server">Root Server <a href="#root-server" class="anchor" aria-hidden="true">#</a></h2>
+<p>A Root Server should provide a lookup of where a Secondary Server for an atSign is running. This is similar to a DNS server.</p>
+<p>When asking a Root Server for the lookup of a particular atSign the Root Server should respond with a null if the name does not exist and if the name exists the DNS name or address of the atServer and the IP port number for that atSign should be returned.</p>
+<p>Response:</p>
+<p><code>&lt;host&gt;:&lt;port&gt;</code></p>
+<p>The Root Server only has one verb - <code>@exit</code> and all other inputs are considered to be lookup requests.</p>
+<h2 id="secondary-server">Secondary Server <a href="#secondary-server" class="anchor" aria-hidden="true">#</a></h2>
+<p>A Secondary Server is where an atSign user&rsquo;s personal data should be stored. One interacts with a secondary using the verbs exposed by the protocol.</p>
+<p>A Secondary Server should have 4 major sub components:</p>
+<ol>
+<li>Key Store</li>
+<li>Commit Log</li>
+<li>Access Log</li>
+<li>Notification Log</li>
+</ol>
+<p>Verbs described in the document should be used to create, update, delete and retrieve information from the above sub components.</p>
+<h3 id="1-key-store">1. Key Store <a href="#1-key-store" class="anchor" aria-hidden="true">#</a></h3>
+<p>Key store is a place where user data in a Secondary Server should be saved as key and value pairs. Apart from the value, an atSign user should be able to add certain metadata for a key.</p>
+<h4 id="key">Key <a href="#key" class="anchor" aria-hidden="true">#</a></h4>
+<p>A key in the atProtocol can be formed by using any alphanumeric and special characters (UTF-8) excluding &ldquo;@&rdquo;, &ldquo;:&rdquo; and a white space (&quot; &ldquo;). A key in a secondary can be any of the following 5 types:</p>
+<ol>
+<li>Public Key</li>
+</ol>
+<ul>
+<li>A public key is a key which can be looked up by any atSign user</li>
+<li>A public key should be part of the <em>scan</em> verb result.</li>
+<li>Format of the public key should be <code>public::&lt;@sign&gt;</code>.</li>
+</ul>
+<p>Example:</p>
+<p><code>public:location@alice</code></p>
+<blockquote>
+<p>The owner of the secondary should be allowed to update or delete the value of a public key.</p>
+</blockquote>
+<ol start="2">
+<li>Private Key</li>
+</ol>
+<ul>
+<li>A private key is a key which cannot be looked up by any atSIgn user other than the one who created it.</li>
+<li>A private key should not be returned in a <em>scan</em> verb result.</li>
+<li>format of the private key should be <code>privatekey::&lt;@sign&gt;</code></li>
+</ul>
+<p>Example:</p>
+<p><code>privatekey:pk1@alice</code></p>
+<blockquote>
+<p>The owner of the secondary should be allowed to update or delete the value of a private key.</p>
+</blockquote>
+<ol start="3">
+<li>User key</li>
+</ol>
+<ul>
+<li>A user key can only be looked up by an atSign user with whom the data has been shared.</li>
+<li>A user key should be part of the <em>scan</em> verb result only for the user who created it and the specific user it has been shared with.</li>
+<li>Format of the key shared with someone else should be <code>&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code></li>
+</ul>
+<p>Example:</p>
+<p><code>@bob:phone@alice</code></p>
+<blockquote>
+<p>Note: Above Key should be part of scan verb result only for @alice and @bob</p>
+</blockquote>
+<blockquote>
+<p>The owner of the secondary should be allowed to update o delete the value of a user key</p>
+</blockquote>
+<ol start="4">
+<li>Internal Key</li>
+</ol>
+<ul>
+<li>Internal keys start with an underscore(_) and are not displayed in scan results. Internal keys can be looked up only by the owner of the secondary</li>
+</ul>
+<ol start="5">
+<li>Cached Key</li>
+</ol>
+<ul>
+<li>A cached key is a key that was originally created by another atSign user but is now cached on the Secondary Server of another user&rsquo;s atSign as they were given permission to cache it.</li>
+<li>A cached key should be listed in the <em>scan</em> verb result for the atSign user who cached it.</li>
+<li>Format of the key shared with someone else should be <code>cached:&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code></li>
+</ul>
+<p>Example:</p>
+<p><code>cached:@bob:phone@alice</code></p>
+<blockquote>
+<p>The user who has cached the key should not be allowed to update the cached key.</p>
+</blockquote>
+<blockquote>
+<p>An atSign user who has created and shared the key should be allowed to update a cached key, and if the &ldquo;autoNotify&rdquo; config parameters is set to true, the updated value should be notified (please refer to the <code>notify</code> verb) and the cached key updated with the new value.</p>
+</blockquote>
+<blockquote>
+<p>If the user who originally shared the keys set the CCD (Cascade delete) to true, the cached key will be deleted when the original key is deleted.</p>
+</blockquote>
+<h4 id="value">Value <a href="#value" class="anchor" aria-hidden="true">#</a></h4>
+<p>Text or binary values can be saved in a Secondary Server. The size of the valuue saved in a secondary is bound by the config parameter &ldquo;maxBufferSize&rdquo;.</p>
+<blockquote>
+<p>A user should be made aware of this limitation by using the <code>stats</code> verb.</p>
+</blockquote>
+<blockquote>
+<p>If a binary value is being saved on a Secondary Server, the &ldquo;isBinary&rdquo; attribute on the metadata should be set to true by the convention.</p>
+</blockquote>
+<ol>
+<li>Reference Value</li>
+</ol>
+<p>A Secondary Server should support referencing another key&rsquo;s value.</p>
+<p>A reference value should be in the format &ldquo;atsign://&rdquo;.</p>
+<p>For example, &lsquo;phone@bob(key)&rsquo; is 1234 (value). Now another key called altPhone@bob can refer to phone@bob by referencing it as altPhone@bob == atsign://phone@bob.</p>
+<p>When the user does a lookup on the key that contains a reference, the Secondary Server should return a fully resolved value.</p>
+<ol start="2">
+<li>Metadata</li>
+</ol>
+<p>Metadata of a key should describe the following properties of the value being inserted.</p>
+<table>
+<thead>
+<tr>
+<th>Meta Attribute</th>
+<th>Auto create?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>createdOn</td>
+<td>Yes</td>
+<td>Date and time when the key has been created.</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>Yes</td>
+<td>atSign that has created the key</td>
+</tr>
+<tr>
+<td>updatedOn</td>
+<td>Yes</td>
+<td>Date and tiem when the key has been last updated</td>
+</tr>
+<tr>
+<td>sharedWith</td>
+<td>No</td>
+<td>atSign of the user with whom the key has been shared. Can be null if not shared with anyone.</td>
+</tr>
+<tr>
+<td>ttl</td>
+<td>No</td>
+<td>Time to live in milliseconds.</td>
+</tr>
+<tr>
+<td>expiresOn</td>
+<td>Yes</td>
+<td>A Date and Time derived from the ttl (now + ttl). A Key should be auto deleted once it expires.</td>
+</tr>
+<tr>
+<td>ttb</td>
+<td>No</td>
+<td>Time to birth in milliseconds.</td>
+</tr>
+<tr>
+<td>availableFrom</td>
+<td>Yes</td>
+<td>A Date and Time derived from the ttl (now + ttl). A Key should be only available after availableFrom</td>
+</tr>
+<tr>
+<td>isCached</td>
+<td>No</td>
+<td>True if the key is cached</td>
+</tr>
+<tr>
+<td>ttr</td>
+<td>No</td>
+<td>Time in milliseconds after which the cached key needs to be refreshed. Ttr of -1 indicates that the key can be cached forever.</td>
+</tr>
+<tr>
+<td>refreshAt</td>
+<td>No</td>
+<td>A Date and Time derived from the ttr. The time at which the key gets refreshed.</td>
+</tr>
+<tr>
+<td>ccd</td>
+<td>No</td>
+<td>Indicates if a cached key needs to be deleted when the atSign user who has originally shared it deletes it.</td>
+</tr>
+<tr>
+<td>isBinary</td>
+<td>No</td>
+<td>True if the value is a binary value.</td>
+</tr>
+<tr>
+<td>isEncrypted</td>
+<td>No</td>
+<td>True if the value is encrypted.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-commit-log">2. Commit Log <a href="#2-commit-log" class="anchor" aria-hidden="true">#</a></h3>
+<p>A Secondary Server should record any create, update and delete operations in a commit log. The Commit Log should record these operations with a unique commit id so that users of the secondary can lookup operations that happened on or after a given commit id.</p>
+<p>A Secondary Server should provide a way to compact the Commit Log based on time and size.</p>
+<h3 id="3-access-log">3. Access Log <a href="#3-access-log" class="anchor" aria-hidden="true">#</a></h3>
+<p>A Secondary Server should record the following user actions: user login, user authentication and lookup. The Access Log should record these operations so that users of the secondary can retrieve various statistics such as the most visited atSign or most visited keys.</p>
+<p>A Secondary Server should provide a way to compact the Access Log based on time and size.</p>
+<h3 id="4-notification-log">4. Notification Log <a href="#4-notification-log" class="anchor" aria-hidden="true">#</a></h3>
+<p>A Secondary Server should record any notifications that have been received and sent. Please check the <code>notify</code> verb specification for details on how a notification should be sent.</p>
+<p>A Secondary Server should provide a way to compact the Notification Log based on time and size.</p>
+<h2 id="standard-keys">Standard Keys <a href="#standard-keys" class="anchor" aria-hidden="true">#</a></h2>
+<p>A Secondary Server should have the following standard keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public:publickey@</td>
+<td>Public key used by other atSigns for encryption</td>
+</tr>
+<tr>
+<td>public:signing_publickey@</td>
+<td>Public key used on a pol handler to a verify a signed challenge</td>
+</tr>
+<tr>
+<td>@signing_privatekey@</td>
+<td>Private key used to sign a challenge on a pol request</td>
+</tr>
+<tr>
+<td>:shared_key@</td>
+<td>Symmetric key used to encrypt/decrypt self atSign data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration-parameters">Configuration Parameters <a href="#configuration-parameters" class="anchor" aria-hidden="true">#</a></h2>
+<p>A Secondary Server should honor the following configuration parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoNotify</td>
+<td>true/false</td>
+<td>If set to true, a Secondary Server should automatically notify another atSign user when a key has been shared with them. Please refer to the <code>notify</code> verb spec for details.</td>
+</tr>
+<tr>
+<td>bufferLimit</td>
+<td>Number of bytes</td>
+<td>Maximum size of a value for a key that can be transferred to a Secondary Server</td>
+</tr>
+<tr>
+<td>inbound_max_limit</td>
+<td>An Integer</td>
+<td>Maximum number of inbound connections that a Secondary Server can accept</td>
+</tr>
+<tr>
+<td>outbound_max_limit</td>
+<td>An Integer</td>
+<td>Maximum number of outbound connections that a secondary can make to another Secondary Server</td>
+</tr>
+<tr>
+<td>inbound_idle_time_millis</td>
+<td>Time in milliseconds</td>
+<td>Maximum time the inbound connection can active</td>
+</tr>
+<tr>
+<td>outbound_idle_time_millis</td>
+<td>Time in milliseconds</td>
+<td>Maximum time the outbound connection can be active.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="block-list">Block List <a href="#block-list" class="anchor" aria-hidden="true">#</a></h2>
+<p>A user of the Secondary Server should be able to decide who is allowed to connect to a Secondary Server. The <code>config</code> verb should be used to configure this. Once added, a Secondary Server should honor the list at the time of accepting new connections from an atSign user using the <code>from</code> verb.</p>
+<h2 id="verbs">Verbs <a href="#verbs" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="the-from-verb">The <code>from</code> verb <a href="#the-from-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>from</code> verb is used to tell a secondary whom you claim to be.</p>
+<p>Following regex represents the syntax of the <code>from</code> verb:</p>
+<p><code>r'^from:(?&lt;@sign&gt;@?[^@\s]+$)'</code></p>
+<p><strong>Example</strong>:</p>
+<p><code>from:@bob</code></p>
+<p><strong>Response</strong>:</p>
+<p>If the user who is trying to connect is the owner of the Secondary Server, then the <code>from</code> verb should respond with the following response.</p>
+<p><code>key:&lt;sessionId@sign:uuid&gt;</code></p>
+<p>If the user who is trying to connect is not the owner of the Secondary Server, then the <code>from</code> verb should respond with the following response.</p>
+<p><code>proof:&lt;sessionId&gt;@&lt;@sign&gt;:&lt;UUID&gt;</code></p>
+<p>If the user is not allowed to connect to the Secondary Server, then it should respond back with the following error and close the connection to the server.</p>
+<p><code>error:AT0013-Connection Exception</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>from</code> verb is used to tell the Secondary Server what atSign you claim to be. With the <code>from</code> verb, one can connect to one&rsquo;s own Secondary Server or someone else&rsquo;s Secondary Server. In both cases, the Secondary Server responds back with a challenge to prove that you are who you claim to be. This is part of the authentication mechanism of the atProtocol.</p>
+<p>This authentication mechanism varies based on whether you are connecting to your own secondary (cram) or someone else&rsquo;s secondary (pol).</p>
+<p><strong>Options:</strong></p>
+<p><code>&lt;atSign&gt;</code> Required: Yes. atSign  with which you are connecting to a Secondary Server</p>
+<h3 id="the-cram-verb">The <code>cram</code> verb <a href="#the-cram-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>cram</code> verb is used to bootstrap authenticate one&rsquo;s own eself as the owner of a Secondary Server. It is intended to be used once until a set of PKI keys are cut on the owner&rsquo;s mobile device nad from then on we use the <code>pkam</code> verb.</p>
+<p>The following regex represents the syntax of the <code>cram</code> verb:</p>
+<p><code>r'^cram:(?&lt;digest&gt;.+$)'</code></p>
+<p><strong>Example:</strong></p>
+<p><code>cram:&lt;digest&gt;</code></p>
+<p><strong>Response:</strong></p>
+<p>If the user gets the challenge right, the prompt should change to the atSign of the user.</p>
+<p><code>&lt;@sign&gt;@</code></p>
+<p>If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
+<p><code>error:AT0401-Client authentication failed</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>cram</code> verb follows the <code>from</code> verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the shared key that the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the srever decrypts the digest using the shared key and matches it with the challenge. If they are the same, then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.</p>
+<p><strong>Options:</strong></p>
+<p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
+<h3 id="the-pol-verb">The <code>pol</code> verb <a href="#the-pol-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis</strong>:</p>
+<p>The <code>pol</code> verb is part of the <code>pkam</code> process to authenticate oneself while connecting to someone else&rsquo;s Secondary Server. The term &lsquo;pol&rsquo; means &lsquo;proof of life&rsquo; as it provides a near realtime assurance that the requestor is who it claims to be.</p>
+<p>Following regex represents the syntax of the <code>pol</code> verb:</p>
+<p><code>r'^pol$'</code></p>
+<p><strong>Example:</strong></p>
+<p><code>pol</code></p>
+<p><strong>Response:</strong>:</p>
+<p>If the user gets the challenge right the prompt should change to the atSign of the user.</p>
+<p><code>&lt;@sign&gt;@</code></p>
+<p>If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
+<p><code>error:AT0401-Client authentication failed</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>pol</code> verb follows the <code>from</code> verb. &lsquo;pol&rsquo; indicates another secondary that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob&rsquo;s secondary @alices secondary should change the prompt to @bob.</p>
+<p><strong>Options:</strong></p>
+<p>NA</p>
+<h3 id="the-scan-verb">The <code>scan</code> verb <a href="#the-scan-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The scan verb is used to see the keys in an atSign&rsquo;s secondary server.
+Following regex represents the syntax of the <code>scan</code> verb:
+<code>r'^scan$|scan(:showhidden:(?&lt;showhidden&gt;true|false))?(:(?&lt;forAtSign&gt;@[^:@\s]+))?(:page:(?&lt;page&gt;\d+))?( (?&lt;regex&gt;\S+))?$'</code></p>
+<p><strong>Example:</strong></p>
+<p><code>scan</code></p>
+<p><code>scan:showhidden:true</code></p>
+<p><code>scan: &lt;regex&gt;</code></p>
+<p><strong>Response:</strong></p>
+<p>The Secondary Server should return the keys within the secondary server if the scan verb executed succesfully. The Secondary Server will respond accordingly to whether the atSign is authenticated or not.
+<code>data:[&lt;keys&gt;]</code></p>
+<h3 id="the-update-verb">The <code>update</code> verb <a href="#the-update-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>update</code> verb is used to insert key/value pairs into a Key Store. An update can only be run by the owner of a Secondary Server on his/her own Secondary Server.</p>
+<p>Following regex represents the syntax of the <code>update</code> verb:</p>
+<p><code>r'^update:(?:ttl:(?&lt;ttl&gt;\d+):)?(?:ttb:(?&lt;ttb&gt;\d+):)?(?:ttr:(?&lt;ttr&gt;(-?)\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?((?:public:)|(@(?&lt;for@sign&gt;[^@:\s]-):))?(?&lt;atKey&gt;[^:@]((?!:{2})[^@])+)(?:@(?&lt;@sign&gt;[^@\s]-))? (?&lt;value&gt;.+$)'</code></p>
+<p><strong>Example:</strong></p>
+<p><code>update:location@bob bob's location value</code></p>
+<p><code>update:ttl:600000:location@bob bob's location value but key expires in 10 minutes</code></p>
+<p><code>update:@alice:phone@bob bob's phone number shared to @alice</code></p>
+<p><strong>Response:</strong></p>
+<p>The Secondary Server should return the commit id from Commit Log if the update is successful.</p>
+<p><code>data:&lt;CommitId&gt;</code></p>
+<p>If the user provides the invalid update command, then it should respond with the following error and close the connection to the server</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>update</code> verb should be used to perform create/update operations on the Secondary Server. The <code>update</code> verb requires the owner of the secondary to authenticate himself/herself to the Secondary Server using <code>from</code> and <code>cram</code> verbs.</p>
+<p>If a key has been created for another @sign user, the Secondary Server should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
+<p><strong>Options:</strong></p>
+<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds.</p>
+<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds.</p>
+<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds.</p>
+<blockquote>
+<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever.</p>
+</blockquote>
+<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it deletes it.</p>
+<p><code>&lt;for@sign&gt;</code> Required: Yes, (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared</p>
+<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner.</p>
+<p><code>&lt;value&gt;</code> Required: Yes. DEscription: Value for the key.</p>
+<h3 id="the-updatemeta-verb">The <code>update:meta</code> verb <a href="#the-updatemeta-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>update:meta</code> verb should be used to update the metadata of a key atSign user without having to send or save the value again.</p>
+<p>Following is the regex for the <code>update:meta</code> verb</p>
+<p><code>^update:meta:((?:public:)|((?&lt;forAtSign&gt;@?[^@\s]-):))?(?&lt;atKey&gt;((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]-)(:ttl:(?&lt;ttl&gt;\d+))?(:ttb:(?&lt;ttb&gt;\d+))?(:ttr:(?&lt;ttr&gt;\d+))?(:ccd:(?&lt;ccd&gt;true|false))?(:isBinary:(?&lt;isBinary&gt;true|false))?(:isEncrypted:(?&lt;isEncrypted&gt;true|false))?$</code></p>
+<p><strong>Example:</strong></p>
+<p><code>update:meta:phone@bob:isBinary:true</code></p>
+<p><code>update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true</code></p>
+<p><strong>Response:</strong></p>
+<p>The Secondary Server should return the commit id from Commit Log if the update is sucecssful.</p>
+<p><code>data:&lt;CommitId&gt;</code></p>
+<p>If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the server.</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>update:meta</code> verb should be used to perform create/update operations on the Secondary Server. The <code>update:meta</code> verb requires the owner of the secondary to authenticate himself/herself to the Secondary Server using <code>from</code> and <code>cram</code> verbs.</p>
+<p>The Secondary Server should allow creation of keys with null values. If a key has been created for another @sign user, the Secondary Server should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
+<p><strong>Options:</strong>:</p>
+<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds</p>
+<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds</p>
+<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds</p>
+<blockquote>
+<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever</p>
+</blockquote>
+<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originaly shared it, deletes it.</p>
+<p><code>&lt;for@sign&gt;</code> Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared</p>
+<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner</p>
+<h3 id="the-lookup-verb">The <code>lookup</code> verb <a href="#the-lookup-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis</strong>:</p>
+<p>The <code>lookup</code> verb should be used to lookup the value shared by another atSign user.</p>
+<p>The following is the regex of the <code>lookup</code> verb:</p>
+<p><code>lookup:((?&lt;operation&gt;meta|all):)?(?&lt;atKey&gt;(?:[^:]).+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
+<p><strong>Example:</strong></p>
+<p><code>lookup:phone@alice</code></p>
+<p><code>lookup:meta:phone@alice</code></p>
+<p><code>lookup:all:phone@alice</code></p>
+<p><strong>Response</strong>:</p>
+<p>If the operation is not specified the Secondary Server should just respond back with the value saved by the user as is.</p>
+<p><code>data:&lt;value&gt;</code></p>
+<p>If the oepration is to lookup the metadata only then the result should be wrapped in a JSON in the following format:</p>
+<p><code>data:&lt;Metadata in a JSON&gt;</code></p>
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">data:</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;createdBy&#34;</span><span class="p">:</span><span class="s2">&#34;@bob&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;updatedBy&#34;</span><span class="p">:</span><span class="s2">&#34;@bob&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;createdAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:48.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;updatedAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:48.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;availableAt&#34;</span><span class="p">:</span><span class="s2">&#34;null&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;expiresAt&#34;</span><span class="p">:</span><span class="s2">&#34;null&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;refreshAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:58.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;status&#34;</span><span class="p">:</span><span class="s2">&#34;active&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ttl&#34;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ttb&#34;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ttr&#34;</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ccd&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;isBinary&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;isEncrypted&#34;</span><span class="p">:</span><span class="kc">false</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div><p>If the operation is to lookup th emetadat and the data together, then the result should be wrapped in a JSON in the following format:</p>
+<p><code>data:&lt;Value and Metadata in a JSON&gt;</code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">data:</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;key&#34;</span><span class="p">:</span><span class="s2">&#34;@alice:country@bob&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;data&#34;</span><span class="p">:</span><span class="s2">&#34;USA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;metaData&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	 <span class="nt">&#34;createdBy&#34;</span><span class="p">:</span><span class="s2">&#34;@bob&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;updatedBy&#34;</span><span class="p">:</span><span class="s2">&#34;@bob&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;createdAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:48.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;updatedAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:48.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;availableAt&#34;</span><span class="p">:</span><span class="s2">&#34;null&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;expiresAt&#34;</span><span class="p">:</span><span class="s2">&#34;null&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;refreshAt&#34;</span><span class="p">:</span><span class="s2">&#34;2020-10-21 09:46:58.982Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;status&#34;</span><span class="p">:</span><span class="s2">&#34;active&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;version&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;ttl&#34;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;ttb&#34;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;ttr&#34;</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;ccd&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;isBinary&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nt">&#34;isEncrypted&#34;</span><span class="p">:</span><span class="kc">false</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>If the other Secondary Server on which the lookup needs to be performed is down then the secondary should return the following error and keep the connection alive.</p>
+<p><code>error:AT0007-Secondary Server not found.</code></p>
+<p>If the lookup command is not valid, then the Secondary Server should return the following error and close the connection:</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<p>For whatever reasons, If the handshake with another secondary fails, then the Secondary Server should return the following error:</p>
+<p><code>data:AT0008-Handshake failure</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>lookup</code> verb should be used to fetch the value of the key shared by another atSign user. If there is a public and user key with the same name then the result should be based on whether the user is trying to lookup is authenticated or not. If the user is authenticated then the user key has to be returned, otherwise the public key has to be returned.</p>
+<h3 id="the-plookup-verb">The <code>plookup</code> verb <a href="#the-plookup-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>plookup</code> verb enables to lookup the value of the public key shared by another atSign user.</p>
+<p>Following is the regex of the <code>plookup</code> verb:</p>
+<p><code>^plookup:((?&lt;operation&gt;meta|all):)?(?&lt;atKey&gt;[^@\s]+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
+<p><strong>Example:</strong></p>
+<p><code>plookup:publickey@alice</code></p>
+<p><code>plookup:meta:publickey@alice</code></p>
+<p><code>plookup:all:publickey@alice</code></p>
+<p><strong>Response:</strong></p>
+<p>The Secondary Server should return the value or metadata or the value and metadata together based on the option specified.</p>
+<p>The response structure should be exactly the same as the <code>lookup</code> verb.</p>
+<p>If the other Secondary Server on which the <code>lookup</code> needs to be performed is not available, then the secondary should return the following error and keep the connection alive.</p>
+<p><code>error:AT0007-Secondary Server not found.</code></p>
+<p>If the <code>lookup</code> command is not valid, then the Secondary Server should return the following error and close the connection:</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<h3 id="the-llookup-verb">The <code>llookup</code> verb <a href="#the-llookup-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>llookup</code> verb should be used to look up one&rsquo;s own secondary and this should return the value as is (i.e. without any resolution).</p>
+<p>The following is the regex of the <code>llookup</code> verb:</p>
+<p><code>^llookup:((?&lt;operation&gt;meta|all):)?(?:cached:)?((?:public:)|(@(?&lt;for@sign&gt;[^@:\s]-):))?(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
+<p><strong>Example:</strong></p>
+<p><code>llookup:public:publickey@bob</code></p>
+<p><code>llookup:all:phone@bob</code></p>
+<p><strong>Response:</strong></p>
+<p>The Secondary Server should return the value or metadata or the value and metadata together based on the option specified.</p>
+<p>The response structure should be exactly the same as the <code>lookup</code> verb.</p>
+<p>If the other Secondary Server on which the lookup needs to be performed is down then the secondary should return the following error and keep the connection alive.</p>
+<p><code>error:AT0007-Secondary Server not found.</code></p>
+<p>If the lookup command is not valid, then the Secondary Server should return the following error and close the connection:</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>llookup</code> verb should be used to fetch the value of the key in the owners secondary store as is without resolving it. For example if a key contains a reference as a value, the <code>lookup</code> verb should resolve it to a value whereas <code>llookup</code> should return the value as is.</p>
+<p><strong>Example:</strong></p>
+<p>If <code>phone@bob</code> is &ldquo;1234&rdquo; and <code>altphone@bob</code> is &ldquo;atsign://phone@bob&rdquo;, then <code>lookup</code> of <code>altphone@bob</code> should return &ldquo;1234&rdquo; where as <code>llookup</code> of <code>altphone@bob</code> should return &ldquo;atsign://phone@bob&rdquo;.</p>
+<h3 id="the-pkam-verb">The <code>pkam</code> verb <a href="#the-pkam-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>pkam</code> verb is used to authenticate one&rsquo;s own self as an owner of a Secondary Server using a PKI style authentication.</p>
+<p>Following regex represents the syntax of the <code>pkam</code> verb:</p>
+<p><code>^pkam:(?&lt;signature&gt;.+$)</code></p>
+<p><strong>Example:</strong></p>
+<p><code>pkam:&lt;digest&gt;</code></p>
+<p><strong>Response:</strong></p>
+<p>If the user gets the challenge right, the prompt should change to the atSign of the user.</p>
+<p><code>&lt;@sign&gt;@</code></p>
+<p>If the user gets the pkam authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
+<p><code>error:AT0401-Client authentication failed</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>pkam</code> verb follows the <code>from</code> verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the private key of the RSA key pair with what the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the server decrypts the digest using the public key and matches it with the challenge. If they are the same then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.</p>
+<p><strong>Options:</strong></p>
+<p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
+<h3 id="the-stats-verb">The <code>stats</code> verb <a href="#the-stats-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>stats</code> verb should be used to get the statistics of an atSign.</p>
+<p>Following is the regex of the <code>stats</code> verb</p>
+<p><code>stats(?&lt;statId&gt;:((?!0)\d+)?(,(\d+))-)?</code></p>
+<p><strong>Response:</strong></p>
+<p>if the user gives stats all the statistics will be returned as JSON. Following statistics are provided:</p>
+<ol>
+<li><code>activeInboundConnections</code></li>
+<li><code>activeOutboundConnections</code></li>
+<li><code>lastCommitId</code></li>
+<li><code>secondaryStorageSize</code></li>
+<li><code>topAtSigns</code></li>
+<li><code>topKeys</code></li>
+</ol>
+<p><strong>Example:</strong></p>
+<p><code>data: [{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;activeInboundConnections&quot;,&quot;value&quot;:&quot;1&quot;}, {&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;activeOutboundConnections&quot;,&quot;value&quot;:&quot;0&quot;}, {&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;lastCommitID&quot;,&quot;value&quot;:&quot;1&quot;}, {&quot;id&quot;:&quot;4&quot;,&quot;name&quot;:&quot;secondaryStorageSize&quot;,&quot;value&quot;:12560}, {&quot;id&quot;:&quot;5&quot;,&quot;name&quot;:&quot;topAtSigns&quot;,&quot;value&quot;:{&quot;@bob&quot;:1}}, {&quot;id&quot;:&quot;6&quot;,&quot;name&quot;:&quot;topKeys&quot;,&quot;value&quot;:{&quot;publickey@alice&quot;:1}}]</code></p>
+<p>Individual statistics can be retrieved using the respective Id.</p>
+<pre tabindex="0"><code>@alice@stats:1
+data: [{&#34;id&#34;:&#34;1&#34;,&#34;name&#34;:&#34;activeInboundConnections&#34;,&#34;value&#34;:&#34;1&#34;}]
+</code></pre><h3 id="the-sync-verb">The <code>sync</code> verb <a href="#the-sync-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p>The <code>sync</code> verb enables to synchronize the keys between the local Secondary Server and remote Secondary Server.</p>
+<p>Following is the regex:</p>
+<p><code>sync:(?&lt;from_commit_seq&gt;[0-9]+$|-1)</code></p>
+<p><strong>Response:</strong></p>
+<p>The <code>sync</code> verb returns a json array of the commit entries from the given commit id to the current commit id. Further, the <code>sync</code> verb accepts -1 as argument which returns all the commit entries.</p>
+<pre tabindex="0"><code>data:[{&#34;atKey&#34;:&#34;@bob:phone@alice&#34;,&#34;operation&#34;:&#34;+&#34;,&#34;opTime&#34;:&#34;2020-10-26 11:57:43.732&#34;,&#34;commitId&#34;:0,&#34;value&#34;:&#34;12345&#34;,&#34;metadata&#34;:{&#34;ttr&#34;:&#34;36000000&#34;,&#34;ccd&#34;:&#34;false&#34;}},
+{&#34;atKey&#34;:&#34;@bob:shared_key@alice&#34;,&#34;operation&#34;:&#34;-&#34;,&#34;opTime&#34;:&#34;2020-10-26 09:44:54.382219Z&#34;,&#34;commitId&#34;:1}]
+</code></pre><h3 id="the-notify-verb">The <code>notify</code> verb <a href="#the-notify-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>notify</code> verb enables us to notify the atSign user of some data event.</p>
+<p>The following is the regex for the <code>notify</code> verb</p>
+<pre tabindex="0"><code>notify:((?&lt;operation&gt;update|delete):)?(ttl:(?&lt;ttl&gt;\d+):)?(ttb:(?&lt;ttb&gt;\d+):)?(ttr:(?&lt;ttr&gt;(-)?\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?(@(?&lt;forAtSign&gt;[^@:\s]-)):(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))?
+</code></pre><p><strong>Example:</strong></p>
+<p><code>notify:update:@alice:test@bob</code></p>
+<p><code>notify:delete:@alice:test@bob</code></p>
+<p><strong>Response:</strong></p>
+<p>When a key is notified successfully, returns</p>
+<p><code>data:&lt;notificationId&gt;</code></p>
+<p>where the notificationId is the id of the sent notification.</p>
+<p><strong>Description:</strong></p>
+<p>When an atSign user notifies the key to another atSign user, an entry has to be created in received notifications list on the user who has shared the key and an entry has to be created in sent notifications list on the user to whom the key is to be notified. When auto notify is set to true, when a key is created/updated and deleted notification is triggered to another atSign user.</p>
+<h4 id="notify-list">Notify List <a href="#notify-list" class="anchor" aria-hidden="true">#</a></h4>
+<p><strong>Synopsis:</strong></p>
+<p>Notify list returns a list of notifications.</p>
+<p>The following is the regex</p>
+<p><code>notify:(list (?&lt;regex&gt;.-)|list$)</code></p>
+<p><strong>Example:</strong></p>
+<p><code>notify:list</code></p>
+<p><strong>Response:</strong></p>
+<p>If the user is the owner, returns a list of received notifications. If a user is pol authenticated user, returns a list of sent notifications</p>
+<p><code>data:[{&quot;id&quot;:&quot;0e5e9e89-c9cb-423b-8972-8c5487215990&quot;,&quot;from&quot;:&quot;@alice&quot;,&quot;to&quot;:&quot;@bob&quot;,&quot;key&quot;:&quot;@bob:phone@alice&quot;,&quot;value&quot;:12345,&quot;operation&quot;:&quot;update&quot;,&quot;epochMillis&quot;:1603714122636}]</code></p>
+<h4 id="notify-remove">Notify Remove <a href="#notify-remove" class="anchor" aria-hidden="true">#</a></h4>
+<p><strong>Synopsis:</strong></p>
+<p>Notify remove removes a notification from the notification log.</p>
+<p>The following is the regex</p>
+<p><code>notify:(remove:(?&lt;notificationId&gt;[^:]+$))</code></p>
+<p><strong>Example:</strong></p>
+<p><code>notify:remove:0e5e9e89-c9cb-423b-8972-8c5487215990</code></p>
+<p><strong>Response:</strong></p>
+<p>If successful, returns</p>
+<p><code>data:success</code></p>
+<h3 id="the-monitor-verb">The <code>monitor</code> verb <a href="#the-monitor-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>monitor</code> verb streams received notifications.</p>
+<p>The following is the regex</p>
+<p><code>^monitor$|^monitor ?(?&lt;regex&gt;.-)?)$</code></p>
+<p><strong>Example:</strong></p>
+<p><code>monitor</code></p>
+<p><strong>Response:</strong></p>
+<p>Returns a stream of notifications</p>
+<pre tabindex="0"><code>@alice@monitor
+notification: {&#34;id&#34;:&#34;773e226d-dac2-4269-b1ee-64d7ce93a42f&#34;,&#34;from&#34;:&#34;@bob&#34;,&#34;to&#34;:&#34;@alice&#34;,&#34;key&#34;:&#34;@alice:phone@bob&#34;,&#34;value&#34;:null,&#34;operation&#34;:&#34;update&#34;,&#34;epochMillis&#34;:1603714720965}
+</code></pre><p><strong>Description:</strong></p>
+<p>The <code>monitor</code> verb accepts an optional parameter to filter the notifications by passing filter criteria as regex to <code>monitor</code> verb.</p>
+<h2 id="error-codes">Error Codes <a href="#error-codes" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AT0001</td>
+<td>Server exception</td>
+<td>Exception occurs when there is an issue while starting the server.</td>
+</tr>
+<tr>
+<td>AT0002</td>
+<td>Datastore exception</td>
+<td>Exception occurs during keystore operations (GET/PUT/DELETE).</td>
+</tr>
+<tr>
+<td>AT0003</td>
+<td>Invalid syntax</td>
+<td>Exception occurs if we give any invalid command to the server.</td>
+</tr>
+<tr>
+<td>AT0004</td>
+<td>Socket error</td>
+<td>Exception occurs when socket connection to secondary cannot be established.</td>
+</tr>
+<tr>
+<td>AT0005</td>
+<td>Buffer limit exceeded</td>
+<td>This exception occurs when input/output message size reaches the maximum limit configured in the server.</td>
+</tr>
+<tr>
+<td>AT0008</td>
+<td>Handshake failure</td>
+<td>this exception is for any exception during the handshake process of two secondaries.</td>
+</tr>
+<tr>
+<td>AT0009</td>
+<td>Unauthorized client in the request</td>
+<td>Occurs when an unsuccessful handshake happens between two secondaries.</td>
+</tr>
+<tr>
+<td>AT0010</td>
+<td>Internal server error</td>
+<td>This is for any server related errors.</td>
+</tr>
+<tr>
+<td>AT0011</td>
+<td>Internal server exception</td>
+<td>This exception is used for any server related exceptions.</td>
+</tr>
+<tr>
+<td>AT0012</td>
+<td>Inbound connection limit exceeded</td>
+<td>This exception will occur when the number of active clients reaches the maximum limit configured.</td>
+</tr>
+<tr>
+<td>AT0401</td>
+<td>Client authentication failed</td>
+<td>This exception occurs when client authentication fails or client tries to execute any verb which needs authentication before successful authentication.</td>
+</tr>
+<tr>
+<td>AT0013</td>
+<td>Connection exception</td>
+<td>This will occur when a blocked user tries to connect to the secondary.</td>
+</tr>
+<tr>
+<td>AT0014</td>
+<td>Unknown AtClient exception</td>
+<td>This exception will be thrown while performing any operations (GET/UPDATE/DELETE) using AtClient SDK.</td>
+</tr>
+<tr>
+<td>AT0015</td>
+<td>Key not found</td>
+<td>This exception will be thrown when the key is not available for encryption/decryption.</td>
+</tr>
+<tr>
+<td>AT0021</td>
+<td>Unable to connect to secondary</td>
+<td>This exception will occur when we are unable to connect to secondary.</td>
+</tr>
+</tbody>
+</table>
+
 			<div class="card-list">
 					
 					
@@ -1152,7 +1909,7 @@
     <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
   <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
-  <script src="https://dev3.atsign.wtf/index.min.987960078b45cdf8c0aeb8eacc3cb76232e2d43c70ab8c87a337f5e549b8a206f24369721a4e0ca2f06816c929673d2161da1eb4a1cdbc2ec08cd222b7f4a613.js" integrity="sha512-mHlgB4tFzfjArrjqzDy3YjLi1Dxwq4yHozf15Um4ogbyQ2lyGk4MovBoFskpZz0hYdoetKHNvC7AjNIit/SmEw==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/index.min.f7f79286512282b46f1ddcd1f2ba40b965071a2fc4f601e9d84d0c3cb44df59135f2a1fa61216c74fb2e6ca58e99c4d6febf3be0d6a660ca5727e9bc243f3c57.js" integrity="sha512-9/eShlEigrRvHdzR8rpAuWUHGi/E9gHp2E0MPLRN9ZE18qH6YSFsdPsubKWOmcTW/r874NamYMpXJ&#43;m8JD88Vw==" crossorigin="anonymous" defer></script>
   
   </body>
 </html>

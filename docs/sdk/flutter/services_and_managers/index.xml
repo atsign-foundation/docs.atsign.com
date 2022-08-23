@@ -32,7 +32,10 @@ Based on your need you can either install at_client_mobile or at_client and impo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/</guid>
-      <description></description>
+      <description>This is where you can quickly learn and update yourself on various atPlatform concepts.
+If you haven&amp;rsquo;t already, we recommend you head to Get Started Flutter Development first.
+The following is covered in this codelab:
+ AtClientManager - an object with various services such as Client, NotificationService, and SyncService. AtClientPreference - object used to configure preferences in your atPlatform application such as the namespace, hiveStoragePath, or maxDataSize. Onboarding - process of activating an atSign and/or authenticating the atSign into its secondary server.</description>
     </item>
     
     <item>
