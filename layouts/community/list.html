@@ -5,6 +5,7 @@
             <p>{{ .Params.lead | safeHTML }}</p>
       </div>
       {{ .Content }}
+      {{ partial "main/footer.html" }}
 </div>
 
 {{ end }}

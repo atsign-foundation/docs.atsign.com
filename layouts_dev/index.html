@@ -5,11 +5,22 @@
             {{ else -}}
             <main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
                 {{ end -}}
-                <div class="d-flex flex-column align-items-center">
-                    <h3>Welcome to the atPlatform</h3>
-                    <p class="mb-0">Here at Atsign, we are providing a platform for developers to "flip the internet".</p>
-                    <p>Use our atPlatform to implement simplicity and security to your IoT devices, Flutter, or Java apps.</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col px-1 py-0">
+                            <h3 class="mb-0 text-end">Welcome to the </h3>
+                        </div>
+                        <div class="col p-0">
+                            <div class="d-flex flex-column align-items-start justify-content-end h-100">
+                                <img class="toggle-dark" src="https://i.imgur.com/lwnlyRk.png" height="34em"/>
+                                <img class="toggle-light" src="https://i.imgur.com/7HfxAGz.png" height="48em"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
                 </div>
+                <p class="mb-0 text-center">Here at Atsign, we are providing a platform for developers to "flip the Internet."</p>
+                <p class="text-center">The atPlatform allows you to implement simplicity and security to your IoT devices, and your Flutter and Java apps.</p>
                 <br/>
                 <br/>
                 <div class="container">
@@ -66,11 +77,6 @@
                 {{ end }}
                 <h1>{{ .Title }}</h1>
                 <p class="lead">{{ .Params.lead | safeHTML }}</p>
-                {{ if ne .Params.toc false -}}
-                <nav class="d-xl-none" aria-label="Quaternary navigation">
-                    {{ partial "sidebar/docs-toc.html" . }}
-                </nav>
-                {{ end -}}
                 {{ .Content }}
                 {{ if ne .Params.autolinks false -}}
 				<div class="card-list">

@@ -14,7 +14,7 @@ autolinks: false # Change this to "false" to hide the automatic links below your
 weight: 1 # Weight compared to other sections of the site, this shouldn't affect anything on the facade
 ---
 
-### I want to...
+#### I want to...
 
 {{% card/group %}}
 {{< card/feature href="/docs/start" title="Get Started" text="Start with Flutter, Java, or IoT development" >}}
@@ -25,7 +25,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 {{< card/feature href="/docs/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
 {{% /card/group %}}
 
-### Featured Tutorials
+#### Featured Tutorials
 
 {{% card/group %}}
 {{< card/feature href="/docs/tutorials/atmosphere-pro" title="atmoshere pro" text="An open source end-to-end encrypted file sharing app" >}}
@@ -36,7 +36,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 {{< card/feature href="/docs/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
 
-### More Options
+#### More Options
 
 {{< card/breadcrumb link="/docs/reference/" first="Reference" >}}
 {{< card/breadcrumb link="/docs/contribute" first="Contribute to this site" >}}
