@@ -9,12 +9,6 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/docs/start/flutter/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -64,6 +58,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/atplatform/overview/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

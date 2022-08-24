@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Samples &amp; Tutorials on </title>
+    <title>Tutorials on </title>
     <link>https://dev3.atsign.wtf/docs/tutorials/</link>
-    <description>Recent content in Samples &amp; Tutorials on </description>
+    <description>Recent content in Tutorials on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
   </channel>

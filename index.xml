@@ -13,20 +13,6 @@
     
     
     <item>
-      <title>atPlatform Documentation</title>
-      <link>https://dev3.atsign.wtf/docs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/</guid>
-      <description>I want to&amp;hellip; #Get Started Follow our getting started guide here
-   Learn the SDK See our SDK Documentation here
-    Learn the platform See our infrastructure overview here
-   Follow a tutorial Find a specific tutorial here
-    Featured Tutorials #@moshere pro An open source end-to-end encrypted file sharing app
-   @dude app Send an end-to-end encrypted duuuuuuude to your friends</description>
-    </item>
-    
-    <item>
       <title>Join the atPlatform developer community</title>
       <link>https://dev3.atsign.wtf/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -50,6 +36,20 @@ Coming soon!
 Learn more  Open-source code     Take@vote A private and secure voting platform.
 Coming soon!
    @arrive Securly share locations with people you trust!</description>
+    </item>
+    
+    <item>
+      <title>Welcome to the atPlatform Documentation</title>
+      <link>https://dev3.atsign.wtf/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/docs/</guid>
+      <description>I want to&amp;hellip; #Get Started Start with Flutter, Java, or IoT development
+   Learn the SDK See our SDK Documentation here
+    Learn the Platform See our infrastructure overview here
+   Follow a Tutorial Find specific tutorials on our tech here
+    Featured Tutorials #atmoshere pro An open source end-to-end encrypted file sharing app
+   atDude app Send an end-to-end encrypted duuuuuuude to your friends</description>
     </item>
     
   </channel>

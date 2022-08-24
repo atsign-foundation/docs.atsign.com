@@ -14,7 +14,7 @@
       <guid>https://dev3.atsign.wtf/docs/sdk/flutter/overview/</guid>
       <description>Introduction #Our Dart/Flutter SDK takes full advantage of the atProtocol and implements all the necessary features like encryption key generation, cram &amp;amp; pkam authentication, verb building, end-to-end encrypted data sharing, encrypting self data, and much more.
 Services #Our atPlatform has a lot to offer for Dart/Flutter developers.
- Flutter widgets for using various aspects of the atPlatform (at_widgets) A collection of demo applications written to help you get a head start on your atPlatform journey (at_demos) Command-line utility for developing app developers (at_app) Other atPlatform tools (at_tools)  Explore our GitHub page.</description>
+ at_widgets - Flutter widgets for using various aspects of the atPlatform at_demos - collection of demo applications to help you on your atPlatform journey at_app - command-line utility for developing app developers at_tools - other atPlatform tools (at_cli, at_cram, at_pkam,&amp;hellip;)  Explore our GitHub page atsign-foundation to see more of our amazing projects and tools.</description>
     </item>
     
   </channel>
