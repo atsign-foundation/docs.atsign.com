@@ -10,7 +10,7 @@ description:
   Definition of Polymorphism
 
 draft: false # Change this to "true" to hide the page
-toc: false # Change this to "true" to show the table of contents
+toc: true # Change this to "true" to show the table of contents
 weight: 204 # For single pages, lower is first.
 ---
 
