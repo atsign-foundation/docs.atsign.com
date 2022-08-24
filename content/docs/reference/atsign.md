@@ -10,7 +10,7 @@ description:
   Learn about what an atSign is in the atPlatform
 
 draft: false # Change this to "true" to hide the page
-toc: false # Change this to "true" to show the table of contents
+toc: true # Change this to "true" to show the table of contents
 weight: 200 # For single pages, lower is first.
 ---
 
