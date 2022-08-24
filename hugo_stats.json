@@ -186,6 +186,7 @@
       "flex-shrink-1",
       "flex-wrap",
       "flex-xl-nowrap",
+      "font-size-lg",
       "footer",
       "form-control",
       "full-width-content",
