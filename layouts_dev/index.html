@@ -7,8 +7,8 @@
                 {{ end -}}
                 <div class="d-flex flex-column align-items-center">
                     <h3>Welcome to the atPlatform</h3>
-                    <p class="mb-0">Here at Atsign, we are providing a platform for developers to "flip the internet".</p>
-                    <p>Use our atPlatform to implement simplicity and security to your IoT devices, Flutter, or Java apps.</p>
+                    <p class="mb-0 text-center">Here at Atsign, we are providing a platform for developers to "flip the Internet."</p>
+                    <p class="text-center">The atPlatform allows you to implement simplicity and security to your IoT devices, and your Flutter and Java apps.</p>
                 </div>
                 <br/>
                 <br/>
@@ -66,11 +66,6 @@
                 {{ end }}
                 <h1>{{ .Title }}</h1>
                 <p class="lead">{{ .Params.lead | safeHTML }}</p>
-                {{ if ne .Params.toc false -}}
-                <nav class="d-xl-none" aria-label="Quaternary navigation">
-                    {{ partial "sidebar/docs-toc.html" . }}
-                </nav>
-                {{ end -}}
                 {{ .Content }}
                 {{ if ne .Params.autolinks false -}}
 				<div class="card-list">
