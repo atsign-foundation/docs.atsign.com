@@ -117,12 +117,6 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/at_demos/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -141,6 +135,18 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/sshnp/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/at_demos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/start/other/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -148,6 +154,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/atplatform/root-server/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -184,12 +196,6 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/docs/tutorials/dess/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -362,6 +368,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/5_dude_service/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/sshnp/4-finish/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -547,6 +559,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/sshnp/1-prerequisites/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/docs/sdk/java/getting-started/privatehiddenkey/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -596,6 +614,18 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/docs/tutorials/at-dude/8_send_dude_srcreen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/sshnp/3-client/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/docs/tutorials/sshnp/2-daemon/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

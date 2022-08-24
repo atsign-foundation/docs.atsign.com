@@ -33,7 +33,7 @@ Clone the Java Client  Fork our at_java repository Create a new directory on you
       
       <guid>https://dev3.atsign.wtf/docs/start/iot/</guid>
       <description>Introduction #Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We&amp;rsquo;d love to work with you on adding security to your IoT devices. Please contact us at info@atsign.com or join our discord and ask us about anything and we will be happy to answer!
-SSH No Ports #Introduction #SSH No Ports provides a way to ssh to a remote linux host/device without that device having any open ports (not even port 22).</description>
+Ssh! No Ports #Want to ssh to your remove device without any open ports?</description>
     </item>
     
     <item>
@@ -43,8 +43,7 @@ SSH No Ports #Introduction #SSH No Ports provides a way to ssh to a remote lin
       
       <guid>https://dev3.atsign.wtf/docs/start/other/</guid>
       <description>Open Source Contributions #We LOVE open source. Any and all contributions are welcome.
-The atPlatform consists of many open-sourced GitHub repositories. To start, go into any repository and find the CONTRIBUTING.md file to see how you can properly setup your fork to make contributions to our projects. Here is an example of the contributing guidelines for making contributions to the dev site that you are reading now.
-Thank you for your contributions!</description>
+The atPlatform consists of many open-sourced GitHub repositories. To start, go into any repository and find the CONTRIBUTING.md file to see how you can properly setup your fork to make contributions to our projects. Here is an example of the contributing guidelines for making contributions to the dev site that you are reading now. There may be different contributing guidelines for each repository, so be sure to read the CONTRIBUTING.</description>
     </item>
     
   </channel>
