@@ -1,0 +1,42 @@
+{{ define "main" }} {{ $section := .CurrentSection }} {{ $page := .Page }}
+  {{ .Scratch.Set "class" "codelab" }}
+  {{ if eq .CurrentSection.Params.layout "codelab-list" }}
+  {{ if eq (hugo.Environment) "development" -}}
+    {{ $options := (dict "targetPath" "codelab.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
+    {{ $css := resources.Get "scss/codelab.scss" | toCSS $options -}}
+    <link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
+  {{ else -}}
+    {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
+    {{ $css := resources.Get "scss/codelab.scss" | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
+    {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+    <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
+  {{ end -}}
+{{ end -}}
+
+<div class="codelab">
+  <div class="codelab-nav-buttons">
+    <a class="codelab-arrow-back text-decoration-none" href="{{ $section.Params.exitLink | default $section.Params.doneLink | default .Site.BaseURL }}" id="arrow-back">← Exit Codelab</a>
+  </div>
+  {{ partial "codelab/timer.html" . }}
+  <div class="codelab-title">
+    {{ with $section.Title }}
+    <h1>{{.}}</h1>
+    {{end}}
+    {{ with $section.Params.lead }}
+    <p class="lead">{{ $section.Params.lead | safeHTML }}</p>
+    {{ end }}
+  </div>
+  {{ partial "codelab/menu.html" . }}
+  <div class="codelab-body">
+    <div class="codelab-steps">
+      <div class="codelab-step">
+        <div class="codelab-instructions">
+          <h2 class="codelab-step-title">{{.Title}}</h2>
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+    {{ partial "codelab/controls.html" . }}
+  </div>
+</div>
+{{ end }}
