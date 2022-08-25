@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.6a53f1fefa69c671dd892027ef4ee376df26e62eb90e0831d69d187818bd039fe6ee2232fd0f1cecd331782bd8bc5601b9ec7f8e97e2fb0cef9efd47882d66eb.css" integrity="sha512-alPx/vppxnHdiSAn707jdt8m5i65Dggx1p0YeBi9A5/m7iIy/Q8c7NMxeCvYvFYBuex/jpfi&#43;wzvnv1HiC1m6w==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Instance setup and dess deployment - atPlatform</title>
+<meta name="description" content="Documentation
+">
+<link rel="canonical" href="https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Instance setup and dess deployment">
+<meta property="og:description" content="Documentation
+">
+<meta property="og:url" content="https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/">
+<meta property="og:site_name" content="atPlatform">
+
+  
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="atsigncompany">
+<meta name="twitter:creator" content="atsigncompany">
+<meta name="twitter:title" content="Instance setup and dess deployment">
+<meta name="twitter:description" content="Documentation
+">
+<meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="Instance setup and dess deployment">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://dev3.atsign.wtf/#/schema/person/1",
+      "name": "",
+      "url": "https://dev3.atsign.wtf/",
+      "sameAs": [
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://dev3.atsign.wtf/#/schema/image/1",
+          "url": "https://dev3.atsign.wtf/\u003cnil\u003e",
+          "width":  null ,
+          "height":  null ,
+          "caption": ""
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://dev3.atsign.wtf/#/schema/website/1",
+      "url": "https://dev3.atsign.wtf/",
+      "name": "atPlatform",
+      "description": "The atPlatform is the fastest and easiest way to develop peer-to-peer, end-to-end encrypted apps.\n",
+      "publisher": {
+          "@id": "https://dev3.atsign.wtf/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/",
+      "url": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/",
+      "name": "Instance setup and dess deployment",
+      "description": "Documentation\n",
+      "isPartOf": {
+        "@id": "https://dev3.atsign.wtf/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://dev3.atsign.wtf/#/schema/person/1"
+        },
+      "datePublished": "0001-01-01T00:00:00CET",
+      "dateModified": "0001-01-01T00:00:00CET",
+      "breadcrumb": {
+        "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/#/schema/image/2"
+      },
+      "inLanguage": "",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/",
+          "url": "https://dev3.atsign.wtf/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/tutorials/",
+          "url": "https://dev3.atsign.wtf/tutorials/",
+          "name": "Tutorials"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/tutorials/dess/",
+          "url": "https://dev3.atsign.wtf/tutorials/dess/",
+          "name": "Dess"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/",
+          "url": "https://dev3.atsign.wtf/tutorials/dess/gcp/",
+          "name": "Gcp"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/#/schema/image/2",
+          "url":  null ,
+          "contentUrl":  null ,
+          "caption": "Instance setup and dess deployment"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="apple-touch-icon" sizes="180x180" href="https://dev3.atsign.wtf/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dev3.atsign.wtf/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dev3.atsign.wtf/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://dev3.atsign.wtf/site.webmanifest">
+
+</head>
+  <body class="tutorials single">
+    <div class="header-bar"></div>
+
+<header class="navbar navbar-expand-md navbar-light doks-navbar">
+  <nav class="container-fluid flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-auto" href="https://dev3.atsign.wtf/docs/" aria-label="atPlatform">
+      <img class="toggle-light" src="https://i.imgur.com/se4lyAK.png" width="320em" /> 
+      <img class="toggle-dark" src="https://uc61054ab566282488b650a3e8f2.previews.dropboxusercontent.com/p/thumb/ABqARQne01LoAnexqrynQwvmMpEFz9dlK05p76sC60oAJhVXwaAkrUDjeFKlPnTySIrateWsH9P7jquiJ71z5K1-h-Piy6iOmBsaClxZ45ruzwxzAAVZBvzhRL5cQ3nUapjPRDhuADmRwpfHXUwMJ9wn06Aa-Ltk4-MML7Ly1rAAh8dEtSrddBeOM3dJsVy744FePvi7AWuhSEsj_9o4mZmuLHd8XyAeEqQfrDvAlt5ZZ6jbNgMNc6zLhTrgc0IobLHZ5QWM74svtxYPZDF-IwYlnGEHmu_QWLh7_o4s9xJq6PP1Qr55vsTENcd-Z3EtkYes9WPC8KFWyZjOxZmYza04-tgJF_3Yl2po9AF9D9Q2L1pw7U_kQAwY_9RvDPpH9MgfosVeWPI-D-c-6f2bCffvcsLRKEzvam1GVME30ytqrw/p.png" width="320em" />
+    </a>
+
+    <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <div class="offcanvas offcanvas-end border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-md-none"></div>
+      <div class="offcanvas-header d-md-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="https://dev3.atsign.wtf/">atPlatform</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body px-4">
+        <h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3>
+        <ul class="nav flex-column flex-md-row ms-md-n3">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="https://atsign.com">Home</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="https://dev3.atsign.wtf/start/">Get Started</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="https://my.atsign.com/go">Get an atSign</a>
+              </li>
+            
+          </ul>
+        <hr class="text-black-50 my-4 d-md-none">
+        <h3 class="h6 text-uppercase mb-3 d-md-none">Socials</h3>
+        <ul class="nav flex-column flex-md-row ms-md-auto me-md-n5 pe-md-2">
+          </ul>
+      </div>
+    </div>
+    <button id="mode" class="btn btn-link order-md-1" type="button" aria-label="Toggle user interface mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <div class="dropdown order-md-2">
+      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+        EN
+        <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
+
+        <li><a class="dropdown-item current" aria-current="true" href="https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/">English</a></li>
+
+        <li><hr class="dropdown-divider"></li>
+
+      
+      </ul>
+    </div>
+    </nav>
+</header>
+
+<nav class="doks-subnavbar py-2 sticky-lg-top d-lg-none" aria-label="Secondary navigation">
+  <div class="container-fluid d-flex align-items-md-center">
+    <span class="navbar-text ms-0">Tutorials</span>
+    <button class="btn doks-sidebar-toggle d-lg-none ms-auto order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doks-docs-nav" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle documentation navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-fluid" role="document">
+      <div class="content">
+          
+  
+  
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.1240b01203c071e6914231f83ccc4609bc467dfeef115decb9124a89725997ef944be0e7a0b22034aa029b1413f573451fe0cf70065ac8c2365f327701935c80.css" integrity="sha512-EkCwEgPAceaRQjH4PMxGCbxGff7vEV3suRJKiXJZl&#43;&#43;US&#43;DnoLIgNKoCmxQT9XNFH&#43;DPcAZayMI2XzJ3AZNcgA==" crossorigin="anonymous">
+  <div class="codelab">
+  <div class="codelab-nav-buttons">
+    <a class="codelab-arrow-back text-decoration-none" href="https://dev3.atsign.wtf/docs/tutorials/dess/" id="arrow-back">← Exit Codelab</a>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="codelab-timer">
+  
+  ⏱
+  
+  3 mins remaining
+  
+</div>
+
+  <div class="codelab-title">
+    
+    <h1>Setup dess on GCP (Google Cloud) Platform</h1>
+    
+    
+  </div>
+  
+<div class="codelab-drawer">
+  <h3 class="codelab-nav-title">Steps <span>in this module</span></h3>
+  <div class="codelab-steps">
+    <ol>
+          
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/1_introduction/">
+          <span class="codelab-step">
+            <span>Introduction</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/2_prerequisites/">
+          <span class="codelab-step">
+            <span>Pre-requisites</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/3_prep_aws_instance/">
+          <span class="codelab-step">
+            <span>Preparing GCP Instance</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/4_prep_network_access/">
+          <span class="codelab-step">
+            <span>Preparing your instance for network access</span>
+          </span>
+        </a>
+      </li>
+          
+      <li selected >
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/">
+          <span class="codelab-step">
+            <span>Instance setup and dess deployment</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/6_registration/">
+          <span class="codelab-step">
+            <span>Registration of atSign in your private dess</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/7_activation/">
+          <span class="codelab-step">
+            <span>Activation of atSign</span>
+          </span>
+        </a>
+      </li>
+      
+    </ol>
+  </div>
+</div>
+
+  <div class="codelab-body">
+    <div class="codelab-steps">
+      <div class="codelab-step">
+        <div class="codelab-instructions">
+          <h2 class="codelab-step-title">Instance setup and dess deployment</h2>
+          <p>Open your GCP console at https://console.cloud.google.com/compute/instances and search for <code>VM instances</code></p>
+<p>
+  <img class="img-fluid lazyload blur-up" src="https://dev3.atsign.wtf/gcp-search-vm_18139707276442090809_hu989845e12ce31e1fc5e9bdad7bfc36f8_0_20x0_resize_box_3.png" data-src="https://dev3.atsign.wtf/gcp-search-vm_18139707276442090809.png" width="162" height="124" alt="gcp-search-vm">
+  </p>
+<p>By now you should see your instance in “Running state”</p>
+<p>
+  <figure class="figure">
+      <img class="figure-img img-fluid lazyload blur-up" data-sizes="auto" src="https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_20x0_resize_box_3.png" data-srcset="https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_900x0_resize_box_3.png 900w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_800x0_resize_box_3.png 800w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_700x0_resize_box_3.png 700w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_600x0_resize_box_3.png 600w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_500x0_resize_box_3.png 500w" width="1211" height="149" alt="gcp-vm-status">
+      <noscript><img class="figure-img img-fluid" sizes="100vw" srcset="https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_900x0_resize_box_3.png 900w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_800x0_resize_box_3.png 800w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_700x0_resize_box_3.png 700w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_600x0_resize_box_3.png 600w,https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_500x0_resize_box_3.png 500w" src="https://dev3.atsign.wtf/gcp-vm-status_17581805644815711932.png" width="1211" height="149" alt="gcp-vm-status"></noscript>
+      </figure>
+  </p>
+<p>Click on the SSH button and connect to your instance.</p>
+<p>You should be presented by new window with command line:</p>
+<p>
+  <figure class="figure">
+      <img class="figure-img img-fluid lazyload blur-up" data-sizes="auto" src="https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_20x0_resize_box_3.png" data-srcset="https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_900x0_resize_box_3.png 900w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_800x0_resize_box_3.png 800w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_700x0_resize_box_3.png 700w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_600x0_resize_box_3.png 600w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_500x0_resize_box_3.png 500w" width="902" height="710" alt="gcp-vm-connected">
+      <noscript><img class="figure-img img-fluid" sizes="100vw" srcset="https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_900x0_resize_box_3.png 900w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_800x0_resize_box_3.png 800w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_700x0_resize_box_3.png 700w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_600x0_resize_box_3.png 600w,https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_500x0_resize_box_3.png 500w" src="https://dev3.atsign.wtf/gcp-vm-connected_9664295141231021424.png" width="902" height="710" alt="gcp-vm-connected"></noscript>
+      </figure>
+  </p>
+<p>Before we do anything else, we should update the system:</p>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+<p>This might take some time, but it will make sure we have latest repository information and the system is up to date.</p>
+<p>Next make sure curl is installed, we will use curl to pull the dess installation file:</p>
+<p><code>sudo apt install curl</code>
+Finally, run the dess installer:</p>
+<p><code>curl -fsSL https://getdess.atsign.com | sudo bash</code></p>
+<p>Once the installer is finished you should be prompted like so:</p>
+<p><code>Dess installed, please move on to the sudo dess-create command</code>.</p>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="codelab-controls">
+  <div class="fabs">
+    
+    <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/4_prep_network_access/" id="previous-step" title="Previous step">Back</a>
+    
+    <div class="spacer"></div>
+    
+    <a href="https://dev3.atsign.wtf/tutorials/dess/gcp/6_registration/" id="next-step" title="Next step">Next</a>
+    
+  </div>
+</div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item"></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://dev3.atsign.wtf/js/bootstrap.min.f93d87ed312fd94eae9a720e5988a3bd322bcdd099518866fc5668e18610cca0077fc356b3edfc727dedf5f773dab0a6d87a870e4b616595e76381163dd5a730.js" integrity="sha512-&#43;T2H7TEv2U6umnIOWYijvTIrzdCZUYhm/FZo4YYQzKAHf8NWs&#43;38cn3t9fdz2rCm2HqHDkthZZXnY4EWPdWnMA==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/js/highlight.min.ab83c9c22e3502ea9a2c69dc7d30f4b944665498128154a4f5209b2d7687058cec30e0d671bba65bb00077b8bc017b214819cb115df26ae69e61aff74dd6102d.js" integrity="sha512-q4PJwi41AuqaLGncfTD0uURmVJgSgVSk9SCbLXaHBYzsMODWcbumW7AAd7i8AXshSBnLEV3yauaeYa/3TdYQLQ==" crossorigin="anonymous" defer></script>
+  <script src="https://dev3.atsign.wtf/main.min.77be814f15d160fc6b19496934363bc074a55c1e7db29a528246f32bd507128551839f528fab104d30ff53a74f51ab1c87c9280d822507bd6fdc0ad4aadbe64d.js" integrity="sha512-d76BTxXRYPxrGUlpNDY7wHSlXB59sppSgkbzK9UHEoVRg59Sj6sQTTD/U6dPUasch8koDYIlB71v3ArUqtvmTQ==" crossorigin="anonymous" defer></script>
+  
+  </body>
+</html>

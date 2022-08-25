@@ -1,63 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Core SDK Services on </title>
-    <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/</link>
-    <description>Recent content in Core SDK Services on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AtClientManager</title>
-      <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_manager/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_manager/</guid>
-      <description>Overview #The AtClientManager is in charge of overseeing and managing all client services.It makes NotificationService, SyncService, and Client application preferences easier to access from its instance.It is also used for client method calls.
-Based on your need you can either install at_client_mobile or at_client and import. After that you will be able to make an AtClientManager Instance. Now to Initialize the AtClient instance , the setCurrentAtsign method needs to be called.</description>
-    </item>
-    
-    <item>
-      <title>AtClientPreference</title>
-      <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_preference/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/at_client_preference/</guid>
-      <description>Overview #AtClientPreference is used to configure the preferences of an atPlatform application. It offers a variety of attributes to give a developer ultimate flexibility.
-   Attributes Description     hiveStoragePath Local device path of hive storage   commitLogPath Local device path of commit log   isLocalStoreRequired Specify whether local store is required   cramSecret Shared secret of the atSign   keyStoreSecret Secret key to encrypt keystore data   privateKey Private key of the atSign   namespace Specifies the namespace of an app.</description>
-    </item>
-    
-    <item>
-      <title>Introduction</title>
-      <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/introduction/</guid>
-      <description>This is where you can quickly learn and update yourself on various atPlatform concepts.
-If you haven&amp;rsquo;t already, we recommend you head to Get Started Flutter Development first.
-The following is covered in this codelab:
- AtClientManager - an object with various services such as Client, NotificationService, and SyncService. AtClientPreference - object used to configure preferences in your atPlatform application such as the namespace, hiveStoragePath, or maxDataSize. Onboarding - process of activating an atSign and/or authenticating the atSign into its secondary server.</description>
-    </item>
-    
-    <item>
-      <title>Key Basics</title>
-      <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/key_basics/</guid>
-      <description>Overview #To store data, atPlatform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
-AtKey Structure:
-   Attributes Description Return Type     key Unique Identifier for the data String   sharedWith The atSign to share with String   sharedBy The atSign that is sharing String   namespace The namespace of the app String   metadata  Metadata   isRef  Bool    Metadata #Metadata In AtKey allows you to add more aspects of AtKey.</description>
-    </item>
-    
-    <item>
-      <title>Onboarding</title>
-      <link>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/docs/sdk/flutter/services_and_managers/onboarding/</guid>
-      <description>Overview #The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords.To make developers life easier atPlatform offers at_onboarding_flutter package which handles secure management of secret keys.If you are developing a new atPlatform app, we recommend that you use at_app which can create atPlatform app template that already contains onboarding in it.
-Usage #Before using the onboarding widget, ensure that your AtClientPreference is properly assigned.</description>
-    </item>
-    
-  </channel>
-</rss>

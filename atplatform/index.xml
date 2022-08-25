@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The atPlatform on </title>
+    <link>https://dev3.atsign.wtf/atplatform/</link>
+    <description>Recent content in The atPlatform on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/atplatform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The atPlatform Overview</title>
+      <link>https://dev3.atsign.wtf/atplatform/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/atplatform/overview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://dev3.atsign.wtf/atplatform/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/atplatform/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Protocol Specification</title>
+      <link>https://dev3.atsign.wtf/atplatform/specification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/atplatform/specification/</guid>
+      <description>Introduction #The atProtcol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.
+See our Protocol Specification on our GitHub page under our at_protocol repository.
+If you see a typo, mistake, or want to suggest a feature, please see our contributing guidelines.</description>
+    </item>
+    
+    <item>
+      <title>Root Server</title>
+      <link>https://dev3.atsign.wtf/atplatform/root-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/atplatform/root-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Secondary Server</title>
+      <link>https://dev3.atsign.wtf/atplatform/secondary-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/atplatform/secondary-server/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

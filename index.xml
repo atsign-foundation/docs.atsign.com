@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>Welcome to the atPlatform Documentation on </title>
     <link>https://dev3.atsign.wtf/</link>
-    <description>Recent content on </description>
+    <description>Recent content in Welcome to the atPlatform Documentation on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2022 Atsign - All Rights Reserved
@@ -13,43 +13,57 @@
     
     
     <item>
-      <title>Join the atPlatform developer community</title>
-      <link>https://dev3.atsign.wtf/community/</link>
+      <title>Contribute</title>
+      <link>https://dev3.atsign.wtf/contribute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/community/</guid>
-      <description>GitHub Start contributing, This is where the code hits the fan.    Discord Learn how it works, Hangout with other developers!    Develop and Contribute #You can find out how to contriubte to these docs in our Contribution Guidelines.
- Hashnode Short technical articles about specific topics!    Reddit Join the conversation on our subreddit!    Email Support Directly reach our support team for help!</description>
+      <guid>https://dev3.atsign.wtf/contribute/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>New experiences powered by the atPlatform</title>
-      <link>https://dev3.atsign.wtf/showcase/</link>
+      <title>Reference</title>
+      <link>https://dev3.atsign.wtf/reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/showcase/</guid>
-      <description>@wavi Your space on the privacy-first web.
-Learn more  Wavi.ng     @buzz An entirely new way to connect.
-Learn more     @spacechat Have conversations with like-minded people.
-Coming soon!
-   @mosphere P2P file sharing hasn&#39;t been easier.
-Learn more  Open-source code     Take@vote A private and secure voting platform.
-Coming soon!
-   @arrive Securly share locations with people you trust!</description>
+      <guid>https://dev3.atsign.wtf/reference/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Welcome to the atPlatform Documentation</title>
-      <link>https://dev3.atsign.wtf/docs/</link>
+      <title>The atPlatform</title>
+      <link>https://dev3.atsign.wtf/atplatform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/docs/</guid>
-      <description>I want to&amp;hellip; #Get Started Start with Flutter, Java, or IoT development
-   Learn the SDK See our SDK Documentation here
-    Learn the Platform See our infrastructure overview here
-   Follow a Tutorial Find specific tutorials on our tech here
-    Featured Tutorials #atmoshere pro An open source end-to-end encrypted file sharing app
-   atDude app Send an end-to-end encrypted duuuuuuude to your friends</description>
+      <guid>https://dev3.atsign.wtf/atplatform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SDK Reference</title>
+      <link>https://dev3.atsign.wtf/sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/sdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://dev3.atsign.wtf/tutorials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Get Started</title>
+      <link>https://dev3.atsign.wtf/start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/start/</guid>
+      <description></description>
     </item>
     
   </channel>

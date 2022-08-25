@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Setup dess on GCP (Google Cloud) Platform on </title>
+    <link>https://dev3.atsign.wtf/tutorials/dess/gcp/</link>
+    <description>Recent content in Setup dess on GCP (Google Cloud) Platform on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/tutorials/dess/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Activation of atSign</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/7_activation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/7_activation/</guid>
+      <description>Next up we need to activate it
+Login to your dashboard at https://my.atsign.com/dashboard
+Open “my atSigns”
+Open “managed” of atSign you are registering”
+Navigate to Advance settings:
+If you have already activated your atSign you will be prompted to erase all your data first
+Once done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate</description>
+    </item>
+    
+    <item>
+      <title>Instance setup and dess deployment</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/5_setup_and_deployment/</guid>
+      <description>Open your GCP console at https://console.cloud.google.com/compute/instances and search for VM instances
+By now you should see your instance in “Running state”
+Click on the SSH button and connect to your instance.
+You should be presented by new window with command line:
+Before we do anything else, we should update the system:
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+This might take some time, but it will make sure we have latest repository information and the system is up to date.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/1_introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/1_introduction/</guid>
+      <description>dess stands for “Distributed Edge Secondary Server” and it is used to host your atSigns on your own secondary server. Refer to the Setup dess guide under Options to learn more.
+In this step-by-step guide we will walk you through all steps required to setup your own private dess in GCP cloud from scratch. Please use index to skip some steps in case you have done them in another way.</description>
+    </item>
+    
+    <item>
+      <title>Pre-requisites</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/2_prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/2_prerequisites/</guid>
+      <description>Register Atsign at atsign.com Have google account Have registered Fully Qualified Domain Name (FQDN)  1. Registering your atSign #This topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.
+2. Sign-up for GCP account #a) Account Creation #If you are new to cloud like me and need to create new GCP account, I have good news! The creation is for free.</description>
+    </item>
+    
+    <item>
+      <title>Preparing GCP Instance</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/3_prep_aws_instance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/3_prep_aws_instance/</guid>
+      <description>Now since I am new to GCP the easiest way to start using it is with prebuild solutions. This way you will deploy small system which is more then capable of handling dess at pre-set price.
+We can use pre-build “Ubuntu 20”. In Search bar look for Ubuntu20
+🔴 Make sure to use “Ubuntu 20” and not “Hardened Ubuntu 20”. Although the Hardened version will work as well it requires additional manual steps to make work.</description>
+    </item>
+    
+    <item>
+      <title>Preparing your instance for network access</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/4_prep_network_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/4_prep_network_access/</guid>
+      <description>a) Assignment of Static IP #Next up our list of activities is providing our instance with static IP and linking our domain to it.
+GCP assigned ephemeral IP address to our newly created VM. We need to change it to static IP.
+In search bar look for External IP addresses.
+You should see your external IP address assigned to your VM
+In column Type select ephemeral and change it to Static</description>
+    </item>
+    
+    <item>
+      <title>Registration of atSign in your private dess</title>
+      <link>https://dev3.atsign.wtf/tutorials/dess/gcp/6_registration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/dess/gcp/6_registration/</guid>
+      <description>At this step you should already have your atSign registered at atsign.com. If not go do it!
+I have registered my own free atSign (@44likelycanary) which I will link to my dess.
+In your instance console, navigate to dess folder. If you were following this guide it will be located in:
+We now need to create the service that will host our atSign by executing the dess-create command:
+$ sudo dess-create @44likelycanary 4atsign.</description>
+    </item>
+    
+  </channel>
+</rss>

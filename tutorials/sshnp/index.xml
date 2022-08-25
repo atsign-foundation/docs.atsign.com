@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh! No Ports on </title>
+    <link>https://dev3.atsign.wtf/tutorials/sshnp/</link>
+    <description>Recent content in Ssh! No Ports on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/tutorials/sshnp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finish</title>
+      <link>https://dev3.atsign.wtf/tutorials/sshnp/4-finish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/sshnp/4-finish/</guid>
+      <description>Connect via ssh
+You will get insutrctions on how to ssh to your remote device.
+Example:
+ssh -p 3456 cconstab@localhost See our GitHub page for more information.</description>
+    </item>
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>https://dev3.atsign.wtf/tutorials/sshnp/1-prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/sshnp/1-prerequisites/</guid>
+      <description>SSH No Ports provides a way to ssh to a remote linux host/device without that device having any open ports (not even port 22). All network connectivity is out bound and there is no need to know the IP address the device has been given. As long as the device has an IP address, DNS and Internet access, you will be able to connect to it.
+See our GitHub repository and demo video for more information.</description>
+    </item>
+    
+    <item>
+      <title>Set up the Client</title>
+      <link>https://dev3.atsign.wtf/tutorials/sshnp/3-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/sshnp/3-client/</guid>
+      <description>Run the client on your machine.
+./sshnp --from &amp;lt;@your_manager_atsign&amp;gt; --to &amp;lt;@your_devices_atsign&amp;gt; --host &amp;lt;example.com&amp;gt; -l --local-port --device &amp;lt;iot_device_name&amp;gt; (Or run the dart file via dart run)
+dart run bin/sshnp.dart &amp;lt;args|flags&amp;gt; See the options &amp;amp; flags available for the client binary:
+   Argument Abbreviation Mandatory Description Default     &amp;ndash;key-file -k false Sending atSign&amp;rsquo;s atKeys file if not in ~/.atsign/keys/    &amp;ndash;from -f true Sending atSign    &amp;ndash;to -t true Send a notification to this atSign    &amp;ndash;device -d false Send a notification to this device &amp;ldquo;default&amp;rdquo;   &amp;ndash;host -h true FQDN Hostname e.</description>
+    </item>
+    
+    <item>
+      <title>Set up the Daemon</title>
+      <link>https://dev3.atsign.wtf/tutorials/sshnp/2-daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/sshnp/2-daemon/</guid>
+      <description>Place your .atKeys files in ~/.atsign/keys directory for both your client and device. One atSign will be the manager (client) atSign and the other atSign will be the device atSign (that you will be connecting to via ssh).
+  Start up the daemon (sshnpd) on the remote device. Remember to start up the daemon on device start up via rc.local or similar.
+  ./sshnpd --atsign &amp;lt;@your_devices_atsign&amp;gt; --manager &amp;lt;@your_manager_atsign&amp;gt; \ --device &amp;lt;iot_device_name&amp;gt; -u (Or run the dart file via dart run)</description>
+    </item>
+    
+  </channel>
+</rss>
