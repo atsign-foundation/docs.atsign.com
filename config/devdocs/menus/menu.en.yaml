@@ -1,0 +1,12 @@
+main:
+  - name: Home
+    url: https://atsign.com
+    weight: 1
+
+  - name: Get Started
+    url: /start/
+    weight: 2
+
+  - name: Get an atSign
+    url: https://my.atsign.com/go
+    weight: 3

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+  {{ $list := sort .CurrentSection.Pages ".Params.order" "asc"}}
+  {{ $firstPage := index $list 0 }}
+  {{ $link := $firstPage.RelPermalink }}
+  <head>
+    <meta http-equiv="refresh" content="0; url={{ $link }}" />
+  </head>
+  <h1>{{ .Page.Title }}</h1>
+  <p class="lead">{{ .Page.Params.lead | safeHTML }}</p>
+  <a href="{{ $link | default .Site.BaseURL}}">Start the codelab</a>
+{{ end }}
+
