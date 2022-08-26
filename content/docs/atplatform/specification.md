@@ -18,7 +18,7 @@ The atProtcol is the underlying protocol that the atPlatform implements. It is a
 
 See our [Protocol Specification](https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md) on our GitHub page under our [at_protocol](https://github.com/atsign-foundation/at_protocol) repository.
 
-If you see a typo, mistake, or want to suggest a feature, please see our [contributing guidelines](/docs/start/other/#contributing-to-the-developer-site). All contributions are welcome.
+If you see a typo, mistake, or want to suggest a feature, please see our [contributing guidelines](/start/other/#contributing-to-the-developer-site). All contributions are welcome.
 
 ## Root Server
 

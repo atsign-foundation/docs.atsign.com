@@ -26,4 +26,4 @@ Want to ssh to your remove device without any open ports?
 
 See our Ssh! No Ports tutorial:
 
-{{< card/breadcrumb href="/docs/tutorials/sshnp/1-prerequisites/" first="Ssh! No Ports" >}}
+{{< card/breadcrumb href="/tutorials/sshnp/1-prerequisites/" first="Ssh! No Ports" >}}
