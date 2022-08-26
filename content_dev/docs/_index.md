@@ -17,26 +17,26 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 #### I want to...
 
 {{% card/group %}}
-{{< card/feature href="/docs/start" title="Get Started" text="Start with Flutter, Java, or IoT development" >}}
-{{< card/feature href="/docs/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
+{{< card/feature href="/start" title="Get Started" text="Start with Flutter, Java, or IoT development" >}}
+{{< card/feature href="/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
 {{% /card/group %}}
 {{% card/group %}}
-{{< card/feature href="/docs/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
-{{< card/feature href="/docs/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
+{{< card/feature href="/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
+{{< card/feature href="/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
 {{% /card/group %}}
 
 #### Featured Tutorials
 
 {{% card/group %}}
-{{< card/feature href="/docs/tutorials/atmosphere-pro" title="atmoshere pro" text="An open source end-to-end encrypted file sharing app" >}}
-{{< card/feature href="/docs/tutorials/at-dude" title="atDude app" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
+{{< card/feature href="/tutorials/atmosphere-pro" title="atmoshere pro" text="An open source end-to-end encrypted file sharing app" >}}
+{{< card/feature href="/tutorials/at-dude" title="atDude" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
 {{% /card/group %}}
 {{% card/group %}}
-{{< card/feature href="/docs/tutorials/dess/aws" title="dess - AWS" text="Host your own secondary server on Amazon Web Services" >}}
-{{< card/feature href="/docs/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
+{{< card/feature href="/tutorials/dess/aws" title="dess - AWS" text="Host your own secondary server on Amazon Web Services" >}}
+{{< card/feature href="/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
 
 #### More Options
 
-{{< card/breadcrumb link="/docs/reference/" first="Reference" >}}
-{{< card/breadcrumb link="/docs/contribute" first="Contribute to this site" >}}
+{{< card/breadcrumb link="/reference/" first="Reference" >}}
+{{< card/breadcrumb link="/contribute" first="Contribute to this site" >}}

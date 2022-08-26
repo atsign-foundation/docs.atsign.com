@@ -5,8 +5,8 @@ title: "Ssh! No Ports" # Title of the codelab
 lead: SSH to a remote linux device without it having any open ports # Description of the codelab
 description: Learn how to use sshnp - SSH to a remote linux device without it having any open ports
 
-doneLink: /docs/tutorials/ # Where to send them if they press "Done" at the end of the Codelab
-exitLink: /docs/tutorials/ # Where to send them if they press "Exit Codelab"
+doneLink: /tutorials/ # Where to send them if they press "Done" at the end of the Codelab
+exitLink: /tutorials/ # Where to send them if they press "Exit Codelab"
 weight: 3
 ---
 
