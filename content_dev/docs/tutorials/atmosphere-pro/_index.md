@@ -5,7 +5,9 @@ title: "atmosphere pro" # Title of the codelab
 lead: Learn how the atmosphere pro app works # Description of the codelab
 description: Learn how the Atsign atmosphere pro app works on the atPlatform
 
-doneLink: /docs/tutorials/ # Where to send them if they press "Done" at the end of the Codelab
-exitLink: /docs/tutorials/ # Where to send them if they press "Exit Codelab"
+doneLink: /tutorials/ # Where to send them if they press "Done" at the end of the Codelab
+exitLink: /tutorials/ # Where to send them if they press "Exit Codelab"
 weight: 1
 ---
+
+Under construction
