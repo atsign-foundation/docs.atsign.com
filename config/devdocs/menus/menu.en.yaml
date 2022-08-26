@@ -1,6 +1,6 @@
 main:
   - name: Home
-    url: https://atsign.com
+    url: /
     weight: 1
 
   - name: Get Started
