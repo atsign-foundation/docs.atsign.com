@@ -82,7 +82,7 @@ The self-encryption key is generated during the CRAM process when your PKAM RSA 
       
       <guid>https://dev3.atsign.wtf/reference/cram/</guid>
       <description>Definition #CRAM is a term you may have heard of when reading about the atPlatform. CRAM stands for challenge response authentication mechanism. It is an algorithm/mechanism used in cryptography commonly used for authentication in protocols.
-atPlatform #You use your CRAM secret to activate your atSign and authenticate into your (secondary server)[/docs/atplatform/secondary-server] secondary server for the first time. Once authenticated, you may add, update, delete, and lookup keys in your own secondary server.</description>
+atPlatform #You use your CRAM secret to activate your atSign and authenticate into your (secondary server)[/atplatform/secondary-server] secondary server for the first time. Once authenticated, you may add, update, delete, and lookup keys in your own secondary server.</description>
     </item>
     
     <item>
