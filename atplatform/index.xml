@@ -8,11 +8,12 @@
     <language>en</language><atom:link href="https://dev3.atsign.wtf/atplatform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The atPlatform Overview</title>
-      <link>https://dev3.atsign.wtf/atplatform/overview/</link>
+      <link>https://dev3.atsign.wtf/atplatform/atplatformoverview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/atplatform/overview/</guid>
-      <description></description>
+      <guid>https://dev3.atsign.wtf/atplatform/atplatformoverview/</guid>
+      <description>The atPlatform is designed to help developers create end-to-end encrypted mobile applications. A full stack platform written in Dart and Flutter, it includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.
+We have also build an SDK to make all of this super simple for developers so that you can get your apps up and running in no time.</description>
     </item>
     
     <item>
@@ -21,7 +22,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/atplatform/architecture/</guid>
-      <description></description>
+      <description>The picture below provides a great way to visualize just how much thought has gone into making the life of a developer on the atPlatform that much easier!
+If you&amp;rsquo;re wondering what the difference between what the atPlatform consists of and what the atProtocol consists of, look no further!
+The atPlatform, which has been created on top of the atProtocol consists of three major segments of developer tools. These segments consists of; Services, Libraries, and Widgets</description>
     </item>
     
     <item>
@@ -37,11 +40,12 @@ If you see a typo, mistake, or want to suggest a feature, please see our contrib
     
     <item>
       <title>Root Server</title>
-      <link>https://dev3.atsign.wtf/atplatform/root-server/</link>
+      <link>https://dev3.atsign.wtf/atplatform/rootserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/atplatform/root-server/</guid>
-      <description></description>
+      <guid>https://dev3.atsign.wtf/atplatform/rootserver/</guid>
+      <description>atRoot servers are the only centralized part of the atProtocol and are centralized to provide a single namespace and a global dependable platform. No data beyond the atSign and responding authoritative atSecondary server is held on the root servers. This information is considered public and no authentication is required to look up the atSecondary server for a particular atSign.
+The atRoot servers have been designed to scale to billions of atSigns and handle the request for atSign lookups at near real-time, globally.</description>
     </item>
     
     <item>
@@ -50,7 +54,7 @@ If you see a typo, mistake, or want to suggest a feature, please see our contrib
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/atplatform/secondary-server/</guid>
-      <description></description>
+      <description>atSecondary (personal atSign) servers provide the second tier of the atProtocol architecture and are responsible for answering lookups for specific atSigns. atSecondary servers provide the lookup service for a particular atSign and one name only. This ensures that the atSecondary server will not mix atSign data with any other atSign’s data. This is unlike web servers that can provide service to multiple websites at a time.</description>
     </item>
     
   </channel>
