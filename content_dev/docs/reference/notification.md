@@ -134,4 +134,4 @@ Read more
 
 ## Related Resources
 
-{{< card/breadcrumb link="/docs/atplatform/specification/" first="Protocol Specification" >}}
+{{< card/breadcrumb link="/atplatform/specification/" first="Protocol Specification" >}}

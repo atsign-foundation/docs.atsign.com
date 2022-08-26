@@ -32,4 +32,4 @@ To learn more about polymorphism see [this article post](https://medium.com/flut
 
 ## Related Resources
 
-{{< card/breadcrumb href="/docs/reference/namespace/" first="Namespace" >}}
+{{< card/breadcrumb href="/reference/namespace/" first="Namespace" >}}
