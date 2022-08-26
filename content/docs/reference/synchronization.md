@@ -16,9 +16,9 @@ weight: 210 # For single pages, lower is first.
 
 ## Definition
 
-On at the atProtocol, your data is encrypted with your self [encryption](/docs/reference/encryption) key and stored on your device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you are the only one who owns the private key. No one else, including **Atsign** can read your data. This process is known as synchronization.
+On at the atProtocol, your data is encrypted with your self [encryption](/reference/encryption) key and stored on your device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you are the only one who owns the private key. No one else, including **Atsign** can read your data. This process is known as synchronization.
 
-## How it works at Atsign
+## atPlatform
 
 First we need to touch up on what local & remote secondaries are:
 
@@ -30,3 +30,8 @@ Synchronization aims to keep both local and remote secondaries with the same dat
 There are two main scenarios that require synchronization. The first occurs when your device is offline. Updates are saved to your device but not synced to the server. Once the device goes online, those saved updates get synced to the server. The second scenario is when you have multiple devices: one device is offline while the other is online. Updates from the online device will get synced to the server periodically. However the offline device will not be able to pull the changes until it is back online.
 
 _To read more about synchronization and how it works check out this [Medium Article](https://Atsigncompany.medium.com/the-protocol-synchronization-77b00ca5341b) we made._
+
+## Related Resources
+
+{{< card/breadcrumb link="/atplatform/root-server/" first="Root Server" >}}
+{{< card/breadcrumb link="/atplatform/secondary-server/" first="Secondary Server" >}}

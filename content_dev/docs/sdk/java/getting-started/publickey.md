@@ -12,6 +12,8 @@ order: 4 # Ordering of the steps
 PublicKeys are meant for public data. Authorized or unauthorized users are able to know of the existence of these keys (via scan) and the data is not encrypted.
 
 ### Putting a PublicKey Example
+Sample code on how to put a public key associated with a public non-encrypted value into your secondary server. Any unauthenticated/authenticated atSign will be able to see the data without decrypting anything.
+
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
@@ -47,6 +49,7 @@ System.out.println(response); // data:<CommitId>
 ```
 
 ### Getting a PublicKey example
+Learn how to fetch public data on either your secondary server or another atSign's secondary server. No decryption is done by `AtClient` in this process. Be sure that the `sharedBy` atSign is the atSign that owns this AtKey (aka the atSign that owns the public data) because this is the atSign's secondary server that `AtClient` will be looking into.
 ```java
 // 1. establish arguments
 String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fetching secondary address
@@ -81,6 +84,7 @@ System.out.println(response);
 ```
 
 ### Deleting a PublicKey example
+Learn how to delete a public key from your secondary server. You can only delete keys in your own secondary server and must be authenticated (aka the sharedBy atSign must be you, in possession of the .atKeys file).
 ```java
 // 1. establish constants
 String ROOT_URL = "root.atsign.org:64";

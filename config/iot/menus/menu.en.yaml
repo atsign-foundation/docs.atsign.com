@@ -14,3 +14,7 @@ main:
   - name: Flutter
     url: https://atsign.dev/
     weight: 4
+
+  - name: Tools
+    url: /tools/
+    weight: 5

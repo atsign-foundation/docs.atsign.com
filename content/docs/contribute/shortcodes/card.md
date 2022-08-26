@@ -65,9 +65,9 @@ No attributes for this shortcode.
 #### Example
 
 {{< card/group >}}
-{{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+{{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
     title="Feature Card 1" text="This is the first card to show the deck example.">}}
-{{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+{{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
     title="Feature Card 2" text="This is the second card to show the deck example.">}}
 {{< /card/group >}}
 
@@ -75,9 +75,9 @@ No attributes for this shortcode.
 
 ```go-html-template
   {{</* card/group */>}}
-    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example."*/>}}
-    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example."*/>}}
   {{</* /card/group */>}}
 ```
@@ -91,9 +91,9 @@ A css-grid based wrapper for cards best used for an even number of cards.
 | class     | Additional css classes to apply to the wrapper. |
 
 {{< card/grid class="grid-col-4 grid-col-md-2 grid-col-sm-1">}}
-  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+  {{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example.">}}
-  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+  {{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example.">}}
 {{< /card/grid >}}
 
@@ -101,9 +101,9 @@ A css-grid based wrapper for cards best used for an even number of cards.
 
 ```go-html-template
   {{</* card/grid class="grid-col-4 grid-col-md-2 grid-col-sm-1"*/>}}
-    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
         title="Feature Card 1" text="This is the first card to show the deck example." */>}}
-    {{</* card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+    {{</* card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
         title="Feature Card 2" text="This is the second card to show the deck example." */>}}
   {{</* /card/grid */>}}
 ```
@@ -117,9 +117,9 @@ A css flexbox based wrapper to automatically layout cards.
 | class     | Additional css classes to apply to the wrapper. |
 
 {{< card/flex class="justify-content-space-evenly">}}
-  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+  {{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 1" text="This is the first card to show the deck example.">}}
-  {{< card/feature class="w-25 min-w-250" href="/docs/contribute/shortcodes/card"
+  {{< card/feature class="w-25 min-w-250" href="/contribute/shortcodes/card"
       title="Feature Card 2" text="This is the second card to show the deck example.">}}
 {{< /card/flex >}}
 

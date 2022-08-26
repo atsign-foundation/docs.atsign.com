@@ -1,0 +1,72 @@
+<div class="page-footer-meta d-flex flex-column">
+    <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <hr/>
+    <div class="d-flex flex-row align-items-center justify-content-between">
+        <div class="d-flex flex-column align-items-start">
+            <img class="toggle-dark" src="https://atsign.com/wp-content/uploads/2022/05/atsign-logo-horizontal-color2022.svg" height="48em">
+            <img class="toggle-light" src="https://i.imgur.com/wfpQiwP.png" height="48em">
+            <p>© 2022 Atsign</p>
+        </div>
+        <div class="d-flex flex-column align-items-end">
+            <div>
+                <a href="https://atsign.com/terms-conditions">Terms and Conditions</a>
+                |
+                <a href="https://atsign.com/privacy-policy">Privacy Policy</a>
+            </div>
+            <div>
+                This is a cookie-free site
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="d-flex flex-column align-items-around justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+            <div>
+                Learn more about us at <a href="https://atsign.com">atsign.com</a>
+            </div>
+            <div>
+                To get or manage atSigns, please visit the <a href="https://my.atsign.com/go">Registrar</a>
+            </div>
+            <div>
+                For general inquiries, email us: <a href="mailto:info@atsign.com">info@atsign.com</a>
+            </div>
+        </div>
+        <br/>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <div>
+                <a target="_blank" href="https://wavi.ng/@wavi">
+                    <image height="48em" src="https://atsign.com/wp-content/uploads/2021/12/Wavi-App-Icon-Rev1200-150x150.png.webp"/>
+                </a>
+            </div>
+            <div>
+                <a target="_blank" href="https://linkedin.com/company/atsigncompany/">
+                    <image height="48em" src="https://atsign.com/wp-content/uploads/2022/01/linkedin-square-150x150.jpg.webp"/>
+                </a>
+            </div>
+            <div>
+                <a target="_blank" href="https://twitter.com/atsigncompany">
+                    <image height="48em" src="https://atsign.com/wp-content/uploads/2022/01/twitter-square-150x150.jpg.webp"/>
+                </a>            </div>
+            <div>
+                <a target="_blank" href="https://www.youtube.com/c/AtsignCo">
+                    <image height="48em" src="https://atsign.com/wp-content/uploads/2022/08/youtube_square-1-150x150.png.webp"/>
+                </a>            </div>
+        </div>
+    </div>
+    {{ if .Site.Params.lastMod -}}
+        {{ partial "main/last-modified.html" . }}
+    {{ end -}}
+    {{ if .Site.Params.editPage -}}
+        {{ partial "main/edit-page.html" . }}
+    {{ end -}}
+</div>

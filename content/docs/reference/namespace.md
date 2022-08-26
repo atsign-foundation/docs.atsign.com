@@ -55,6 +55,6 @@ get what data. With the atPlatform, the people become in control of their own da
 
 ## Related Resources
 
-{{< card/breadcrumb href="/docs/atplatform/specification" first="Protocol Specification" >}}
-{{< card/breadcrumb href="/docs/atplatform/secondary-server" first="Secondary Server" >}}
-{{< card/breadcrumb href="/docs/reference/polymorphism" first="Polymorphism" >}}
+{{< card/breadcrumb href="/atplatform/specification" first="Protocol Specification" >}}
+{{< card/breadcrumb href="/atplatform/secondary-server" first="Secondary Server" >}}
+{{< card/breadcrumb href="/reference/polymorphism" first="Polymorphism" >}}
