@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Onboarding" # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Onboarding on the atPlatform in Flutter and Dart
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps

@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Key Basics" # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Key basics for the atPlatform in Flutter and Dart
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
