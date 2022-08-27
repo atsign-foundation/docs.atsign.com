@@ -1,7 +1,7 @@
 <!-- Auto collapsible section menu -->
 <ul class="list-unstyled collapsible-sidebar">
   {{ $currentPage := . -}}
-  {{ range .Pages.ByWeight.Reverse}}
+  {{ range .Site.Home.Pages.ByWeight.Reverse}}
     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
     <li class="mb-1">
       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
