@@ -7,16 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/start/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Flutter Development</title>
+      <title>Flutter</title>
       <link>https://dev3.atsign.wtf/start/flutter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/start/flutter/</guid>
-      <description></description>
+      <description>Setting Up Your Development Environment #1. Get an editor for programming in Dart #Some editors we recommend:
+ Visual Studio Code Android Studio  2. Install Flutter/Dart on your machine #See Flutter&amp;rsquo;s instructions on getting the Flutter environment setup:
+ Install Flutter on MacOS Install Flutter on Windows Install Flutter on Linux  3. Install at_app #at_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps.</description>
     </item>
     
     <item>
-      <title>Java Development</title>
+      <title>Java</title>
       <link>https://dev3.atsign.wtf/start/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
