@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "Java Development" # The title (ON THE PAGE)
+title: "Java" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Get Started with Java Development on the atPlatform
 

@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "Flutter Development" # The title (ON THE PAGE)
+title: "Flutter" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Get Started with Flutter on the atPlatform
 
