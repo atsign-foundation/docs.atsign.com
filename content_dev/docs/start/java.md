@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "Java Development" # The title (ON THE PAGE)
+title: "Java" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Get Started with Java Development on the atPlatform
 
@@ -24,7 +24,6 @@ The first step in getting your developer environment ready, is to install [Java 
 2. Install Maven
 
 Next step is to install [maven](https://maven.apache.org/install.html) and add it to your PATH. Maven is a great tool for managing Java projects and will be useful for development atPlatform applications.
-
 
 3. Clone the Java Client
 
