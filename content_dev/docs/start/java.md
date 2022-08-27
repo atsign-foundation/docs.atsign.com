@@ -25,7 +25,6 @@ The first step in getting your developer environment ready, is to install [Java 
 
 Next step is to install [maven](https://maven.apache.org/install.html) and add it to your PATH. Maven is a great tool for managing Java projects and will be useful for development atPlatform applications.
 
-
 3. Clone the Java Client
 
 <!-- Eventually for Step 3., we'll want to either 1. tell the user to add a maven dependency to their pom.xml (which will be the at_java client), or 2. tell the user to download the JAR and add it as a dependency to their Java project. -->

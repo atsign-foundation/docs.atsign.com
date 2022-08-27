@@ -14,6 +14,6 @@ weight: 1 # For list pages, higher is first.
 
 The atPlatform is designed to help developers create end-to-end encrypted mobile applications. A [full stack platform](https://github.com/atsign-foundation/) written in Dart and Flutter, it includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.
 
-We have also build an SDK to make all of this super simple for developers so that you can get your apps up and running in no time.
+We have also build an SDK to make all of this super simple for developers so that you can get your IoT devices and Flutter apps up and running in no time.
 
 {{< image class="bg-white" src="platform_definition.png" type="page"  >}}
