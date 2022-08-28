@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Learn about how Keys work in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 3 # Ordering of the steps
+order: 5 # Ordering of the steps
 ---
 
 ### Overview

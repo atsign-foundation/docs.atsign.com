@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Learn how to put, get, and delete a PublicKey in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 4 # Ordering of the steps
+order: 6 # Ordering of the steps
 ---
 
 PublicKeys are meant for public data. Authorized or unauthorized users are able to know of the existence of these keys (via scan) and the data is not encrypted.
