@@ -1,11 +1,12 @@
-name: DeployStaging
+name: Deploy Production
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - trunk
+    tags:
+      - '*.*.*'
 
 env:
-  URL: 'dev3.atsign.wtf'
+  URL: 'docs.atsign.com'
 
 jobs:
   deploy:
@@ -31,13 +32,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Staging
-        run: npm run build:staging
+      - name: Build Production
+        run: npm run build:production
 
-      - name: Deploy Staging
+      - name: Deploy Production
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          external_repository: atsign-foundation/docs.atsign.com-prod
           publish_dir: ./public
           publish_branch: gh-pages
           cname: ${{ env.URL }}
