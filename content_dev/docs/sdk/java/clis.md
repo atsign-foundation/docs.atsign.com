@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Keys in Java are different from the Dart SDK AtKeys
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 8 # Ordering of the steps
+order: 10 # Ordering of the steps
 ---
 
 There are various CLIs (command-line interfaces) that uses the Java SDK to interact with a secondary server. 
@@ -37,4 +37,3 @@ If you want to interact with the atProtocol through a command-line experience, s
 | Delete   | delete something that was previously shared | rootUrl, other atSign, name of shared key including namespace |
 | Scan     | for seeing what keys exist in the secondary and view metadata | rootUrl, atSign, verbose true or false, scan regex |
 | REPL     | use raw atProtocol, handles PKAM auth | rootUrl, atSign, seeEncryptedNotifications true or false |
-

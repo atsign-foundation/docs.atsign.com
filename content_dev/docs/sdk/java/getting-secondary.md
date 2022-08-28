@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   There are a number to get the address of a secondary server belonging to an atSign.
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 2 # Ordering of the steps
+order: 4 # Ordering of the steps
 ---
 
 There are a number to get the address of a secondary server belonging to an atSign.

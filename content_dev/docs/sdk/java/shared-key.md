@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Learn how to put, get-self, get-other, and delete a SharedKey in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 5 # Ordering of the steps
+order: 7 # Ordering of the steps
 ---
 
 SharedKeys are for data you want to share with another atSign. The sharedBy atSign should be you. The sharedWith atSign should be the receiver. 

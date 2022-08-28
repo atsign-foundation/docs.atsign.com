@@ -1,7 +1,14 @@
 <div class="footer">
     <div class="footer-logo">
-        <img class="toggle-dark" src="https://atsign.com/wp-content/uploads/2022/05/atsign-logo-horizontal-color2022.svg" height="48em">
-        <img class="toggle-light" src="https://i.imgur.com/wfpQiwP.png" height="48em">
+        {{ $image := resources.Get "img/branding/dark/atsign-dark.png" }}
+        {{ with $image }}
+            <img class="toggle-light" src="{{ .RelPermalink }}" width="124em">
+        {{ end }}
+
+        {{ $image := resources.Get "img/branding/light/atsign-light.svg" }}
+        {{ with $image }}
+            <img class="toggle-dark" src="{{ .RelPermalink }}" width="124em">
+        {{ end }}
     </div>
     <div class="footer-terms">
         <a href="https://atsign.com/terms-conditions">Terms and Conditions</a>
@@ -25,17 +32,35 @@
         </p>
     </div>
     <div class="footer-social">
+        <a target="_blank" href="https://github.com/atsign-foundation">
+            {{ $image := resources.Get "img/footer-logos/github.png" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
+        </a>
         <a target="_blank" href="https://wavi.ng/@wavi">
-            <image height="48em" src="https://atsign.com/wp-content/uploads/2021/12/Wavi-App-Icon-Rev1200-150x150.png.webp"/>
+            {{ $image := resources.Get "img/footer-logos/wavi.webp" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
         </a>
         <a target="_blank" href="https://linkedin.com/company/atsigncompany/">
-            <image height="48em" src="https://atsign.com/wp-content/uploads/2022/01/linkedin-square-150x150.jpg.webp"/>
+            {{ $image := resources.Get "img/footer-logos/linkedin.webp" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
         </a>
         <a target="_blank" href="https://twitter.com/atsigncompany">
-            <image height="48em" src="https://atsign.com/wp-content/uploads/2022/01/twitter-square-150x150.jpg.webp"/>
+            {{ $image := resources.Get "img/footer-logos/twitter.webp" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
         </a>
         <a target="_blank" href="https://www.youtube.com/c/AtsignCo">
-            <image height="48em" src="https://atsign.com/wp-content/uploads/2022/08/youtube_square-1-150x150.png.webp"/>
+            {{ $image := resources.Get "img/footer-logos/youtube.webp" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
         </a>
     </div>
 </div>

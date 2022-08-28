@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Learn how to put, get, and delete a SelfKey in the Java SDK
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 6 # Ordering of the steps
+order: 7 # Ordering of the steps
 ---
 
 SelfKeys hold data that are intended for the atSign owner of the secondary server. Data is encrypted with the symmetric selfEncryptionKey. 
