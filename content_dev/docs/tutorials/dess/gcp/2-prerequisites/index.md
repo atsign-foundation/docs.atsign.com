@@ -25,11 +25,11 @@ This topic is already well documented. Please follow the guidance of Our [FAQs](
 
 If you are new to cloud like me and need to create new GCP account, I have good news! The creation is for free. As promotion all new customer will also receive 300$ as credit. That is more than enough to run multiple dess’s for 3 months of offer validity.
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-discount.png?raw=true)
+{{< image type="page" src="gcp-discount.png" >}}
 
 You can register with your gmail account or create new one by clicking “Get started for free” and follow instructions to register
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-get-started.png?raw=true)
+{{< image type="page" src="gcp-get-started_7797938325509315921.png" >}}
 
 Once done with registration you will be able to login to your [console.cloud.google.com](https://console.cloud.google.com/) And voila you have your GCP account up and running.
 
@@ -37,11 +37,11 @@ Once done with registration you will be able to login to your [console.cloud.goo
 
 To be able to run some services you have to maintain billing account. Navigation Menu -> Billing
 
-![gcp-navigation-billing](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-navigation-billing.png?raw=true)
+{{< image type="page" src="gcp-navigation-billing.png" >}}
 
 By default GCP creates “My Billing Account” which you can link to your project.
 
-![gcp-navigation-billing](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-billing_project.png?raw=true)
+{{< image type="page" src="gcp-billing_project_3792115323896866730_hu930d03d1e3771b3eb865110704a75bcb_0_600x0_resize_box_3.png" >}}
 
 Click “Link Billing account” and select “My billing account” from drop down
 
@@ -57,11 +57,11 @@ This step can be performed at range of different sites with different pricing mo
 
 In your GCP console search for ```Cloud Domain```.
 
-![gcp-search-domain](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-search-domain.png?raw=true)
+{{< image type="page" src="gcp-search-domain.png" >}}
 
 We first need to enable this service.
 
-![gcp-domain-api](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-api.png?raw=true)
+{{< image type="page" src="gcp-domain-api_4756114638204601513_hu18f3dc8d8683ce87bc46bf76de500bcb_0_500x0_resize_box_3.png" >}}
 
 Once the service activates you will be presented with its dashboard.
 
@@ -69,46 +69,46 @@ Lets register our fully qualified domain name (FQDN) that will be used for regis
 
 Click on “Register Domain” and look for suitable name.
 
-![gcp-domain-register](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-register.png?raw=true)
+{{< image type="page" src="gcp-domain-register_15385502001867454950_hu2cedff6dcaa13d7c794a852cdd1b9542_0_500x0_resize_box_3.png" >}}
 
 Reviewing pricing options of GCP .pw is their cheapest option which will work for testing. For my test case I am selecting atsign.pw with price $0.75 / month by clicking add to cart button and continue.
 
-![gcp-domain-lookup](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-lookup.png?raw=true)
+{{< image type="page" src="gcp-domain-lookup_15750893407441542022_hub91df1b2ecf4fa27ada2e4a4a282a070_0_600x0_resize_box_3.png" >}}
 
 Next we can select where will our DNS record be hosted. Simply select “Use Google Domains” and DNSSEC “Enabled” and click continue.
 
-![gcp-domain-config](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-config.png?raw=true)
+{{< image type="page" src="gcp-domain-config.png" >}}
 
 We have no options with Privacy protection so simply click continue.
 
-![gcp-domain-privacy](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-privacy.png?raw=true)
+{{< image type="page" src="gcp-domain-privacy.png" >}}
 
 Fill out contact details and click register. This will trigger registration email you will have to verify.
 
-![gcp-domain-contacts](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-contacts.png?raw=true)
+{{< image type="page" src="gcp-domain-contacts_3557708868624226178_hu0f8657f38db38b3b81eee3daccf01f35_0_600x0_resize_box_3.png" >}}
 
 Once you verify your email your domain should be ready to use
 
-![gcp-domain-lookup](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-domain-lookup.png?raw=true)
+{{< image type="page" src="gcp-domain-lookup_15750893407441542022_hub91df1b2ecf4fa27ada2e4a4a282a070_0_600x0_resize_box_3 (1).png" >}}
 
 #### b) Create Cloud DNS zone 
 
 Next step is to enable Cloud DNS service. Search for DNS in search bar and select Cloud DNS
 
-![gcp-search-dns](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-search-dns.png?raw=true)
+{{< image type="page" src="gcp-search-dns_5877342956061685702.png" >}}
 
 If its your first time activating this service you will have to enable the API. Press enable and wait for the activation to finish.
 
-![gcp-dns-api](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-dns-api.png?raw=true)
+{{< image type="page" src="gcp-dns-api_2876756476555119665_hue560087b7958a7d0ffd7d15f415f2d9a_0_500x0_resize_box_3.png" >}}
 
 Lets crate new DNS zone by clicking “Create Zone”
 
-![gcp-dns-create](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-dns-create.png?raw=true)
+{{< image type="page" src="gcp-dns-create_4631853586991474287_hue04327fccca7e4dfac62e9d3c47d70d2_0_600x0_resize_box_3.png" >}}
 
 We will select zone type as Public since we will be connecting to our DNS from internet and provide your registered DNS name. In my case atsign.pw. DNSSEC will be set to off and provide some meaningful Description. Once you filled all your details press create.
 
-![gcp-dns-create-details](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-dns-create-details.png?raw=true)
+{{< image type="page" src="gcp-dns-create-details_17656337242790471658_hu2ef1ce24c09085889063ca7c59ba3568_0_600x0_resize_box_3.png" >}}
 
 You should receive following message:
 
-![gcp-dns-confirm](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-dns-confirm.png?raw=true)
+{{< image type="page" src="gcp-dns-confirm.png" >}}

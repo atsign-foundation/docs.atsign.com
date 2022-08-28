@@ -34,6 +34,6 @@ The last likelycanary is the name that docker will use to track the service.
 
 If everything is successful you should see output like this:
 
-![image](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-aws/images/clip_image004-162728549379914.jpg?raw=true)
+{{< image type="page" src="clip_image004-162728549379914_2730618874130876249_hu0ed060d7ce90f7467e1f54c780c8205e_0_600x0_resize_q75_box.jpeg" >}}
 
 At this moment your atSign is registered on your dess.
