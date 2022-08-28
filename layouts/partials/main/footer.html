@@ -32,6 +32,12 @@
         </p>
     </div>
     <div class="footer-social">
+        <a target="_blank" href="https://github.com/atsign-foundation">
+            {{ $image := resources.Get "img/footer-logos/github.png" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
+        </a>
         <a target="_blank" href="https://wavi.ng/@wavi">
             {{ $image := resources.Get "img/footer-logos/wavi.webp" }}
             {{ with $image }}
