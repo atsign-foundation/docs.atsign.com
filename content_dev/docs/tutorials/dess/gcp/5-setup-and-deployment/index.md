@@ -12,20 +12,17 @@ order: 5 # Ordering of the steps
 
 Open your GCP console at https://console.cloud.google.com/compute/instances and search for ```VM instances```
 
-
-![gcp-search-vm](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-search-vm.png?raw=true)
+{{< image type="page" src="gcp-search-vm_18139707276442090809.png" >}}
 
 By now you should see your instance in “Running state”
 
-
-![gcp-vm-status](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-vm-status.png?raw=true)
+{{< image type="page" src="gcp-vm-status_17581805644815711932_hua5c51e9e12cdc2b272965933eeace49d_0_600x0_resize_box_3.png" >}}
 
 Click on the SSH button and connect to your instance.
 
 You should be presented by new window with command line:
 
-
-![gcp-vm-connected](https://github.com/atsign-foundation/atsign.dev/blob/trunk/content/en/docs/Archives/guides/dess-setup/dess-gcp/images/gcp-vm-connected.png?raw=true)
+{{< image type="page" src="gcp-vm-connected_9664295141231021424_hu7e59050221157d166e838d298e258e4b_0_600x0_resize_box_3.png" >}}
 
 Before we do anything else, we should update the system:
 
