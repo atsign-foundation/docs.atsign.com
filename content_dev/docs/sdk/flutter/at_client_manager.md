@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'AtClientManager' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  The atPlatform AtClientManager in Flutter and Dart
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
