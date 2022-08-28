@@ -15,19 +15,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/sdk/java/installation/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/overview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -69,7 +57,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -285,13 +273,13 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/at_client_manager/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/at_client_manager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/at_client_preference/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/at_client_preference/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -381,7 +369,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/introduction/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/introduction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -423,7 +411,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/key_basics/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/key_basics/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -459,7 +447,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/sdk/flutter/services_and_managers/onboarding/</loc>
+    <loc>https://dev3.atsign.wtf/sdk/flutter/onboarding/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
