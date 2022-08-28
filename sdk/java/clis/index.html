@@ -7,31 +7,33 @@
   
   <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
 
-  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.76a2558b5172c622ad8cafb3832d092e0ad48c369c4fd84aeec76a3cc9fa21a1f3b2e9e4f8fe46bdd3a90e2c86f3d11c33c9bff24475e25ba404276b4b1d252e.css" integrity="sha512-dqJVi1FyxiKtjK&#43;zgy0JLgrUjDacT9hK7sdqPMn6IaHzsunk&#43;P5GvdOpDiyG89EcM8m/8kR14lukBCdrSx0lLg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.96ef0938f4cb82f5a8077c25f95e01f4267f07dc64ca6fb7ad9b52099c7ca97fc384c3df065bee8f8b2200951d80feeec5f1ff00362015a13f5a59a1397fc6cc.css" integrity="sha512-lu8JOPTLgvWoB3wl&#43;V4B9CZ/B9xkym&#43;3rZtSCZx8qX/DhMPfBlvuj4siAJUdgP7uxfH/ADYgFaE/WlmhOX/GzA==" crossorigin="anonymous">
 <noscript><style>img.lazyload { display: none; }</style></noscript>
   <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <title>Getting Started - atPlatform</title>
-<meta name="description" content="Learn about the core Atsign platform java SDK services">
-<link rel="canonical" href="https://dev3.atsign.wtf/sdk/java/getting-started/">
+  <title>CLIs - atPlatform</title>
+<meta name="description" content="Keys in Java are different from the Dart SDK AtKeys
+">
+<link rel="canonical" href="https://dev3.atsign.wtf/sdk/java/clis/">
 <meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Getting Started">
-<meta property="og:description" content="Learn about the core Atsign platform java SDK services">
-<meta property="og:url" content="https://dev3.atsign.wtf/sdk/java/getting-started/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLIs">
+<meta property="og:description" content="Keys in Java are different from the Dart SDK AtKeys
+">
+<meta property="og:url" content="https://dev3.atsign.wtf/sdk/java/clis/">
 <meta property="og:site_name" content="atPlatform">
 
   
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="atsigncompany">
 <meta name="twitter:creator" content="atsigncompany">
-<meta name="twitter:title" content="Getting Started">
-<meta name="twitter:description" content="Learn about the core Atsign platform java SDK services">
+<meta name="twitter:title" content="CLIs">
+<meta name="twitter:description" content="Keys in Java are different from the Dart SDK AtKeys
+">
 <meta name="twitter:card" content="summary">
-    <meta name="twitter:image:alt" content="Getting Started">
+    <meta name="twitter:image:alt" content="CLIs">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://dev3.atsign.wtf/sdk/java/getting-started/index.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,10 +66,10 @@
       },
     {
       "@type": "WebPage",
-      "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/",
-      "url": "https://dev3.atsign.wtf/sdk/java/getting-started/",
-      "name": "Getting Started",
-      "description": "Learn about the core Atsign platform java SDK services",
+      "@id": "https://dev3.atsign.wtf/sdk/java/clis/",
+      "url": "https://dev3.atsign.wtf/sdk/java/clis/",
+      "name": "CLIs",
+      "description": "Keys in Java are different from the Dart SDK AtKeys\n",
       "isPartOf": {
         "@id": "https://dev3.atsign.wtf/#/schema/website/1"
       },
@@ -77,19 +79,19 @@
       "datePublished": "0001-01-01T00:00:00CET",
       "dateModified": "0001-01-01T00:00:00CET",
       "breadcrumb": {
-        "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/#/schema/breadcrumb/1"
+        "@id": "https://dev3.atsign.wtf/sdk/java/clis/#/schema/breadcrumb/1"
       },
       "primaryImageOfPage": {
-        "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/#/schema/image/2"
+        "@id": "https://dev3.atsign.wtf/sdk/java/clis/#/schema/image/2"
       },
       "inLanguage": "",
       "potentialAction": [{
-        "@type": "ReadAction", "target": ["https://dev3.atsign.wtf/sdk/java/getting-started/"]
+        "@type": "ReadAction", "target": ["https://dev3.atsign.wtf/sdk/java/clis/"]
       }]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/#/schema/breadcrumb/1",
+      "@id": "https://dev3.atsign.wtf/sdk/java/clis/#/schema/breadcrumb/1",
       "name": "Breadcrumbs",
       "itemListElement": [{
         "@type": "ListItem",
@@ -122,7 +124,7 @@
         "@type": "ListItem",
         "position":  4 ,
         "item": {
-          "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/"
+          "@id": "https://dev3.atsign.wtf/sdk/java/clis/"
           }
         }]
     },
@@ -132,10 +134,10 @@
       "@graph": [
         {
           "@type": "ImageObject",
-          "@id": "https://dev3.atsign.wtf/sdk/java/getting-started/#/schema/image/2",
+          "@id": "https://dev3.atsign.wtf/sdk/java/clis/#/schema/image/2",
           "url":  null ,
           "contentUrl":  null ,
-          "caption": "Getting Started"
+          "caption": "CLIs"
         }
       ]
     }
@@ -151,14 +153,21 @@
 <link rel="manifest" crossorigin="use-credentials" href="https://dev3.atsign.wtf/site.webmanifest">
 
 </head>
-  <body class="sdk list">
+  <body class="sdk single">
     <div class="header-bar"></div>
 
 <header class="navbar navbar-expand-md navbar-light doks-navbar">
   <nav class="container-fluid flex-wrap flex-md-nowrap" aria-label="Main navigation">
     <a class="navbar-brand p-0 me-auto" href="https://dev3.atsign.wtf/" aria-label="atPlatform">
-      <img class="toggle-light" src="https://i.imgur.com/se4lyAK.png" width="320em" /> 
-      <img class="toggle-dark" src="https://i.imgur.com/EjdCMan.png" width="320em" />
+      
+      
+        <img class="toggle-light" src="https://dev3.atsign.wtf/img/branding/dark/lockup-dark.png" width="320em">
+      
+
+      
+      
+        <img class="toggle-dark" src="https://dev3.atsign.wtf/img/branding/light/lockup-light.png" width="320em">
+      
     </a>
 
     <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
@@ -208,7 +217,7 @@
       </button>
       <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
 
-        <li><a class="dropdown-item current" aria-current="true" href="https://dev3.atsign.wtf/sdk/java/getting-started/">English</a></li>
+        <li><a class="dropdown-item current" aria-current="true" href="https://dev3.atsign.wtf/sdk/java/clis/">English</a></li>
 
         <li><hr class="dropdown-divider"></li>
 
@@ -384,42 +393,10 @@
           
             
               
-                
-                <li class="my-1 ms-3">
-                  <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-1d29bcc70ee3310d724c5d30f2aa23df" aria-expanded="true">
-                    Java Reference
-                  </button>
-                  <div class="collapse show" id="section-1d29bcc70ee3310d724c5d30f2aa23df">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      
-                        
-                          
-                          
-                          
-                          
-                          <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/sdk/java/installation/requirements/">Installation</a></li>
-                        
-                      
-                        
-                          
-                          
-                          
-                          
-                          <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/sdk/java/introduction/overview/">Introduction</a></li>
-                        
-                      
-                        
-                          
-                          
-                          
-                          
-                          <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/sdk/java/getting-started/instance/">Getting Started</a></li>
-                        
-                      
-                    </ul>
-                  </div>
-                </li>
               
+              
+              
+              <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/sdk/java/introduction/">Java</a></li>
             
           
         </ul>
@@ -604,17 +581,366 @@
 
     <div class="wrap container-fluid" role="document">
       <div class="content">
+          
+  
+  
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.c0d88d3aac7dd0c2eb45b144ef4d0b4145980ac952cfa20c887fe3210e2882e9dcab929ad37f0abfe5a6029743bf33219fbd4484ea4f96cf5e82f6232ff59dab.css" integrity="sha512-wNiNOqx90MLrRbFE700LQUWYCslSz6IMiH/jIQ4oguncq5Ka038Kv&#43;WmApdDvzMhn71EhOpPls9egvYjL/Wdqw==" crossorigin="anonymous">
+  <div class="codelab">
+  <div class="codelab-nav-buttons">
+    <a class="codelab-arrow-back text-decoration-none" href="https://dev3.atsign.wtf/sdk/" id="arrow-back">← Exit Codelab</a>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="codelab-timer">
+  
+  ⏱
+  
+  2 mins remaining
+  
+</div>
+
+  <div class="codelab-title">
+    
+    <h1>Java</h1>
+    
+    
+    <p class="lead">Learn how the Java SDK works</p>
+    
+  </div>
+  
+<div class="codelab-drawer">
+  <h3 class="codelab-nav-title">Steps <span>in this module</span></h3>
+  <div class="codelab-steps">
+    <ol>
+          
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/introduction/">
+          <span class="codelab-step">
+            <span>Introduction</span>
+          </span>
+        </a>
+      </li>
         
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/installation/">
+          <span class="codelab-step">
+            <span>Installation</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/instance/">
+          <span class="codelab-step">
+            <span>Creating an instance of AtClient</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/getting-secondary/">
+          <span class="codelab-step">
+            <span>Getting Secondary.Address</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/keys/">
+          <span class="codelab-step">
+            <span>Key Types</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/public-key/">
+          <span class="codelab-step">
+            <span>PublicKey interactions</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/self-key/">
+          <span class="codelab-step">
+            <span>SelfKey interactions</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/shared-key/">
+          <span class="codelab-step">
+            <span>SharedKey interactions</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/sdk/java/private-hidden-key/">
+          <span class="codelab-step">
+            <span>PrivateHiddenKey interactions</span>
+          </span>
+        </a>
+      </li>
+          
+      <li selected >
+        <a href="https://dev3.atsign.wtf/sdk/java/clis/">
+          <span class="codelab-step">
+            <span>CLIs</span>
+          </span>
+        </a>
+      </li>
+      
+    </ol>
+  </div>
+</div>
+
+  <div class="codelab-body">
+    <div class="codelab-steps">
+      <div class="codelab-step">
+        <div class="codelab-instructions">
+          <h2 class="codelab-step-title">CLIs</h2>
+          <p>There are various CLIs (command-line interfaces) that uses the Java SDK to interact with a secondary server.</p>
+<h3 id="prerequisite">Prerequisite <a href="#prerequisite" class="anchor" aria-hidden="true">#</a></h3>
+<p>To run the CLIs:</p>
+<ol>
+<li>Edit settings in <code>at_client/src/main/resources/config.yaml</code></li>
+<li>cd to <code>at_java/at_client</code> and run <code>mvn install</code></li>
+<li>Run <code>java -cp &quot;target/client-1.0-SNAPSHOT.jar:target/lib/*&quot; org.atsign.client.cli.&lt;CLI&gt; &lt;args&gt;</code>. Replace “<code>&lt;CLI&gt;</code>” with one of the CLIs (Register, Get, Scan,&hellip;) and “<code>&lt;args&gt;</code>” with</li>
+</ol>
+<h3 id="list-of-clis">List of CLIs <a href="#list-of-clis" class="anchor" aria-hidden="true">#</a></h3>
+<p>If you want to interact with the atProtocol through a command-line experience, see our CLIs in <code>src/main/java/org/atsign/client/cli/</code>. Note that to use some CLIs, you must have the keys in a <code>keys/</code> directory in the root project.</p>
+<ul>
+<li>Delete - delete AtKeys that you’ve shared with another atSign</li>
+<li>Get - get AtKeys that you’ve shared with another atSign</li>
+<li>Onboard - authenticate with CRAM and generate your PKI keypair</li>
+<li>Register - register an atSign (uses Onboard CLI)</li>
+<li>Scan - see what keys you have and view metadata</li>
+<li>Share - share an AtKey with another atSign</li>
+<li>REPL - use raw atProtocol</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Register</td>
+<td>to claim a free atsign. Requires one-time-password received on the provided email to validate. Registers the free atsign to provided email.</td>
+<td>email</td>
+</tr>
+<tr>
+<td>Onboard</td>
+<td>utility which &lsquo;onboards&rsquo; a new atSign. Once onboarding is complete it creates the all-important keys file. Onboard is a subset of Register</td>
+<td>rootUrl, atSign, cramSecret</td>
+</tr>
+<tr>
+<td>Share</td>
+<td>share something with another atSign</td>
+<td>rootUrl, your AtSign, other AtSign, keyName to share, including namespace, keyValue to share, a string, ttr,</td>
+</tr>
+<tr>
+<td>Get</td>
+<td>get something that was shared by another atSign</td>
+<td>rootUrl, your AtSign, other AtSign, name of shared key, including namespace,</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>delete something that was previously shared</td>
+<td>rootUrl, other atSign, name of shared key including namespace</td>
+</tr>
+<tr>
+<td>Scan</td>
+<td>for seeing what keys exist in the secondary and view metadata</td>
+<td>rootUrl, atSign, verbose true or false, scan regex</td>
+</tr>
+<tr>
+<td>REPL</td>
+<td>use raw atProtocol, handles PKAM auth</td>
+<td>rootUrl, atSign, seeEncryptedNotifications true or false</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
-  
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://dev3.atsign.wtf/sdk/java/getting-started/instance/" />
-  </head>
-  <h1>Getting Started</h1>
-  <p class="lead">Writing atPlatform Java code</p>
-  <a href="https://dev3.atsign.wtf/sdk/java/getting-started/instance/">Start the codelab</a>
+
+
+
+
+
+
+
+
+<div class="codelab-controls">
+  <div class="fabs">
+    
+    <a href="https://dev3.atsign.wtf/sdk/java/private-hidden-key/" id="previous-step" title="Previous step">Back</a>
+    
+    <div class="spacer"></div>
+    
+    <a href="https://dev3.atsign.wtf/sdk/java/" id="done" title="Codelab complete">Done</a>
+    
+  </div>
+</div>
+
+  </div>
+</div>
 
       </div>
     </div>
