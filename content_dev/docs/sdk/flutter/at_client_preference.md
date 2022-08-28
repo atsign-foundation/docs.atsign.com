@@ -3,7 +3,7 @@ layout: codelab
 
 title: "AtClientPreference" # Step Name
 description: | # SEO Description for this step
-  Documentation
+  The atPlatform AtClientPreference in Flutter and Dart
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps
