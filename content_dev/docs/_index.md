@@ -28,15 +28,10 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 #### Featured Tutorials
 
 {{% card/group %}}
-{{< card/feature href="/tutorials/atmosphere-pro" title="atmoshere pro" text="An open source end-to-end encrypted file sharing app" >}}
+{{< card/feature href="/tutorials/sshnp" title="SSH no ports" text="SSH to remote machines without opening inbound connections" >}}
 {{< card/feature href="/tutorials/at-dude" title="atDude" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
 {{% /card/group %}}
 {{% card/group %}}
 {{< card/feature href="/tutorials/dess/aws" title="dess - AWS" text="Host your own secondary server on Amazon Web Services" >}}
 {{< card/feature href="/tutorials/dess/gcp" title="dess - GCP" text="Host your own secondary server on Google Cloud Platform">}}
 {{% /card/group %}}
-
-#### More Options
-
-{{< card/breadcrumb link="/reference/" first="Reference" >}}
-{{< card/breadcrumb link="/contribute" first="Contribute to this site" >}}
