@@ -5,7 +5,7 @@ title: "Introduction" # Step Name
 description: | # SEO Description for this step
   Atmosphere Pro introduction
 
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+draft: true # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 1 # Ordering of the steps
 ---
 
