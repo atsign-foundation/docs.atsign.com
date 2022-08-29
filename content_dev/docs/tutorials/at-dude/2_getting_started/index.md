@@ -2,7 +2,7 @@
 layout: codelab
 
 title: "Getting Started" # Step Name
-description: | # SEO Description for this step
+description: How to get started on the atPlatform # SEO Description for this step
   Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
