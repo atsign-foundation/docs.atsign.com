@@ -29,7 +29,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 
 {{% card/group %}}
 {{< card/feature href="/docs/tutorials/atmosphere-pro" title="@moshere pro" text="An open source end-to-end encrypted file sharing app" >}}
-{{< card/feature href="/docs/tutorials/at-dude" title="@dude app" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
+{{< card/feature href="/docs/tutorials/at-dude" title="atDude app" text="Send an end-to-end encrypted duuuuuuude to your friends">}}
 {{% /card/group %}}
 {{% card/group %}}
 {{< card/feature href="/docs/tutorials/dess/aws" title="dess - AWS" text="Host your own secondary server on Amazon Web Services" >}}
