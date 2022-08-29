@@ -1,17 +1,12 @@
 ---
-layout: list
+layout: codelab-list
 
-title: "Flutter Reference" # The title (ON THE PAGE)
-lead: | # The lead below the title (ON THE PAGE)
-  Build an atPlatform app in Flutter.
+title: Flutter # Title of the codelab
+lead: Learn how the Flutter SDK works
+description: Learn how to use the atPlatform Flutter SDK
 
-description:
-  | # SEO Description of the page (Shows in google and atsign.dev search)
-  My SEO description
-
-draft: false # Change this to "true" to hide the page
-toc: true # Change this to "false" to hide the table of contents
-autolinks: true # Change this to "false" to hide the automatic links below your content
-weight: 1 # For list pages, higher is first.
-order: 2
+doneLink: /sdk/flutter/ # Where to send them if they press "Done" at the end of the Codelab
+exitLink: /sdk/ # Where to send them to if they press "Exit Codelab"
+weight: 2
+order: 1
 ---

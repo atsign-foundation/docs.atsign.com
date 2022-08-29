@@ -5,12 +5,11 @@ on:
       - trunk
 
 env:
-  DEV_URL: 'dev3.atsign.wtf'
-  IOT_URL: 'iot3.atsign.wtf'
+  URL: 'dev3.atsign.wtf'
 
 jobs:
   deploy:
-    if: ${{ github.repository == 'atsign-foundation/atsign.dev-3.0' }}
+    if: ${{ github.repository == 'atsign-foundation/docs.atsign.com' }}
     runs-on: ubuntu-20.04
     steps:
       - name: Git checkout
@@ -41,16 +40,5 @@ jobs:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          cname: ${{ env.DEV_URL }}
+          cname: ${{ env.URL }}
 
-      - name: Build IoT Staging
-        run: npm run build:staging:iot
-
-      - name: Deploy IoT Staging
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
-          external_repository: atsign-foundation/iot.atsign.dev
-          publish_dir: ./public
-          publish_branch: gh-pages
-          cname: ${{ env.IOT_URL }}

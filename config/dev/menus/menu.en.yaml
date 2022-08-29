@@ -10,7 +10,3 @@ main:
   - name: Community
     url: /community/
     weight: 3
-
-  - name: IoT
-    url: https://iot.atsign.dev/
-    weight: 4

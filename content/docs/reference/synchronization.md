@@ -16,7 +16,7 @@ weight: 210 # For single pages, lower is first.
 
 ## Definition
 
-On at the atProtocol, your data is encrypted with your self [encryption](/docs/reference/encryption) key and stored on your device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you are the only one who owns the private key. No one else, including **Atsign** can read your data. This process is known as synchronization.
+On at the atProtocol, your data is encrypted with your self [encryption](/reference/encryption) key and stored on your device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you are the only one who owns the private key. No one else, including **Atsign** can read your data. This process is known as synchronization.
 
 ## atPlatform
 
@@ -33,5 +33,5 @@ _To read more about synchronization and how it works check out this [Medium Arti
 
 ## Related Resources
 
-{{< card/breadcrumb link="/docs/atplatform/root-server/" first="Root Server" >}}
-{{< card/breadcrumb link="/docs/atplatform/secondary-server/" first="Secondary Server" >}}
+{{< card/breadcrumb link="/atplatform/root-server/" first="Root Server" >}}
+{{< card/breadcrumb link="/atplatform/secondary-server/" first="Secondary Server" >}}

@@ -1,5 +1,6 @@
 {{ define "main" }}
 	<div class="row flex-xl-nowrap">
+		
 		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
 			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
 				{{ partial "sidebar/docs-menu.html" . }}
@@ -24,8 +25,8 @@
 					</ol>
 				</nav>
 			{{ end }}
-			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
+			<h2>{{ .Title }}</h2>
+			<p class="lead font-size-lg">{{ .Params.lead | safeHTML }}</p>
 			{{ if ne .Params.toc false -}}
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
 				{{ partial "sidebar/docs-toc.html" . }}
@@ -49,14 +50,7 @@
 					{{ end }}
 				</div>
 			{{ end -}}
-			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if .Site.Params.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
-				{{ end -}}
-				{{ if .Site.Params.editPage -}}
-					{{ partial "main/edit-page.html" . }}
-				{{ end -}}
-			</div>
+			{{ partial "main/footer.html"}}
 			{{ partial "main/docs-navigation.html" . }}
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
