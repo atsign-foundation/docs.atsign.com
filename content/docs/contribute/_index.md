@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Contribute to this Site
+title: Contribute
 lead: "All the information you need to contribute to this site"
 
 description: "How to contribute to atsign.dev"

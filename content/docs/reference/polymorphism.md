@@ -10,7 +10,7 @@ description:
   Definition of Polymorphism
 
 draft: false # Change this to "true" to hide the page
-toc: false # Change this to "true" to show the table of contents
+toc: true # Change this to "true" to show the table of contents
 weight: 204 # For single pages, lower is first.
 ---
 
@@ -32,4 +32,4 @@ To learn more about polymorphism see [this article post](https://medium.com/flut
 
 ## Related Resources
 
-{{< card/breadcrumb href="/docs/reference/namespace/" first="Namespace" >}}
+{{< card/breadcrumb href="/reference/namespace/" first="Namespace" >}}

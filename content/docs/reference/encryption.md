@@ -32,6 +32,6 @@ If you want to read more about Encryption and how it works on the atPlatform che
 
 ## Related Resources
 
-{{< card/breadcrumb link="/docs/reference/public_private_keys/" first="Public and Private Keys" >}}
-{{< card/breadcrumb link="/docs/reference/self_encryption_key/" first="Self-Encryption Key" >}}
-{{< card/breadcrumb link="/docs/reference/privacy/" first="Privacy" >}}
+{{< card/breadcrumb link="/reference/public_private_keys/" first="Public and Private Keys" >}}
+{{< card/breadcrumb link="/reference/self_encryption_key/" first="Self-Encryption Key" >}}
+{{< card/breadcrumb link="/reference/privacy/" first="Privacy" >}}
