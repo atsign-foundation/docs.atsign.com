@@ -82,5 +82,17 @@ Example #Regular TextSuperscript
 Regular Text{{&amp;lt;sup&amp;gt;}}Superscript{{&amp;lt;/sup&amp;gt;}} </description>
     </item>
     
+    <item>
+      <title>YouTube</title>
+      <link>https://dev3.atsign.wtf/contribute/shortcodes/youtube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/contribute/shortcodes/youtube/</guid>
+      <description>YouTube Video #Add YouTube videos to your content with the YouTube shortcode.
+To get the correct YouTube URL:
+ Go to the YouTube video Ensure it is set to public or unlisted (so that it can be accessed with the link) Click &amp;ldquo;Share&amp;rdquo; Select the &amp;ldquo;Embed&amp;rdquo; option Copy the URL from the Embed from the generated html code (see image below)  Example #YouTube video:
+  {{&amp;lt;youtubesrc=&amp;#34;https://www.</description>
+    </item>
+    
   </channel>
 </rss>
