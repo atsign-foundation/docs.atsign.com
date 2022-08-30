@@ -311,6 +311,7 @@
       "assets",
       "assignment-of-domain-name-to-your-static-ip",
       "assignment-of-static-ip",
+      "atiot",
       "atplatform",
       "atprotocol",
       "b-assignment-of-domain-name-to-your-static-ip",
@@ -331,6 +332,7 @@
       "compile-jar",
       "configuration-parameters",
       "contact",
+      "contact-us",
       "content",
       "contributing-to-the-developer-site",
       "definition",
@@ -456,6 +458,7 @@
       "verbs",
       "what-is-an-atsign",
       "what-is-at_java",
+      "what-is-iot",
       "what-you-can-do-with-an-atsign",
       "whats-covered",
       "where-can-at_java-be-used"
