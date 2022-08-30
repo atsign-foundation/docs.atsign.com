@@ -34,8 +34,8 @@ Clone the Java Client  Fork our at_java repository Create a new directory on you
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/start/iot/</guid>
-      <description>Introduction #Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We&amp;rsquo;d love to work with you on adding security to your IoT devices. Please contact us at info@atsign.com or join our discord and ask us about anything and we will be happy to answer!
-Ssh! No Ports #Want to ssh to your remove device without any open ports?</description>
+      <description>What is IoT? #IoT–Internet of Things–is a system of interconnecting devices, mechanical or electronic, that are designed to work together to provide a service, such as the transmission of information, or the control of a device.
+In simple terms, an IoT device is any device (such as a camera, a smart phone, a thermostat, a TV, a computer, etc) that is connected to the internet. IoT devices have sensors that are always collecting data and sending it through the Internet.</description>
     </item>
     
     <item>
