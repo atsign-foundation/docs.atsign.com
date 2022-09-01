@@ -4,8 +4,8 @@ layout: codelab
 title: "Onboarding" # Step Name
 description: How to onboard or authenticate on any app built on the atPlatform # SEO Description for this step Documentation
 
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 3 # Ordering of the steps
+draft: true # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+order: 4 # Ordering of the steps
 ---
 
 In this tutorial, we will build the onboarding screen for the dude app.
@@ -129,35 +129,11 @@ class AuthenticationService {
   }
 }
 ```
+The above code creates a [singleton](https://flutterbyexample.com/lesson/singletons) of our class.
 
 
+Now we'll create a method called onboard in our `AuthenticationService` class whose content will be the code we copied a few steps above.
 ```
-AtOnboardingResult onboardingResult =
-                        await AtOnboarding.onboard(
-                      context: context,
-                      config: AtOnboardingConfig(
-                        atClientPreference: await futurePreference,
-                        rootEnvironment: AtEnv.rootEnvironment,
-                        domain: AtEnv.rootDomain,
-                        appAPIKey: AtEnv.appApiKey,
-                      ),
-                    );
-                    switch (onboardingResult.status) {
-                      case AtOnboardingResultStatus.success:
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (_) => const HomeScreen()));
-                        break;
-                      case AtOnboardingResultStatus.error:
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            backgroundColor: Colors.red,
-                            content: Text('An error has occurred'),
-                          ),
-                        );
-                        break;
-                      case AtOnboardingResultStatus.cancel:
-                        break;
-                    }
+
+
 ```

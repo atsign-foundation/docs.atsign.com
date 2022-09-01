@@ -36,6 +36,4 @@ If successful, you should see the default atPlatform Flutter app.
 {{< image type="page" src="default_flutter_app.png" >}}
 
 {{<br>}}
-In the next step, we'll learn how to onboard on the atPlatform.
-
-
+In the next step, we'll implement the MVC+S architecture pattern in our app.
