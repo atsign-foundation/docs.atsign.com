@@ -27,6 +27,7 @@
       "hr",
       "html",
       "i",
+      "iframe",
       "img",
       "li",
       "line",
@@ -148,6 +149,9 @@
       "dropdown-menu",
       "dropdown-menu-end",
       "dropdown-toggle",
+      "embed-responsive",
+      "embed-responsive-16by9",
+      "embed-responsive-item",
       "error404",
       "fa-caret-right",
       "fa-external-link-square",
@@ -306,6 +310,7 @@
       "assets",
       "assignment-of-domain-name-to-your-static-ip",
       "assignment-of-static-ip",
+      "atiot",
       "atplatform",
       "atprotocol",
       "b-assignment-of-domain-name-to-your-static-ip",
@@ -328,6 +333,7 @@
       "conclusion",
       "configuration-parameters",
       "contact",
+      "contact-us",
       "content",
       "contributing-to-the-developer-site",
       "controllers",
@@ -437,9 +443,11 @@
       "views",
       "what-is-an-atsign",
       "what-is-at_java",
+      "what-is-iot",
       "what-you-can-do-with-an-atsign",
       "whats-covered",
-      "where-can-at_java-be-used"
+      "where-can-at_java-be-used",
+      "youtube-video"
     ]
   }
 }
