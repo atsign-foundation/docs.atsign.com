@@ -10,7 +10,7 @@ order: 3 # Ordering of the steps
 
 In this tutorial, we will we'll implement the [MVC+S](https://blog.gskinner.com/archives/2020/09/flutter-state-management-with-mvcs.html) architecture pattern in our app.
 
-We will create the folders that will store our models, views, controllers, services and Do files.
+We will create the folders that will store our models, views, commands and services.
 
 
 
