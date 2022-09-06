@@ -1,6 +1,6 @@
 ---
 layout: codelab-list
-title: Shortcodes tutorial
+title: Shortcodes Tutorial
 lead: Learn about the various shortcodes used on this website
 description: "atsign.dev shortcodes tutorial"
 doneLink: /contribute
