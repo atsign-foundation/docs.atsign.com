@@ -14,9 +14,9 @@ In this tutorial, we will build the onboarding screen for the dude app and modif
 
 With out further ado, lets get back to building the atDude app.
 
-At the end this step our app will look like this,
+At the end of this step our app will look like this,
 
-{{< image type="page" src="first_screen.png" >}}
+{{< image type="page" src="first_onboard_screen.png" >}}
 
 {{<br>}}
 {{<br>}}
@@ -29,9 +29,10 @@ The first thing we will do is change the App bar title to  "atDude" in `main.dar
 ```
 MaterialApp(
       // * The onboarding screen (first screen)
+      debugShowCheckedModeBanner: false, // New
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('atDude'), # Changed
+          title: const Text('atDude'), // Changed
         ),
       ),
     );
@@ -461,7 +462,6 @@ Add the below code to `main.dart`:
     return MultiProvider(
       ...
       child: MaterialApp(
-       
         ...
         home: Scaffold(
           appBar: ...,
@@ -496,4 +496,4 @@ flutter run
 
 Building a production app is like cooking your favorite food, Before you cook the food you do food preparation. You can skip food prep but then cooking become much much harder. Similarly, Following an architecture pattern, creating our export files and abstract classes are like food prep it makes cooking a whole lot easier.
 
-Now that we've completed the onboarding process, in the next step we'll complete the first screen by add a reset atsign button and it's functionalities.
+Now that we've completed the onboarding process, in the next step we'll complete the first screen by adding a reset atsign button and it's functionalities.
