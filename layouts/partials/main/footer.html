@@ -62,5 +62,11 @@
                 <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
+        <a target="_blank" href="https://discord.gg/55sHTQFxfz">
+            {{ $image := resources.Get "img/footer-logos/discord.png" }}
+            {{ with $image }}
+                <img src="{{ .RelPermalink }}" height="48em">
+            {{ end }}
+        </a>
     </div>
 </div>
