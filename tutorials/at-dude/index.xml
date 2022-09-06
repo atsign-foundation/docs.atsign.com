@@ -7,11 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/tutorials/at-dude/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Controller</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/6_controller/</link>
+      <title>App Architecture</title>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/3-app_architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/6_controller/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/3-app_architecture/</guid>
+      <description>In this tutorial, we will we&amp;rsquo;ll implement the MVC+S architecture pattern in our app.
+We will create the folders that will store our models, views, commands and services.
+Models #The models are only concerned with storing and manipulation of data our app needs.
+In your terminal type:
+mkdir lib/models The model files will be saved in this folder.
+Views #The views are the widgets and screen in our application.</description>
+    </item>
+    
+    <item>
+      <title>Controller</title>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_6_controller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_6_controller/</guid>
       <description>TOC     Dude Model   From Json   To Json   Other Methods   Profile Model    In this codelab we will discuss the controller class of the dude app and how it interacts with the DudeService() class.
 Dude Controller #The DudeController() class controls the state management for the app.
 /// A Dude class that controls the UI update when the [DudeService] methods are called.</description>
@@ -19,90 +33,88 @@ Dude Controller #The DudeController() class controls the state management for t
     
     <item>
       <title>Dude Service</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/5_dude_service/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_5_dude_service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/5_dude_service/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_5_dude_service/</guid>
       <description>TOC    | Dude Service | | Dude Service Imports | | Dude Service Properties | | Local Notification | | Local Notification imports | | Properties of LocalNotificationService |
 They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 DudeService #This class is a singleton that makes all the network calls to the atPlatform.</description>
     </item>
     
     <item>
-      <title>History Screen</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/9_history_screen/</link>
+      <title>Getting Started</title>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/2-getting_started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/9_history_screen/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/2-getting_started/</guid>
+      <description>In this tutorial, we will be using VS Code, but feel free to use any editor of your choice.
+To get started, open your terminal and cd to the folder where you want to start this project. Type the following in your terminal:
+dart pub global activate at_app The above command will allow you to run the at_app scripts from the command line when you are not currently inside a package.</description>
+    </item>
+    
+    <item>
+      <title>History Screen</title>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_9_history_screen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_9_history_screen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Introduction</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/1_introduction/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/1-introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/1_introduction/</guid>
-      <description>In this tutorial we will cover the main aspect of the at_dude app. This app is a secure, end-to-end encrypted, peer-to-peer application that allows you to send &amp;lsquo;dudes&amp;rsquo; to your contacts!
-The longer you press and hold the Dude button, the longer your sent dude will be! you can Keep up-to-date with your &amp;lsquo;dude&amp;rsquo; stats to see how much duding you&amp;rsquo;ve done!.
-This app is build on the atPlatform. The atPlatform is an open source backend platform that allows developers to build end to end encrypted application.</description>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/1-introduction/</guid>
+      <description>In this tutorial we will build the atDude app. This app is a secure, end-to-end encrypted, peer-to-peer application that allows you to send &amp;lsquo;dudes&amp;rsquo; to your contacts!
+The longer you press and hold the Dude button, the longer your sent dude will be! You can keep up-to-date with your &amp;lsquo;dude&amp;rsquo; stats to see how much duding you&amp;rsquo;ve done!
+This app is built on the atPlatform. The atPlatform is an open-source backend platform that allows developers to build end-to-end encrypted applications.</description>
     </item>
     
     <item>
       <title>Local Notification Service</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/4_local_notification_services/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_4_local_notification_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/4_local_notification_services/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_4_local_notification_services/</guid>
       <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 LocalNotificationService #This class contains the configurations required to send in app notification on Android and IOS.</description>
     </item>
     
     <item>
       <title>Models</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/2_model/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_2_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/2_model/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_2_model/</guid>
       <description>TOC     Dude Model   From Json   To Json   Other Methods   Profile Model    This app uses two model for data management, the dude model and the profile model.
 Dude Model #The dude model is a class that represent a dude or a message that will be sent to others on the atPlatform.The dude model class contains the following properties.</description>
     </item>
     
     <item>
       <title>Navigation Service</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/3_navigation_service/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/_3_navigation_service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/3_navigation_service/</guid>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/_3_navigation_service/</guid>
       <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 NavigationService #import &amp;#39;package:flutter/material.</description>
     </item>
     
     <item>
       <title>Onboarding</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/7_onboarding/</link>
+      <link>https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/7_onboarding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Profile Screen</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/10_profile_screen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/10_profile_screen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Send Dude Screen</title>
-      <link>https://dev3.atsign.wtf/tutorials/at-dude/8_send_dude_srcreen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev3.atsign.wtf/tutorials/at-dude/8_send_dude_srcreen/</guid>
-      <description></description>
+      <guid>https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/</guid>
+      <description>In this tutorial, we will build the onboarding screen for the dude app.
+With out further ado, lets get back to building the atDude app.
+At the end this step our app will look like this,
+
+Before we get into the onboarding, lets make the UI changes to our app.
+Update AppBar #The first thing we will do is change the App bar title to &amp;ldquo;atDude&amp;rdquo; in main.dart.</description>
     </item>
     
   </channel>
