@@ -1,14 +1,14 @@
 ---
 layout: codelab
 
-title: "Reset atsign" # Step Name
+title: "Send Dude Screen AppBar" # Step Name
 description: Creating the UI of the send dude screen # SEO Description for this step Documentation
 
-draft: true # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
 ---
 
-In this tutorial, we will complete the onboarding screen for the dude app and implement the reset app functionality.
+In this tutorial, we will build the AppBar of send dude screen.
 
 
 
@@ -21,258 +21,324 @@ At the end of this step our app will look like this,
 {{<br>}}
 
 
-#### Creating the Texts util class
-The first thing we will do is create a utility class that will store our texts. This will make it easy to update our texts across out app without having to search and replace all occurrence of the string.
+#### Creating the AppBar
+The first thing we will do is create our send dude screen dart file with the AppBar and the widgets and properties it needs.
 
  Follow the steps below:
 
 ```
-mkdir lib/utils
-touch lib/utils/texts.dart
+
+touch lib/views/screens/send_dude_screen.dart
+open lib/views/screens/send_dude_screen.dart
+```
+
+```dart
+import 'package:flutter/material.dart';
+import '../../utils/texts.dart';
+
+class SendDudeScreen extends StatefulWidget {
+  SendDudeScreen({Key? key}) : super(key: key);
+  static String routeName = 'sendDudeScreen';
+
+  @override
+  State<SendDudeScreen> createState() => _SendDudeScreenState();
+}
+
+class _SendDudeScreenState extends State<SendDudeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        title: const Text(
+          Texts.sendDude,
+          style: TextStyle(color: Colors.black),
+        ),
+        actions: const [AtsignAvatar()],
+        
+      ),
+    );
+  }
+}
+```
+
+We have our stateful widget with an `appBar` but we neither have a `Texts.sendDude` constant nor the `AtsignAvatar()`.  Lets create them:
+
+```
 open lib/utils/texts.dart
 ```
 
 ```dart
+...
 class Texts {
-  static const String atDude = 'atDude';
-  static const String onboardAtsign = 'Onboard an atsign';
-  static const String resetApp = 'Reset App';
+  ...
+  static const String sendDude = 'Reset App';
 }
 ```
 
-Replace the string 'Reset App' with it's equivalent `static const` for the `ResetAppButton` widget as shown below
+#### AtsignAvatar
+
+Let us create `AtsignAvatar` as shown below:
+
+```
+touch lib/views/widgets/atsign_avatar.dart
+open lib/views/widgets/atsign_avatar.dart
+```
+```dart
+import 'dart:typed_data' show Uint8List;
+import 'package:flutter/material.dart';
+
+class AtsignAvatar extends StatefulWidget {
+  const AtsignAvatar({Key? key}) : super(key: key);
+
+  @override
+  State<AtsignAvatar> createState() => _AtsignAvatarState();
+}
+
+class _AtsignAvatarState extends State<AtsignAvatar> {
+  Uint8List? image;
+  String? profileName;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: CircleAvatar(
+        backgroundColor: Colors.transparent,
+        child: image == null
+            ? const Icon(
+                Icons.person_outline,
+                color: Colors.black,
+              )
+            : ClipOval(child: Image.memory(image!)),
+      ),
+      onTap: () {},
+    );
+  }
+}
+```
+
+Basically we have a `CircleAvatar` whose child is an image or an person_outline. We need to add the functionality that will check for the atsign contact details.
+
+##### Profile Data
+```
+mkdir lib/data
+touch lib/data/profile_data.dart
+open lib/data/profile_data.dart
+```
+
+```dart
+import 'dart:typed_data' show Uint8List;
+
+class ProfileData {
+  ProfileData({required this.name, required this.profileImage});
+
+  final String name;
+  final Uint8List? profileImage;
+}
+```
+This class will contain the name and profile image data we'll get from ContactService class provided to us form free from the at_xxx package.
+
+##### Contacts Model
+We'll now create our contacts model that will store all our contacts information needed in our app.
+
+```
+touch lib/models/contacts_model.dart
+open lib/models/contacts_model.dart
+```
+
+```dart
+import 'package:flutter/material.dart';
+
+import '../data/profile_data.dart';
+
+class ContactsModel extends ChangeNotifier {
+  late ProfileData _profileData;
+
+  ProfileData get profileData => _profileData;
+
+  set profileData(ProfileData profileData) {
+    _profileData = profileData;
+    notifyListeners();
+  }
+}
+```
+Our profile data extends `ChangeNotifier`, this will allow us to `notifyListeners()` of changes made to `profileData`.
+
+We now have to add our `ContactModel` as a `ChangeNotifierProvider` and then add it to `BaseCommand`.
+
+```
+open lib/main.dart
+```
 
 ```dart
 ...
 @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: const Text(Texts.resetApp), // Changed
+    return MultiProvider(
+      providers: [
+        Provider(create: (c) => AuthenticationService.getInstance()),
+        ChangeNotifierProvider(create: (c) => ContactsModel()), // new
+      ],
+      child: MaterialApp(...),
     );
-  }
 ```
 
-Let us make similar changes in `main.dart` as shown below:
+```
+open lib/commands/base_command.dart
+```
 ```dart
 ...
-MaterialApp(
-       ...
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text(Texts.atDude), // Changed
-          ),
-          body: Builder(
-            builder: (context) => Center(
-              child: Column(
-                ...
-                children: [
-                  ...
-                  ElevatedButton(
-                    ...
-                    child: const Text(Texts.onboardAtsign),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+import '../models/contacts_model.dart';
+
+abstract class BaseCommand {
+  // Services
+  AuthenticationService authenticationService =
+      NavigationService.navKey.currentContext!.read();
+
+  // Models
+  ContactsModel contactsModel = NavigationService.navKey.currentContext!.read();
 ```
 
-#### Adding Reset Functionality to Authentication Service
+#### Contact Details Command
+We'll now create our Contact Details Command. We don't have to create our `ContactService` since this is provided to us from the at_contacts_flutter package.
+
 
 In your terminal type:
 
 ```
-open lib/services/authentication_service.dart
+flutter pub add at_contacts_flutter
+touch lib/commands/contact_details_command.dart
+open lib/commands/contact_details_command.dart
 ```
 
-Now we'll create a method called `reset` and `getAtOnboardingConfig` in our `AuthenticationService` class and refactor the `onboard` method.
-
 ```dart
-class AuthenticationService {
-  ...
+import 'package:at_client_mobile/at_client_mobile.dart';
+import 'package:at_contacts_flutter/services/contact_service.dart';
+import 'package:at_dude/commands/base_command.dart';
+import 'package:at_dude/data/profile_data.dart';
 
-  AtOnboardingConfig getAtOnboardingConfig({
-    required AtClientPreference atClientPreference,
-  }) =>
-      AtOnboardingConfig(
-        atClientPreference: atClientPreference,
-        rootEnvironment: AtEnv.rootEnvironment,
-        domain: AtEnv.rootDomain,
-        appAPIKey: AtEnv.appApiKey,
-      );
+class ContactDetailsCommand extends BaseCommand {
+  Future<void> run() async {
+    final contactService = ContactService();
 
-  Future<AtOnboardingResult> onboard() async {
-    return await AtOnboarding.onboard(
-      context: context,
-      config: getAtOnboardingConfig(atClientPreference: atClientPreference),
+    ContactService()
+        .getContactDetails(
+            AtClientManager.getInstance().atClient.getCurrentAtSign(), null)
+        .then(
+      (value) {
+        contactsModel.profileData =
+            ProfileData(name: value['name'], profileImage: value['image']);
+        return null;
+      },
     );
   }
 }
 ```
 
-Here we simply moved `AtOnboardingConfig` into it's own method so we can reuse it on our reset method we're going to create below:
+We use the `AtClientManager` method to get the current atsign, then use the ContactService to get the name and profile image of the atsign. We then return the profileData to our contactsModel.
+
+
+
+#### Completing the AtsignAvatar widget
+
+Now we just have what we need to complete the AtsignAvatar Widget.
+
+```
+open lib/views/widgets/atsign_avatar.dart
+```
 
 ```dart
-import 'package:at_onboarding_flutter/screen/at_onboarding_reset_screen.dart';
+class _AtsignAvatarState extends State<AtsignAvatar> {
 ...
-Future<AtOnboardingResetResult> reset() async {
-    var dir = await getApplicationSupportDirectory();
+@override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await ContactDetailsCommand().run();
+    });
+    super.initState();
+  }
+}
+```
 
-    var atClientPreference = AtClientPreference()
-      ..rootDomain = AtEnv.rootDomain
-      ..namespace = AtEnv.appNamespace
-      ..hiveStoragePath = dir.path
-      ..commitLogPath = dir.path
-      ..isLocalStoreRequired = true;
+To run an async method inside `initState` we need to call the method inside `WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {});`
 
-    return AtOnboarding.reset(
-      context: NavigationService.navKey.currentContext!,
-      config: getAtOnboardingConfig(atClientPreference: atClientPreference),
+We can now delete the `image` and `profileName` variables since the data is now inside our `ContactsModel.profileData` property. Let's use the power of provider to access this property.
+
+```dart
+class _AtsignAvatarState extends State<AtsignAvatar> {
+  Uint8List? image; // Delete this
+  String? profileName; // Delete this
+
+  @override
+  void initState() {
+   ...
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: CircleAvatar(
+        backgroundColor: Colors.transparent,
+        child: context.watch<ContactsModel>().profileData.profileImage == null
+            ? const Icon(
+                Icons.person_outline,
+                color: Colors.black,
+              )
+            : ClipOval(
+                child: Image.memory(
+                    context.watch<ContactsModel>().profileData.profileImage!)),
+      ),
+      onTap: () {},
     );
   }
+}
 ```
 
-`AtOnboarding.reset` allows the user to remove any atsign that onboard on the app before. This allows the user to onboarding with another atsign. 
+#### Cleaning up our SendDudeScreen 
 
-#### Onboard Command
-
-Now that we're all set, lets create our Reset Command. This class method will contain the instructions required to reset the currently signed in atsign on the atPlatform. In your terminal type:
+Let's fix our "The method 'AtsignAvatar' isn't defined" error by simply importing out `AtsignAvatar` widget:
 
 ```
-touch lib/commands/reset_command.dart
-open lib/commands/reset_command.dart
+open lib/views/screens/send_dude_screen.dart
 ```
-
-Add the below code:
 
 ```dart
-import 'package:at_dude/commands/base_command.dart';
+import '../widgets/atsign_avatar.dart'; // new
+
+class SendDudeScreen extends StatefulWidget {
+  ...
+}
+
+class _SendDudeScreenState extends State<SendDudeScreen> {
+  ...
+}
+```
+
+#### Navigating to the SendDudeScreen
+
+We can now navigate to our SendDudeScreen now that our send Dude Screen AppBar is completed.
+
+```
+open lib/commands/onboard_command.dart
+```
+
+```dart
+...
 class OnboardCommand extends BaseCommand {
   Future<void> run() async {
-    var onboardingResult = await authenticationService.onboard();
-    
-  }
-}
-```
-This command return a `Future<void>`. 
-
-Move the remaining code in the `onPressed` anoymous function and paste in in the `run()` method of the `OnboardCommand()` class as show below:
-
-```dart
-import 'package:at_dude/commands/base_command.dart';
-import 'package:at_dude/commands/onboard_command.dart';
-
-import 'package:at_onboarding_flutter/screen/at_onboarding_reset_screen.dart'; //new
-import 'package:flutter/material.dart'; // new
-
-
-
-class ResetCommand extends BaseCommand {
-  Future<void> run() async {
-    var resetResult = await authenticationService.reset();
-
-
-    // Everything Below New
-
+    ...
     switch (onboardingResult.status) {
       case AtOnboardingResultStatus.success:
-        OnboardCommand().run();
+        Navigator.popAndPushNamed(context, SendDudeScreen.routeName); // new
         break;
-      case AtOnboardingResultStatus.cancelled:
-        break;
+      ...
     }
   }
 }
 ```
 
-If `authenticationService.onboard()` return `AtOnboardingResetResultStatus.success` we call `'OnboardCommand().run()` to initiate the onboarding process, if it returns `AtOnboardingResetResultStatus.cancelled` we do nothing.
-
-
-#### Completing the first screen
-
-Now we just have to update the UI in `main.dart` to all the user to reset their atsign.
-
-Add the below code to `main.dart`:
-
-```dart
-@override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      ...
-      child: MaterialApp(
-        ...
-        home: Scaffold(
-          appBar: ...,
-          body: Builder(
-            builder: (context) => Center(
-              child: Column(
-                ...
-                children: [
-                  ...,
-                  ElevatedButton(...),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 8,
-                    ),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 12.0),
-                            child: Text(
-                              'Or',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-```
-
-We add a divider to create separation between the two buttons.
-
-lets add the reset atsign button as shown below:
-
-```dart
-import 'package:at_dude/commands/reset_command.dart';
-...
-Padding(...)
-ElevatedButton(
-  onPressed: () async {
-    await ResetCommand().run();
-  },
-  child: Text(Texts.resetApp),
-)
-```
-
-Run your flutter app and everything should work perfectly.
-
-Go ahead and reset the app
-
-```
-flutter run
-```
 #### Conclusion
 
 Well done, you've made it this far. In the next step we will start building our Send Dude Screen.
