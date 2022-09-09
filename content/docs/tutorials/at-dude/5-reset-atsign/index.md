@@ -10,9 +10,6 @@ order: 5 # Ordering of the steps
 
 In this tutorial, we will complete the onboarding screen for the dude app and implement the reset app functionality.
 
-
-
-
 At the end of this step our app will look like this,
 
 {{< image type="page" src="final_onboard_screen.png" >}}
@@ -20,8 +17,8 @@ At the end of this step our app will look like this,
 {{<br>}}
 {{<br>}}
 
-
 #### Creating the Texts util class
+
 The first thing we will do is create a utility class that will store our texts. This will make it easy to update our texts across out app without having to search and replace all occurrence of the string.
 
  Follow the steps below:
@@ -70,7 +67,7 @@ MaterialApp(
                   ...
                   ElevatedButton(
                     ...
-                    child: const Text(Texts.onboardAtsign),
+                    child: const Text(Texts.onboardAtsign), // changed
                   ),
                 ],
               ),
@@ -82,7 +79,7 @@ MaterialApp(
 
 #### Adding Reset Functionality to Authentication Service
 
-In your terminal type:
+We'll repeat the same pattern of the onboarding functionality for the reset app functionality. In your terminal type:
 
 ```
 open lib/services/authentication_service.dart
@@ -93,7 +90,7 @@ Now we'll create a method called `reset` and `getAtOnboardingConfig` in our `Aut
 ```dart
 class AuthenticationService {
   ...
-
+  // new method
   AtOnboardingConfig getAtOnboardingConfig({
     required AtClientPreference atClientPreference,
   }) =>
@@ -102,12 +99,12 @@ class AuthenticationService {
         rootEnvironment: AtEnv.rootEnvironment,
         domain: AtEnv.rootDomain,
         appAPIKey: AtEnv.appApiKey,
-      );
+      ); // new
 
   Future<AtOnboardingResult> onboard() async {
     return await AtOnboarding.onboard(
       context: context,
-      config: getAtOnboardingConfig(atClientPreference: atClientPreference),
+      config: getAtOnboardingConfig(atClientPreference: atClientPreference), // changed
     );
   }
 }
@@ -137,9 +134,11 @@ Future<AtOnboardingResetResult> reset() async {
 
 `AtOnboarding.reset` allows the user to remove any atsign that onboard on the app before. This allows the user to onboarding with another atsign. 
 
-#### Onboard Command
+#### Reset Command
 
-Now that we're all set, lets create our Reset Command. This class method will contain the instructions required to reset the currently signed in atsign on the atPlatform. In your terminal type:
+Now that we're all set, lets create our Reset Command. This class method will contain the instructions required to remove any atsign associated with our app. 
+
+In your terminal type:
 
 ```
 touch lib/commands/reset_command.dart
@@ -150,16 +149,14 @@ Add the below code:
 
 ```dart
 import 'package:at_dude/commands/base_command.dart';
-class OnboardCommand extends BaseCommand {
+class ResetCommand extends BaseCommand {
   Future<void> run() async {
-    var onboardingResult = await authenticationService.onboard();
+    var resetResult = await authenticationService.reset();
     
   }
 }
 ```
-This command return a `Future<void>`. 
-
-Move the remaining code in the `onPressed` anoymous function and paste in in the `run()` method of the `OnboardCommand()` class as show below:
+Now that we have our variable `resetResult`. Let's decide what we'll do depending on the `resetResult`.
 
 ```dart
 import 'package:at_dude/commands/base_command.dart';
@@ -177,25 +174,26 @@ class ResetCommand extends BaseCommand {
 
     // Everything Below New
 
-    switch (onboardingResult.status) {
-      case AtOnboardingResultStatus.success:
+    switch (resetResult) {
+      case AtOnboardingResetResult.success:
         OnboardCommand().run();
         break;
-      case AtOnboardingResultStatus.cancelled:
+
+      case AtOnboardingResetResult.cancelled:
         break;
     }
   }
 }
 ```
 
-If `authenticationService.onboard()` return `AtOnboardingResetResultStatus.success` we call `'OnboardCommand().run()` to initiate the onboarding process, if it returns `AtOnboardingResetResultStatus.cancelled` we do nothing.
+If `authenticationService.reset()` return `AtOnboardingResetResultStatus.success` we call `'OnboardCommand().run()` to initiate the onboarding process, if it returns `AtOnboardingResetResultStatus.cancelled` we do nothing.
 
 
 #### Completing the first screen
 
-Now we just have to update the UI in `main.dart` to all the user to reset their atsign.
+Now we just have to update the UI in `main.dart` to allow the user to reset the app.
 
-Add the below code to `main.dart`:
+Edit `main.dart` as shown below:
 
 ```dart
 @override
@@ -204,42 +202,46 @@ Add the below code to `main.dart`:
       ...
       child: MaterialApp(
         ...
-        home: Scaffold(
-          appBar: ...,
+        home: Scaffold(...),
           body: Builder(
             builder: (context) => Center(
               child: Column(
                 ...
                 children: [
-                  ...,
-                  ElevatedButton(...),
+                  IconButton(...),
+                  ElevatedButton(
+                    ...
+                    child: const Text(Texts.onboardAtsign),
+                  ),
+                  // new
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
                       vertical: 8,
                     ),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black,
-                            ),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.black,
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 12.0),
-                            child: Text(
-                              'Or',
-                              textAlign: TextAlign.center,
-                            ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 12.0),
+                          child: Text(
+                            'Or',
+                            textAlign: TextAlign.center,
                           ),
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black,
-                            ),
+                        ),
+                        Expanded(
+                          child: Divider(
+                            color: Colors.black,
                           ),
-                        ]),
-                  ),
+                        ),
+                      ],
+                    ),
+                  ), // new end
                 ],
               ),
             ),
@@ -255,15 +257,16 @@ We add a divider to create separation between the two buttons.
 lets add the reset atsign button as shown below:
 
 ```dart
-import 'package:at_dude/commands/reset_command.dart';
+import 'package:at_dude/commands/reset_command.dart'; // new
 ...
 Padding(...)
+// new
 ElevatedButton(
   onPressed: () async {
     await ResetCommand().run();
   },
   child: Text(Texts.resetApp),
-)
+) // new end
 ```
 
 Run your flutter app and everything should work perfectly.

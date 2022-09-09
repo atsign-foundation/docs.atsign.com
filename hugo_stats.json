@@ -403,6 +403,7 @@
       "registration-cli",
       "related-resources",
       "requirements",
+      "reset-command",
       "root-secondary",
       "root-server",
       "search",
