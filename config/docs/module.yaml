@@ -49,7 +49,5 @@ mounts:
     target: content
   - source: archetypes
     target: archetypes
-  - source: content_dev/docs
-    target: content
-  - source: layouts_devdocs
+  - source: layouts_docs
     target: layouts
