@@ -37,17 +37,17 @@ mounts:
       - partials/sidebar/auto-collapsible-menu.html
       - partials/head/resource-hints.html
       - index.html
+      - _default/list.html
+      - _default/single.html
   - source: layouts
     target: layouts
+    excludeFiles:
+      - partials/sidebar/auto-collapsible-menu.html
 
   # OTHER
-  - source: content
+  - source: content/docs
     target: content
   - source: archetypes
     target: archetypes
-  - source: data
-    target: data
-  - source: content_dev
-    target: content
-  - source: layouts_dev
+  - source: layouts_docs
     target: layouts
