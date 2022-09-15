@@ -43,7 +43,7 @@ Compile at_java/at_client:
 
 ## Registration CLI
 
-1. Be sure you've fully [set up your development environment](/start/java/#setting-up-your-development-environment). Also ensure you've built and deployed the project by running `mvn install` under the `at_java/at_client` directory. 
+1. Be sure you've fully [set up your development environment](/start/java/#setting-up-your-development-environment). Ensure you've built and deployed the project by running `mvn install` under the `at_java/at_client` directory. 
 
 2. Our next step is to run the `Register.java` CLI to register a new atSign will be onboarded and a set of .atKeys will be generated. You can do this by running:
 
