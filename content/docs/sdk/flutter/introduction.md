@@ -41,7 +41,7 @@ Our Dart/Flutter packages are available on our [pub.dev](https://pub.dev/publish
 
 Talk to us about anything! Questions, feedback, suggestions, partnerships, events, anything!
 
-Reach out to us on our [Discord](https://discord.gg/55sHTQFxfz) or by email - [info@atsign.com](mailto:info@atsign.com)
+Reach out to us on our [Discord](https://discord.atsign.com) or by email - [info@atsign.com](mailto:info@atsign.com)
 
 ## Let's Go!
 

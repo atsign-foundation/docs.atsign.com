@@ -18,6 +18,12 @@ weight: 201 # For single pages, lower is first.
 
 Since the atPlatform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the atPlatform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that **Atsign** generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000. If you opt-in for the vanity atSign the prices increase as the atSign of your liking decreases in length and complexity. For each paid atSign you own, there is a $10 annual renewal fee. This fee does not apply to the free atSigns. What makes atSigns so awesome is that if your app is the first one someone pairs an atSign with, after buying their atSign, we pay you commission on that. Yep, you don't pay us, we pay you.
 
+## Video
+
+Hate reading? Watch this [video](https://www.youtube.com/watch?v=npUMux-uS3Y) instead!
+
+{{< youtube src="https://www.youtube.com/embed/npUMux-uS3Y" >}}
+
 ## Paid atSigns
 
 For paid atSigns the options are listed below:

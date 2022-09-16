@@ -18,6 +18,12 @@ weight: 202 # For single pages, lower is first.
 
 Encryption is a means of achieving privacy. It is a part of cryptography which has the Greek origin meaning of "secret writing". The goal of encryption is that assuming that an unwanted third party is eavesdropping on an insecure channel, said person would not be able to comprehend the transmitted information. Decryption is the process of converted encrypted information into a comprehensible format. Encryption and Decryption algorithms are known as ciphers. Encryption uses a key which is a set of values that the cipher, as an algorithm, will operate on. Encryption and Decryption go back a long way with one of the most well known ciphers being the [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
+## Video
+
+Hate reading? Watch this [video](https://www.youtube.com/watch?v=A12jdKPa4WE) instead!
+
+{{< youtube src="https://www.youtube.com/embed/A12jdKPa4WE" >}}
+
 ## atPlatform
 
 The atPlatform implements end-to-end encryption that is best illustrated with the following example: @alice wishes to share her phone number with her friend @bob. To do this, @alice, who is on her own device, prompts her own secondary server to direct phone @alice at her friend @bob's secondary server. From here, a shared key is generated for @bob (@bob:shared_key@alice).

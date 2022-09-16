@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "IoT Devices" # The title (ON THE PAGE)
+title: "IoT" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Add end-to-end security to your IoT devices with the atPlatform.
 
@@ -23,13 +23,7 @@ In simple terms, an IoT device is any device (such as a camera, a smart phone, a
 
 As said on our website [atsign.com](https://atsign.com/iot-internet-of-things/#overview), the atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.
 
-## atPlatform
-
-The atPlatform is a free, open-source, platform with the capabilities to add end-to-end security to your IoT devices. Check out our [Tools and Demos](https://atsign.com/iot-internet-of-things/#tools) page to see how we are adding end-to-end security to our IoT devices. 
-
-In most demos, a raspberry-pi is used to act as the IoT device. The R-PI runs the atPlatform via Dart where the atSign associated with the IoT device sends the data end-to-end encrypted to another atSign which is running a Flutter app.
-
-IoT Network Architecture
+## IoT Network Architecture
 
 {{< image type="page" src="atIoT-Network-Architecture-1.png.webp" >}}
 
@@ -45,5 +39,5 @@ See our Ssh! No Ports tutorial:
 
 ## Contact us
 
-Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We'd love to work with you on adding security to your IoT devices. Please contact us at [info@atsign.com](mailto:info@atsign.com) or join our [discord](https://discord.gg/55sHTQFxfz) 
+Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We'd love to work with you on adding security to your IoT devices. Please contact us at [info@atsign.com](mailto:info@atsign.com) or join our [discord](https://discord.atsign.com) 
 and ask us about anything and we will be happy to answer!
