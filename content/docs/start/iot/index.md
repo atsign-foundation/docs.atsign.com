@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "IoT Devices" # The title (ON THE PAGE)
+title: "IoT" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Add end-to-end security to your IoT devices with the atPlatform.
 
