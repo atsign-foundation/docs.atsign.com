@@ -115,3 +115,8 @@ i.fa-solid {
 [data-dark-mode] .bg-secondary {
   background-color: $gray-700;
 }
+
+[data-dark-mode] body .text-highlight {
+  color: $highlight;
+}
+
