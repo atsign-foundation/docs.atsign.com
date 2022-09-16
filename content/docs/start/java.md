@@ -47,8 +47,15 @@ Compile at_java/at_client:
 
 2. Our next step is to run the `Register.java` CLI to register a new atSign will be onboarded and a set of .atKeys will be generated. You can do this by running:
 
+Linux
+
 ```sh
-java -cp "target/client-1.0-SNAPSHOT.jar:target/lib/*" org.atsign.client.cli.Register <email@email.com>
+run java -cp "target/client-1.0-SNAPSHOT.jar:target/lib/*" org.atsign.client.cli.Register <email@email.com>
+```
+
+Windows
+
+```run java -cp "target/client-1.0-SNAPSHOT.jar;target/lib/*" org.atsign.client.cli.Register <email@email.com>
 ```
 
 3. If successful, the output should be similar:
