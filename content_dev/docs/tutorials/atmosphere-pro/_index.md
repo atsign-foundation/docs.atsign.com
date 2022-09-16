@@ -2,7 +2,7 @@
 layout: codelab-list # The layout for a codelab list (think of this as a title page for the code lab)
 
 title: "atmosphere pro" # Title of the codelab
-lead: Make Contributions to our P2P File Transferring App # Description of the codelab
+lead: Learn how the atmosphere pro app works # Description of the codelab
 description: Learn how the Atsign atmosphere pro app works on the atPlatform
 
 draft: true
