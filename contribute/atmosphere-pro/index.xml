@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atmosphere Pro on </title>
+    <link>https://dev3.atsign.wtf/contribute/atmosphere-pro/</link>
+    <description>Recent content in Atmosphere Pro on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://dev3.atsign.wtf/contribute/atmosphere-pro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Following the Contrbuting Guidelines</title>
+      <link>https://dev3.atsign.wtf/contribute/atmosphere-pro/3-contribution-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/contribute/atmosphere-pro/3-contribution-guidelines/</guid>
+      <description>Here at Atsign, we LOVE pull requests. You may have been part of various teams &amp;amp; projects where they followed different styles of contributing to GitHub repositories (squash &amp;amp; rebase, or committing to the same branch,..). But here at Atsign, all of our projects, apps, and services are open-sourced and the fork and pull request process seems to work the best for us.
+See the CONTRIBUTING.md file in the root of the repository to see how we want you to set up your repository when making contributions.</description>
+    </item>
+    
+    <item>
+      <title>Forking the Repository</title>
+      <link>https://dev3.atsign.wtf/contribute/atmosphere-pro/2-git-clone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/contribute/atmosphere-pro/2-git-clone/</guid>
+      <description>Now, it is time to fork the atmospher
+  Make sure you are logged into GitHub
+  Head over to atmosphere_pro and click &amp;ldquo;Fork&amp;rdquo;.
+  You should be given prompted to create a new repository on your account. Change these settings to your needs. Change the repository name, description, or copy all of the branches if you&amp;rsquo;d like. We recommend the default settings.  Now that you have the repository on your own personal GitHub account, you can get the GitHub url by clicking on &amp;ldquo;Code,&amp;rdquo; clicking &amp;ldquo;HTTPS,&amp;rdquo; then copy the url.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://dev3.atsign.wtf/contribute/atmosphere-pro/1-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/contribute/atmosphere-pro/1-introduction/</guid>
+      <description>In this tutorial, we will be cloning our project so that you can make contributions to our end-to-end encrypted file transfer app, atmosphere pro. To get started, you will need the following:
+ Git A GitHub account A code editor like VSCode for coding in Dart/Flutter. The Flutter framework An environment to test and run the application (Android, iOS, macOS, or Windows).  </description>
+    </item>
+    
+    <item>
+      <title>Making Contributions</title>
+      <link>https://dev3.atsign.wtf/contribute/atmosphere-pro/4-making-contributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev3.atsign.wtf/contribute/atmosphere-pro/4-making-contributions/</guid>
+      <description>Now that you have your fork all setup and you&amp;rsquo;ve appropriately setup your repository to be following the Contributing Standards, it&amp;rsquo;s time to get to the fun part- coding!
+ Fetch the latest changes from the upstream repository.  git fetch upstream Reset your fork&amp;rsquo;s trunk to be exactly as the upstream trunk branch. IMPORTANT: Do this only at the beginning when you begin working on your contribution. It will overwrite and delete and local changes you&amp;rsquo;ve made and make it exactly as the code we have it in the upstream trunk branch.</description>
+    </item>
+    
+  </channel>
+</rss>

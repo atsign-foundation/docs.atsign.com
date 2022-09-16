@@ -81,6 +81,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/contribute/atmosphere-pro/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/start/iot/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -321,6 +327,18 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/contribute/atmosphere-pro/3-contribution-guidelines/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/contribute/atmosphere-pro/2-git-clone/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/sdk/java/getting-secondary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -358,6 +376,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/tutorials/dess/gcp/5-setup-and-deployment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/contribute/atmosphere-pro/1-introduction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -424,6 +448,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/tutorials/at-dude/_4_local_notification_services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/contribute/atmosphere-pro/4-making-contributions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
