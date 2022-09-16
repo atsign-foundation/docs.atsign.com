@@ -1,7 +1,7 @@
 {{ define "main" }} {{ $section := .CurrentSection }} {{ $page := .Page }}
   {{ .Scratch.Set "class" "codelab" }}
   {{ if eq .CurrentSection.Params.layout "codelab-list" }}
-  {{ if eq (hugo.Environment) "development" -}}
+  {{ if ne (.Site.BaseURL) "docs.atsign.com" -}}
     {{ $options := (dict "targetPath" "codelab.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
     {{ $css := resources.Get "scss/codelab.scss" | toCSS $options -}}
     <link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
