@@ -13,6 +13,14 @@ order: 1 # Ordering of the steps
 
 See our [GitHub repository](https://github.com/atsign-foundation/sshnoports) and [demo video](https://www.youtube.com/watch?v=Z-5sZ2UQn0I) for more information.
 
+Demo video:
+
+{{< youtube src="https://www.youtube.com/embed/Z-5sZ2UQn0I" >}}
+
+{{< br >}}
+
+Instructions:
+
 1. Prepare two atSigns and ensure you have both of their `.atKeys` files. If you've done this, skip to step 3.
 2. If you don't have two atSigns (free or paid), go to [atsign.com](https://atsign.com). Once you've purchased two atSigns be sure to activate them on the dashboard by pressing the "Click to activate" button on each atSign dropdown. Then you will have to onboard these atSigns by downloading one of our apps and onboard the atSign via our [at_onboarding_flutter widget](https://pub.dev/packages/at_onboarding_flutter). This will generate your .atKeys file for you. Save this `.atKeys` file to the machine you are working on. One of these atSigns wil be the "manager" atSign working on the client-side and the other atSign will be the "device" atSign working in the remote device.
 3. Download the binaries [here](https://github.com/atsign-foundation/sshnoports/releases). Ssh! No ports comes with two binary files. One binary (sshnpd) is the daemon that runs on the remote linux host/device, while the other binary (sshnp) runs on the client that is connecting to the device via ssh. *It is also possible to run the source code via `dart run`.
