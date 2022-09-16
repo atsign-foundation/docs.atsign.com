@@ -12,6 +12,7 @@ mounts:
       - scss/common/_global.scss
       - js/highlight.js
       - js/mermaid.js
+      - js/index.js
   - source: node_modules/font-awesome/scss
     target: assets/scss/font-awesome
 
@@ -37,6 +38,7 @@ mounts:
       - partials/main/docs-navigation.html
       - partials/sidebar/auto-collapsible-menu.html
       - partials/head/resource-hints.html
+      - partials/footer/script-footer.html
       - index.html
       - _default/list.html
       - _default/single.html
