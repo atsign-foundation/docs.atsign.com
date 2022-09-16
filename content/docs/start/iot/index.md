@@ -23,7 +23,7 @@ In simple terms, an IoT device is any device (such as a camera, a smart phone, a
 
 As said on our website [atsign.com](https://atsign.com/iot-internet-of-things/#overview), the atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.
 
-IoT Network Architecture
+## IoT Network Architecture
 
 {{< image type="page" src="atIoT-Network-Architecture-1.png.webp" >}}
 
