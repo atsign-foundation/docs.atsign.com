@@ -39,5 +39,5 @@ See our Ssh! No Ports tutorial:
 
 ## Contact us
 
-Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We'd love to work with you on adding security to your IoT devices. Please contact us at [info@atsign.com](mailto:info@atsign.com) or join our [discord](https://discord.gg/55sHTQFxfz) 
+Here at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We'd love to work with you on adding security to your IoT devices. Please contact us at [info@atsign.com](mailto:info@atsign.com) or join our [discord](https://discord.atsign.com) 
 and ask us about anything and we will be happy to answer!
