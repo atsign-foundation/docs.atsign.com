@@ -40,7 +40,7 @@ An atSign has two states: deactivated and activated. To activate an atSign, CRAM
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/reference/privacy/</guid>
-      <description>We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
+      <description>Definition #We live in an age of information. Information is an asset that has a similar value much like other assets that you might own. As an asset, that information must be secured from potential attacks or unauthorized access. There are several security goals that must be considered:
  Confidentiality: Hidden from unauthorized access. Integrity: Protected from unauthorized change. Availability: Available to an authorized party when needed. Authentication/Liveness: Ensuring the session is &amp;ldquo;current&amp;rdquo; rather than a replay of an earlier session.</description>
     </item>
     
