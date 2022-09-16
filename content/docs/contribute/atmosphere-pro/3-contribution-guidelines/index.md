@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Following the Contrbuting Guidelines" # Step Name
 description: | # SEO Description for this step
-  Atmosphere Pro introduction
+  Learn how to set up your environment to properly make contributions.
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps

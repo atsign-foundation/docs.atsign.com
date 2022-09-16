@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Forking the Repository" # Step Name
 description: | # SEO Description for this step
-  Atmosphere Pro introduction
+  Fork and Cloning the Atmosphere Pro repository to your GitHub account
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps

@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Making Contributions" # Step Name
 description: | # SEO Description for this step
-  Atmosphere Pro introduction
+  Learn how to properly contribute to the Atmosphere Pro repository
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
