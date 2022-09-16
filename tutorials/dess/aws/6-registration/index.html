@@ -7,7 +7,7 @@
   
   <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
 
-  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.b9cba22ca769e790d5ed9059938ffaee902fc4b270511138ddacc1270ca31ae24b8cedc6a7a7b76b55297c40843130912cf502a422520bff591029edc9a607c8.css" integrity="sha512-ucuiLKdp55DV7ZBZk4/67pAvxLJwURE43azBJwyjGuJLjO3Gp6e3a1UpfECEMTCRLPUCpCJSC/9ZECntyaYHyA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.e0a168264820dcb84816fed14805abd01b2b32b92924f0bb351a779e6d6b0a58fce1090a30526d352604429dfa97fb189b1c79ef8d7d38356191ce5874aadf48.css" integrity="sha512-4KFoJkgg3LhIFv7RSAWr0BsrMrkpJPC7NRp3nm1rClj84QkKMFJtNSYEQp36l/sYmxx57419ODVhkc5YdKrfSA==" crossorigin="anonymous">
 <noscript><style>img.lazyload { display: none; }</style></noscript>
   <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -163,10 +163,8 @@
 
 </head>
   <body class="tutorials single">
-    <div class="header-bar"></div>
-
-<header class="navbar navbar-expand-md navbar-light doks-navbar">
-  <nav class="container-fluid flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-fluid" aria-label="Main navigation">
     <a class="navbar-brand p-0 me-auto" href="https://dev3.atsign.wtf/" aria-label="atPlatform">
       
       
@@ -179,77 +177,47 @@
       
     </a>
 
-    <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="offcanvas-header d-lg-none">
+        
+      
+        <img class="toggle-light" src="https://dev3.atsign.wtf/img/branding/dark/lockup-dark.png" width="320em">
+      
 
-    <div class="offcanvas offcanvas-end border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
-      <div class="header-bar d-md-none"></div>
-      <div class="offcanvas-header d-md-none">
-        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="https://dev3.atsign.wtf/">atPlatform</a></h2>
+      
+      
+        <img class="toggle-dark" src="https://dev3.atsign.wtf/img/branding/light/lockup-light.png" width="320em">
+      
         <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
       </div>
       <div class="offcanvas-body px-4">
-        <h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3>
-        <ul class="nav flex-column flex-md-row ms-md-n3">
-              <li class="nav-item">
-                <a class="nav-link ps-0 py-1" href="https://dev3.atsign.wtf/start/">Get Started</a>
-              </li>
-            
-          
-              <li class="nav-item">
-                <a class="nav-link ps-0 py-1" href="https://my.atsign.com/go">Get an atSign</a>
-              </li>
-            
-          
-              <li class="nav-item">
-                <a class="nav-link ps-0 py-1" href="https://github.com/atsign-foundation">GitHub</a>
-              </li>
-            
-          </ul>
-        <hr class="text-black-50 my-4 d-md-none">
-        <h3 class="h6 text-uppercase mb-3 d-md-none">Socials</h3>
-        <ul class="nav flex-column flex-md-row ms-md-auto me-md-n5 pe-md-2">
-          </ul>
-      </div>
-    </div>
-    <button id="mode" class="btn btn-link order-md-1" type="button" aria-label="Toggle user interface mode">
-      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
-      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
-    </button>
-    <a target="_blank" href="https://atsign.com">atsign.com</a>
+        <h3 class="h6 text-uppercase mb-3 d-lg-none">Quick Links</h3>
+        <ul class="nav flex-column flex-lg-row ms-md-n3">
+  
+      <li class="nav-item">
+        <a class="nav-link ps-0 py-1" href="https://dev3.atsign.wtf/start/">Get Started</a>
+      </li>
     
-    <div class="dropdown order-md-2">
-      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-        EN
-        <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
-
-        <li><a class="dropdown-item current" aria-current="true" href="https://dev3.atsign.wtf/tutorials/dess/aws/6-registration/">English</a></li>
-
-        <li><hr class="dropdown-divider"></li>
-
-      
-      </ul>
-    </div>
-    </nav>
-</header>
-
-<nav class="doks-subnavbar py-2 sticky-lg-top d-lg-none" aria-label="Secondary navigation">
-  <div class="container-fluid d-flex align-items-md-center">
-    <span class="navbar-text ms-0">Tutorials</span>
-    <button class="btn doks-sidebar-toggle d-lg-none ms-auto order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doks-docs-nav" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle documentation navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
-    </button>
-  </div>
-</nav>
-
-<div class="container-fluid">
-  <aside class="doks-sidebar">
-    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
-      
+  
+      <li class="nav-item">
+        <a class="nav-link ps-0 py-1" href="https://my.atsign.com/go">Get an atSign</a>
+      </li>
+    
+  
+      <li class="nav-item">
+        <a class="nav-link ps-0 py-1" href="https://github.com/atsign-foundation">GitHub</a>
+      </li>
+    
+  
+      <li class="nav-item">
+        <a class="nav-link ps-0 py-1" href="https://atsign.com">atsign.com</a>
+      </li>
+    
+  </ul>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <h3 class="h6 text-uppercase mb-3 d-lg-none">Navigate</h3>
+        <span class="d-lg-none">
+          
 <ul class="list-unstyled collapsible-sidebar">
   
     
@@ -592,16 +560,40 @@
   
 </ul>
 
-    </nav>
-  </aside>
-</div>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex-grow-1"></div>
+
+    <button id="mode" class="btn py-2 order-md-1 text-body" type="button" aria-label="Toggle user interface mode">
+      <span class="toggle-dark text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light text-highlight"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <button class="btn btn-menu order-md-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </nav>
+</header>
+
+<nav class="doks-subnavbar py-2 sticky-lg-top" aria-label="Secondary navigation">
+  <div class="container-fluid d-flex align-items-center">
+
+    <form class="doks-search position-relative flex-grow-1 me-auto">
+      <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+      <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+    </form>
+
+    </div>
+</nav>
+
 
     <div class="wrap container-fluid" role="document">
       <div class="content">
           
   
   
-  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.9c81e1b5ccb7ef8f3b4179045120146f040b8ce2d7fb0576e039b89ffd8d4c5b1213e0208d32cba2354aead27c2ed95f334bd45d36f1385ec0a7eb927cf1907c.css" integrity="sha512-nIHhtcy37487QXkEUSAUbwQLjOLX&#43;wV24Dm4n/2NTFsSE&#43;AgjTLLojVK6tJ8LtlfM0vUXTbxOF7Ap&#43;uSfPGQfA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dev3.atsign.wtf/main.4135705b44cf3fcedb4a44202ab1d9281076f3d4eb2653fe14dcdb5d0feb16887a00752a8a36d77cced655413835fcfd2d7d6c0f614c3a2ff24b101d0d4c4353.css" integrity="sha512-QTVwW0TPP87bSkQgKrHZKBB289TrJlP&#43;FNzbXQ/rFoh6AHUqijbXfM7WVUE4Nfz9LX1sD2FMOi/ySxAdDUxDUw==" crossorigin="anonymous">
   <div class="codelab">
   <div class="codelab-nav-buttons">
     <a class="codelab-arrow-back text-decoration-none" href="https://dev3.atsign.wtf/tutorials/dess/" id="arrow-back">← Exit Codelab</a>
