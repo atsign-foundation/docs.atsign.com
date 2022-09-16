@@ -33,6 +33,7 @@ mounts:
     excludeFiles:
       - docs/list.html
       - docs/single.html
+      - partials/header/header.html
       - partials/main/docs-navigation.html
       - partials/sidebar/auto-collapsible-menu.html
       - partials/head/resource-hints.html

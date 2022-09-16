@@ -32,7 +32,7 @@ lastMod: false # if true, ensure "enableGitInfo" is also true in config.yaml
 # Settings toggles
 
 options:
-  multilingualMode: true
+  multilingualMode: false
   docsVersioning: false
   lazySizes: true
   clipBoard: true
