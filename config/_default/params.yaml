@@ -48,7 +48,7 @@ options:
 
 # Disable Google's Sitelinks Search Box (Using flexsearch instead)
 
-siteLinksSearchBox: false
+siteLinksSearchBox: true
 
 
 # Image Config
