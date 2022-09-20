@@ -132,7 +132,7 @@ Source:
         href: "/",
         title: "Welcome to the atPlatform Documentation",
         description: "Documentation for the atPlatform.\n",
-        content: "I want to\u0026hellip; #\rGet Started Start with Flutter, Java, or IoT development\n   Learn the SDK See our SDK Documentation here\n    Learn the Platform See our infrastructure overview here\n   Follow a Tutorial Find specific tutorials on our tech here\n    Featured Tutorials #\rSSH no ports SSH to remote machines without opening inbound connections\n   atDude Send an end-to-end encrypted duuuuuuude to your friends\n    dess - AWS Host your own secondary server on Amazon Web Services\n   dess - GCP Host your own secondary server on Google Cloud Platform\n    "
+        content: "I want to\u0026hellip; #\r  Get Started Start with Flutter, Java, or IoT development\n     Learn the SDK See our SDK Documentation here\n      Learn the Platform See our infrastructure overview here\n     Follow a Tutorial Find specific tutorials on our tech here\n    Featured Tutorials #\rSSH no ports SSH to remote machines without opening inbound connections\n   atDude Send an end-to-end encrypted duuuuuuude to your friends\n    dess - AWS Host your own secondary server on Amazon Web Services\n   dess - GCP Host your own secondary server on Google Cloud Platform\n    "
       })
       .add(
       {
@@ -308,7 +308,7 @@ Source:
         href: "/start/",
         title: "Get Started",
         description: "Get started on the atPlatform\n",
-        content: ""
+        content: "I want to get started with\u0026hellip; #\r  Flutter Start with Flutter development\n     Java Start with Java development\n      IoT Start with IoT development\n    "
       })
       .add(
       {
