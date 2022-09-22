@@ -1,10 +1,10 @@
 ---
 layout: codelab-list
 
-title: Setup dess on AWS (Amazon Web Services) Platform # Title of the codelab
+title: Setup dess on AWS # Title of the codelab
 lead: # Description of the codelab
 description: | # SEO Description of the codelab
-    My SEO Description
+    Setup dess on AWS
 
 doneLink: /tutorials/dess/ # Where to send them if they press "Done" at the end of the Codelab
 exitLink: /tutorials/dess/ # Where to send them to if they press "Exit Codelab"
