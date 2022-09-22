@@ -1,7 +1,7 @@
 ---
 layout: list
 
-title: "The atPlatform Overview" # The title (ON THE PAGE)
+title: "Overview" # The title (ON THE PAGE)
 lead: Learn about the technology that powers the atPlatform
 
 description: Overview of the atPlatform
