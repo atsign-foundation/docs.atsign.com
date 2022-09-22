@@ -15,6 +15,12 @@
   </url>
   
   <url>
+    <loc>https://dev3.atsign.wtf/atplatform/atplatformoverview/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dev3.atsign.wtf/contribute/shortcodes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -22,12 +28,6 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/contribute/style-guide/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev3.atsign.wtf/atplatform/atplatformoverview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

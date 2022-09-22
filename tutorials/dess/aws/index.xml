@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Setup dess on AWS (Amazon Web Services) Platform on </title>
+    <title>Setup dess on AWS on </title>
     <link>https://dev3.atsign.wtf/tutorials/dess/aws/</link>
-    <description>Recent content in Setup dess on AWS (Amazon Web Services) Platform on </description>
+    <description>Recent content in Setup dess on AWS on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dev3.atsign.wtf/tutorials/dess/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -41,7 +41,7 @@ sudo apt update &amp;amp;&amp;amp; sudo apt upgrade This might take some time, b
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/tutorials/dess/aws/1-introduction/</guid>
-      <description>In this step-by-step guide I will walk you through all steps required to setup your own private dess using AWS. Please use the index to skip some steps in case you have already completed them.</description>
+      <description>In this step-by-step guide I will walk you through all steps required to setup your own private dess (distributed edge secondary server) using AWS (Amazon Web Services). Please use the index to skip some steps in case you have already completed them.</description>
     </item>
     
     <item>

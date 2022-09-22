@@ -105,6 +105,14 @@ Source:
       .add(
       {
         id: 2,
+        href: "/atplatform/atplatformoverview/",
+        title: "Overview",
+        description: "Overview of the atPlatform",
+        content: "The atPlatform is designed to help developers create end-to-end encrypted mobile applications. A full stack platform written in Dart and Flutter, it includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.\nWe have also build an SDK to make all of this super simple for developers so that you can get your IoT devices and Flutter apps up and running in no time.\n"
+      })
+      .add(
+      {
+        id: 3,
         href: "/contribute/shortcodes/",
         title: "Shortcodes Tutorial",
         description: "atsign.dev shortcodes tutorial",
@@ -112,19 +120,11 @@ Source:
       })
       .add(
       {
-        id: 3,
+        id: 4,
         href: "/contribute/style-guide/",
         title: "Style Guide",
         description: "Style guide for contributing to atsign.dev",
         content: "Layouts #\rIn addition to Hugo\u0026rsquo;s default list \u0026amp; single layouts, the docs section also supports codelab-list \u0026amp; codelab-single. Their inner workings are explained in the frontmatter section.\nFrontmatter #\r   Property Supported Layouts Description     title ALL Title of the page   layout ALL Hugo layout of the page   lead ALL except codelab-step A lead to show below the title, this should be short and serves to provide a little more context to the title.   description ALL SEO description for the page, this should be descriptive of the content for the page, and include keywords that represent both the content \u0026amp; the overall site\u0026rsquo;s purpose.   draft ALL Whether this page is a draft or not, if true, this page will not be built on the production site.   toc docs/single, docs/list Whether this page should generate a table of contents from headers.   autolinks docs/list Whether this page should automatically generate links for sub-pages.   weight ALL except codelab-step Used to order content in navigation   doneLink codelab-list Where to send the visitor if they press \u0026lsquo;done\u0026rsquo; at the end of the codelab.   exitLink codelab-list Where to send the visitor if they press \u0026rsquo;exit codelab\u0026rsquo;.   order codelab-single Used to order steps in a codelab, similar to \u0026lsquo;weight\u0026rsquo; property.    Content #\r No HTML in markdown content files.\nHTML shall be written in /layouts/ for the purposes of maintaining consistency across all other pages. Keep things consistent across sections.\nContent pages within a section should be written such that they match the format of other content within the section. There may be some exceptions, but keep this in mind when contributing. Examples should be clear and concise.\nMake sure to use examples that are accurate to the topic, and are easy to understand. File names should be concise and prioritize \u0026lsquo;-\u0026rsquo; over \u0026lsquo;\u0026rsquo; We\u0026rsquo;ve opted to use \u0026lsquo;-\u0026rsquo; instead of \u0026lsquo;\u0026rsquo; in link names to keep things consistent.\nThe only exception to this is when \u0026lsquo;_\u0026rsquo; is part of a name, like in \u0026lsquo;at_server\u0026rsquo;, this also allows us to distinguish between names and spaces in the url.\nLinks should be as pretty as possible for sharing purposes.  Building Layouts #\r Use bootstrap for styling where available.\nAll styling should be done in bootstrap, unless it is unable to achieve what you are after. Ensure compatibility when writing custom styles and layouts. This includes compatibility for dark/light modes, various screen sizes, and has good browser support.  JavaScript #\rThis site is using purgeCSS for the staging and production builds. If you write JavaScript that modifies the DOM in any way, ensure that all style selectors are added to the safelist in config/postcss.config.js.\nAssets #\r External assets and images should be stored in the static folder.\nSite-only images should be stored at page level where possible, or in the assets folder if it is used in multiple places across the site. See here for more information. Use FontAwesome for icons.  Reference #\rIf you want to add your own definition/topic to the reference section, please adhere to the following guidelines.\n Follow all rules in Content Copy the docs-reference-single.md archetype and use it in /reference/ when you make your own page. Ensure toc property to true. (See Frontmatter) Use ## markdown headings for main titles on the page and ### and #### for any sub headings. For links, use markdown (e.g. [here](https://atsign.com)) or the anchor tag (a) shortcode. For canonical links, be sure to use the anchor tag (a) shortcode for better SEO.  "
-      })
-      .add(
-      {
-        id: 4,
-        href: "/atplatform/atplatformoverview/",
-        title: "The atPlatform Overview",
-        description: "Overview of the atPlatform",
-        content: "The atPlatform is designed to help developers create end-to-end encrypted mobile applications. A full stack platform written in Dart and Flutter, it includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.\nWe have also build an SDK to make all of this super simple for developers so that you can get your IoT devices and Flutter apps up and running in no time.\n"
       })
       .add(
       {
@@ -178,16 +178,16 @@ Source:
       {
         id: 11,
         href: "/tutorials/dess/aws/",
-        title: "Setup dess on AWS (Amazon Web Services) Platform",
-        description: "My SEO Description\n",
+        title: "Setup dess on AWS",
+        description: "Setup dess on AWS\n",
         content: ""
       })
       .add(
       {
         id: 12,
         href: "/tutorials/dess/gcp/",
-        title: "Setup dess on GCP (Google Cloud) Platform",
-        description: "My SEO Description\n",
+        title: "Setup dess on GCP",
+        description: "Learn how to setup dess on GCP\n",
         content: ""
       })
       .add(
@@ -636,15 +636,15 @@ Source:
         href: "/tutorials/dess/aws/1-introduction/",
         title: "Introduction",
         description: "Documentation\n",
-        content: "In this step-by-step guide I will walk you through all steps required to setup your own private dess using AWS. Please use the index to skip some steps in case you have already completed them.\n"
+        content: "In this step-by-step guide I will walk you through all steps required to setup your own private dess (distributed edge secondary server) using AWS (Amazon Web Services). Please use the index to skip some steps in case you have already completed them.\n"
       })
       .add(
       {
         id: 69,
         href: "/tutorials/dess/gcp/1-introduction/",
         title: "Introduction",
-        description: "Documentation\n",
-        content: "dess stands for “Distributed Edge Secondary Server” and it is used to host your atSigns on your own secondary server. Refer to the Setup dess guide under Options to learn more.\nIn this step-by-step guide we will walk you through all steps required to setup your own private dess in GCP cloud from scratch. Please use index to skip some steps in case you have done them in another way.\n"
+        description: "Setup dess on GCP\n",
+        content: "dess stands for “Distributed Edge Secondary Server” and it is used to host your atSigns on your own secondary server. Refer to the Setup dess guide under Options to learn more.\nIn this step-by-step guide we will walk you through all steps required to setup your own private dess in GCP (Google Cloud Platform) from scratch. Please use index to skip some steps in case you have done them in another way.\n"
       })
       .add(
       {
