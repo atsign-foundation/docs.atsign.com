@@ -1,0 +1,11 @@
+<div class="card {{ .Get "class" }}"  style="margin-top: 32px; margin-bottom: 32px;">
+  <a href="{{ .Get "href" }}">
+    <div class="card-body">
+      <div class="feature-image-container">
+      <img src="{{ .Get "img" }}" style="height:2rem; width:2rem;"></img>
+      </div>
+      <h5 class="card-title">{{ .Get "title" }}</h5>
+      <p class="card-text">{{ .Get "text" }}</p>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,11 @@
+<div class="card {{ .Get "class" }}">
+  <a href="{{ .Get "href" }}">
+    <div class="card-body">
+      <div class="feature-icon-container">
+      <i class="fas {{ .Get "icon" }}" style="height:1.5rem; width:1.5rem; font-size: 1.5em;"></i>
+      </div>
+      <h5 class="card-title">{{ .Get "title" }}</h5>
+      <p class="card-text">{{ .Get "text" }}</p>
+    </div>
+  </a>
+</div>

@@ -356,3 +356,39 @@
     }
   }
 }
+
+// feature-icon
+.feature-icon-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 3rem;
+  text-align: center;
+  height: 3rem;
+  width: 3rem; 
+  margin: -1.5rem 0 1.5rem; 
+  background-color: $gray-200;
+  border-radius: 0.5rem;
+}
+
+[data-dark-mode] body .feature-icon-container {
+  background-color: $gray-700;
+}
+
+// feature-image
+.feature-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  text-align: center;
+  height: 3rem;
+  width: 3rem; 
+  margin: -1.5rem 0 1.5rem; 
+  background-color: $gray-200;
+  border-radius: 0.5rem;
+}
+
+[data-dark-mode] body .feature-image-container {
+  background-color: $gray-700;
+}
