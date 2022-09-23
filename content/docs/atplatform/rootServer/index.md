@@ -16,6 +16,4 @@ atRoot servers are the only centralized part of the atProtocol and are centraliz
 
 {{< image class="bg-none" src="findSecondary.png" type="page"  >}}
 
-{{< image class="bg-none" src="noRoot.png" type="page"  >}}
-
 The atRoot servers have been designed to scale to billions of atSigns and handle the request for atSign lookups at near real-time, globally. To achieve this, in-memory databases are utilized and only the absolute minimum of data is stored.
