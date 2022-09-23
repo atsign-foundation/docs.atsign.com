@@ -26,9 +26,9 @@ Some editors we recommend:
 ### 2. Install Flutter/Dart on your machine
 
 See Flutter's instructions on getting the Flutter environment setup:
-- Install Flutter on [MacOS](https://docs.flutter.dev/get-started/install/macos)
-- Install Flutter on [Windows](https://docs.flutter.dev/get-started/install/windows)
-- Install Flutter on [Linux](https://docs.flutter.dev/get-started/install/linux)
+- [MacOS](https://docs.flutter.dev/get-started/install/macos)
+- [Windows](https://docs.flutter.dev/get-started/install/windows)
+- [Linux](https://docs.flutter.dev/get-started/install/linux)
 
 ### 3. Install at_app
 
