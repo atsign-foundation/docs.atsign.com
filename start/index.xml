@@ -14,7 +14,7 @@
       <guid>https://dev3.atsign.wtf/start/flutter/</guid>
       <description>Setting Up Your Development Environment #1. Get an editor for programming in Dart #Some editors we recommend:
  Visual Studio Code Android Studio  2. Install Flutter/Dart on your machine #See Flutter&amp;rsquo;s instructions on getting the Flutter environment setup:
- Install Flutter on MacOS Install Flutter on Windows Install Flutter on Linux  3. Install at_app #at_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps.</description>
+ MacOS Windows Linux  3. Install at_app #at_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps.</description>
     </item>
     
     <item>

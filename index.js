@@ -100,7 +100,7 @@ Source:
         href: "/start/flutter/",
         title: "Flutter",
         description: "Get started with Flutter on the atPlatform\n",
-        content: "Setting Up Your Development Environment #\r1. Get an editor for programming in Dart #\rSome editors we recommend:\n Visual Studio Code Android Studio  2. Install Flutter/Dart on your machine #\rSee Flutter\u0026rsquo;s instructions on getting the Flutter environment setup:\n Install Flutter on MacOS Install Flutter on Windows Install Flutter on Linux  3. Install at_app #\rat_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps. See our video on at_app.\n4. Create an atPlatform app #\rCreate an atPlatform app by using at_app\n at_app create \u0026lt;dir\u0026gt; cd \u0026lt;dir\u0026gt; flutter run  "
+        content: "Setting Up Your Development Environment #\r1. Get an editor for programming in Dart #\rSome editors we recommend:\n Visual Studio Code Android Studio  2. Install Flutter/Dart on your machine #\rSee Flutter\u0026rsquo;s instructions on getting the Flutter environment setup:\n MacOS Windows Linux  3. Install at_app #\rat_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps. See our video on at_app.\n4. Create an atPlatform app #\rCreate an atPlatform app by using at_app\n at_app create \u0026lt;dir\u0026gt; cd \u0026lt;dir\u0026gt; flutter run  "
       })
       .add(
       {
