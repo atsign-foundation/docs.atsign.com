@@ -41,12 +41,17 @@ To access NotificationService methods
 ```
 NotificationService notificationService = atClientManager.notificationService;
 ```
+**Example**
+
+```
+  await atClientManager.notificationService.notify(NotificationParams.forUpdate(<key>,value: <value>));
+```
 
 **SyncService**
 
-SyncService syncs local secondary and cloud secondary.
-  If local secondary is ahead, pushes the changes to the cloud secondary.
-  If cloud secondary is ahead, pulls the changes to the local secondary.
+SyncService syncs the client app and remote secondary server's changes.
+  If client app's changes are ahead, pushes the changes to the remote secondary.
+  If remote secondary is ahead, pulls the changes to the client app.
 
 SyncService which is responsible for invoking the sync :
 
