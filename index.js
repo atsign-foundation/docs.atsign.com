@@ -113,7 +113,7 @@ Source:
       .add(
       {
         id: 3,
-        href: "/contribute/shortcodes/",
+        href: "/contribute/this-site/shortcodes/",
         title: "Shortcodes Tutorial",
         description: "atsign.dev shortcodes tutorial",
         content: ""
@@ -121,7 +121,7 @@ Source:
       .add(
       {
         id: 4,
-        href: "/contribute/style-guide/",
+        href: "/contribute/this-site/style-guide/",
         title: "Style Guide",
         description: "Style guide for contributing to atsign.dev",
         content: "Layouts #\rIn addition to Hugo\u0026rsquo;s default list \u0026amp; single layouts, the docs section also supports codelab-list \u0026amp; codelab-single. Their inner workings are explained in the frontmatter section.\nFrontmatter #\r   Property Supported Layouts Description     title ALL Title of the page   layout ALL Hugo layout of the page   lead ALL except codelab-step A lead to show below the title, this should be short and serves to provide a little more context to the title.   description ALL SEO description for the page, this should be descriptive of the content for the page, and include keywords that represent both the content \u0026amp; the overall site\u0026rsquo;s purpose.   draft ALL Whether this page is a draft or not, if true, this page will not be built on the production site.   toc docs/single, docs/list Whether this page should generate a table of contents from headers.   autolinks docs/list Whether this page should automatically generate links for sub-pages.   weight ALL except codelab-step Used to order content in navigation   doneLink codelab-list Where to send the visitor if they press \u0026lsquo;done\u0026rsquo; at the end of the codelab.   exitLink codelab-list Where to send the visitor if they press \u0026rsquo;exit codelab\u0026rsquo;.   order codelab-single Used to order steps in a codelab, similar to \u0026lsquo;weight\u0026rsquo; property.    Content #\r No HTML in markdown content files.\nHTML shall be written in /layouts/ for the purposes of maintaining consistency across all other pages. Keep things consistent across sections.\nContent pages within a section should be written such that they match the format of other content within the section. There may be some exceptions, but keep this in mind when contributing. Examples should be clear and concise.\nMake sure to use examples that are accurate to the topic, and are easy to understand. File names should be concise and prioritize \u0026lsquo;-\u0026rsquo; over \u0026lsquo;\u0026rsquo; We\u0026rsquo;ve opted to use \u0026lsquo;-\u0026rsquo; instead of \u0026lsquo;\u0026rsquo; in link names to keep things consistent.\nThe only exception to this is when \u0026lsquo;_\u0026rsquo; is part of a name, like in \u0026lsquo;at_server\u0026rsquo;, this also allows us to distinguish between names and spaces in the url.\nLinks should be as pretty as possible for sharing purposes.  Building Layouts #\r Use bootstrap for styling where available.\nAll styling should be done in bootstrap, unless it is unable to achieve what you are after. Ensure compatibility when writing custom styles and layouts. This includes compatibility for dark/light modes, various screen sizes, and has good browser support.  JavaScript #\rThis site is using purgeCSS for the staging and production builds. If you write JavaScript that modifies the DOM in any way, ensure that all style selectors are added to the safelist in config/postcss.config.js.\nAssets #\r External assets and images should be stored in the static folder.\nSite-only images should be stored at page level where possible, or in the assets folder if it is used in multiple places across the site. See here for more information. Use FontAwesome for icons.  Reference #\rIf you want to add your own definition/topic to the reference section, please adhere to the following guidelines.\n Follow all rules in Content Copy the docs-reference-single.md archetype and use it in /reference/ when you make your own page. Ensure toc property to true. (See Frontmatter) Use ## markdown headings for main titles on the page and ### and #### for any sub headings. For links, use markdown (e.g. [here](https://atsign.com)) or the anchor tag (a) shortcode. For canonical links, be sure to use the anchor tag (a) shortcode for better SEO.  "
@@ -233,14 +233,6 @@ Source:
       .add(
       {
         id: 18,
-        href: "/start/other/",
-        title: "Other",
-        description: "Other ways to get started on the atPlatform\n",
-        content: "Open Source Contributions #\rWe LOVE open source. Any and all contributions are welcome.\nThe atPlatform consists of many open-sourced GitHub repositories. To start, go into any repository and find the CONTRIBUTING.md file to see how you can properly setup your fork to make contributions to our projects. Here is an example of the contributing guidelines for making contributions to the dev site that you are reading now. There may be different contributing guidelines for each repository, so be sure to read the CONTRIBUTING.md of the repository that you are contributing to.\nThank you for your contributions!\nContributing to the Developer Site #\rThe developer site is written in GoHugo (a static-site generator).\nWhile browsing the developer site, if you find a typo, mistake, or would like to make a contribution to the dev site, continue reading on ways you can contribute. All contributions are welcome and greatly appreciated.\n If you wish to contact us about the issue, join our discord or email us at info@atsign.com. If you wish to raise GitHub issue card, click here. If you wish to get your hands dirty and fix the bug or add documentation yourself (which we absolutely love), please read our Contributing Guidelines on how to contribute to the open-source project and read through our Style Guide to keep your contribution up to standard with the rest of our content.  "
-      })
-      .add(
-      {
-        id: 19,
         href: "/atplatform/rootserver/",
         title: "Root Server",
         description: "Learn about the atPlatform root server",
@@ -248,7 +240,7 @@ Source:
       })
       .add(
       {
-        id: 20,
+        id: 19,
         href: "/tutorials/dess/",
         title: "dess",
         description: "Learn about the atPlatform distributed edge secondary server",
@@ -256,7 +248,7 @@ Source:
       })
       .add(
       {
-        id: 21,
+        id: 20,
         href: "/atplatform/secondary-server/",
         title: "Secondary Server",
         description: "Learn about atPlatform secondary edge servers",
@@ -264,11 +256,19 @@ Source:
       })
       .add(
       {
-        id: 22,
+        id: 21,
         href: "/contribute/",
-        title: "Contribute",
-        description: "How to contribute to atsign.dev",
-        content: ""
+        title: "Contribute to the atPlatform",
+        description: "How to contribute to the atPlatform",
+        content: "Open Source Contributions #\rWe LOVE open source. Any and all contributions are welcome.\nThe atPlatform consists of many open-sourced GitHub repositories. To start, go into any repository and find the CONTRIBUTING.md file to see how you can properly setup your fork to make contributions to our projects. Here is an example of the contributing guidelines for making contributions to the dev site that you are reading now. There may be different contributing guidelines for each repository, so be sure to read the CONTRIBUTING.md of the repository that you are contributing to.\nThank you for your contributions!\nNeed more information? Read the following: #\r"
+      })
+      .add(
+      {
+        id: 22,
+        href: "/contribute/this-site/",
+        title: "Contribute to this site",
+        description: "How to contribute to docs.atsign.com",
+        content: "The developer site is written in GoHugo (a static-site generator).\nWhile browsing the developer site, if you find a typo, mistake, or would like to make a contribution to the dev site, continue reading on ways you can contribute. All contributions are welcome and greatly appreciated.\n If you wish to contact us about the issue, join our discord or email us at info@atsign.com. If you wish to raise GitHub issue card, click here. If you wish to get your hands dirty and fix the bug or add documentation yourself (which we absolutely love), please read our Contributing Guidelines on how to contribute to the open-source project and read through our Style Guide to keep your contribution up to standard with the rest of our content.  "
       })
       .add(
       {
@@ -457,7 +457,7 @@ Source:
       .add(
       {
         id: 46,
-        href: "/contribute/shortcodes/button/",
+        href: "/contribute/this-site/shortcodes/button/",
         title: "Buttons",
         description: "Button shortcodes used in atsign.dev",
         content: "\nbutton/link #\rA button that links to another page.\n   Attribute Description     href The html href to the content when the button is clicked.   type The button style (Any bootstrap style, defaults to \u0026lsquo;primary\u0026rsquo;)   text The label for the button.    Note: Only primary and secondary types are fully supported.\nExample #\rSecondary   Primary  \n{{\u0026lt;button/linkhref=\u0026#34;#\u0026#34;type=\u0026#34;secondary\u0026#34;text=\u0026#34;Secondary\u0026#34;\u0026gt;}} {{\u0026lt;button/linkhref=\u0026#34;#\u0026#34;type=\u0026#34;primary\u0026#34;text=\u0026#34;Primary\u0026#34;\u0026gt;}} "
@@ -465,7 +465,7 @@ Source:
       .add(
       {
         id: 47,
-        href: "/contribute/shortcodes/card/",
+        href: "/contribute/this-site/shortcodes/card/",
         title: "Cards",
         description: "Card shortcodes used in atsign.dev",
         content: "\ncard/breadcrumb #\rA breadcrumb style card that links to another page.\n   Attribute Description     href The html href to the content when the card is clicked.   first The first text element in the breadcrumb   second The second text element in the breadcrumb   third The third text element in the breadcrumb    Example #\rFirst \u0026rarr;    First \u0026rarr; Second \u0026rarr;    First \u0026rarr; Second \u0026rarr; Third \u0026rarr;   {{\u0026lt;card/breadcrumbhref=\u0026#34;#\u0026#34;first=\u0026#34;First\u0026#34;\u0026gt;}} {{\u0026lt;card/breadcrumbhref=\u0026#34;#\u0026#34;first=\u0026#34;First\u0026#34;second=\u0026#34;Second\u0026#34;\u0026gt;}} {{\u0026lt;card/breadcrumbhref=\u0026#34;#\u0026#34;first=\u0026#34;First\u0026#34;second=\u0026#34;Second\u0026#34;third=\u0026#34;Third\u0026#34;\u0026gt;}} card/feature #\rA feature style card that links to another page.\n   Attribute Description     href The html href to the content when the card is clicked.   class Additional css classes to apply to the card.   title The title for the card   text The text in the body of the card    See bootstrap cards for more information.\nExample #\rMy Card My text goes here...\n   {{\u0026lt;card/featureclass=\u0026#34;w-50\u0026#34;href=\u0026#34;#\u0026#34;title=\u0026#34;My Card\u0026#34;text=\u0026#34;My text goes here...\u0026#34;\u0026gt;}} card/group #\rA wrapper for cards using bootstrap\u0026rsquo;s deck style.\nNo attributes for this shortcode.\nExample #\rFeature Card 1 This is the first card to show the deck example.\n   Feature Card 2 This is the second card to show the deck example.\n    {{\u0026lt;card/group\u0026gt;}} {{\u0026lt;card/featureclass=\u0026#34;w-25 min-w-250\u0026#34;href=\u0026#34;/contribute/shortcodes/card\u0026#34;title=\u0026#34;Feature Card 1\u0026#34;text=\u0026#34;This is the first card to show the deck example.\u0026#34;\u0026gt;}} {{\u0026lt;card/featureclass=\u0026#34;w-25 min-w-250\u0026#34;href=\u0026#34;/contribute/shortcodes/card\u0026#34;title=\u0026#34;Feature Card 2\u0026#34;text=\u0026#34;This is the second card to show the deck example.\u0026#34;\u0026gt;}} {{\u0026lt;/card/group\u0026gt;}} card/grid #\rA css-grid based wrapper for cards best used for an even number of cards.\n   Attribute Description     class Additional css classes to apply to the wrapper.    Feature Card 1 This is the first card to show the deck example.\n   Feature Card 2 This is the second card to show the deck example.\n    Example #\r{{\u0026lt;card/gridclass=\u0026#34;grid-col-4 grid-col-md-2 grid-col-sm-1\u0026#34;\u0026gt;}} {{\u0026lt;card/featureclass=\u0026#34;w-25 min-w-250\u0026#34;href=\u0026#34;/contribute/shortcodes/card\u0026#34;title=\u0026#34;Feature Card 1\u0026#34;text=\u0026#34;This is the first card to show the deck example.\u0026#34;\u0026gt;}} {{\u0026lt;card/featureclass=\u0026#34;w-25 min-w-250\u0026#34;href=\u0026#34;/contribute/shortcodes/card\u0026#34;title=\u0026#34;Feature Card 2\u0026#34;text=\u0026#34;This is the second card to show the deck example.\u0026#34;\u0026gt;}} {{\u0026lt;/card/grid\u0026gt;}} card/flex #\rA css flexbox based wrapper to automatically layout cards.\n   Attribute Description     class Additional css classes to apply to the wrapper.    Feature Card 1 This is the first card to show the deck example.\n   Feature Card 2 This is the second card to show the deck example.\n    card/social #\rA card for linking to a social platform.\n   Attribute Description     class Additional css classes to apply to the bootstrap card element.   title The title for the card.   img-src The src for the img element.   img-class Additional css classes to apply to the img tag.   img-type The type of image, can be one of \u0026lsquo;page\u0026rsquo;, \u0026lsquo;asset\u0026rsquo;, or \u0026lsquo;remote\u0026rsquo; (default)   bg-class Additional css classes to apply to the img container    Example #\r Wavi Start contributing, this is where the code hits the fan.   {{\u0026lt;card/socialhref=\u0026#34;https://github.com/\u0026#34;class=\u0026#34;w-25 min-w-250\u0026#34;title=\u0026#34;Wavi\u0026#34;img-src=\u0026#34;https://wavi.ng/assets/img/wavimetalogo.jpeg\u0026#34;img-class=\u0026#34;bg-white p-5\u0026#34;\u0026gt;}} Start contributing, this is where the code hits the fan. {{\u0026lt;/card/social\u0026gt;}} card/showcase #\rA card for showcasing a single item.\n   Attribute Description     class Additional css classes to apply to the bootstrap card element.   title The title for the card.   img-src The src for the img element.   img-class Additional css classes to apply to the img tag.   img-type The type of image, can be one of \u0026lsquo;page\u0026rsquo;, \u0026lsquo;asset\u0026rsquo;, or \u0026lsquo;remote\u0026rsquo; (default)   bg-class Additional css classes to apply to the img container    Example #\r Wavi Your space on the privacy-first web.\nLearn more  Wavi.ng    {{\u0026lt;card/showcaseclass=\u0026#34;w-50\u0026#34;title=\u0026#34;Wavi\u0026#34;img-src=\u0026#34;https://wavi.ng/assets/img/wavimetalogo.jpeg\u0026#34;img-class=\u0026#34;bg-white p-5\u0026#34;\u0026gt;}} {{\u0026lt;card/showcase-item\u0026gt;}}Your space on the privacy-first web.{{\u0026lt;/card/showcase-item\u0026gt;}} {{\u0026lt;card/showcase-linkhref=\u0026#34;https://atsign.com/apps/wavi\u0026#34;\u0026gt;}}Learn more{{\u0026lt;/card/showcase-link\u0026gt;}} {{\u0026lt;card/showcase-linkhref=\u0026#34;https://wavi.ng/@wavi\u0026#34;\u0026gt;}}Wavi.ng{{\u0026lt;/card/showcase-link\u0026gt;}} {{\u0026lt;/card/showcase\u0026gt;}} "
@@ -561,7 +561,7 @@ Source:
       .add(
       {
         id: 59,
-        href: "/contribute/shortcodes/image/",
+        href: "/contribute/this-site/shortcodes/image/",
         title: "Images",
         description: "Image shortcodes used in atsign.dev",
         content: "\nInclude an image using the 3 different types:\n remote (default) page asset     Attribute Description     class Additional css classes to apply to the img element.   src The src for the image (url or path).   type The type of image (remote, page or global).    image - remote #\rUsed when you would like to use an image from another site (with permission of course!).\nYou do not need to specify a type for this since it is default.\nSet src to the url of the image.\nExample #\r{{\u0026lt;imageclass=\u0026#34;bg-white\u0026#34;src=\u0026#34;https://atsign.com/wp-content/uploads/2020/09/The@Company-Logo@2x.png.webp\u0026#34;\u0026gt;}} image - page #\rUsed when an image belongs to this site, and only needs to be visible from a single page.\nSet the type to \u0026ldquo;page\u0026rdquo; for this.\nSet the src to the filename for your image.\nIf your page is not named \u0026ldquo;index.md\u0026rdquo; or \u0026ldquo;_index.md\u0026rdquo;:\n Create a folder with the same name as your page (without the \u0026ldquo;.md\u0026rdquo;). Place your file in this folder and rename it to index.md Place your image in the folder, and you should be good to go!.  Your folder structure should look like this after:\n- my_page (folder) \\ - index.md \\ - my_image.png Example #\r{{\u0026lt;imageclass=\u0026#34;bg-white\u0026#34;src=\u0026#34;my_image.png\u0026#34;type=\u0026#34;page\u0026#34;\u0026gt;}} image - asset #\rUsed when an image belongs to this site, and needs to be visible from multiple pages.\nSet the type to \u0026ldquo;asset\u0026rdquo; for this.\nSet the src to the filepath for your image from within the assets folder.\nExample #\r{{\u0026lt;imageclass=\u0026#34;bg-white\u0026#34;src=\u0026#34;img/contributing/my_global_image.png\u0026#34;type=\u0026#34;asset\u0026#34;\u0026gt;}} "
@@ -673,7 +673,7 @@ Source:
       .add(
       {
         id: 73,
-        href: "/contribute/shortcodes/links/",
+        href: "/contribute/this-site/shortcodes/links/",
         title: "Links",
         description: "Links shortcodes used in atsign.dev",
         content: "\nAnchor Tag (a) #\rLinks in your paragraphs\n   Attribute Description     href The html href to the content when the link is clicked.   target (optional) \u0026ldquo;_blank\u0026rdquo; for new tab, \u0026ldquo;_self\u0026rdquo; for same frame (default, *use markdown for self links: [here](www.google.com)),   rel (optional) \u0026ldquo;canonical\u0026rdquo; for canonical links    Example #\ratsign.com  {{\u0026lt;arel=\u0026#34;canonical\u0026#34;target=\u0026#34;_blank\u0026#34;href=\u0026#34;https://atsign.com/\u0026#34;\u0026gt;}} atsign.com {{\u0026lt;/a\u0026gt;}} "
@@ -737,7 +737,7 @@ Source:
       .add(
       {
         id: 81,
-        href: "/contribute/shortcodes/panel/",
+        href: "/contribute/this-site/shortcodes/panel/",
         title: "Panel",
         description: "Panel shortcodes used in atsign.dev",
         content: "\npanel/feature #\rA large format feature panel.\n   Attribute Description     class Additional css classes to apply to the panel   title Title to be displayed in the panel   footnote Optional text to be displayed below the inner text   img-src The src for the img element.   img-type The type of image, can be one of \u0026lsquo;page\u0026rsquo;, \u0026lsquo;asset\u0026rsquo;, or \u0026lsquo;remote\u0026rsquo; (default)   img-class Additional css classes to apply to the img tag.   img-right Whether the image should be positioned to the right side or not   theme The color theme for this, can be one of \u0026lsquo;gray\u0026rsquo;, \u0026rsquo;light\u0026rsquo;, or \u0026lsquo;clear\u0026rsquo; (default)    Example #\r Option 1: Clear This panel is an example of the clear theme with its image positioned to the right. Try mixing and matching different themes and orientations to make a page look more visually appealing. Use footnotes to add captions to an image or additional context\n   Option 2: Gray This panel is an example of the gray theme with its image positioned to the left. Make sure that you omit the img-right attribute to get the orientation of the image to appear on the left side. Use footnotes to add captions to an image or additional context\n    Option 3: Light This panel is an example of the light theme with its image positioned to the left. Use footnotes to add captions to an image or additional context\n  {{\u0026lt;panel/featuretitle=\u0026#34;hello\u0026#34;footnote=\u0026#34;foot\u0026#34;img-src=\u0026#34;https://wavi.ng/assets/img/wavimetalogo.jpeg\u0026#34;theme=\u0026#34;clear\u0026#34;img-class=\u0026#34;bg-white\u0026#34;img-right=\u0026#34;true\u0026#34;\u0026gt;}} test {{\u0026lt;/panel/feature\u0026gt;}} "
@@ -921,7 +921,7 @@ Source:
       .add(
       {
         id: 104,
-        href: "/contribute/shortcodes/spacing/",
+        href: "/contribute/this-site/shortcodes/spacing/",
         title: "Spacing",
         description: "Spacing shortcodes used in atsign.dev",
         content: "\nLine Break (br) #\rInsert a simple line break.\nExample #\rSome text here and then a line break.\nSome text here {{\u0026lt;br\u0026gt;}} and then a line break. "
@@ -929,7 +929,7 @@ Source:
       .add(
       {
         id: 105,
-        href: "/contribute/shortcodes/superscripts/",
+        href: "/contribute/this-site/shortcodes/superscripts/",
         title: "Superscripts",
         description: "Superscripts with links",
         content: "\nSuperscripts (sup) #\rSuperscript go next to text.\nExample #\rRegular TextSuperscript\nRegular Text{{\u0026lt;sup\u0026gt;}}Superscript{{\u0026lt;/sup\u0026gt;}} "
@@ -937,7 +937,7 @@ Source:
       .add(
       {
         id: 106,
-        href: "/contribute/shortcodes/youtube/",
+        href: "/contribute/this-site/shortcodes/youtube/",
         title: "YouTube",
         description: "A YouTube video",
         content: "\nYouTube Video #\rAdd YouTube videos to your content with the YouTube shortcode.\nTo get the correct YouTube URL:\n Go to the YouTube video Ensure it is set to public or unlisted (so that it can be accessed with the link) Click \u0026ldquo;Share\u0026rdquo; Select the \u0026ldquo;Embed\u0026rdquo; option Copy the URL from the Embed from the generated html code (see image below)  Example #\rYouTube video:\n  {{\u0026lt;youtubesrc=\u0026#34;https://www.youtube.com/embed/Z-5sZ2UQn0I\u0026#34;\u0026gt;}} "

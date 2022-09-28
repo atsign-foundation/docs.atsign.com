@@ -21,13 +21,13 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/style-guide/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/style-guide/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -111,12 +111,6 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/start/other/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dev3.atsign.wtf/atplatform/rootserver/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -136,6 +130,12 @@
   
   <url>
     <loc>https://dev3.atsign.wtf/contribute/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -279,13 +279,13 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/button/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/button/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/card/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/card/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -357,7 +357,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/image/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/image/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -441,7 +441,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/links/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/links/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -489,7 +489,7 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/panel/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/panel/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -627,19 +627,19 @@
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/spacing/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/spacing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/superscripts/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/superscripts/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dev3.atsign.wtf/contribute/shortcodes/youtube/</loc>
+    <loc>https://dev3.atsign.wtf/contribute/this-site/shortcodes/youtube/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

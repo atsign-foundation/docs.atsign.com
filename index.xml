@@ -13,12 +13,13 @@
     
     
     <item>
-      <title>Contribute</title>
+      <title>Contribute to the atPlatform</title>
       <link>https://dev3.atsign.wtf/contribute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/contribute/</guid>
-      <description></description>
+      <description>Open Source Contributions #We LOVE open source. Any and all contributions are welcome.
+The atPlatform consists of many open-sourced GitHub repositories. To start, go into any repository and find the CONTRIBUTING.md file to see how you can properly setup your fork to make contributions to our projects. Here is an example of the contributing guidelines for making contributions to the dev site that you are reading now. There may be different contributing guidelines for each repository, so be sure to read the CONTRIBUTING.</description>
     </item>
     
     <item>
