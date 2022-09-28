@@ -84,10 +84,10 @@ List of reserved keys:
 - privatekey:at_secret
 - privatekey:at_secret_deleted
 
-**atProtocol CRUD operations**
+**atPlatform CRUD operations**
 
 **Create/Update Data**
-SDK of atProtocol exposes two methods to create the data. They are:
+atPlatform SDK exposes two methods to create the data. They are:
 
 - put
 - putMeta
@@ -370,4 +370,4 @@ When an original key is updated by the creator, the ones who have cached it need
 
 **_CCD - Cascade delete_**
 
-CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the original key is deleted. 
+CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting it to false results in the cached key remaining, even after the original key is deleted.
