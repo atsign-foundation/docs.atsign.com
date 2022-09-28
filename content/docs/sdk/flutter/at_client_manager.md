@@ -50,7 +50,7 @@ NotificationService notificationService = atClientManager.notificationService;
 **SyncService**
 
 SyncService syncs the client app and remote secondary server's changes.
-  If client app's changes are ahead, it pushes the changes to the remote secondary.
+  If the client app's changes are ahead, it pushes the changes to the remote secondary.
   If the remote secondary is ahead, it pulls the changes to the client app.
 
 SyncService which is responsible for invoking the sync :
