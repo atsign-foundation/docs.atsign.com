@@ -9,6 +9,7 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
 ---
 
+
 ### Overview
 
 To store data, atPlatform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
@@ -83,6 +84,111 @@ List of reserved keys:
 - privatekey:at_secret
 - privatekey:at_secret_deleted
 
+**atPlatform CRUD operations**
+
+**Create/Update Data**
+atPlatform SDK exposes two methods to create the data. They are:
+
+- put
+- putMeta
+
+**_put_**
+
+Update’s value of key is if it is already present. Otherwise creates a new key.
+
+To share a key to another atSign, use AtKey.shared() factory method or populate AtKey.sharedWith with the atSign to whom the data has to be shared. Further, notifies the sharedWith atSign that a key has been created.
+
+**Signature**
+
+`Future<bool> put(AtKey key, dynamic value);`
+
+Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.
+
+AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. [key rules](#keyrules)
+
+The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.
+
+Throws **AtClientException** with an error code and error description that describes that cause of the exception.
+
+**_putMeta_**
+
+Updates the metadata of the key.
+
+_Signature_
+
+`Future<bool> putMeta(AtKey key);`
+
+Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].
+
+Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.
+
+Throws **AtClientException** with an error code and error description that describes that cause of the exception.
+
+**Read Data**
+
+**_get_**
+
+Get the value of the key from the user's cloud secondary.
+Signature
+`Future<AtValue> get (AtKey key);`
+
+Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.
+
+Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.
+
+Throws **AtClientException** with an error code and error description that describes that cause of the exception.
+
+**_getMeta_**
+
+Gets the metadata of the key.
+
+**Signature**
+
+`Future <bool> getMeta(AtKey key);`
+
+Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.
+
+Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.
+
+Throws _AtClientException_ with an error code and error description that describes that cause of the exception.
+
+**Delete Data**
+
+Deletes the key.
+
+**Signature**
+`Future<bool> delete(AtKey key);`
+
+Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another atSign, notifies the other atSign on the deletion of the key.
+
+Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.
+
+Throws **AtClientException** with an error code and error description that describes that cause of the exception.
+
+**List of Keys**
+
+**_getKeys_**
+
+Get all the keys stored in the user's secondary in string format.
+
+_Signature_
+
+`Future <<List<String>> getKeys({String? regex, String? sharedBy, String? sharedWith});`
+
+If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.
+
+**_getAtKeys_**
+
+Get all the keys stored in the user's secondary in [AtKey] format.
+
+**Signature**
+
+`Future <<List<AtKey>> getAtKeys({String? regex, String? sharedBy, String? sharedWith});`
+
+If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.
+
+**Notification**
+
 **atProtocol data visibility**
 
 The atProtocol saves data created in a key-value pair format. atProtocol lets you create data with three levels of visibility. They are public, shared and self data.
@@ -97,14 +203,14 @@ Good examples of public data in the real world are “first name” and the “l
 **Signing of public data**
 Public data is signed with the “private keys” of the user. Which means when @alice looks up @bob’s public data, @alice knows for sure that the data is indeed from @bob.
 
-**Creating a public key in atProtocol**
+**Creating a public key**
 
 ```
 var publicKey = AtKey.public('phone', namespace: 'wavi')
                 .build();
 ```
 
-**Persisting public data in atProtocol**
+**Persisting public data**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -125,14 +231,14 @@ Good examples of shared data in the real world are “phone number” and “ema
 
 When @bob shares data to @alice, @bob generates a shared key for @alice and encrypts the data with the shared key. Further, the shared key is encrypted with the @alice public key. So the data shared is cryptographically secure.
 
-**Creating a shared key in atProtocol**
+**Creating a shared key**
 
 ```
 var sharedKey = AtKey.shared('phone', namespace: 'wavi')
                 ..sharedWith('@bob').build();
 ```
 
-**Persisting shared data in atProtocol**
+**Persisting shared data**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -154,14 +260,14 @@ Good examples of self data are “passwords” and “financial data”. We keep
 
 When @bob creates data for self it is encrypted using @bob’s self encryption key.
 
-**Creating a self key in atProtocol**
+**Creating a self key**
 
 ```
 var selfKey = AtKey.self('phone', namespace: 'wavi')
               .build();
 ```
 
-**Persisting self data in atProtocol**
+**Persisting self data**
 
 ```
 final atClientManager = await AtClientManager.getInstance()
@@ -264,109 +370,4 @@ When an original key is updated by the creator, the ones who have cached it need
 
 **_CCD - Cascade delete_**
 
-CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the origi
-
-**atProtocol CRUD operations**
-
-**Create/Update Data**
-SDK of atProtocol exposes two methods to create the data. They are:
-
-- put
-- putMeta
-
-**_put_**
-
-Update’s value of key is if it is already present. Otherwise creates a new key.
-
-To share a key to another atSign, use AtKey.shared() factory method or populate AtKey.sharedWith with the atSign to whom the data has to be shared. Further, notifies the sharedWith atSign that a key has been created.
-
-**Signature**
-
-`Future<bool> put(AtKey key, dynamic value);`
-
-Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.
-
-AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. [key rules](#keyrules)
-
-The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.
-
-Throws **AtClientException** with an error code and error description that describes that cause of the exception.
-
-**_putMeta_**
-
-Updates the metadata of the key.
-
-_Signature_
-
-`Future<bool> putMeta(AtKey key);`
-
-Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].
-
-Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.
-
-Throws **AtClientException** with an error code and error description that describes that cause of the exception.
-
-**Read Data**
-
-**_get_**
-
-Get the value of the key from the user's cloud secondary.
-Signature
-`Future<AtValue> get (AtKey key);`
-
-Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.
-
-Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.
-
-Throws **AtClientException** with an error code and error description that describes that cause of the exception.
-
-**_getMeta_**
-
-Gets the metadata of the key.
-
-**Signature**
-
-`Future <bool> getMeta(AtKey key);`
-
-Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.
-
-Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.
-
-Throws _AtClientException_ with an error code and error description that describes that cause of the exception.
-
-**Delete Data**
-
-Deletes the key.
-
-**Signature**
-`Future<bool> delete(AtKey key);`
-
-Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another atSign, notifies the other atSign on the deletion of the key.
-
-Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.
-
-Throws **AtClientException** with an error code and error description that describes that cause of the exception.
-
-**List of Keys**
-
-**_getKeys_**
-
-Get all the keys stored in the user's secondary in string format.
-
-_Signature_
-
-`Future <<List<String>> getKeys({String? regex, String? sharedBy, String? sharedWith});`
-
-If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.
-
-**_getAtKeys_**
-
-Get all the keys stored in the user's secondary in [AtKey] format.
-
-**Signature**
-
-`Future <<List<AtKey>> getAtKeys({String? regex, String? sharedBy, String? sharedWith});`
-
-If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.
-
-**Notification**
+CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting it to false results in the cached key remaining, even after the original key is deleted.
