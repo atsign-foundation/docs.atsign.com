@@ -72,8 +72,8 @@ smallLimit: '300'
 
 # Open Graph Config
 
-# images:
-#   - doks.png # TODO add images for Open Graph
+images:
+    - logo.png
 twitterSite: atsigncompany
 twitterCreator: atsigncompany
 # facebookAuthor: verlinde.henk
