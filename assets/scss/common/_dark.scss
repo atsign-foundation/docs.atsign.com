@@ -183,6 +183,7 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $body-color-dark;
   background-color: transparent;
   border: 0;
+  text-transform: capitalize;
 }
 
 [data-dark-mode] body .btn-toggle:hover,
