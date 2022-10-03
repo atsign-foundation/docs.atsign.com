@@ -403,7 +403,7 @@
             
               
                 
-                <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/atplatform/secondary-server/">Secondary Server</a></li>
+                <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/atplatform/secondaryserver/">Secondary Server</a></li>
               
             
           
@@ -656,7 +656,7 @@
   
   ⏱
   
-  14 mins remaining
+  15 mins remaining
   
 </div>
 
@@ -728,13 +728,21 @@
 <p>Based on your need you can either  install at_client_mobile or at_client and import. After that you will be able to make an AtClientManager Instance. Now to Initialize the AtClient instance , the setCurrentAtsign method needs to be called.</p>
 <pre tabindex="0"><code>AtClientManager.getInstance().setCurrentAtSign(&#39;@alice&#39;, &#39;wavi&#39;, &lt;preference&gt;);
 </code></pre><p>The setCurrentAtSign method accepts the following arguments: currentAtSign, namespace and the preferences. The currentAtsign argument accepts an atSign , namespace accepts the namespace of the app and the preference accepts AtClientPreference value which we are going to discuss next.</p>
-<p>After Initializing you are ready to make calls of client methods and services. The AtClientManger Instance has a getter atClient which returns an instance of AtClient.</p>
+<p>After Initializing you are ready to make calls of client methods and services. The AtClientManager Instance has a getter atClient which returns an instance of AtClient.</p>
 <h3 id="usage">Usage <a href="#usage" class="anchor" aria-hidden="true">#</a></h3>
 <p>To access CRUD methods,</p>
 <pre tabindex="0"><code>AtClient atClient = atClientManager.atClient;
-</code></pre><p>To access NotificationService methods</p>
+</code></pre><p><strong>NotificationService</strong></p>
+<p>Notification service gives back a stream of notifications from the server to the subscribing client.</p>
+<p>To access NotificationService methods</p>
 <pre tabindex="0"><code>NotificationService notificationService = atClientManager.notificationService;
-</code></pre><p>And for the SyncService which is responsible for invoking the sync :</p>
+</code></pre><p><strong>Example</strong></p>
+<pre tabindex="0"><code>  await atClientManager.notificationService.notify(NotificationParams.forUpdate(&lt;key&gt;,value: &lt;value&gt;));
+</code></pre><p><strong>SyncService</strong></p>
+<p>SyncService syncs the client app and remote secondary server&rsquo;s changes.
+If the client app&rsquo;s changes are ahead, it pushes the changes to the remote secondary.
+If the remote secondary is ahead, it pulls the changes to the client app.</p>
+<p>SyncService which is responsible for invoking the sync :</p>
 <pre tabindex="0"><code>SyncService syncService = atClientManager.syncService;
 </code></pre>
         </div>

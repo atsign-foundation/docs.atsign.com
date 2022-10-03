@@ -22,7 +22,7 @@ An atSign has two states: deactivated and activated. To activate an atSign, CRAM
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/reference/pricing-and-costs/</guid>
-      <description>Introduction #Since the atPlatform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the atPlatform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that Atsign generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000.</description>
+      <description>Introduction #Since the atPlatform is fully open-sourced and everyone can contribute, there is no cost for developers! When you make an app on the atPlatform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that Atsign generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000.</description>
     </item>
     
     <item>
@@ -50,8 +50,8 @@ An atSign has two states: deactivated and activated. To activate an atSign, CRAM
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/reference/polymorphism/</guid>
-      <description>Definition #The condition of occuring in several different forms.
-Polymorphism on the atPlatform is the ability to share different data depending on the context of who’s asking. atPlatform applications enable you to setup multiple personas for different areas of your life. When you share data with someone else, the value of that data may be different depending on the person receiving that data. This is true for both sides, you may ask for data from different sources and get a different answer for each one.</description>
+      <description>Definition #The condition of occurring in several different forms.
+Polymorphism on the atPlatform is the ability to share different data depending on the context of who’s asking. atPlatform applications enable you to set up multiple personas for different areas of your life. When you share data with someone else, the value of that data may be different depending on the person receiving that data. This is true for both sides, you may ask for data from different sources and get a different answer for each one.</description>
     </item>
     
     <item>

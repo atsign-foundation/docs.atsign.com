@@ -403,7 +403,7 @@
             
               
                 
-                <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/atplatform/secondary-server/">Secondary Server</a></li>
+                <li><a class="docs-link rounded" href="https://dev3.atsign.wtf/atplatform/secondaryserver/">Secondary Server</a></li>
               
             
           
@@ -884,6 +884,63 @@ Ex: notify:_secret@jagan:sitaram
 <li>privatekey:at_secret</li>
 <li>privatekey:at_secret_deleted</li>
 </ul>
+<p><strong>atPlatform CRUD operations</strong></p>
+<p><strong>Create/Update Data</strong>
+atPlatform SDK exposes two methods to create the data. They are:</p>
+<ul>
+<li>put</li>
+<li>putMeta</li>
+</ul>
+<p><strong><em>put</em></strong></p>
+<p>Update’s value of key is if it is already present. Otherwise creates a new key.</p>
+<p>To share a key to another atSign, use AtKey.shared() factory method or populate AtKey.sharedWith with the atSign to whom the data has to be shared. Further, notifies the sharedWith atSign that a key has been created.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future&lt;bool&gt; put(AtKey key, dynamic value);</code></p>
+<p>Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.</p>
+<p>AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. <a href="#keyrules">key rules</a></p>
+<p>The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong><em>putMeta</em></strong></p>
+<p>Updates the metadata of the key.</p>
+<p><em>Signature</em></p>
+<p><code>Future&lt;bool&gt; putMeta(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].</p>
+<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>Read Data</strong></p>
+<p><strong><em>get</em></strong></p>
+<p>Get the value of the key from the user&rsquo;s cloud secondary.
+Signature
+<code>Future&lt;AtValue&gt; get (AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.</p>
+<p>Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong><em>getMeta</em></strong></p>
+<p>Gets the metadata of the key.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future &lt;bool&gt; getMeta(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.</p>
+<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.</p>
+<p>Throws <em>AtClientException</em> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>Delete Data</strong></p>
+<p>Deletes the key.</p>
+<p><strong>Signature</strong>
+<code>Future&lt;bool&gt; delete(AtKey key);</code></p>
+<p>Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another atSign, notifies the other atSign on the deletion of the key.</p>
+<p>Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.</p>
+<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
+<p><strong>List of Keys</strong></p>
+<p><strong><em>getKeys</em></strong></p>
+<p>Get all the keys stored in the user&rsquo;s secondary in string format.</p>
+<p><em>Signature</em></p>
+<p><code>Future &lt;&lt;List&lt;String&gt;&gt; getKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
+<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
+<p><strong><em>getAtKeys</em></strong></p>
+<p>Get all the keys stored in the user&rsquo;s secondary in [AtKey] format.</p>
+<p><strong>Signature</strong></p>
+<p><code>Future &lt;&lt;List&lt;AtKey&gt;&gt; getAtKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
+<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
+<p><strong>Notification</strong></p>
 <p><strong>atProtocol data visibility</strong></p>
 <p>The atProtocol saves data created in a key-value pair format. atProtocol lets you create data with three levels of visibility. They are public, shared and self data.
 In the atProtocol a piece of data is identified as a certain data type based on the key structure. In the SDK, AtKey exposes abstractions to create keys for the various data types. Below sections describe this in detail.</p>
@@ -892,10 +949,10 @@ In the atProtocol a piece of data is identified as a certain data type based on 
 <p>Good examples of public data in the real world are “first name” and the “last name”. We often don’t mind sharing our name with people, even random strangers.</p>
 <p><strong>Signing of public data</strong>
 Public data is signed with the “private keys” of the user. Which means when @alice looks up @bob’s public data, @alice knows for sure that the data is indeed from @bob.</p>
-<p><strong>Creating a public key in atProtocol</strong></p>
+<p><strong>Creating a public key</strong></p>
 <pre tabindex="0"><code>var publicKey = AtKey.public(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                 .build();
-</code></pre><p><strong>Persisting public data in atProtocol</strong></p>
+</code></pre><p><strong>Persisting public data</strong></p>
 <pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
@@ -908,10 +965,10 @@ var putResult = await atClient.put(phoneKey, value);
 Good examples of shared data in the real world are “phone number” and “email”. We only share these details with the people we know and trust.</p>
 <p><strong>Encryption of shared data</strong></p>
 <p>When @bob shares data to @alice, @bob generates a shared key for @alice and encrypts the data with the shared key. Further, the shared key is encrypted with the @alice public key. So the data shared is cryptographically secure.</p>
-<p><strong>Creating a shared key in atProtocol</strong></p>
+<p><strong>Creating a shared key</strong></p>
 <pre tabindex="0"><code>var sharedKey = AtKey.shared(&#39;phone&#39;, namespace: &#39;wavi&#39;)
                 ..sharedWith(&#39;@bob&#39;).build();
-</code></pre><p><strong>Persisting shared data in atProtocol</strong></p>
+</code></pre><p><strong>Persisting shared data</strong></p>
 <pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
@@ -925,10 +982,10 @@ Self data is created for self. If @bob creates data for self, only @bob and no o
 <p>Good examples of self data are “passwords” and “financial data”. We keep these details to ourselves.</p>
 <p><strong>Encryption of self data</strong></p>
 <p>When @bob creates data for self it is encrypted using @bob’s self encryption key.</p>
-<p><strong>Creating a self key in atProtocol</strong></p>
+<p><strong>Creating a self key</strong></p>
 <pre tabindex="0"><code>var selfKey = AtKey.self(&#39;phone&#39;, namespace: &#39;wavi&#39;)
               .build();
-</code></pre><p><strong>Persisting self data in atProtocol</strong></p>
+</code></pre><p><strong>Persisting self data</strong></p>
 <pre tabindex="0"><code>final atClientManager = await AtClientManager.getInstance()
    .setCurrentAtSign(‘@alice, &#39;me&#39;, AtClientPreference());
 var atClient = atClientManager.atClient;
@@ -995,64 +1052,7 @@ Only the owner of the key reserves the right to update the value. Updating the c
 <li>The refresh job in the secondary server</li>
 </ol>
 <p><strong><em>CCD - Cascade delete</em></strong></p>
-<p>CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting false results in the cached key remains intact even after the origi</p>
-<p><strong>atProtocol CRUD operations</strong></p>
-<p><strong>Create/Update Data</strong>
-SDK of atProtocol exposes two methods to create the data. They are:</p>
-<ul>
-<li>put</li>
-<li>putMeta</li>
-</ul>
-<p><strong><em>put</em></strong></p>
-<p>Update’s value of key is if it is already present. Otherwise creates a new key.</p>
-<p>To share a key to another atSign, use AtKey.shared() factory method or populate AtKey.sharedWith with the atSign to whom the data has to be shared. Further, notifies the sharedWith atSign that a key has been created.</p>
-<p><strong>Signature</strong></p>
-<p><code>Future&lt;bool&gt; put(AtKey key, dynamic value);</code></p>
-<p>Accepts an instance of AtKey and value and stores it in the local storage(local secondary) has a key-value pair.</p>
-<p>AtKey represents the key against which the value will be stored. It further describes to whom the data is shared and metadata of the key. <a href="#keyrules">key rules</a></p>
-<p>The value can be either a textual information or a binary data (e.g. Images, Files etc ). Returns a boolean value that represents the status of the put method. Returns ‘TRUE’ when put is completed successfully, else returns false.</p>
-<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
-<p><strong><em>putMeta</em></strong></p>
-<p>Updates the metadata of the key.</p>
-<p><em>Signature</em></p>
-<p><code>Future&lt;bool&gt; putMeta(AtKey key);</code></p>
-<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Set the new/updated metadata to [Atkey.Metadata].</p>
-<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when putMeta is completed successfully, else returns false.</p>
-<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
-<p><strong>Read Data</strong></p>
-<p><strong><em>get</em></strong></p>
-<p>Get the value of the key from the user&rsquo;s cloud secondary.
-Signature
-<code>Future&lt;AtValue&gt; get (AtKey key);</code></p>
-<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Fetch both the value and metadata of the key.</p>
-<p>Returns a boolean value that represents the status of the ‘get’ method. Returns ‘TRUE’ when ‘get’ is completed successfully, else returns false.</p>
-<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
-<p><strong><em>getMeta</em></strong></p>
-<p>Gets the metadata of the key.</p>
-<p><strong>Signature</strong></p>
-<p><code>Future &lt;bool&gt; getMeta(AtKey key);</code></p>
-<p>Accepts an Instance of AtKey. The Metadata is encapsulated in the AtKey. Gets the metadata of the key.</p>
-<p>Returns a boolean value that represents the status of the putMeta method. Returns ‘TRUE’ when getMeta is completed successfully, else returns false.</p>
-<p>Throws <em>AtClientException</em> with an error code and error description that describes that cause of the exception.</p>
-<p><strong>Delete Data</strong></p>
-<p>Deletes the key.</p>
-<p><strong>Signature</strong>
-<code>Future&lt;bool&gt; delete(AtKey key);</code></p>
-<p>Accepts an Instance of AtKey. Deletes the key from the storage. If the key is shared with another atSign, notifies the other atSign on the deletion of the key.</p>
-<p>Returns a boolean value that represents the status of the delete method. Returns ‘TRUE’ when delete is completed successfully, else returns false.</p>
-<p>Throws <strong>AtClientException</strong> with an error code and error description that describes that cause of the exception.</p>
-<p><strong>List of Keys</strong></p>
-<p><strong><em>getKeys</em></strong></p>
-<p>Get all the keys stored in the user&rsquo;s secondary in string format.</p>
-<p><em>Signature</em></p>
-<p><code>Future &lt;&lt;List&lt;String&gt;&gt; getKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
-<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
-<p><strong><em>getAtKeys</em></strong></p>
-<p>Get all the keys stored in the user&rsquo;s secondary in [AtKey] format.</p>
-<p><strong>Signature</strong></p>
-<p><code>Future &lt;&lt;List&lt;AtKey&gt;&gt; getAtKeys({String? regex, String? sharedBy, String? sharedWith});</code></p>
-<p>If regex is specified only matching keys are returned, giving you the flexibility to use different regexes for different types of data.</p>
-<p><strong>Notification</strong></p>
+<p>CCD (Cascade delete) compliments the TTR functionality by allowing the owner of the key to decide if the cached key has to be deleted upon the deletion of the original key. CCD accepts a boolean value(either true (or) false). When set to true, upon deletion of the original key, the cached key is also deleted. Setting it to false results in the cached key remaining, even after the original key is deleted.</p>
 
         </div>
       </div>
