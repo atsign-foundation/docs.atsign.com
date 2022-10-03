@@ -19,7 +19,7 @@ order:  # Ordering of the steps
 |  [Properties of LocalNotificationService](#properties-of-localnotificationservice) |
 
 
-They are three service classes in the dude app, they are `NavigationServices()`, `DudeServices()` and `LocalNotificationServices()`. In this code lab we will explore the properties of these classes.
+There are three service classes in the dude app, they are `NavigationServices()`, `DudeServices()` and `LocalNotificationServices()`. In this code lab we will explore the properties of these classes.
 
 
 #### NavigationService
