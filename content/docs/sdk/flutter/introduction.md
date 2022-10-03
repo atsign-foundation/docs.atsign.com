@@ -19,7 +19,7 @@ If you haven't already, we recommend you head to [Get Started Flutter Developmen
 
 The following is covered in this codelab:
 
-- **AtClientManager** - an object with various services such as Client, NotificationService, and SyncService.
+- **AtClientManager** - object with various services such as Client, NotificationService, and SyncService.
 - **AtClientPreference** - object used to configure preferences in your atPlatform application such as the namespace, storage path for the hive database, or maximum data size.
 - **Onboarding** - process of activating an atSign and/or authenticating the atsign into its secondary server.
 - **Key Basics** - learn how keys are stored in the secondary server and what key metadata is.
@@ -30,7 +30,7 @@ Our atPlatform has a lot to offer for Dart/Flutter developers.
 
 - [at_widgets](https://github.com/atsign-foundation/at_widgets) - Flutter widgets for using various aspects of the atPlatform
 - [at_demos](https://github.com/atsign-foundation/at_demos) - collection of demo applications to help you on your atPlatform journey
-- [at_app](https://github.com/atsign-foundation/at_app) - command-line utility for developing app developers
+- [at_app](https://github.com/atsign-foundation/at_app) - command-line utility for atPlatform developers
 - [at_tools](https://github.com/atsign-foundation/at_tools) - other atPlatform tools (at_cli, at_cram, at_pkam,...)
 
 Explore our GitHub page [atsign-foundation](https://github.com/atsign-foundation) to see more of our amazing projects and tools.
