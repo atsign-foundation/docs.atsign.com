@@ -28,6 +28,10 @@ $navbar-dark-active-color:          $link-color-dark;
 
 /** Theme styles */
 
+body .default-text {
+  text-transform: none;
+}
+
 [data-dark-mode] body {
   background: $body-bg-dark;
   color: $body-color-dark;
