@@ -20,7 +20,7 @@ The site gives you all the tools, samples, examples and documentation needed to 
 
 ##  Pages we recommend visiting:
 
-If this is your first time here, we strongly recommend navigating through our ‘[getting started](https://atsign.dev/docs/get-started/)’ page. There, you will find all of the steps you will need to take in order to start developing your very own atPlatform application. 
+If this is your first time here, we strongly recommend navigating through our ‘[getting started](https://docs.atsign.com/start/)’ page. There, you will find all of the steps you will need to take in order to start developing your very own atPlatform application. 
 
 If you’d like to see what an atPlatform application looks like, feel free to visit our ‘[tutorials](https://docs.atsign.com/tutorials/)’ page! Here, you will find a list of demonstrative applications showing off the many verbs/methods that exist on the atPlatform. The most basic of this list is ‘[at_hello_world](https://github.com/atsign-foundation/at_demos/tree/trunk/at_hello_world)’ and the most advanced are ‘[at_cookbook](https://github.com/atsign-foundation/at_demos/tree/trunk/at_cookbook)’ and ‘[atmosphere](https://github.com/atsign-foundation/atmosphere)’
 
