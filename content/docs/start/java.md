@@ -3,11 +3,11 @@ layout: list
 
 title: "Java" # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
-  Get Started with Java Development on the atPlatform
+  Get Started with Java Development on the atPlatform.
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Get started with Java Development on the atPlatform
+  Get started with Java Development on the atPlatform.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents
@@ -31,7 +31,7 @@ Next step is to install [maven](https://maven.apache.org/install.html) and add i
 
 Fork our `at_java` repository
 Create a new directory on your local machine where you want the java client source code to live. Change directory (cd) into this directory and git clone your fork.
-Git clone: `git clone <your_fork_url> .` so that the source code is on your local machine. 
+Git clone: `git clone <your_fork_url>` so that the source code is on your local machine. 
 
 ### 4. Build `at_java/at_client`
 
