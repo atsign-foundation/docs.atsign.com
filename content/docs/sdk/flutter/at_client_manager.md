@@ -27,7 +27,7 @@ After Initializing you are ready to make calls of client methods and services. T
 
 ### Usage
 
-To access CRUD methods,
+To access CRUD methods :
 ```
 AtClient atClient = atClientManager.atClient;
 ```
@@ -36,7 +36,7 @@ AtClient atClient = atClientManager.atClient;
 
 Notification service gives back a stream of notifications from the server to the subscribing client.
 
-To access NotificationService methods 
+To access NotificationService methods :
 
 ```
 NotificationService notificationService = atClientManager.notificationService;

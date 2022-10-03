@@ -16,7 +16,7 @@ weight: 201 # For single pages, lower is first.
 
 ## Introduction
 
-Since the atPlatform is fully open sourced and everyone can contribute, there is no cost for developers! When you make an app on the atPlatform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that **Atsign** generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000. If you opt-in for the vanity atSign the prices increase as the atSign of your liking decreases in length and complexity. For each paid atSign you own, there is a $10 annual renewal fee. This fee does not apply to the free atSigns. What makes atSigns so awesome is that if your app is the first one someone pairs an atSign with, after buying their atSign, we pay you commission on that. Yep, you don't pay us, we pay you.
+Since the atPlatform is fully open-sourced and everyone can contribute, there is no cost for developers! When you make an app on the atPlatform, people that use your apps will not have to pay any fees for infrastructure or storage! The way that **Atsign** generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000. If you opt-in for the vanity atSign the prices increase as the atSign of your liking decreases in length and complexity. For each paid atSign you own, there is a $10 annual renewal fee. This fee does not apply to the free atSigns. What makes atSigns so awesome is that if your app is the first one someone pairs an atSign with, after buying their atSign, we pay you commission on that. Yep, you don't pay us, we pay you.
 
 ## Video
 
@@ -49,7 +49,7 @@ For paid atSigns the options are listed below:
 
 ## Free atSigns
 
-For a FREE atSign there exists an atSign generator which creates a new set of atSigns at random for you to choose from! You are given two options: the first option requires you to add some pre-generated atSigns while the second option lets you generate an atSign based on your interests using _super-secret_ mode. Let's say you like music and sports, the atSign generator would perform its magic and dish out:
+For a FREE atSign there exists an atSign generator that creates a new set of atSigns at random for you to choose from! You are given two options: the first option requires you to add some pre-generated atSigns while the second option lets you generate an atSign based on your interests using _super-secret_ mode. Let's say you like music and sports, the atSign generator would perform its magic and dish out:
 
     * melodic74
     * canopy22wild
