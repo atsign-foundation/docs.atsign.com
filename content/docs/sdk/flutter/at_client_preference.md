@@ -25,12 +25,12 @@ AtClientPreference is used to configure the preferences of an atPlatform applica
 | rootDomain                | Domain of the root server. Defaults to root.atsign.com                                                            |
 | rootPort                  | Port of the root server. Defaults to 64                                                                           |
 | syncIntervalMins          | Frequency of sync tasks to run in minutes. Defaults to 10 minutes.                                                |
-| outboundConnectionTimeout | Idle time in milliseconds of connection to secondary server. Default to 10 minutes.                               |
+| outboundConnectionTimeout | Idle time in milliseconds of connection to secondary server. Defaults to 10 minutes.                              |
 | maxDataSize               | Maximum data size a secondary can store. Temporary solution. Have to fetch this from the server using stats verb. |
 | downloadPath              | Default path to download stream files                                                                             |
-| syncRegex                 | regex to perform sync                                                                                             |
+| syncRegex                 | Regex to perform sync                                                                                             |
 | syncBatchSize             | Number of keys to batch for sync to secondary server                                                              |
-| syncPageLimit             | The number of keys to pull from cloud secondary to local secondary in a single call.                              |
+| syncPageLimit             | Number of keys to pull from cloud secondary to local secondary in a single call.                                  |
 
 For Local device paths we recommend the path_provider package.
 

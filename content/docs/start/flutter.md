@@ -37,7 +37,7 @@ See Flutter's instructions on getting the Flutter environment setup:
 
 #### 4. Create an atPlatform app
 
-Create an atPlatform app by using {{<a href="https://github.com/atsign-foundation/at_app" target="_blank">}}at_app{{</a>}}
+Create an atPlatform app by using {{<a href="https://github.com/atsign-foundation/at_app" target="_blank">}}at_app{{</a>}}:
 1. `at_app create <dir>`
 2. `cd <dir>`
 3. `flutter run`
