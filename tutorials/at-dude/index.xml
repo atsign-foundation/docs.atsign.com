@@ -38,7 +38,7 @@ Dude Controller #The DudeController() class controls the state management for t
       
       <guid>https://dev3.atsign.wtf/tutorials/at-dude/_5_dude_service/</guid>
       <description>TOC    | Dude Service | | Dude Service Imports | | Dude Service Properties | | Local Notification | | Local Notification imports | | Properties of LocalNotificationService |
-They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
+There are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 DudeService #This class is a singleton that makes all the network calls to the atPlatform.</description>
     </item>
     
@@ -79,7 +79,7 @@ This app is built on the atPlatform. The atPlatform is an open-source backend pl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/tutorials/at-dude/_4_local_notification_services/</guid>
-      <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
+      <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    There are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 LocalNotificationService #This class contains the configurations required to send in app notification on Android and IOS.</description>
     </item>
     
@@ -99,7 +99,7 @@ Dude Model #The dude model is a class that represent a dude or a message that w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/tutorials/at-dude/_3_navigation_service/</guid>
-      <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    They are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
+      <description>TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    There are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.
 NavigationService #import &amp;#39;package:flutter/material.</description>
     </item>
     
