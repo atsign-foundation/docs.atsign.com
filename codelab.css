@@ -8390,6 +8390,9 @@ textarea.form-control-lg {
 $border-dark: darken($body-bg-dark, 2.5%);
 */
 /** Theme styles */
+body .default-text {
+  text-transform: none; }
+
 [data-dark-mode] body {
   background: #222;
   color: #DDD; }
