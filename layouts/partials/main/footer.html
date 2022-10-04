@@ -2,12 +2,12 @@
     <div class="footer-logo">
         {{ $image := resources.Get "img/branding/dark/atsign-dark.png" }}
         {{ with $image }}
-            <img class="toggle-light" src="{{ .RelPermalink }}" width="124em">
+        <img class="toggle-light" src="{{ .RelPermalink }}" width="124em">
         {{ end }}
 
         {{ $image := resources.Get "img/branding/light/atsign-light.svg" }}
         {{ with $image }}
-            <img class="toggle-dark" src="{{ .RelPermalink }}" width="124em">
+        <img class="toggle-dark" src="{{ .RelPermalink }}" width="124em">
         {{ end }}
     </div>
     <div class="footer-terms">
@@ -30,43 +30,62 @@
         <p>
             For general inquiries, email us: <a href="mailto:info@atsign.com">info@atsign.com</a>
         </p>
+        <p id="GithubLink">
+        </p>
+        <p id="GitLink"></p>
     </div>
     <div class="footer-social">
         <a target="_blank" href="https://github.com/atsign-foundation">
             {{ $image := resources.Get "img/footer-logos/github.png" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
         <a target="_blank" href="https://wavi.ng/@wavi">
             {{ $image := resources.Get "img/footer-logos/wavi.webp" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
         <a target="_blank" href="https://linkedin.com/company/atsigncompany/">
             {{ $image := resources.Get "img/footer-logos/linkedin.webp" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
         <a target="_blank" href="https://twitter.com/atsigncompany">
             {{ $image := resources.Get "img/footer-logos/twitter.webp" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
         <a target="_blank" href="https://www.youtube.com/c/AtsignCo">
             {{ $image := resources.Get "img/footer-logos/youtube.webp" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
         <a target="_blank" href="https://discord.gg/55sHTQFxfz">
             {{ $image := resources.Get "img/footer-logos/discord.png" }}
             {{ with $image }}
-                <img src="{{ .RelPermalink }}" height="48em">
+            <img src="{{ .RelPermalink }}" height="48em">
             {{ end }}
         </a>
     </div>
 </div>
+<script>
+    async function fetchCommit() {
+
+        fetch('https://api.github.com/repos/atsign-foundation/docs.atsign.com/commits?per_page=1').then(data => {
+            return data.json();
+        })
+            .then(commit => {
+                var element = document.getElementById("GithubLink");
+                var element2 = document.getElementById("GitLink");
+                var date = new Date(commit[0].commit.committer.date);
+                element2.innerHTML = `By ${commit[0].commit.author.name} in <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/${commit[0].sha}'>${commit[0].sha.slice(0,7)} </a>`
+                element.innerHTML = "Last Updated on " + date.getFullYear() + "-" +(date.getMonth()+1) + "-" + (date.getDay()+1);
+            });
+    }
+    fetchCommit();
+</script>
