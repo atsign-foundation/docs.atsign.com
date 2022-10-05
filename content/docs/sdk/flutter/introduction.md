@@ -15,7 +15,7 @@ Our Dart/Flutter SDK takes full advantage of the atProtocol and implements all t
 
 This is where you can quickly learn and update yourself on various atPlatform concepts.
 
-If you haven't already, we recommend you head to [Get Started Flutter Development](docs/start/flutter/) first.
+If you haven't already, we recommend you head to [Get Started Flutter Development](/start/flutter/) first.
 
 The following is covered in this codelab:
 
