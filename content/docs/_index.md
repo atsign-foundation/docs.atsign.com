@@ -14,6 +14,9 @@ autolinks: false # Change this to "false" to hide the automatic links below your
 weight: 1 # Weight compared to other sections of the site, this shouldn't affect anything on the facade
 ---
 
+Want to learn more about atSign?
+{{< button/about-atsign >}}
+
 #### I want to...
 
 {{% card/group %}}
