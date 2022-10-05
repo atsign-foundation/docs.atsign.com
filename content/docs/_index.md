@@ -15,6 +15,7 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 ---
 
 Want to learn more about atSign?
+{{< br >}}
 {{< button/about-atsign >}}
 
 #### I want to...
