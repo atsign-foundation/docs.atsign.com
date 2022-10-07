@@ -16,7 +16,7 @@ The atPlatform uses secret keys for authenticating an atSign as a cryptographica
 ## Usage
 
 Before using the onboarding widget, ensure that your [AtClientPreference](https://docs.google.com/document/d/14PZ-FHV9djBJL1RR8G8aYd6qxiWErBJEvRW9hD0pfNQ/edit#heading=h.yept27gyvv8g) is properly assigned.
-If you need an appAPIKey please email us at: support@atsign.com
+If you need an appAPIKey please email us at: [support@atsign.com](mailto://support@atsign.com)
 
 ```
 Onboarding(
