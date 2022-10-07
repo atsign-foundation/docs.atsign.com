@@ -619,7 +619,7 @@ Source:
         id: 66,
         href: "/tutorials/at-dude/1-introduction/",
         title: "Introduction",
-        description: "Introdution to the atDude tutorial# SEO Description for this step Documentation",
+        description: "Introduction to the atDude tutorial# SEO Description for this step Documentation",
         content: "In this tutorial we will build the atDude app. This app is a secure, end-to-end encrypted, peer-to-peer application that allows you to send \u0026lsquo;dudes\u0026rsquo; to your contacts!\nThe longer you press and hold the Dude button, the longer your sent dude will be! You can keep up-to-date with your \u0026lsquo;dude\u0026rsquo; stats to see how much duding you\u0026rsquo;ve done!\nThis app is built on the atPlatform. The atPlatform is an open-source backend platform that allows developers to build end-to-end encrypted applications.\nThe purpose of this tutorial is to guide you through the steps in creating a production-ready app on the atPlatform.\n"
       })
       .add(
