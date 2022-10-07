@@ -51,6 +51,8 @@
 			{{ end -}}
 			{{ partial "main/footer.html"}}
 			{{ partial "main/docs-navigation.html" . }}
+			<p>Last updated on {{ .GitInfo.AuthorDate }}</p>
+			<p> By {{ .GitInfo.AuthorName }} on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/{{ .GitInfo.AbbreviatedHash }}'>{{ .GitInfo.AbbreviatedHash }}</a></p>
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
 				{{ partial "main/docs-navigation.html" . }}
