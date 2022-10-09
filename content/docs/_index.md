@@ -17,12 +17,12 @@ weight: 1 # Weight compared to other sections of the site, this shouldn't affect
 #### I want to...
 
 {{% card/group %}}
-{{< card/feature-icon icon="fa-external-link-square" href="/start" title="Get Started" text="Start with Flutter, Java, or IoT development">}}
-{{< card/feature-icon icon="fa-book" href="/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
+{{< card/feature-image img="GetStarted.png" href="/start" title="Get Started" text="Start with Flutter, Java, or IoT development">}}
+{{< card/feature-image img="LearnTheSDK.png" href="/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
 {{% /card/group %}}
 {{% card/group %}}
-{{< card/feature-icon icon="fa-book" href="/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
-{{< card/feature-icon icon="fa-check-square" href="/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
+{{< card/feature-image img="LearnThePlatform.png" href="/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
+{{< card/feature-image img="FollowTheTutorial.png" href="/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
 {{% /card/group %}}
 
 #### Featured Tutorials
