@@ -9,7 +9,7 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
 ---
 
-Now, it is time to fork the atmospher
+Now, it is time to fork the atmosphere
 
 1. Make sure you are logged into [GitHub](https://github.com)
 

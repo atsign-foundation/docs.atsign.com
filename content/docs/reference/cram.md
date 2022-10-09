@@ -39,7 +39,7 @@ server and the secondary server of other atSigns. The `.atKeys` file is closely 
 
 In the [atProtocol](/atplatform/specification), CRAM is a verb.
 
-The cram verb is used to boostrap authenticate one's own self as an owner of a Secondary Server.
+The cram verb is used to bootstrap authenticate one's own self as an owner of a Secondary Server.
 It is intended to be used once until a set of PKI keys are cut on the owner's mobile device and from then on we use the pkam verb.
 
 The following regex represents the syntax of the cram verb: `r'^cram:(?<digest>.+$)'`
