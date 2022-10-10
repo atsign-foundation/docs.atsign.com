@@ -21,7 +21,7 @@
 <meta property="og:description" content="The specification of the atProtocol on the atPlatform">
 <meta property="og:url" content="https://dev3.atsign.wtf/atplatform/specification/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2022-10-10T13:03:39-04:00">
+<meta property="article:modified_time" content="2022-10-10T13:09:08-04:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -77,7 +77,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2022-10-10T13:03:39CET",
+      "dateModified": "2022-10-10T13:09:08CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/atplatform/specification/#/schema/breadcrumb/1"
       },
@@ -1042,7 +1042,7 @@
 
 			</nav>
 			<h2 id="introduction">Introduction <a href="#introduction" class="anchor" aria-hidden="true">#</a></h2>
-<p>The atProtcol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.</p>
+<p>The atProtocol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.</p>
 <p>See our <a href="https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md">Protocol Specification</a> on our GitHub page under our <a href="https://github.com/atsign-foundation/at_protocol">at_protocol</a> repository.</p>
 <p>If you see a typo, mistake, or want to suggest a feature, please see our <a href="https://dev3.atsign.wtf/start/other/#contributing-to-the-developer-site">contributing guidelines</a>. All contributions are welcome.</p>
 <h2 id="root-server">Root Server <a href="#root-server" class="anchor" aria-hidden="true">#</a></h2>
@@ -1069,7 +1069,7 @@
 <li>Public Key</li>
 </ol>
 <ul>
-<li>A public key is a key which can be looked up by any atSign user</li>
+<li>A public key is a key which can be looked up by any atSign user.</li>
 <li>A public key should be part of the <em>scan</em> verb result.</li>
 <li>Format of the public key should be <code>public::&lt;@sign&gt;</code>.</li>
 </ul>
@@ -1082,9 +1082,9 @@
 <li>Private Key</li>
 </ol>
 <ul>
-<li>A private key is a key which cannot be looked up by any atSIgn user other than the one who created it.</li>
+<li>A private key is a key which cannot be looked up by any atSign user other than the one who created it.</li>
 <li>A private key should not be returned in a <em>scan</em> verb result.</li>
-<li>format of the private key should be <code>privatekey::&lt;@sign&gt;</code></li>
+<li>Format of the private key should be <code>privatekey::&lt;@sign&gt;</code>.</li>
 </ul>
 <p>Example:</p>
 <p><code>privatekey:pk1@alice</code></p>
@@ -1097,7 +1097,7 @@
 <ul>
 <li>A user key can only be looked up by an atSign user with whom the data has been shared.</li>
 <li>A user key should be part of the <em>scan</em> verb result only for the user who created it and the specific user it has been shared with.</li>
-<li>Format of the key shared with someone else should be <code>&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code></li>
+<li>Format of the key shared with someone else should be <code>&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code>.</li>
 </ul>
 <p>Example:</p>
 <p><code>@bob:phone@alice</code></p>
@@ -1105,7 +1105,7 @@
 <p>Note: Above Key should be part of scan verb result only for @alice and @bob</p>
 </blockquote>
 <blockquote>
-<p>The owner of the secondary should be allowed to update o delete the value of a user key</p>
+<p>The owner of the secondary should be allowed to update or delete the value of a user key.</p>
 </blockquote>
 <ol start="4">
 <li>Internal Key</li>
@@ -1119,7 +1119,7 @@
 <ul>
 <li>A cached key is a key that was originally created by another atSign user but is now cached on the Secondary Server of another user&rsquo;s atSign as they were given permission to cache it.</li>
 <li>A cached key should be listed in the <em>scan</em> verb result for the atSign user who cached it.</li>
-<li>Format of the key shared with someone else should be <code>cached:&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code></li>
+<li>Format of the key shared with someone else should be <code>cached:&lt;Shared with atSign&gt;::&lt;Created by atSign&gt;</code>.</li>
 </ul>
 <p>Example:</p>
 <p><code>cached:@bob:phone@alice</code></p>
@@ -1127,7 +1127,7 @@
 <p>The user who has cached the key should not be allowed to update the cached key.</p>
 </blockquote>
 <blockquote>
-<p>An atSign user who has created and shared the key should be allowed to update a cached key, and if the &ldquo;autoNotify&rdquo; config parameters is set to true, the updated value should be notified (please refer to the <code>notify</code> verb) and the cached key updated with the new value.</p>
+<p>An atSign user who has created and shared the key should be allowed to update a cached key, and if the &ldquo;autoNotify&rdquo; config parameter is set to true, the updated value should be notified (please refer to the <code>notify</code> verb) and the cached key updated with the new value.</p>
 </blockquote>
 <blockquote>
 <p>If the user who originally shared the keys set the CCD (Cascade delete) to true, the cached key will be deleted when the original key is deleted.</p>
@@ -1336,7 +1336,7 @@
 <p><code>&lt;atSign&gt;</code> Required: Yes. atSign  with which you are connecting to a Secondary Server</p>
 <h3 id="the-cram-verb">The <code>cram</code> verb <a href="#the-cram-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
-<p>The <code>cram</code> verb is used to bootstrap authenticate one&rsquo;s own eself as the owner of a Secondary Server. It is intended to be used once until a set of PKI keys are cut on the owner&rsquo;s mobile device nad from then on we use the <code>pkam</code> verb.</p>
+<p>The <code>cram</code> verb is used to bootstrap authenticate one&rsquo;s own self as the owner of a Secondary Server. It is intended to be used once until a set of PKI keys are cut on the owner&rsquo;s mobile device and from then on we use the <code>pkam</code> verb.</p>
 <p>The following regex represents the syntax of the <code>cram</code> verb:</p>
 <p><code>r'^cram:(?&lt;digest&gt;.+$)'</code></p>
 <p><strong>Example:</strong></p>
@@ -1347,7 +1347,7 @@
 <p>If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
 <p><code>error:AT0401-Client authentication failed</code></p>
 <p><strong>Description:</strong></p>
-<p>The <code>cram</code> verb follows the <code>from</code> verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the shared key that the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the srever decrypts the digest using the shared key and matches it with the challenge. If they are the same, then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.</p>
+<p>The <code>cram</code> verb follows the <code>from</code> verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the shared key that the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the server decrypts the digest using the shared key and matches it with the challenge. If they are the same, then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.</p>
 <p><strong>Options:</strong></p>
 <p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
 <h3 id="the-pol-verb">The <code>pol</code> verb <a href="#the-pol-verb" class="anchor" aria-hidden="true">#</a></h3>
@@ -1363,7 +1363,7 @@
 <p>If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
 <p><code>error:AT0401-Client authentication failed</code></p>
 <p><strong>Description:</strong></p>
-<p>The <code>pol</code> verb follows the <code>from</code> verb. &lsquo;pol&rsquo; indicates another secondary that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob&rsquo;s secondary @alices secondary should change the prompt to @bob.</p>
+<p>The <code>pol</code> verb follows the <code>from</code> verb. &lsquo;pol&rsquo; indicates another secondary that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob&rsquo;s secondary @alice&rsquo;s secondary should change the prompt to @bob.</p>
 <p><strong>Options:</strong></p>
 <p>NA</p>
 <h3 id="the-scan-verb">The <code>scan</code> verb <a href="#the-scan-verb" class="anchor" aria-hidden="true">#</a></h3>
@@ -1376,7 +1376,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p><code>scan:showhidden:true</code></p>
 <p><code>scan: &lt;regex&gt;</code></p>
 <p><strong>Response:</strong></p>
-<p>The Secondary Server should return the keys within the secondary server if the scan verb executed succesfully. The Secondary Server will respond accordingly to whether the atSign is authenticated or not.
+<p>The Secondary Server should return the keys within the secondary server if the scan verb executed successfully. The Secondary Server will respond accordingly to whether the atSign is authenticated or not.
 <code>data:[&lt;keys&gt;]</code></p>
 <h3 id="the-update-verb">The <code>update</code> verb <a href="#the-update-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
@@ -1415,7 +1415,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p><code>update:meta:phone@bob:isBinary:true</code></p>
 <p><code>update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true</code></p>
 <p><strong>Response:</strong></p>
-<p>The Secondary Server should return the commit id from Commit Log if the update is sucecssful.</p>
+<p>The Secondary Server should return the commit id from Commit Log if the update is successful.</p>
 <p><code>data:&lt;CommitId&gt;</code></p>
 <p>If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the server.</p>
 <p><code>error:AT0003-Invalid Syntax</code></p>
@@ -1429,7 +1429,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <blockquote>
 <p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever</p>
 </blockquote>
-<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originaly shared it, deletes it.</p>
+<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.</p>
 <p><code>&lt;for@sign&gt;</code> Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared</p>
 <p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner</p>
 <h3 id="the-lookup-verb">The <code>lookup</code> verb <a href="#the-lookup-verb" class="anchor" aria-hidden="true">#</a></h3>
@@ -1444,7 +1444,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p><strong>Response</strong>:</p>
 <p>If the operation is not specified the Secondary Server should just respond back with the value saved by the user as is.</p>
 <p><code>data:&lt;value&gt;</code></p>
-<p>If the oepration is to lookup the metadata only then the result should be wrapped in a JSON in the following format:</p>
+<p>If the operation is to lookup the metadata only then the result should be wrapped in a JSON in the following format:</p>
 <p><code>data:&lt;Metadata in a JSON&gt;</code></p>
 <p><strong>Example</strong>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">data:</span> 
@@ -1465,7 +1465,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;isBinary&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;isEncrypted&#34;</span><span class="p">:</span><span class="kc">false</span>
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span></code></pre></div><p>If the operation is to lookup th emetadat and the data together, then the result should be wrapped in a JSON in the following format:</p>
+</span></span></code></pre></div><p>If the operation is to lookup the metadata and the data together, then the result should be wrapped in a JSON in the following format:</p>
 <p><code>data:&lt;Value and Metadata in a JSON&gt;</code></p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">data:</span>
@@ -1531,7 +1531,7 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p>If the lookup command is not valid, then the Secondary Server should return the following error and close the connection:</p>
 <p><code>error:AT0003-Invalid Syntax</code></p>
 <p><strong>Description:</strong></p>
-<p>The <code>llookup</code> verb should be used to fetch the value of the key in the owners secondary store as is without resolving it. For example if a key contains a reference as a value, the <code>lookup</code> verb should resolve it to a value whereas <code>llookup</code> should return the value as is.</p>
+<p>The <code>llookup</code> verb should be used to fetch the value of the key in the owner&rsquo;s secondary store as is without resolving it. For example if a key contains a reference as a value, the <code>lookup</code> verb should resolve it to a value whereas <code>llookup</code> should return the value as is.</p>
 <p><strong>Example:</strong></p>
 <p>If <code>phone@bob</code> is &ldquo;1234&rdquo; and <code>altphone@bob</code> is &ldquo;atsign://phone@bob&rdquo;, then <code>lookup</code> of <code>altphone@bob</code> should return &ldquo;1234&rdquo; where as <code>llookup</code> of <code>altphone@bob</code> should return &ldquo;atsign://phone@bob&rdquo;.</p>
 <h3 id="the-pkam-verb">The <code>pkam</code> verb <a href="#the-pkam-verb" class="anchor" aria-hidden="true">#</a></h3>
@@ -1794,8 +1794,8 @@ notification: {&#34;id&#34;:&#34;773e226d-dac2-4269-b1ee-64d7ce93a42f&#34;,&#34;
         <p>
             For general inquiries, email us: <a href="mailto:info@atsign.com">info@atsign.com</a>
         </p>
-        <p>Last updated on 2022-10-10 13:03:39 -0400 -0400</p>
-        <p> By Tyler Trott on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/4fddb76'>4fddb76</a></p>
+        <p>Last updated on 2022-10-10 13:09:08 -0400 -0400</p>
+        <p> By Tyler Trott on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/7358545'>7358545</a></p>
     </div>
     <div class="footer-social">
         <a target="_blank" href="https://github.com/atsign-foundation">
