@@ -722,20 +722,20 @@
 <h2 id="usage">Usage <a href="#usage" class="anchor" aria-hidden="true">#</a></h2>
 <p>Before using the onboarding widget, ensure that your <a href="https://docs.google.com/document/d/14PZ-FHV9djBJL1RR8G8aYd6qxiWErBJEvRW9hD0pfNQ/edit#heading=h.yept27gyvv8g">AtClientPreference</a> is properly assigned.
 If you need an appAPIKey please email us at.</p>
-<pre tabindex="0"><code>Onboarding(
+<pre tabindex="0"><code>AtOnboarding.onboard(
   context: context,
-  atClientPreference: atClientPreference!,
-  domain: AtEnv.rootDomain,
-  rootEnvironment: AtEnv.rootEnvironment,
-  appAPIKey: AtEnv.appApiKey,
+  config: AtOnboardingConfig(
+          atClientPreference: atClientPreference,
+          domain: AtEnv.rootDomain,
+          rootEnvironment: AtEnv.rootEnvironment,
+          appAPIKey: AtEnv.appApiKey,
+        ),
   onboard: (value, atsign) {
      _logger.finer(&#39;Successfully onboarded $atsign&#39;);
   },
   onError: (error) {
      _logger.severe(&#39;Onboarding throws $error error&#39;);
-  },
-   nextScreen: const HomeScreen(),
-   );
+  });
   },
   child: const Text(&#39;Onboard an atSign&#39;),
 ),
