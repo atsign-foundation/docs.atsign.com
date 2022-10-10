@@ -30,6 +30,8 @@
         <p>
             For general inquiries, email us: <a href="mailto:info@atsign.com">info@atsign.com</a>
         </p>
+        <p>Last updated on {{ .GitInfo.AuthorDate }}</p>
+        <p> By {{ .GitInfo.AuthorName }} on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/{{ .GitInfo.AbbreviatedHash }}'>{{ .GitInfo.AbbreviatedHash }}</a></p>
     </div>
     <div class="footer-social">
         <a target="_blank" href="https://github.com/atsign-foundation">
