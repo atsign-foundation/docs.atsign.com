@@ -19,9 +19,9 @@ weight: 99 # For list pages, higher is first.
 
 {{% card/group %}}
 {{< card/feature-image img="flutter.png" href="/start/flutter" title="Flutter" text="Start with Flutter development">}}
-{{< card/feature-image img="java.png" href="/sdk" title="Java" text="Start with Java development">}}
+{{< card/feature-image img="java.png" href="/start/java" title="Java" text="Start with Java development">}}
 {{% /card/group %}}
 
 {{% card/group %}}
-{{< card/feature-icon icon="fa-server" href="/start" title="IoT" text="Start with IoT development">}}
+{{< card/feature-icon icon="fa-server" href="/start/iot" title="IoT" text="Start with IoT development">}}
 {{% /card/group %}}
