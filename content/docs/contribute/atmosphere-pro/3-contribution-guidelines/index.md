@@ -1,7 +1,7 @@
 ---
 layout: codelab
 
-title: "Following the Contrbuting Guidelines" # Step Name
+title: "Following the Contributing Guidelines" # Step Name
 description: | # SEO Description for this step
   Learn how to set up your environment to properly make contributions.
 

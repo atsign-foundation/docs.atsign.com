@@ -30,6 +30,6 @@ Alice has created their own atSign called @alice. Anyone who looks up @alice can
 
 At the moment, you can pair your atSign with any app on the atPlatform (the underlying technology behind atSigns) to enable the app to access, but not store, your data. The number of things you can do with your atSign will increase as more and more of these atApps are built.
 
-While we wait for the rest of the Internet to catch up, you can get ahead of the game by downloading the first batch of recently launched atApps. These include @mospherePro, an end-to-end encrypted file sharing app, @buzz, an entirely new and private way to connect with others, and more.
+While we wait for the rest of the Internet to catch up, you can get ahead of the game by downloading the first batch of recently launched atApps. These include @atmospherePro, an end-to-end encrypted file sharing app, @buzz, an entirely new and private way to connect with others, and more.
 
 Discover these atApps [here](https://atsign.com/apps/).
