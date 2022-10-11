@@ -15,7 +15,7 @@ autolinks: false # Change this to "false" to hide the automatic links below your
 weight: 99 # For list pages, higher is first.
 ---
 
-{{< button/about-atSign href="https://atsign.com/" type="primary" text="What is AtSign?" >}}
+{{< button/about-atSign href="https://atsign.com/" type="primary" text="What is Atsign?" >}}
 
 #### I want to get started with...
 
