@@ -7,7 +7,9 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of Namespace in the atPlatform
+  Definition of Namespace in the atPlatform: a unique container to place
+data in. More in the context of the apps, namespaces are just atSigns associated with each app so a secondary server can be aware of which
+data belongs to who. See an example below.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
