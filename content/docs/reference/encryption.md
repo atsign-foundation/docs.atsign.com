@@ -11,7 +11,7 @@ description:
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=A12jdKPa4WE) instead!
+Not a fan of reading? Watch this [video](https://www.youtube.com/watch?v=A12jdKPa4WE) instead!
 
 {{< youtube src="https://www.youtube.com/embed/A12jdKPa4WE" >}}
 
