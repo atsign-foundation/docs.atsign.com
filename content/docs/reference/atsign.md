@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Learn about what an atSign is in the atPlatform
+  Learn about what an atSign is in the atPlatform: An atSign is a handle (e.g. @alice) that functions as your digital identity. It uses end-to-end encryption to ensure that your data is 100% owned and controlled by you.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
