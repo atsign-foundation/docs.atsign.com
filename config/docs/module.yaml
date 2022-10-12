@@ -15,6 +15,8 @@ mounts:
       - js/index.js
   - source: node_modules/font-awesome/scss
     target: assets/scss/font-awesome
+  - source: node_modules/font-awesome/css
+    target: assets/scss/font-awesome
 
   # vendor assets
   - source: node_modules/flexsearch
