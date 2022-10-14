@@ -3,7 +3,7 @@ layout: list
 title: Contribute to the atPlatform
 lead: "All the information you need to contribute to the atPlatform"
 
-description: "How to contribute to the atPlatform"
+description: "AtPlatform is a Open Source project, so anyone intrested can contribute to AtPlatform. Don't know what is Open Source ? It denoting software for which the original source code is made freely available and may be redistributed and modified. This page contains all the required information needed to get started with contribution to AtPlatform a.k.a It is a step to step guid for contribution to AtPlatform. "
 draft: false
 toc: true
 autolinks: true
