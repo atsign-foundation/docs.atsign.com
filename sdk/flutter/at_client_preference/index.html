@@ -23,7 +23,7 @@
 ">
 <meta property="og:url" content="https://dev3.atsign.wtf/sdk/flutter/at_client_preference/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2022-10-13T14:25:37-04:00">
+<meta property="article:modified_time" content="2022-10-15T09:42:58-04:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -80,7 +80,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2022-10-13T14:25:37CET",
+      "dateModified": "2022-10-15T09:42:58CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/sdk/flutter/at_client_preference/#/schema/breadcrumb/1"
       },
@@ -734,72 +734,106 @@
 <tr>
 <th>Attributes</th>
 <th>Description</th>
+<th>Optional/Mandatory</th>
+<th>Default Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>hiveStoragePath</td>
 <td>Local device path of hive storage</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>commitLogPath</td>
 <td>Local device path of commit log</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>isLocalStoreRequired</td>
 <td>Specify whether local store is required</td>
+<td>Optional</td>
+<td>false</td>
 </tr>
 <tr>
 <td>cramSecret</td>
 <td>Shared secret of the atSign</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>keyStoreSecret</td>
 <td>Secret key to encrypt keystore data</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>privateKey</td>
 <td>Private key of the atSign</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>namespace</td>
 <td>Specifies the namespace of an app.</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>rootDomain</td>
 <td>Domain of the root server. Defaults to root.atsign.com</td>
+<td>Optional</td>
+<td>root.atsign.org</td>
 </tr>
 <tr>
 <td>rootPort</td>
 <td>Port of the root server. Defaults to 64</td>
+<td>Optional</td>
+<td>64</td>
 </tr>
 <tr>
 <td>syncIntervalMins</td>
 <td>Frequency of sync tasks to run in minutes. Defaults to 10 minutes.</td>
+<td>Optional</td>
+<td>10</td>
 </tr>
 <tr>
 <td>outboundConnectionTimeout</td>
 <td>Idle time in milliseconds of connection to secondary server. Defaults to 10 minutes.</td>
+<td>Optional</td>
+<td>600000</td>
 </tr>
 <tr>
 <td>maxDataSize</td>
 <td>Maximum data size a secondary can store. Temporary solution. Have to fetch this from the server using stats verb.</td>
+<td>Optional</td>
+<td>512000</td>
 </tr>
 <tr>
 <td>downloadPath</td>
 <td>Default path to download stream files</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>syncRegex</td>
 <td>Regex to perform sync</td>
+<td>Mandatory</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>syncBatchSize</td>
 <td>Number of keys to batch for sync to secondary server</td>
+<td>Optional</td>
+<td>5</td>
 </tr>
 <tr>
 <td>syncPageLimit</td>
 <td>Number of keys to pull from cloud secondary to local secondary in a single call.</td>
+<td>Optional</td>
+<td>10</td>
 </tr>
 </tbody>
 </table>

@@ -23,7 +23,7 @@ Based on your need you can either install at_client_mobile or at_client and impo
       
       <guid>https://dev3.atsign.wtf/sdk/flutter/at_client_preference/</guid>
       <description>Overview #AtClientPreference is used to configure the preferences of an atPlatform application. It offers a variety of attributes to give a developer ultimate flexibility.
-   Attributes Description     hiveStoragePath Local device path of hive storage   commitLogPath Local device path of commit log   isLocalStoreRequired Specify whether local store is required   cramSecret Shared secret of the atSign   keyStoreSecret Secret key to encrypt keystore data   privateKey Private key of the atSign   namespace Specifies the namespace of an app.</description>
+   Attributes Description Optional/Mandatory Default Value     hiveStoragePath Local device path of hive storage Mandatory N/A   commitLogPath Local device path of commit log Mandatory N/A   isLocalStoreRequired Specify whether local store is required Optional false   cramSecret Shared secret of the atSign Mandatory N/A   keyStoreSecret Secret key to encrypt keystore data Mandatory N/A   privateKey Private key of the atSign Mandatory N/A   namespace Specifies the namespace of an app.</description>
     </item>
     
     <item>
