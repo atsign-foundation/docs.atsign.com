@@ -20,7 +20,7 @@ Since the atPlatform is fully open-sourced and everyone can contribute, there is
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=npUMux-uS3Y) instead!
+Not a fan of reading? Watch this [video](https://www.youtube.com/watch?v=npUMux-uS3Y) instead!
 
 {{< youtube src="https://www.youtube.com/embed/npUMux-uS3Y" >}}
 
