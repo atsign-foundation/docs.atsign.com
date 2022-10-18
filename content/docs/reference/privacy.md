@@ -23,6 +23,6 @@ We live in an age of information. Information is an asset that has a similar val
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=F1txoXUPeSA) instead!
+Not a fan of reading? Watch this [video](https://www.youtube.com/watch?v=F1txoXUPeSA) instead!
 
 {{< youtube src="https://www.youtube.com/embed/F1txoXUPeSA" >}}
