@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of Polymorphism
+  Definition of Polymorphism: the ability to share different data depending on the context of who’s asking. atPlatform applications enable you to set up multiple personas for different areas of your life. When you share data with someone else, the value of that data may be different depending on the person receiving that data. This is true for both sides, you may ask for data from different sources and get a different answer for each one.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
