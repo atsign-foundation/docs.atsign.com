@@ -14,15 +14,17 @@ autolinks: false # Change this to "false" to hide the automatic links below your
 weight: 1 # Weight compared to other sections of the site, this shouldn't affect anything on the facade
 ---
 
+{{< button/about-atsign href="https://atsign.com" >}}
+
 #### I want to...
 
 {{% card/group %}}
-{{< card/feature-icon icon="fa-external-link-square" href="/start" title="Get Started" text="Start with Flutter, Java, or IoT development">}}
-{{< card/feature-icon icon="fa-book" href="/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
+{{< card/feature-svg dark="GetStarted dark.svg" img="GetStarted.svg" href="/start" title="Get Started" text="Start with Flutter, Java, or IoT development">}}
+{{< card/feature-svg dark="LearnTheSDK dark.svg" img="LearnTheSDK.svg" href="/sdk" title="Learn the SDK" text="See our SDK Documentation here">}}
 {{% /card/group %}}
 {{% card/group %}}
-{{< card/feature-icon icon="fa-book" href="/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
-{{< card/feature-icon icon="fa-check-square" href="/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
+{{< card/feature-svg dark="LearnThePlatform dark.svg" img="LearnThePlatform.svg" href="/atplatform" title="Learn the Platform" text="See our infrastructure overview here" >}}
+{{< card/feature-svg dark="FollowTheTutorial dark.svg" img="FollowTheTutorial.svg" href="/tutorials" title="Follow a Tutorial" text="Find specific tutorials on our tech here">}}
 {{% /card/group %}}
 
 #### Featured Tutorials
