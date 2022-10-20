@@ -4,7 +4,7 @@ layout: codelab
 title: "Onboarding" # Step Name
 description: How to onboard or authenticate on any app built on the atPlatform # SEO Description for this step Documentation
 
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+draft: true # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
 ---
 

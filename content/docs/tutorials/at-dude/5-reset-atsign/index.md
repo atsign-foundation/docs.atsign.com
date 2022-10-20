@@ -4,7 +4,7 @@ layout: codelab
 title: "Reset atsign" # Step Name
 description: How to reset any app built on the atPlatform # SEO Description for this step Documentation
 
-draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
+draft: true # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
 ---
 
