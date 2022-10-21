@@ -3,7 +3,7 @@ layout: codelab
 
 title: Installation # Title of the codelab
 lead: Getting your development environment ready
-description: Learn about the core Atsign platform Flutter SDK services
+description: Check Installation requirements, Cloning the Client, Compile at_java as dependancy using JAR
 
 doneLink: /sdk/java/ # Where to send them if they press "Done" at the end of the Codelab
 exitLink: /sdk/java/ # Where to send them to if they press "Exit Codelab"
