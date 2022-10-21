@@ -14,7 +14,7 @@ weight: 3 # For list pages, higher is first.
 
 ## Introduction
 
-The atProtcol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.
+The atProtocol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.
 
 See our [Protocol Specification](https://github.com/atsign-foundation/at_protocol/blob/trunk/specification/at_protocol_specification.md) on our GitHub page under our [at_protocol](https://github.com/atsign-foundation/at_protocol) repository.
 
@@ -55,7 +55,7 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
 1. Public Key
 
-- A public key is a key which can be looked up by any atSign user
+- A public key is a key which can be looked up by any atSign user.
 - A public key should be part of the *scan* verb result.
 - Format of the public key should be `public::<@sign>`.
 
@@ -67,9 +67,9 @@ Example:
 
 2. Private Key
 
-- A private key is a key which cannot be looked up by any atSIgn user other than the one who created it.
+- A private key is a key which cannot be looked up by any atSign user other than the one who created it.
 - A private key should not be returned in a *scan* verb result.
-- format of the private key should be `privatekey::<@sign>`
+- Format of the private key should be `privatekey::<@sign>`.
 
 Example:
 
@@ -81,7 +81,7 @@ Example:
 
 - A user key can only be looked up by an atSign user with whom the data has been shared.
 - A user key should be part of the *scan* verb result only for the user who created it and the specific user it has been shared with.
-- Format of the key shared with someone else should be `<Shared with atSign>::<Created by atSign>`
+- Format of the key shared with someone else should be `<Shared with atSign>::<Created by atSign>`.
 
 Example:
 
@@ -89,7 +89,7 @@ Example:
 
 > Note: Above Key should be part of scan verb result only for @alice and @bob
 
-> The owner of the secondary should be allowed to update o delete the value of a user key
+> The owner of the secondary should be allowed to update or delete the value of a user key.
 
 4. Internal Key
 
@@ -99,7 +99,7 @@ Example:
 
 - A cached key is a key that was originally created by another atSign user but is now cached on the Secondary Server of another user's atSign as they were given permission to cache it.
 - A cached key should be listed in the *scan* verb result for the atSign user who cached it.
-- Format of the key shared with someone else should be `cached:<Shared with atSign>::<Created by atSign>`
+- Format of the key shared with someone else should be `cached:<Shared with atSign>::<Created by atSign>`.
 
 Example:
 
@@ -107,7 +107,7 @@ Example:
 
 > The user who has cached the key should not be allowed to update the cached key.
 
-> An atSign user who has created and shared the key should be allowed to update a cached key, and if the "autoNotify" config parameters is set to true, the updated value should be notified (please refer to the `notify` verb) and the cached key updated with the new value.
+> An atSign user who has created and shared the key should be allowed to update a cached key, and if the "autoNotify" config parameter is set to true, the updated value should be notified (please refer to the `notify` verb) and the cached key updated with the new value.
 
 > If the user who originally shared the keys set the CCD (Cascade delete) to true, the cached key will be deleted when the original key is deleted.
 
@@ -241,7 +241,7 @@ This authentication mechanism varies based on whether you are connecting to your
 
 **Synopsis:**
 
-The `cram` verb is used to bootstrap authenticate one's own eself as the owner of a Secondary Server. It is intended to be used once until a set of PKI keys are cut on the owner's mobile device nad from then on we use the `pkam` verb.
+The `cram` verb is used to bootstrap authenticate one's own self as the owner of a Secondary Server. It is intended to be used once until a set of PKI keys are cut on the owner's mobile device and from then on we use the `pkam` verb.
 
 The following regex represents the syntax of the `cram` verb:
 
@@ -263,7 +263,7 @@ If the user gets the cram authentication wrong, then it should respond back with
 
 **Description:**
 
-The `cram` verb follows the `from` verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the `from` verb and encrypt using the shared key that the server has been bound with. Upon receiving the `cram` verb along with the digest, the srever decrypts the digest using the shared key and matches it with the challenge. If they are the same, then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.
+The `cram` verb follows the `from` verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the `from` verb and encrypt using the shared key that the server has been bound with. Upon receiving the `cram` verb along with the digest, the server decrypts the digest using the shared key and matches it with the challenge. If they are the same, then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.
 
 **Options:**
 
@@ -295,7 +295,7 @@ If the user gets the cram authentication wrong, then it should respond back with
 
 **Description:**
 
-The `pol` verb follows the `from` verb. 'pol' indicates another secondary that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob's secondary @alices secondary should change the prompt to @bob.
+The `pol` verb follows the `from` verb. 'pol' indicates another secondary that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob's secondary @alice's secondary should change the prompt to @bob.
 
 **Options:**
 
@@ -319,7 +319,7 @@ Following regex represents the syntax of the `scan` verb:
 
 **Response:**
 
-The Secondary Server should return the keys within the secondary server if the scan verb executed succesfully. The Secondary Server will respond accordingly to whether the atSign is authenticated or not.
+The Secondary Server should return the keys within the secondary server if the scan verb executed successfully. The Secondary Server will respond accordingly to whether the atSign is authenticated or not.
 ```data:[<keys>]```
 
 ### The `update` verb
@@ -392,7 +392,7 @@ Following is the regex for the `update:meta` verb
 
 **Response:**
 
-The Secondary Server should return the commit id from Commit Log if the update is sucecssful.
+The Secondary Server should return the commit id from Commit Log if the update is successful.
 
 `data:<CommitId>`
 
@@ -416,7 +416,7 @@ The Secondary Server should allow creation of keys with null values. If a key ha
 
 > -1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won't change forever
 
-`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originaly shared it, deletes it.
+`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.
 
 `<for@sign>` Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared
 
@@ -446,7 +446,7 @@ If the operation is not specified the Secondary Server should just respond back 
 
 `data:<value>`
 
-If the oepration is to lookup the metadata only then the result should be wrapped in a JSON in the following format:
+If the operation is to lookup the metadata only then the result should be wrapped in a JSON in the following format:
 
 `data:<Metadata in a JSON>`
 
@@ -473,7 +473,7 @@ data:
  }
 ```
 
-If the operation is to lookup th emetadat and the data together, then the result should be wrapped in a JSON in the following format:
+If the operation is to lookup the metadata and the data together, then the result should be wrapped in a JSON in the following format:
 
 `data:<Value and Metadata in a JSON>`
 
@@ -585,7 +585,7 @@ If the lookup command is not valid, then the Secondary Server should return the 
 
 **Description:**
 
-The `llookup` verb should be used to fetch the value of the key in the owners secondary store as is without resolving it. For example if a key contains a reference as a value, the `lookup` verb should resolve it to a value whereas `llookup` should return the value as is.
+The `llookup` verb should be used to fetch the value of the key in the owner's secondary store as is without resolving it. For example if a key contains a reference as a value, the `lookup` verb should resolve it to a value whereas `llookup` should return the value as is.
 
 **Example:**
 

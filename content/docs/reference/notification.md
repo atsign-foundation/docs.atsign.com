@@ -35,7 +35,7 @@ Read more {{< a href="https://github.com/atsign-foundation/at_client_sdk/blob/tr
 
 ### notify verb
 
-The notify verb enables you to notify the atsign user of some data event.
+The notify verb enables you to notify the atSign user of some data event.
 
 The following is the regex for the `notify` verb.
 
@@ -49,7 +49,7 @@ notify:((?<operation>update|delete):)?(ttl:(?<ttl>\d+):)?(ttb:(?<ttb>\d+):)?(ttr
 | `(ttl:(?<ttl>\d+):)?`                                               | TTL (time to live), [integer, 1 or more digits, optional argument]                                                                                                                                                     |
 | `(ttb:(?<ttb>\d+):)?`                                               | TTB (time to birth), [integer, 1 or more digits, optional argument]                                                                                                                                                    |
 | `(ttr:(?<ttr>(-)?\d+):)?`                                           | TTR (time to refresh), [integer, 1 or more digits, can be negative, optional argument], (e.g.: 86400 will refresh once a day)                                                                                          |
-| `(ccd:(?<ccd>true\|false):)?`                                       | CCD (casecade delete), [boolean, true\|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender's server and the recipient's server) |
+| `(ccd:(?<ccd>true\|false):)?`                                       | CCD (cascade delete), [boolean, true\|false, optional argument], (e.g.: if the sender deletes their original key and ccd is true, the cached key gets deleted on both the sender's server and the recipient's server) |
 
 Following the metadata for creating the notification, next, we mention the AtKey the notification pertains to.
 

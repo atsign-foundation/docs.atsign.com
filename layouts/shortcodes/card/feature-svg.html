@@ -1,0 +1,17 @@
+<div class="card {{ .Get "class" }}">
+    <a href="{{ .Get "href" }}">
+      <div class="card-body">
+        <div class="feature-image-container">
+          {{ if .Site.Params.options.darkMode -}}
+              <img class="toggle-light" src="{{ .Get "dark" }}" style="height:2rem; width:2rem;"></img>
+            {{ end -}}
+          {{ if .Site.Params.options.darkMode -}}
+            <img class="toggle-dark" src="{{ .Get "img" }}" style="height:2rem; width:2rem;"></img>
+          {{ end -}}
+          </div>
+        <h5 class="card-title">{{ .Get "title" }}</h5>
+        <p class="card-text">{{ .Get "text" }}</p>
+      </div>
+    </a>
+  </div>
+  
