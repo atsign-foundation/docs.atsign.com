@@ -291,7 +291,7 @@ Source:
         id: 25,
         href: "/sdk/",
         title: "SDK Reference",
-        description: "My SEO description\n",
+        description: "SDK References for each implementation\n",
         content: ""
       })
       .add(
@@ -443,7 +443,7 @@ Source:
         id: 44,
         href: "/sdk/flutter/at_client_manager/",
         title: "AtClientManager",
-        description: "The atPlatform AtClientManager in Flutter and Dart\n",
+        description: "The atPlatform AtClientManager in Flutter and Dart(for NotificationService, SyncService, Client application preferences and making client method calls)\n",
         content: "Overview #\rThe AtClientManager is in charge of overseeing and managing all client services.It makes NotificationService, SyncService, and Client application preferences easier to access from its instance.It is also used for client method calls.\nBased on your need you can either install at_client_mobile or at_client and import. After that you will be able to make an AtClientManager Instance. Now to Initialize the AtClient instance , the setCurrentAtsign method needs to be called.\nAtClientManager.getInstance().setCurrentAtSign(\u0026#39;@alice\u0026#39;, \u0026#39;wavi\u0026#39;, \u0026lt;preference\u0026gt;); The setCurrentAtSign method accepts the following arguments: currentAtSign, namespace and the preferences. The currentAtsign argument accepts an atSign , namespace accepts the namespace of the app and the preference accepts AtClientPreference value which we are going to discuss next.\nAfter Initializing you are ready to make calls of client methods and services. The AtClientManager Instance has a getter atClient which returns an instance of AtClient.\nUsage #\rTo access CRUD methods :\nAtClient atClient = atClientManager.atClient; NotificationService\nNotification service gives back a stream of notifications from the server to the subscribing client.\nTo access NotificationService methods :\nNotificationService notificationService = atClientManager.notificationService; Example\n await atClientManager.notificationService.notify(NotificationParams.forUpdate(\u0026lt;key\u0026gt;,value: \u0026lt;value\u0026gt;)); SyncService\nSyncService syncs the client app and remote secondary server\u0026rsquo;s changes. If the client app\u0026rsquo;s changes are ahead, it pushes the changes to the remote secondary. If the remote secondary is ahead, it pulls the changes to the client app.\nSyncService which is responsible for invoking the sync :\nSyncService syncService = atClientManager.syncService; "
       })
       .add(
@@ -475,7 +475,7 @@ Source:
         id: 48,
         href: "/sdk/java/clis/",
         title: "CLIs",
-        description: "Keys in Java are different from the Dart SDK AtKeys\n",
+        description: "Keys in Java(different from the Dart SDK AtKeys), Prerequisite, List of CLIs\n",
         content: "There are various CLIs (command-line interfaces) that uses the Java SDK to interact with a secondary server.\nPrerequisite #\rTo run the CLIs:\n Edit settings in at_client/src/main/resources/config.yaml cd to at_java/at_client and run mvn install Run java -cp \u0026quot;target/client-1.0-SNAPSHOT.jar:target/lib/*\u0026quot; org.atsign.client.cli.\u0026lt;CLI\u0026gt; \u0026lt;args\u0026gt;. Replace “\u0026lt;CLI\u0026gt;” with one of the CLIs (Register, Get, Scan,\u0026hellip;) and “\u0026lt;args\u0026gt;” with  List of CLIs #\rIf you want to interact with the atProtocol through a command-line experience, see our CLIs in src/main/java/org/atsign/client/cli/. Note that to use some CLIs, you must have the keys in a keys/ directory in the root project.\n Delete - delete AtKeys that you’ve shared with another atSign Get - get AtKeys that you’ve shared with another atSign Onboard - authenticate with CRAM and generate your PKI keypair Register - register an atSign (uses Onboard CLI) Scan - see what keys you have and view metadata Share - share an AtKey with another atSign REPL - use raw atProtocol     Name Description Arguments     Register to claim a free atsign. Requires one-time-password received on the provided email to validate. Registers the free atsign to provided email. email   Onboard utility which \u0026lsquo;onboards\u0026rsquo; a new atSign. Once onboarding is complete it creates the all-important keys file. Onboard is a subset of Register rootUrl, atSign, cramSecret   Share share something with another atSign rootUrl, your AtSign, other AtSign, keyName to share, including namespace, keyValue to share, a string, ttr,   Get get something that was shared by another atSign rootUrl, your AtSign, other AtSign, name of shared key, including namespace,   Delete delete something that was previously shared rootUrl, other atSign, name of shared key including namespace   Scan for seeing what keys exist in the secondary and view metadata rootUrl, atSign, verbose true or false, scan regex   REPL use raw atProtocol, handles PKAM auth rootUrl, atSign, seeEncryptedNotifications true or false    "
       })
       .add(
@@ -539,7 +539,7 @@ Source:
         id: 56,
         href: "/sdk/java/getting-secondary/",
         title: "Getting Secondary.Address",
-        description: "There are a number to get the address of a secondary server belonging to an atSign.\n",
+        description: "There are a number to get the address of a secondary server belonging to an atSign( using Secondary.Address Finder and Secondary.Address Constructor)\n",
         content: "There are a number to get the address of a secondary server belonging to an atSign.\n You have the atSign and rootUrl  // Use Secondary.AddressFinder String ROOT_URL = \u0026#34;root.atsign.org:64\u0026#34;; String ATSIGN_STR = \u0026#34;@bob\u0026#34;; AtSign atSign = new AtSign(ATSIGN_STR); Secondary.AddressFinder saFinder = ArgsUtil.createAddressFinder(ROOT_URL); Secondary.Address sAddress = null; try { sAddress = saFinder.findSecondary(atSign); } catch (NoSuchSecondaryException | IOException e) { System.err.println(e); e.printStackTrace(); } // use sAddress  You have the host and port of the secondary server  // Use Secondary.Address constructor String HOST = \u0026#34;ddbe1816-f40f-5b9f-bb2a-ba1492b93aec.staging0001.atsign.zone\u0026#34;; int PORT = 3198; Secondary.Address sAddress = new Secondary.Address(HOST, PORT); // use sAddress "
       })
       .add(
@@ -571,7 +571,7 @@ Source:
         id: 60,
         href: "/sdk/java/installation/",
         title: "Installation",
-        description: "Learn about the core Atsign platform Flutter SDK services",
+        description: "Check Installation requirements, Cloning the Client, Compile at_java as dependancy using JAR",
         content: "Requirements #\rThere are two requirements for developing with at_java on your machine.\n Java 8 or higher Maven A code editor, see getting started with Java  Compile JAR #\rIf you\u0026rsquo;d like to use at_java as a dependency, you can compile at_java into a JAR by following the instructions below:\n cd at_client to be in the at_client directory. mvn install JAR file created in target/ named similarly to client-1.0-SNAPSHOT.jar If you run into dependency issues, you may need to add the dependencies used by the at_java. Look in at_client/pom.xml and copy everything within the \u0026lt;dependencies\u0026gt;\u0026lt;/dependencies\u0026gt; tags and paste that in your pom.xml that you have in your Java project.  Maven Dependency #\rUnder construction\nCloning the Client #\rIf you\u0026rsquo;d like to make contributions or edit the client yourself, make a form of the repository by heading to the repository and clicking \u0026ldquo;Fork\u0026rdquo; to fork the repository on your own GitHub account.\nOnce forked, you can make changes to your own fork version of the repository.\nGet it on your local machine by doing the following (. is the directory you want to clone the repository in; in this case, we are cloning it in our current directory so be sure to cd into the directory you want the repository in):\ngit clone https://github.com/\u0026lt;YOUR_GITHUB_USERNAME\u0026gt;/at_java.git . "
       })
       .add(
