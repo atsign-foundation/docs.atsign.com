@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of public and private keys
+  Definition of public key(distributed to the trusted masses), self key(which cannot be looked up any atSign holder other than creator) ,shared key(an only be looked up by an atSign holder with whom the data has been shared), cashed key(a key that was originally created by another atSign owner but is now cached on the Secondary Server of another person's atSign as they were given permission to cache it) and private keys(used in asymmetric key cryptography).
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
