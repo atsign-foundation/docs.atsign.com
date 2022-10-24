@@ -3,7 +3,7 @@ layout: codelab
 
 title: Getting Secondary.Address # Step Name
 description: | # SEO Description for this step
-  There are a number to get the address of a secondary server belonging to an atSign.
+  There are a number to get the address of a secondary server belonging to an atSign( using Secondary.Address Finder and Secondary.Address Constructor)
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
