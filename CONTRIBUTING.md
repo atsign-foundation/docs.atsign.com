@@ -34,22 +34,22 @@ describe.
 
 To prepare your dedicated GitHub repository:
 
-1. Fork in GitHub https://github.com/atsign-foundation/atsign.dev-3.0
-2. Clone *your forked repository* (e.g., `git clone git@github.com:yourname/atsign.dev-3.0`)
+1. Fork in GitHub https://github.com/atsign-foundation/docs.atsign.com
+2. Clone *your forked repository* (e.g., `git clone git@github.com:yourname/docs.atsign.com`)
 3. Set your remotes as follows:
 
    ```sh
-   cd atsign.dev-3.0
-   git remote add upstream git@github.com:atsign-foundation/atsign.dev-3.0.git
+   cd docs.atsign.com
+   git remote add upstream git@github.com:atsign-foundation/docs.atsign.com.git
    git remote set-url upstream --push DISABLED
    ```
 
    Running `git remote -v` should give something similar to:
 
    ```text
-   origin  git@github.com:yourname/atsign.dev-3.0.git (fetch)
-   origin  git@github.com:yourname/atsign.dev-3.0.git (push)
-   upstream        git@github.com:atsign-foundation/atsign.dev-3.0.git (fetch)
+   origin  git@github.com:yourname/docs.atsign.com.git (fetch)
+   origin  git@github.com:yourname/docs.atsign.com.git (push)
+   upstream        git@github.com:atsign-foundation/docs.atsign.com.git (fetch)
    upstream        DISABLED (push)
    ```
 
