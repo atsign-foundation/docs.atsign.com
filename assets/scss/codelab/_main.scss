@@ -69,6 +69,10 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
         // text-decoration: line-through;
         font-style: italic;
       }
+      li[completed]::after {
+        // text-decoration: line-through;
+        content: "✔";
+      }
 
       li[selected], li[selected] a {
         color: $primary;
