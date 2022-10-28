@@ -66,12 +66,13 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
       }
 
       li[completed] {
-        // text-decoration: line-through;
         font-style: italic;
       }
       li[completed]::after {
-        // text-decoration: line-through;
-        content: "✔";
+        content: "✓";
+        font-style: normal;
+        color: #f05e3e;
+        font-weight: 900;
       }
 
       li[selected], li[selected] a {
