@@ -71,7 +71,7 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
       li[completed]::after {
         content: "✓";
         font-style: normal;
-        color: #f05e3e;
+        color: $primary;
         font-weight: 900;
       }
 
@@ -121,6 +121,10 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
 [data-dark-mode] body .codelab {
 
   .codelab-drawer .codelab-steps ol {
+
+    li[completed]::after {
+      color: $highlight;
+    }
 
     li, li a {
       color: $gray-300;
