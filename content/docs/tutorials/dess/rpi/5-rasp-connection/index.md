@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Connection to Raspberry Pi' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Connection to Raspberry Pi
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
