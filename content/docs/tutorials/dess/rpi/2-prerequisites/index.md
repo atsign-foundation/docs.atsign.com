@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Pre-requisites' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Pre-requisites for setting up private dess on a Raspberry Pi
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps

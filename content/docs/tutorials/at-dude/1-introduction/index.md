@@ -2,7 +2,7 @@
 layout: codelab
 
 title: "Introduction" # Step Name
-description:  Introduction to the atDude tutorial# SEO Description for this step Documentation
+description:  Introduction to the atDude tutorial # SEO Description for this step Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 1 # Ordering of the steps

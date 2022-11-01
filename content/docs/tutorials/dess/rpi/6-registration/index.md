@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Registration of atSign in your private dess' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Registration of atSign in your private dess on Raspberry Pi
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 6 # Ordering of the steps

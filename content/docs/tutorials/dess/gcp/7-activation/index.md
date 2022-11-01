@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Activation of atSign' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Get started on activating atSign for use on apps built on atPlatform
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 7 # Ordering of the steps

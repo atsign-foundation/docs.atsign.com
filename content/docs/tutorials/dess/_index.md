@@ -4,7 +4,7 @@ layout: list
 title: "dess" # The title (ON THE PAGE)
 lead: Learn about how the distributed edge secondary server works
 
-description: Learn about the atPlatform distributed edge secondary server
+description: Learn about the atPlatform DESS, distributed edge secondary server
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

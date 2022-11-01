@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Preparing your instance for network access' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Preparing your GCP instance for network access to private dess
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps

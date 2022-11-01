@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Pre-requisites' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Pre-requisites to setting up private dess on Google Cloud Platform (GCP)
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps

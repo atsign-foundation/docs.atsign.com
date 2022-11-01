@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Preparing AWS Instance' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Preparing AWS Instance for setting up private dess
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps
