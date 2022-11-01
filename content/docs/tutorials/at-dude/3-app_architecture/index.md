@@ -2,7 +2,7 @@
 layout: codelab
 
 title: "App Architecture" # Step Name
-description: How to onboard or authenticate on any app built on the atPlatform # SEO Description for this step Documentation
+description: How to architect an app built on the atPlatform # SEO Description for this step Documentation
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps

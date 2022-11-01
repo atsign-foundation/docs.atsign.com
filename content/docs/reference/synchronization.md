@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of Synchronization in the atPlatform
+  Definition of Synchronization in the atPlatform: encryption of your data with atProtocol, with your self encryption key and stored on your device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you are the only one who owns the private key. No one else, including **Atsign** can read your data.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents

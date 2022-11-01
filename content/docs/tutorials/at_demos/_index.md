@@ -8,7 +8,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  My SEO description
+  Learn about the inner workings of our at_demos demo apps
 
 draft: true # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

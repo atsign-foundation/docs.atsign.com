@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of PKAM (public key authentication mechanism)
+  Definition of PKAM (public key authentication mechanism, a mechanism for encrypting/decrypting data between two parties). The PKAM public key is given out to other clients who want to send data to you. The data they send to you is encrypted using your public key and is decrypted using your private key.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents

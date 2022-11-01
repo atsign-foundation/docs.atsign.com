@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Get started with Java Development on the atPlatform.
+  Get started with developing atPlatform apps using Java SDK.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

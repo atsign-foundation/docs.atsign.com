@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Instance setup and dess deployment' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Setting up Google Cloud Platform (GCP) instance for dess deployment
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps

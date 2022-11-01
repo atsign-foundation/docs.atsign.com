@@ -5,8 +5,7 @@ title: 'Privacy' # The title (ON THE PAGE)
 lead: | # The lead below the title (ON THE PAGE)
   Protecting your most valuable asset
 description: | # SEO Description of the page (Shows in google and atsign.dev search)
-    Definition of the term privacy
-
+    Definition of the term privacy:  InformationAs as an asset, must be secured from potential attacks or unauthorized access. There are several security goals that must be considered like Confidentiality, Integrity, Availability, Authentication/Liveness and Non-repudiation.
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
 weight: 203 # For single pages, lower is first.
@@ -24,6 +23,6 @@ We live in an age of information. Information is an asset that has a similar val
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=F1txoXUPeSA) instead!
+Not a fan of reading? Watch this [video](https://www.youtube.com/watch?v=F1txoXUPeSA) instead!
 
 {{< youtube src="https://www.youtube.com/embed/F1txoXUPeSA" >}}

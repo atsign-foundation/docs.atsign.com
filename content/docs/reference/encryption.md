@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of the term encryption
+  Encryption is a means of achieving privacy. It is a part of cryptography. The goal of encryption is that assuming that an unwanted third party is eavesdropping on an insecure channel, said person would not be able to comprehend the transmitted information. Decryption is the process of converted encrypted information into a comprehensible format. Encryption and Decryption algorithms are known as ciphers. Encryption uses a key which is a set of values that the cipher, as an algorithm, will operate on. Encryption and Decryption go back a long way with one of the most well known ciphers being the [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents

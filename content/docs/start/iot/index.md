@@ -7,7 +7,9 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Get started with IoT (Internet of Things) devices on the atPlatform
+  Get started with IoT (Internet of Things) devices on the atPlatform. The Internet of things describes physical objects with sensors, processing ability, software, and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks.
+  In the consumer market, IoT technology is most synonymous with products pertaining to the concept of the "smart home", including devices and appliances (such as lighting fixtures, thermostats, home security systems, cameras, and other home appliances) that support one or more common ecosystems, and can be controlled via devices associated with that ecosystem, such as smartphones and smart speakers. IoT is also used in healthcare systems.
+  The atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

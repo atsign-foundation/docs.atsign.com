@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Get started on the atPlatform
+  Get started on the atPlatform, a full stack platform written in Dart and Flutter. It includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "false" to hide the table of contents

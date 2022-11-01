@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of CRAM (challenge response authentication method)
+  Definition of CRAM (challenge response authentication method): CRAM stands for challenge response authentication mechanism. It is an algorithm/mechanism used in cryptography commonly used for authentication in protocols.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents

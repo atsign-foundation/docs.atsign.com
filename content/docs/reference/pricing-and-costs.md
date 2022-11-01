@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Reference on the pricing and costs on atSigns
+  Reference on the pricing and costs on atSigns: Since the atPlatform is fully open-sourced , there is no cost for developers! **Atsign** generates revenue is by using our special identifier which is known as an atSign. An atSign can come in many flavors with corresponding prices ranging from free, $10, $100, $1000, $5000.For each paid atSign you own, there is a $10 annual renewal fee. This fee does not apply to the free atSigns. What makes atSigns so awesome is that if your app is the first one someone pairs an atSign with, after buying their atSign, we pay you commission on that. Yep, you don't pay us, we pay you.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents
@@ -20,7 +20,7 @@ Since the atPlatform is fully open-sourced and everyone can contribute, there is
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=npUMux-uS3Y) instead!
+Not a fan of reading? Watch this [video](https://www.youtube.com/watch?v=npUMux-uS3Y) instead!
 
 {{< youtube src="https://www.youtube.com/embed/npUMux-uS3Y" >}}
 

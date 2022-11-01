@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Preparing GCP Instance' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Preparing GCP instance for setting up private dess
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 3 # Ordering of the steps

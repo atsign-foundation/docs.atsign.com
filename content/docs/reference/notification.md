@@ -7,7 +7,7 @@ lead: | # The lead below the title (ON THE PAGE)
 
 description:
   | # SEO Description of the page (Shows in google and atsign.dev search)
-  Definition of Notification in the atPlatform, the notify verb in the atProtocol, and Definition of Monitor in the atPlatform
+  Definition of Notification in the atPlatform: Notification enables developers to notify another atSign of some data event. It is used to notify another atSign that data from your secondary server was modified (updated or deleted). Some example notifications include: the key's value is updated, the key is deleted, the key's metadata changed, and more. The notify verb in the atProtocol (which enables you to notify the atSign user of some data event.), and Definition of Monitor in the atPlatform: The monitor is used to receive notifications from the other secondary server.
 
 draft: false # Change this to "true" to hide the page
 toc: true # Change this to "true" to show the table of contents

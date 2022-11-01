@@ -3,7 +3,7 @@ layout: codelab
 
 title: "Introduction" # Step Name
 description: | # SEO Description for this step
-  Setup dess on GCP
+  Introduction to setting up dess on Google Cloud Platform (GCP)
 
 draft: false # CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 1 # Ordering of the steps

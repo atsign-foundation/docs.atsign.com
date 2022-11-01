@@ -3,7 +3,7 @@ layout: codelab
 
 title: 'Preparing Raspberry Pi configuration' # Step Name
 description: | # SEO Description for this step
-  Documentation
+  Preparing Raspberry Pi for atPlatform dess configuration
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 4 # Ordering of the steps
