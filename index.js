@@ -99,7 +99,7 @@ Source:
         id: 1,
         href: "/start/flutter/",
         title: "Flutter",
-        description: "Get started with Flutter on the atPlatform\n",
+        description: "Get started with developing atPlatform apps using Flutter SDK.\n",
         content: "Setting Up Your Development Environment #\r1. Get an editor for programming in Dart #\rSome editors we recommend:\n Visual Studio Code Android Studio  2. Install Flutter/Dart on your machine #\rSee Flutter\u0026rsquo;s instructions on getting the Flutter environment setup:\n MacOS Windows Linux  3. Install at_app #\rat_app is a command-line tool for quickly creating atPlatform apps. It is similar to flutter create but adds atPlatform capabilities to your flutter apps. See our video on at_app.\n4. Create an atPlatform app #\rCreate an atPlatform app by using at_app:\n at_app create \u0026lt;dir\u0026gt; cd \u0026lt;dir\u0026gt; flutter run  "
       })
       .add(
@@ -171,7 +171,7 @@ Source:
         id: 10,
         href: "/start/java/",
         title: "Java",
-        description: "Get started with Java Development on the atPlatform.\n",
+        description: "Get started with developing atPlatform apps using Java SDK.\n",
         content: "Setting Up Your Development Environment #\r1. Install Java #\rThe first step in getting your developer environment ready, is to install Java 8 or higher on your local machine.\n2. Install Maven #\rNext step is to install maven and add it to your PATH. Maven is a great tool for managing Java projects and will be useful for development atPlatform applications.\n3. Clone the Java Client #\rFork our at_java repository Create a new directory on your local machine where you want the java client source code to live. Change directory (cd) into this directory and git clone your fork. Git clone: git clone \u0026lt;your_fork_url\u0026gt; so that the source code is on your local machine.\n4. Build at_java/at_client #\rCompile at_java/at_client:\n Ensure you are in the at_client directory: cd at_java/at_client. Run mvn install You should see [INFO] BUILD SUCCESS  Registration CLI #\r  Be sure you\u0026rsquo;ve fully set up your development environment. Also ensure you\u0026rsquo;ve built and deployed the project by running mvn install under the at_java/at_client directory.\n  Our next step is to run the Register.java CLI to register a new atSign will be onboarded and a set of .atKeys will be generated. You can do this by running:\n  Linux\njava -cp \u0026#34;target/client-1.0-SNAPSHOT.jar:target/lib/*\u0026#34; org.atsign.client.cli.Register \u0026lt;email@email.com\u0026gt; Windows\njava -cp \u0026#34;target/client-1.0-SNAPSHOT.jar;target/lib/*\u0026#34; org.atsign.client.cli.Register \u0026lt;email@email.com\u0026gt; If successful, the output should be similar:  Getting free atsign Got atsign: @64husky26 Sending one-time-password to :\u0026lt;email@email.com\u0026gt; Got response: Sent Successfully Enter OTP received on: \u0026lt;email@email.com\u0026gt; You will get a OTP (one-time password) in your entered email. Be sure to enter the OTP as received because it is case-sensitive. If successful, output should be similar to as follows:  xxxx Validating one-time-password Got response: Verified IMPORTANT: There will be a newly generated .atKeys file for your new atSign in ~/.atsign/keys. Congratulations, you\u0026rsquo;ve successfully registered a new atSign in the Java client. Note: The default properties in config.yaml point to the production environment. Your new atSign will be registered to the root that is defined in config.yaml  "
       })
       .add(
@@ -203,7 +203,7 @@ Source:
         id: 14,
         href: "/start/iot/",
         title: "IoT",
-        description: "Get started with IoT (Internet of Things) devices on the atPlatform\n",
+        description: "Get started with IoT (Internet of Things) devices on the atPlatform. The Internet of things describes physical objects with sensors, processing ability, software, and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks.\nIn the consumer market, IoT technology is most synonymous with products pertaining to the concept of the \"smart home\", including devices and appliances (such as lighting fixtures, thermostats, home security systems, cameras, and other home appliances) that support one or more common ecosystems, and can be controlled via devices associated with that ecosystem, such as smartphones and smart speakers. IoT is also used in healthcare systems.\nThe atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.\n",
         content: "What is IoT? #\rIoT–Internet of Things–is a system of interconnecting devices, mechanical or electronic, that are designed to work together to provide a service, such as the transmission of information, or the control of a device.\nIn simple terms, an IoT device is any device (such as a camera, a smart phone, a thermostat, a TV, a computer, etc) that is connected to the internet. IoT devices have sensors that are always collecting data and sending it through the Internet. However, these data are usually precious data that are valuable to the owner. For example, a person may own a camera connected to the internet which is constantly surveilling the living room of their house. It is important that outside parties have no access to this data and that the data the camera is collecting is sent securely over the internet. This is where the atPlatform comes in. The atPlatform adds security to this IoT camera device and sends the data securely to whomever the owner chooses.\nAs said on our website atsign.com, the atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.\nIoT Network Architecture #\rSsh! No Ports #\rSsh! No ports is a perfect demonstration of how the atPlatform is adding end-to-end security to your IoT devices.\nWant to ssh to your remote (IoT or non-IoT) device without it having any open ports?\nSee our Ssh! No Ports tutorial:\nSsh! No Ports \u0026rarr;    Contact us #\rHere at Atsign, we believe in a world where IoT devices have atSigns and send their data end-to-end-encrypted to other atSigns. We\u0026rsquo;d love to work with you on adding security to your IoT devices. Please contact us at info@atsign.com or join our discord and ask us about anything and we will be happy to answer!\n"
       })
       .add(
@@ -227,7 +227,7 @@ Source:
         id: 17,
         href: "/tutorials/at_demos/",
         title: "at_demos",
-        description: "My SEO description\n",
+        description: "Learn about the inner workings of our at_demos demo apps\n",
         content: ""
       })
       .add(
@@ -243,7 +243,7 @@ Source:
         id: 19,
         href: "/tutorials/dess/",
         title: "dess",
-        description: "Learn about the atPlatform distributed edge secondary server",
+        description: "Learn about the atPlatform DESS, distributed edge secondary server",
         content: ""
       })
       .add(
@@ -299,7 +299,7 @@ Source:
         id: 26,
         href: "/tutorials/",
         title: "Tutorials",
-        description: "My SEO description\n",
+        description: "Learn how to build on the atPlatform through hands-on tutorials.\n",
         content: ""
       })
       .add(
@@ -307,7 +307,7 @@ Source:
         id: 27,
         href: "/start/",
         title: "Get Started",
-        description: "Get started on the atPlatform\n",
+        description: "Get started on the atPlatform, a full stack platform written in Dart and Flutter. It includes a wide range of libraries, services and widgets specifically designed for creating privacy-first applications on any platform.\n",
         content: "I want to get started with\u0026hellip; #\r  Flutter Start with Flutter development\n     Java Start with Java development\n      IoT Start with IoT development\n    "
       })
       .add(
@@ -411,7 +411,7 @@ Source:
         id: 40,
         href: "/tutorials/dess/aws/7-activation/",
         title: "Activation of atSign",
-        description: "Documentation\n",
+        description: "Get started on activating atSign for use on apps built on atPlatform\n",
         content: "Next up we need to activate it\nLogin to your dashboard at atsign.com/dashboard\nOpen “my atSigns”\nOpen “managed” of atSign you are registering”\nNavigate to Advance settings:\nIf you have already activated your atSign you will be prompted to erase all your data first\nOnce done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate.\nYou should see that your atSign is being activated in your dashboard:\nThis can take several minutes so go get cup of coffee, some tea maybe, stretch your body and pray you haven’t made any mistakes!\nOnce the activation process completes you are welcomed by green Activated.\nYou can now open @buzz or @wavi and register your atSign via QR code and generate your keys!\nCONGRATULATIONS\n"
       })
       .add(
@@ -419,7 +419,7 @@ Source:
         id: 41,
         href: "/tutorials/dess/gcp/7-activation/",
         title: "Activation of atSign",
-        description: "Documentation\n",
+        description: "Get started on activating atSign for use on apps built on atPlatform\n",
         content: "Next up we need to activate it\nLogin to your dashboard at https://my.atsign.com/dashboard\nOpen “my atSigns”\nOpen “managed” of atSign you are registering”\nNavigate to Advance settings:\nIf you have already activated your atSign you will be prompted to erase all your data first\nOnce done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate\nYou should see that your atSign is being activated in your dashboard:\nThe activation will be completed once you have used your QR code from dess and retrieved your keys.\nOnce the activation process completes you are welcomed by green Activated.\nCONGRATULATIONS\n"
       })
       .add(
@@ -427,7 +427,7 @@ Source:
         id: 42,
         href: "/tutorials/dess/rpi/7-activation/",
         title: "Activation of atSign",
-        description: "Documentation\n",
+        description: "Get started on activating atSign for use on apps built on atPlatform\n",
         content: "Next up we need to activate it\nLogin to your dashboard at atsign.com/dashboard\nOpen “my atSigns”\nOpen “managed” of atSign you are registering”\nNavigate to Advance settings:\nIf you have already activated your atSign you will be prompted to erase all your data first\nOnce done you are able to link your atSign with your private dess. Use your domain and port number with which you have created service on your cloud instance and press Activate.\nYou should see that your atSign is being activated in your dashboard:\nThis can take several minutes so go get cup of coffee, some tea maybe, stretch your body and pray you haven’t made any mistakes!\nOnce the activation process completes you are welcomed by green Activated.\nYou can now open @buzz or atmospherePro and register your atSign via QR code and generate your keys!\nCONGRATULATIONS\n"
       })
       .add(
@@ -435,7 +435,7 @@ Source:
         id: 43,
         href: "/tutorials/at-dude/3-app_architecture/",
         title: "App Architecture",
-        description: "How to onboard or authenticate on any app built on the atPlatform",
+        description: "How to architect an app built on the atPlatform",
         content: "In this tutorial, we will we\u0026rsquo;ll implement the MVC+S architecture pattern in our app.\nWe will create the folders that will store our models, views, commands and services.\nModels #\rThe models are only concerned with storing and manipulation of data our app needs.\nIn your terminal type:\nmkdir lib/models The model files will be saved in this folder.\nViews #\rThe views are the widgets and screen in our application.\nIn your terminal type:\nmkdir -p lib/views/widgets mkdir lib/views/screens The screens and widgets files will be saved in these folders.\nCommands #\rThe commands are the various application logic.\nIn your terminal type:\nmkdir lib/commands The controller files will be saved in this folder.\nServices #\rThe services fetch data from the network or local storage and returns it to the controllers.\nIn your terminal type:\nmkdir lib/services The services files will be saved in this folder.\nConclusion #\rThe controllers will call the services to fetch data from the network and then send the fetched data to the model. The views are bound to the model using provider or an alternative. As the models are updated the views will be updated. Alternatively the controller can update the views directly.\nIn the next step we\u0026rsquo;ll explore this further as we implement onboarding on the atPlatform.\n"
       })
       .add(
@@ -483,7 +483,7 @@ Source:
         id: 49,
         href: "/tutorials/dess/rpi/5-rasp-connection/",
         title: "Connection to Raspberry Pi",
-        description: "Documentation\n",
+        description: "Connection to Raspberry Pi\n",
         content: "Now we will connect to our Raspberry Pi (which should be connected via ethernet or wireless to our network). We will be using Putty, although there are other options such as OpenSSH. To begin with, let\u0026rsquo;s download the software.\nWe will choose SSH (port 22) and our Raspberry Pi local IP address: If you are using a public-key (if not, this step is not necessary), you will have to choose the directory where it is located, in SSH-\u0026gt;Auth options: After that, click \u0026lsquo;Open\u0026rsquo; button, located in the main menu. The connection will start. Now we are ready to start configuring our private dess.\n"
       })
       .add(
@@ -491,7 +491,7 @@ Source:
         id: 50,
         href: "/tutorials/at-dude/_6_controller/",
         title: "Controller",
-        description: "Documentation\n",
+        description: "Documentation for \"Controller\" in atDude app\n",
         content: "   TOC     Dude Model   From Json   To Json   Other Methods   Profile Model    In this codelab we will discuss the controller class of the dude app and how it interacts with the DudeService() class.\nDude Controller #\rThe DudeController() class controls the state management for the app.\n/// A Dude class that controls the UI update when the [DudeService] methods are called. class DudeController with ChangeNotifier { List\u0026lt;DudeModel\u0026gt; _dudes = []; List\u0026lt;DudeModel\u0026gt; get dudes { _dudes.sort((a, b) =\u0026gt; b.timeSent.compareTo(a.timeSent)); return _dudes; } /// Get dudes sent to the current astign.  Future\u0026lt;void\u0026gt; getDudes() async { _dudes = await DudeService.getInstance().getDudes(); notifyListeners(); } List\u0026lt;AtContact\u0026gt; _contacts = []; List\u0026lt;AtContact\u0026gt; get contacts { return [..._contacts]; } int get dudeCount =\u0026gt; dudes.length; /// Get contacts for the current atsign.  Future\u0026lt;void\u0026gt; getContacts() async {...} /// Deletes dudes sent to the current atsign.  ///  void deleteDude(DudeModel dude) async {...} } We extend this class with a ChangeNotifier() because the app uses the Provider package as state management.\nLines 5 to 8 returns a List of DudeModel sorted from oldest to newest dudes. Lines 18 to 20 returns a List of AtContact. The AtContacts class contains properties about the contacts of an atsign like the contacts atsign.\n/// Get dudes sent to the current astign.  Future\u0026lt;void\u0026gt; getDudes() async { _dudes = await DudeService.getInstance().getDudes(); notifyListeners(); } This method calls DudeService.getDudes() method followed by notify listeners so all widgets that depends on the DudeModel() will be rebuilt. ie dudes will be added to the screen.\n/// Get contacts for the current atsign.  Future\u0026lt;void\u0026gt; getContacts() async { _contacts = await DudeService.getInstance().getContactList() ?? []; notifyListeners(); } This method calls DudeService.getContactList() method followed by notify listeners so all widgets that depends on the DudeModel() will be rebuilt. ie contacts will be added or removed from the screen. If the list of contacts is null an empty list is returned instead.\n/// Deletes dudes sent to the current atsign.  ///  void deleteDude(DudeModel dude) async { bool result = await DudeService.getInstance().deleteDude(dude); result ? _dudes = await DudeService.getInstance().getDudes() : null; notifyListeners(); } This method calls DudeService.deleteDude() method followed by notify listeners so all widgets that depends on the DudeModel() will be rebuilt. i.e the deleted dude will be removed from the screen.\n"
       })
       .add(
@@ -507,7 +507,7 @@ Source:
         id: 52,
         href: "/tutorials/at-dude/_5_dude_service/",
         title: "Dude Service",
-        description: "Documentation\n",
+        description: "Documentation for \"Dude Service\" in atDude app\n",
         content: "   TOC    | Dude Service | | Dude Service Imports | | Dude Service Properties | | Local Notification | | Local Notification imports | | Properties of LocalNotificationService |\nThere are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.\nDudeService #\rThis class is a singleton that makes all the network calls to the atPlatform.\nImports #\rimport \u0026#39;dart:async\u0026#39;; import \u0026#39;dart:convert\u0026#39;; import \u0026#39;dart:typed_data\u0026#39;; import \u0026#39;package:flutter/material.dart\u0026#39;; import \u0026#39;package:at_app_flutter/at_app_flutter.dart\u0026#39;; import \u0026#39;package:at_client/src/service/notification_service.dart\u0026#39;; import \u0026#39;package:at_client_mobile/at_client_mobile.dart\u0026#39;; import \u0026#39;package:at_commons/at_commons.dart\u0026#39;; import \u0026#39;package:at_contact/at_contact.dart\u0026#39;; import \u0026#39;package:at_contacts_flutter/services/contact_service.dart\u0026#39;; import \u0026#39;package:at_utils/at_utils.dart\u0026#39;; import \u0026#39;../models/dude_model.dart\u0026#39;; import \u0026#39;../models/profile_model.dart\u0026#39;; import \u0026#39;local_notification_service.dart\u0026#39;; All the packages that starts with at_ are packages that allows us to interact with the atPlatform.\n at_app_flutter A library that help developers build flutter applications on the atPlatform. at_client The at_client library is the non-platform specific Client SDK which provides the essential methods for building an app using the atProtocol. at_client_mobile A Flutter extension to the at_client library which adds support for mobile, desktop and IoT devices. at_commons A library of Dart and Flutter utility classes that are used across other components of the @‎platform. at_contacts: A Dart library for managing contact data that developers can use for their applications. at_contacts_flutter A Flutter plugin project to provide ease of managing contacts for an @‎sign using @‎platform. at_utils A Dart library that contains various utility classes such as atSign, atmetadata, configuration, and logger.  We discussed the dude and profile model in the previous codelab.\nProperties of DudeService #\rclass DudeService { static final DudeService _singleton = DudeService._internal(); DudeService._internal(); factory DudeService.getInstance() { return _singleton; } final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace); AtClient? atClient; AtClientService? atClientService; var atClientManager = AtClientManager.getInstance(); static var contactService = ContactService(); Future\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async {...} /// Receives all dudes sent to the current atsign.  Future\u0026lt;List\u0026lt;DudeModel\u0026gt;\u0026gt; getDudes() async {...} /// Subscribes to the stream of data being sent to the current atsign.  void monitorNotifications(BuildContext context) {...} /// Fetch the current atsign contacts.  Future\u0026lt;List\u0026lt;AtContact\u0026gt;?\u0026gt; getContactList() {...} /// Fetch the current atsign profile image  Future\u0026lt;Uint8List?\u0026gt; getCurrentAtsignProfileImage() async {...} /// Fetch details for the current atsign  Future\u0026lt;dynamic\u0026gt; getCurrentAtsignContactDetails() async {...} /// Get the profile stats for the current atsign  Future\u0026lt;ProfileModel\u0026gt; getProfile() async {...} /// Save senders atsign to the current atsign local secondary.  Future\u0026lt;void\u0026gt; putSenderAtsign( {required String senderAtsign, required String receiverAtsign}) async {...} /// Get sender atsign saved in the current atsign remote secondary.  Future\u0026lt;List\u0026lt;String\u0026gt;\u0026gt; getSenderAtsigns() async {...} /// Delete dude sent to the current atsign.  Future\u0026lt;bool\u0026gt; deleteDude(DudeModel dude) async {...} } } Line 2 - 6 creates a singleton pattern. Every time DudeService.getInstance() is called it will always return the same object. You can read more about it in on stackoverflow.\nThe AtSignLogger in line 9 is used to generate server logs. It also helps to classify logs into subclasses live severe, info and warning based on importance.\nLines 11 to 14 creates instances of AtClient(), AtClientService(), AtClientManager() and ContactService().\n AtClient AtClient should be used to perform Create, Read, Update or Delete (CRUD) operations on the secondary server. AtClientService Class that manages your atsigns. AtClientManager Factory class responsible for giving the instances of AtClient and other services for a given atSign.  DudeService Methods #\rWe\u0026rsquo;ll now discuss the network calls that are made to the atPlatform to perform various CRUD operation.\nputDude Method #\rThis method saves the DudeModel and ProfileModel on the atPlatform.\n/// Saves Dude to the receiver\u0026#39;s remote secondary and stats to the sender\u0026#39;s local secondary.  Future\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { bool isCompleted = false; dude.saveSender(atClient!.getCurrentAtSign()!); dude.saveReceiver(contactAtsign); dude.saveId(); ... } Line 4 instantiates isCompleted to false. This is to display a CircularProgressIndicator on the UI while this method is being executed.\nLine 5 saves the currentAtsign or signed in user to the DudeModel.receiver property.\nLine 6 saves the contactAtsign to the DudeModel.receiver property. The contactAtsign is the atsign that was selected as the receiver in the UI.\nline 7 generates a UUID and saves it to the DudeModel.id property.\nMetadata \u0026amp; AtKeys #\rFuture\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { ... var metaData = Metadata() ..isEncrypted = true ..namespaceAware = true ..ttr = -1 ..isPublic = false; var key = AtKey() ..key = dude.id ..sharedBy = dude.sender ..sharedWith = dude.receiver ..metadata = metaData ..namespace = \u0026#39;\u0026#39;; dude.saveTimeSent(); ... } Lines 4 to 8 creates the MetaData. This class describes the characteristics of the AtKey being saved on the atPlatform. eg. The AtKey will not be available to everyone on the atPlatform because isPublic is set to false. The list of Metadata properties can be viewed here.\nLines 10 to 15 creates the AtKey. This class acts as an unique identifier of the data being saved to the atPlatform. If the atPlatform was a table the @key would represent the row.\nIt is important to remember that the atsign that creates the data owns the data. Therefore, the sharedWith property controls who the data is being shared with and the shareBy property determine who the owner of the data is. This is not true in every case, I\u0026rsquo;ll explain the exception next.\nLine 17 saves the current time to the DudeModel.timeSent property.\nNotify #\rThey are two ways to save data on the atPlatform. It can be saved on the sender secondary server or the receiver secondary server, We\u0026rsquo;ll discuss the latter\nFuture\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { ... await atClientManager.notificationService.notify( NotificationParams.forUpdate( key, value: json.encode(dude.toJson()), ), onSuccess: (notification) async {}); ... } Lines 4 to 9 saves the the method we use to save data on the receiver secondary server. The reason we want to save the dude on the receiver server is because we want the receiver to have the permission to delete the dude after listening to it.\nThe NotificationParams.forUpdate() method accepts an Atkey and a value arguments. We pass the AtKey we created previously in line 6 and in line 7 we pass in a string as the value.\njson.encode(dude.toJson()) converts the DudeModel to a string.\nSaving Profile Model data #\rFuture\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { ... var profileMetaData = Metadata() ..isEncrypted = true ..namespaceAware = true ..isPublic = false; var profileKey = AtKey() ..key = \u0026#39;dude_profile_\u0026#39; + dude.sender.replaceFirst(\u0026#39;@\u0026#39;, \u0026#39;\u0026#39;) ..sharedBy = dude.sender ..metadata = profileMetaData; ... Lines 5 to 8 creates the Profile Metadata and lines 10 to 13 creates the Profile AtKey. No sharedWith property was provided because the data will not be shared with any other atsign.\nFuture\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { ... try { AtValue profileAtValue = await atClient!.get(profileKey); ProfileModel profileModel = ProfileModel.fromJson(jsonDecode(profileAtValue.value)); profileModel.saveId(dude.sender); profileModel.dudesSent += 1; profileModel.dudeHours += dude.duration; if (dude.duration \u0026gt; profileModel.longestDude) { profileModel.saveLongestDude(dude.duration); } await atClient! .put( profileKey, json.encode( profileModel.toJson(), ), ) .whenComplete(() =\u0026gt; isCompleted = true) .onError((error, stackTrace) =\u0026gt; isCompleted = false); } ... ) Lines 5 to 7 retrieves the ProfileModel data from the remote secondary. We will discuss the AtClient!.get() method later in this code lab.\nLines 9 to 10 updated the ProfileModel by incrementing the previous values.\nLines 11 to 12 compare the current dude.duration with the previous profileModel.longestDude and saves the current dude.duration if it is the longest duration of the two.\nLines 14 to 22 saves the profileModel to remote secondary.\nThe code was placed in a try block because it will throw an exception if there is no ProfileModel in remote secondary.\nFuture\u0026lt;bool\u0026gt; putDude( DudeModel dude, String contactAtsign, BuildContext context) async { ... } catch (e) { // Exception should be thrown the first time a profile is created for an atsign  await atClient! .put( profileKey, json.encode( ProfileModel( id: dude.sender, dudesSent: 1, dudeHours: dude.duration, longestDude: dude.duration) .toJson(), ), ) .whenComplete(() =\u0026gt; isCompleted = true) .onError((error, stackTrace) =\u0026gt; isCompleted = false); } return isCompleted; } Lines 8 to 20 saves the profileModel to the remote secondary. This code only execute the first time a profileModel is created for an atSign.\nGetting Dudes from remote secondary #\r/// Receives all dudes sent to the current atsign.  Future\u0026lt;List\u0026lt;DudeModel\u0026gt;\u0026gt; getDudes() async { List\u0026lt;AtKey\u0026gt; receivedKeysList = []; var key = await atClient!.getAtKeys( regex: \u0026#39;^cached:.*@.+\\$\u0026#39;, // sharedBy: atsign,  ); receivedKeysList.addAll(key); ... } // @blizzard30:some_uuid.at_skeleton_app@assault30 // @blizzard30:signing_privatekey@blizzard30  This method retrieves the DudeModel thats stored on remote secondary.\nLines 3 instantiates an empty list that will eventually store AtKeys.\nLines 4 to 7 grabs all the AtKey stored in the current atSign remote secondary.\nLine 9 add the keys to the receivedKeysList.\n/// Receives all dudes sent to the current atsign.  Future\u0026lt;List\u0026lt;DudeModel\u0026gt;\u0026gt; getDudes() async { ... List\u0026lt;DudeModel\u0026gt; dudes = []; for (AtKey key in receivedKeysList) { try { if (key.sharedBy != null \u0026amp;\u0026amp; key.key!.length == 36) { AtValue _keyValue = await atClient!.get(AtKey()..key = key.key!); dudes.add(DudeModel.fromJson(jsonDecode(_keyValue.value))); } } on Exception catch (e) { ScaffoldMessenger(child: SnackBar(content: Text(e.toString()))); } } return dudes; } Line 4 instantiates an empty list that will eventually store the DudeModel extracted from remote secondary.\nLines 5 to 15 loops through every AtKey in the receivedKeysList.\nline 7 filters the receivedKeysList to only select AtKey that was shared and where the key/id is a UUID.\nline 8 extract the AtValue of the AtKey\nline 10 converts the value of the AtValue to a DudeModel and add it to the empty dudes list.\nline 13 shows a SnackBar with the exception message if an error occurs.\nLine 16 returns the List of DudeModel.\nMonitor Notification #\rThe atPlatform has its own Notification Service that monitors being sent to the current atSign.\nvoid monitorNotifications(BuildContext context) { atClientManager.notificationService .subscribe(regex: \u0026#39;at_skeleton_app\u0026#39;) .listen( (AtNotification notification) async { String? currentAtsign = DudeService.getInstance().atClient!.getCurrentAtSign(); if (currentAtsign == notification.to) { await LocalNotificationService().showNotifications( notification.id.length, \u0026#39;Dude\u0026#39;, \u0026#39;${notification.from}sent you a dude\u0026#39;, 1); } }, ); } Line 3 subscribe to data being sent over the dude app.\nIn line the listen method expects an option function. This function receives an AtNotification that allows us to control what data we want to listen for as show in lines 5 to 16.\nIn line 6 to 7 we get the current atsign. In line 9 we filter the notification to ensure the notification is being sent to the current atsign.\nIn lines 10 to 14 we show the user a notification that a dude was sent to them by the atSign of the sender.\nGet Contacts #\r/// Fetch the current atsign contacts.  Future\u0026lt;List\u0026lt;AtContact\u0026gt;?\u0026gt; getContactList() { return contactService.fetchContacts(); } Line 3 returns a list of AtContacts. An AtContact is a class containing properties of other atsigns that was selected as a contact.\nGet Profile #\rThis method retrieves the ProfileModel of the current atsign.\n/// Get the profile stats for the current atsign  Future\u0026lt;ProfileModel\u0026gt; getProfile() async { return await atClient! .getAtKeys( regex: \u0026#39;dude_profile_\u0026#39;, sharedBy: atClient!.getCurrentAtSign(), ) .then( (value) =\u0026gt; atClient!.get(value[0]).then( (value) =\u0026gt; ProfileModel.fromJson( jsonDecode(value.value), ), ), ); } Lines 3 to 7 gets a list profile models AtKeys, there only one AtKey in the list. Line 9 returns the AtValue and lines 10 to 11 returns the ProfileModel class.\nDelete Dude #\rThis dude deletes a dude from remote secondary.\n/// Delete dude sent to the current atsign.  Future\u0026lt;bool\u0026gt; deleteDude(DudeModel dude) async { try { List\u0026lt;AtKey\u0026gt; dudeAtKey = await atClient!.getAtKeys(regex: dude.id); bool isDeleted = await atClient!.delete(dudeAtKey[0]); return isDeleted; } on AtClientException catch (atClientExcep) { _logger.severe(\u0026#39;❌ AtClientException : ${atClientExcep.errorMessage}\u0026#39;); return false; } catch (e) { _logger.severe(\u0026#39;❌ Exception : ${e.toString()}\u0026#39;); return false; } } Line 4 returns a list containing a dude AtKey that corresponds with the uuid of the DudeModel. Line 5 deletes it.\nLines 8 to 13 logs the exception if an error occurs.\n"
       })
       .add(
@@ -555,7 +555,7 @@ Source:
         id: 58,
         href: "/tutorials/at-dude/_9_history_screen/",
         title: "History Screen",
-        description: "Documentation\n",
+        description: "Documentation for \"History\" in atDude app\n",
         content: ""
       })
       .add(
@@ -579,7 +579,7 @@ Source:
         id: 61,
         href: "/tutorials/dess/aws/5-setup-and-deployment/",
         title: "Instance setup and dess deployment",
-        description: "Documentation\n",
+        description: "Setup your AWS Instance for dess deployment\n",
         content: "Open your LightSail console\nBy now you should see your instance in “Running state”\nOpen it and on tab Connect click on “Connect using SSH”\nYou should be presented by a new window with command line:\nBefore we do anything else, we should update the system:\nsudo apt update \u0026amp;\u0026amp; sudo apt upgrade This might take some time, but it will make sure we have latest repository information and the system is up to date.\nNext make sure curl is installed, we will use curl to pull the dess installation file:\nsudo apt install curl\nFinally, run the dess installer:\ncurl -fsSL https://getdess.atsign.com | sudo bash\nOnce the installer is finished you should be prompted like so:\nDess installed, please move on to the sudo dess-create command.\n"
       })
       .add(
@@ -587,7 +587,7 @@ Source:
         id: 62,
         href: "/tutorials/dess/gcp/5-setup-and-deployment/",
         title: "Instance setup and dess deployment",
-        description: "Documentation\n",
+        description: "Setting up Google Cloud Platform (GCP) instance for dess deployment\n",
         content: "Open your GCP console at https://console.cloud.google.com/compute/instances and search for VM instances\nBy now you should see your instance in “Running state”\nClick on the SSH button and connect to your instance.\nYou should be presented by new window with command line:\nBefore we do anything else, we should update the system:\nsudo apt update \u0026amp;\u0026amp; sudo apt upgrade\nThis might take some time, but it will make sure we have latest repository information and the system is up to date.\nNext make sure curl is installed, we will use curl to pull the dess installation file:\nsudo apt install curl Finally, run the dess installer:\ncurl -fsSL https://getdess.atsign.com | sudo bash\nOnce the installer is finished you should be prompted like so:\nDess installed, please move on to the sudo dess-create command.\n"
       })
       .add(
@@ -619,7 +619,7 @@ Source:
         id: 66,
         href: "/tutorials/at-dude/1-introduction/",
         title: "Introduction",
-        description: "Introduction to the atDude tutorial# SEO Description for this step Documentation",
+        description: "Introduction to the atDude tutorial",
         content: "In this tutorial we will build the atDude app. This app is a secure, end-to-end encrypted, peer-to-peer application that allows you to send \u0026lsquo;dudes\u0026rsquo; to your contacts!\nThe longer you press and hold the Dude button, the longer your sent dude will be! You can keep up-to-date with your \u0026lsquo;dude\u0026rsquo; stats to see how much duding you\u0026rsquo;ve done!\nThis app is built on the atPlatform. The atPlatform is an open-source backend platform that allows developers to build end-to-end encrypted applications.\nThe purpose of this tutorial is to guide you through the steps in creating a production-ready app on the atPlatform.\n"
       })
       .add(
@@ -627,7 +627,7 @@ Source:
         id: 67,
         href: "/tutorials/atmosphere-pro/1-introduction/",
         title: "Introduction",
-        description: "Atmosphere Pro introduction\n",
+        description: "Introduction to Atmosphere Pro app built on atPlatform\n",
         content: "introduction\n"
       })
       .add(
@@ -635,7 +635,7 @@ Source:
         id: 68,
         href: "/tutorials/dess/aws/1-introduction/",
         title: "Introduction",
-        description: "Documentation\n",
+        description: "Get started on setting up private dess, distributed edge secondary server, using Amazon Web Services (AWS)\n",
         content: "In this step-by-step guide I will walk you through all steps required to setup your own private dess (distributed edge secondary server) using AWS (Amazon Web Services). Please use the index to skip some steps in case you have already completed them.\n"
       })
       .add(
@@ -643,7 +643,7 @@ Source:
         id: 69,
         href: "/tutorials/dess/gcp/1-introduction/",
         title: "Introduction",
-        description: "Setup dess on GCP\n",
+        description: "Introduction to setting up dess on Google Cloud Platform (GCP)\n",
         content: "dess stands for “Distributed Edge Secondary Server” and it is used to host your atSigns on your own secondary server. Refer to the Setup dess guide under Options to learn more.\nIn this step-by-step guide we will walk you through all steps required to setup your own private dess in GCP (Google Cloud Platform) from scratch. Please use index to skip some steps in case you have done them in another way.\n"
       })
       .add(
@@ -651,7 +651,7 @@ Source:
         id: 70,
         href: "/tutorials/dess/rpi/1-introduction/",
         title: "Introduction",
-        description: "Documentation\n",
+        description: "Introduction to set up private dess using a Raspberry Pi\n",
         content: "In this step-by-step guide I will walk you through all steps required to setup your own private dess using a Raspberry Pi.\n"
       })
       .add(
@@ -683,7 +683,7 @@ Source:
         id: 74,
         href: "/tutorials/at-dude/_4_local_notification_services/",
         title: "Local Notification Service",
-        description: "Documentation\n",
+        description: "Documentation for \"Local Notification Service\" in atDude app\n",
         content: "   TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    There are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.\nLocalNotificationService #\rThis class contains the configurations required to send in app notification on Android and IOS.\nimports #\rimport \u0026#39;dart:io\u0026#39;; import \u0026#39;package:flutter/material.dart\u0026#39;; import \u0026#39;package:flutter_local_notifications/flutter_local_notifications.dart\u0026#39;; import \u0026#39;package:timezone/data/latest.dart\u0026#39; as tz; import \u0026#39;package:timezone/timezone.dart\u0026#39; as tz; import \u0026#39;../screens/history_screen.dart\u0026#39;; import \u0026#39;navigation_service.dart\u0026#39;; The flutter_local_notification` package is used to send notifications.\nProperties of LocalNotificationService #\rclass LocalNotificationService { static final LocalNotificationService _notificationService = LocalNotificationService._internal(); factory LocalNotificationService.getInstance() { return _notificationService; } factory LocalNotificationService() { return _notificationService; } final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin(); LocalNotificationService._internal(); Future\u0026lt;void\u0026gt; initNotification() async {...} _requestIOSPermission() {...} /// Shows notification when dude is sent to the current atsign.  ///  /// Notification currently only works in app on android.  Future\u0026lt;void\u0026gt; showNotifications( int id, String title, String body, int seconds) async {...} } Similar to DudeService() this class is a singleton. Lines 13 and 14 instantiates the FlutterLocalNotificationsPlugin.\n"
       })
       .add(
@@ -699,7 +699,7 @@ Source:
         id: 76,
         href: "/tutorials/at-dude/_2_model/",
         title: "Models",
-        description: "Documentation\n",
+        description: "Documentation of \"Models\" for atDude app\n",
         content: "   TOC     Dude Model   From Json   To Json   Other Methods   Profile Model    This app uses two model for data management, the dude model and the profile model.\nDude Model #\rThe dude model is a class that represent a dude or a message that will be sent to others on the atPlatform.The dude model class contains the following properties.\nclass DudeModel { late String id; String dude = \u0026#39;\u0026#39;; late String sender; late String receiver; late DateTime timeSent; late Duration duration; DudeModel({ required this.id, required this.dude, required this.sender, required this.receiver, required this.timeSent, required this.duration, }); } ... The value of these properties will be sent to the atPlatform as a string.\nThe receiver and sender properties are necessary for the atPlatform to determine on will send and receive the data and on whose server the data will be saved.\nThe duration property will determine which voiceover will be played. A voiceover will be played to reflect the duration of the dude message.\nFrom Json #\r... DudeModel.fromJson(Map\u0026lt;String, dynamic\u0026gt; json) : this( id: json[\u0026#39;id\u0026#39;] as String, dude: json[\u0026#39;dude\u0026#39;] as String, sender: json[\u0026#39;sender\u0026#39;] as String, receiver: json[\u0026#39;receiver\u0026#39;] as String, timeSent: DateTime.parse((json[\u0026#39;timeSent\u0026#39;])) as DateTime, duration: Duration(milliseconds: json[\u0026#39;duration\u0026#39;]) as Duration); ... This method converts the json received from the atPlatform to the DudeModel() class.\nTo Json #\r... Map\u0026lt;String, dynamic\u0026gt; toJson() { return { \u0026#39;id\u0026#39;: id, \u0026#39;dude\u0026#39;: dude, \u0026#39;sender\u0026#39;: sender, \u0026#39;receiver\u0026#39;: receiver, \u0026#39;timeSent\u0026#39;: timeSent.toIso8601String(), \u0026#39;duration\u0026#39;: duration.inMilliseconds, }; } ... This method converts the DudeModel() instance into a Map.\nOther Methods #\r... void saveId() =\u0026gt; id = const Uuid().v4(); void saveDude(String value) =\u0026gt; dude = value; void saveSender(String value) =\u0026gt; sender = value; void saveReceiver(String value) =\u0026gt; receiver = value; void saveTimeSent() =\u0026gt; timeSent = DateTime.now(); ///Record the duration of a dude.  /// Record the length of a dude use want to send.  void saveDuration(DateTime startTime) { duration = DateTime.now().difference(startTime); } ... These methods will save the values received from the app and save it to an instance of the DudeModel() that will be sent to the atPlatform.\nProfile model #\rThis model keeps track of the number of dudes sent, the number of hours spend duding and the duration of the longest dude.\nclass ProfileModel { late String id; int dudesSent = 0; Duration dudeHours = const Duration(milliseconds: 0); Duration longestDude = const Duration(milliseconds: 0); ProfileModel({ required this.id, required this.dudesSent, required this.dudeHours, required this.longestDude, }); ProfileModel.newDude(); Map\u0026lt;String, dynamic\u0026gt; toJson() { return { \u0026#39;id\u0026#39;: id, \u0026#39;dudesSent\u0026#39;: dudesSent, \u0026#39;dudeHours\u0026#39;: dudeHours.inMilliseconds, \u0026#39;longestDude\u0026#39;: longestDude.inMilliseconds, }; } ProfileModel.fromJson(Map\u0026lt;String, dynamic\u0026gt; json) : this( id: json[\u0026#39;id\u0026#39;] as String, dudesSent: json[\u0026#39;dudesSent\u0026#39;] as int, dudeHours: Duration(milliseconds: json[\u0026#39;dudeHours\u0026#39;]) as Duration, longestDude: Duration(milliseconds: json[\u0026#39;longestDude\u0026#39;]) as Duration, ); // @override  // String toString() {  // return \u0026#39;ProfileModel(id: $id, dude: $dude, sender: $sender, receiver: $receiver, timeSent: $timeSent, duration: $duration)\u0026#39;;  // }  void saveId(String value) =\u0026gt; id = value; void saveDudesSent(int value) =\u0026gt; dudesSent = value; void saveDudeHours(Duration value) =\u0026gt; dudeHours = value; void saveLongestDude(Duration value) =\u0026gt; longestDude = value; bool getChampionStats() { return longestDude \u0026gt;= const Duration(hours: 1); } } "
       })
       .add(
@@ -707,7 +707,7 @@ Source:
         id: 77,
         href: "/tutorials/at-dude/_3_navigation_service/",
         title: "Navigation Service",
-        description: "Documentation\n",
+        description: "Documentation for \"Navigation Services\" in atDude app\n",
         content: "   TOC     Navigation Service   Dude Service   Dude Service Imports   Dude Service Properties   Local Notification   Local Notification imports   Properties of LocalNotificationService    There are three service classes in the dude app, they are NavigationServices(), DudeServices() and LocalNotificationServices(). In this code lab we will explore the properties of these classes.\nNavigationService #\rimport \u0026#39;package:flutter/material.dart\u0026#39;; class NavigationService { static GlobalKey\u0026lt;NavigatorState\u0026gt; navKey = GlobalKey(); static GlobalKey\u0026lt;NavigatorState\u0026gt; nesteNavKey = GlobalKey(); } This Class contains two static properties of type GlobalKey. It allows us to get the current context without being inside a builder method.\n"
       })
       .add(
@@ -731,7 +731,7 @@ Source:
         id: 80,
         href: "/tutorials/at-dude/_7_onboarding/",
         title: "Onboarding",
-        description: "Documentation\n",
+        description: "Documentation for \"Onboarding\" in atDude app\n",
         content: ""
       })
       .add(
@@ -747,7 +747,7 @@ Source:
         id: 82,
         href: "/tutorials/dess/aws/2-prerequisites/",
         title: "Pre-requisites",
-        description: "Documentation\n",
+        description: "Pre-requisites for setting up private dess, distributed edge secondary server, using Amazon Web Services (AWS)\n",
         content: " Registered atSign(s) to setup An AWS account A Fully Qualified Domain Name (FQDN)  1. Registering your atSign #\rThis topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.\n2. Sign-up for AWS account #\rIf you are new to AWS, signing up for an account is free! The cost of running dess is about 10$/month. You can create your account at Amazon Web Services and as of June 6th, 2021 there is a “free tier” available which was used during the making of this guide.\naws-free-trial\nFollow the instructions on screen.\naws-sign-up\nOnce you are done with registration, you will be able to login to your aws console.\nMake sure that you select the correct region in the top right corner.\naws-region\nSelect the region that is geographically closest to your location for best performance.\nYou are now setup on AWS and ready to prepare dess.\n3. Register your own fully qualified domain name (FQDN) #\rThis step can be performed at a variety of sites, all with different pricing models. You can use sites like Go Daddy, Namecheap, and many others. However, since we have AWS account, we can use it to register our domain through the Route 53 service.\nIn your AWS console navigate to services in top left corner and select Route 53.\na) Register domain name with AWS. #\rIn your AWS console search for Route 53.\nYou can start looking for your domain directly from here:\nBased on the domain name you search, AWS will give you similar options, and their pricing. As I am looking for the best deal, the .link domain seems like a good option at a cost of 5$ / year.\nIn my case 4atsign.link is free and I will register it by clicking “Add to cart” and continue.\nFill out DNS registration form:\nContinue review details and order. At this point if all is fine you should see your domain request pending:\nThis can take some time so why don’t we move on to next step!\n"
       })
       .add(
@@ -755,7 +755,7 @@ Source:
         id: 83,
         href: "/tutorials/dess/gcp/2-prerequisites/",
         title: "Pre-requisites",
-        description: "Documentation\n",
+        description: "Pre-requisites to setting up private dess on Google Cloud Platform (GCP)\n",
         content: " Register Atsign at atsign.com Have google account Have registered Fully Qualified Domain Name (FQDN)  1. Registering your atSign #\rThis topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.\n2. Sign-up for GCP account #\ra) Account Creation #\rIf you are new to cloud like me and need to create new GCP account, I have good news! The creation is for free. As promotion all new customer will also receive 300$ as credit. That is more than enough to run multiple dess’s for 3 months of offer validity.\nYou can register with your gmail account or create new one by clicking “Get started for free” and follow instructions to register\nOnce done with registration you will be able to login to your console.cloud.google.com And voila you have your GCP account up and running.\nb) Setting up billing #\rTo be able to run some services you have to maintain billing account. Navigation Menu -\u0026gt; Billing\nBy default GCP creates “My Billing Account” which you can link to your project.\nClick “Link Billing account” and select “My billing account” from drop down\n🔴 Its important to note that this account holds your 300$ free credits! 🔴\nWe are all setup and ready to go deploy!\n3. Register your own fully qualified domain name (FQDN) #\rThis step can be performed at range of different sites with different pricing models. You can use sites like godaddy.com; namecheap.com; and many others. Since we have GCP account we can use it to register our domain through Cloud Domain.\na) Register domain name with GCP. #\rIn your GCP console search for Cloud Domain.\nWe first need to enable this service.\nOnce the service activates you will be presented with its dashboard.\nLets register our fully qualified domain name (FQDN) that will be used for registration of our dess.\nClick on “Register Domain” and look for suitable name.\nReviewing pricing options of GCP .pw is their cheapest option which will work for testing. For my test case I am selecting atsign.pw with price $0.75 / month by clicking add to cart button and continue.\nNext we can select where will our DNS record be hosted. Simply select “Use Google Domains” and DNSSEC “Enabled” and click continue.\nWe have no options with Privacy protection so simply click continue.\nFill out contact details and click register. This will trigger registration email you will have to verify.\nOnce you verify your email your domain should be ready to use\nb) Create Cloud DNS zone #\rNext step is to enable Cloud DNS service. Search for DNS in search bar and select Cloud DNS\nIf its your first time activating this service you will have to enable the API. Press enable and wait for the activation to finish.\nLets crate new DNS zone by clicking “Create Zone”\nWe will select zone type as Public since we will be connecting to our DNS from internet and provide your registered DNS name. In my case atsign.pw. DNSSEC will be set to off and provide some meaningful Description. Once you filled all your details press create.\nYou should receive following message:\n"
       })
       .add(
@@ -763,7 +763,7 @@ Source:
         id: 84,
         href: "/tutorials/dess/rpi/2-prerequisites/",
         title: "Pre-requisites",
-        description: "Documentation\n",
+        description: "Pre-requisites for setting up private dess on a Raspberry Pi\n",
         content: " Registered atSign(s) to setup A No-IP account A Fully Qualified Domain Name (FQDN) Raspberry Pi (model 3B+ used for this tutorial)  1. Registering your atSign #\rThis topic is already well documented. Please follow the guidance of Our FAQs and register via the registrar site.\n2. Check if your IP address is static or dynamic #\rIn case it is static, you can skip the rest of this step. Otherwise, if you have a dynamic address, keep reading:\nYou will need to setup an account on a Dynamic DNS (DDNS) service. Dynamic DNS are a service which allows us to associate our public IP address to a domain. In this case, we will use it to be able to reach our home IP address in a simpler way (eg: instead of connecting to \u0026lsquo;203.0.113.206\u0026rsquo;, we can connect to \u0026rsquo;example.ddns.com\u0026rsquo;).\nWe will use No-IP service for this tutorial. Firstly, you need to sign up for an account:\nYou can check the \u0026lsquo;Create my hostname later\u0026rsquo; box, as we will also configure it.\nClick on \u0026lsquo;Free Sign Up\u0026rsquo; button: Now you will need to activate your account via email: After that, navigate again to https://my.noip.com/ and select No-IP Hostnames: Click on \u0026lsquo;Create a Hostname\u0026rsquo;. Choose a Hostname you like, and one of the free options in de Domain menu. Leave the \u0026lsquo;Record Type\u0026rsquo; on \u0026lsquo;DNS Host (A)\u0026rsquo; and the IPv4 Address field empty, and click on \u0026lsquo;Create Hostname\u0026rsquo;: We will end the No-IP configuration later.\n3. Register your own fully qualified domain name (FQDN) #\rThis step can be performed at a variety of sites, all with different pricing models. You can use sites like Go Daddy, Namecheap, and many others. The following configuration has been done in Cloudflare: On the DNS panel, click on \u0026lsquo;Add record\u0026rsquo;: And create a CNAME record which points to your No-IP Hostname: We can now go to the next steps.\n"
       })
       .add(
@@ -771,7 +771,7 @@ Source:
         id: 85,
         href: "/tutorials/dess/aws/3-prep-aws-instance/",
         title: "Preparing AWS Instance",
-        description: "Documentation\n",
+        description: "Preparing AWS Instance for setting up private dess\n",
         content: "Now since I am new to AWS, the easiest way to get started is by using the LightSail service from service catalog. This will enable you to deploy small system which is more then capable of handling dess at pre-set price.\nWelcome to LightSail:\nFirst step is to create new instance. Fortunately, we have big orange button that can do just that!\nThere are several options we are presented at this moment. Since I am living in Europe I select “Frankfurt, Zone A (eu-central-1a)” as my instance location. Instance region will dictate how well will your instance response based on your geographical location. People located in India should selects APAC region where as people in US should select North America region. You can leave availability zone set as default.\nNext up will be selection of operating system we want to deploy. We know that dess works well with Ubuntu 20.04 LTS so lets select just that.\nYou are presented with couple more options, but unless you know what you are doing leave these as is.\nNow let’s select instance plan. dess is relatively light weight so for testing purposes I will select first instance plan for 3.5$/Month. This will provide us with 512 MB of RAM, 1vCPU, 20GB of storage and 1TB of data transfer. This is more than enough to run our dess.\nLastly we have to name our instance. This is the name you will be presented with in your dashboard.\nLast but not least is to press “Create instance”\nAfter a couple of seconds you should be re-routed to your dashboard and see your instance up and running:\n"
       })
       .add(
@@ -779,7 +779,7 @@ Source:
         id: 86,
         href: "/tutorials/dess/gcp/3-prep-aws-instance/",
         title: "Preparing GCP Instance",
-        description: "Documentation\n",
+        description: "Preparing GCP instance for setting up private dess\n",
         content: "Now since I am new to GCP the easiest way to start using it is with prebuild solutions. This way you will deploy small system which is more then capable of handling dess at pre-set price.\nWe can use pre-build “Ubuntu 20”. In Search bar look for Ubuntu20\n🔴 Make sure to use “Ubuntu 20” and not “Hardened Ubuntu 20”. Although the Hardened version will work as well it requires additional manual steps to make work.🔴​\nThis will take you to this prebuild solution overview page:\nSelect launch\nAnd press enable all required API’s\nOnce all API’s are activated you are taken to configuration page:\nPrices are based on region and power of selected Virtual Machine (VM). To cost optimize you can select US region / N1 / g1-small at cost of $15/Month.\nNext up is boot disk which we can leave as is.\nThis will deploy your Ubuntu 20.04 virtual machine.\n"
       })
       .add(
@@ -787,7 +787,7 @@ Source:
         id: 87,
         href: "/tutorials/dess/rpi/4-prep-rasp/",
         title: "Preparing Raspberry Pi configuration",
-        description: "Documentation\n",
+        description: "Preparing Raspberry Pi for atPlatform dess configuration\n",
         content: "For this part of the tutorial, I\u0026rsquo;m going to be using a Raspberry Pi model 3B+, although some other Raspberry Pi which runs an OS version compatible with dess will also work. This time we are going to be using Raspbian (Raspberry Pi OS Lite (32-bit) version), along with the Raspberry Pi Imager program, which will help us to install the OS.\nFirst of all, we need to download the Raspberry Pi Imager program for our current PC OS: We can install the Lite or the Full version. I will be using the Lite one: It is important that we configure SSH, as we will be using it to connect to the device. It is highly recommendable to configure it with public-key authentication (for security reasons), but you can also configure it with username and password (which is not secure). We can also configure other things, such as a wireless network, or a username/password for the system. If you are going to be using the device connected to the Ethernet, I would not recommend configuring the wireless network.\nIf you configure the wireless network and then decide to connect it to your network through Ethernet, you may experience some network related errors in the next steps (dess installation). In that case, you can run:\nip addr sh  To see your interfaces (typically, eth0 and wlan0), and:\nip link set wlan0 down  To shutdown your wireless network interface, so the installation can run properly. You can enable it again by substituting \u0026lsquo;down\u0026rsquo; by \u0026lsquo;up\u0026rsquo; in the previous command.\nFinally, introduce the SD-card into your computer, select it, and write the OS to the SD-Card (all content will be formatted in the process): After the installation ends, we can continue with the next step.\n"
       })
       .add(
@@ -795,7 +795,7 @@ Source:
         id: 88,
         href: "/tutorials/dess/rpi/3-prep-router-config/",
         title: "Preparing router configuration",
-        description: "Documentation\n",
+        description: "Prepare router configuration for setting up private dess using Raspberry Pi\n",
         content: "Now we will need to do the proper configuration in our home router. We will need to do two things:\n Open port 80, and a port for the dess (typically 6464) Associate Dynamic DNS to No-IP  After logging in into the home router (In my case, navigating to \u0026ldquo;192.168.1.1\u0026rdquo; in any web browser. You will find that information on the back of your router), We can start the configuration. We will need to know the local IP assigned to our Raspberry Pi (which can be also seen in the router configuration page).\nFirstly, we will open the ports we need. Port 80 needs to be opened so Certbot can provide us with a certificate from Let\u0026rsquo;s Encrypt.\nThis is an example of both ports opened for our Raspberry Pi\u0026rsquo;s local IP: After that, we now need to configure the Dynamic DNS (DDNS) service. Some newer routers let the users choose a popular service (such as No-IP) directly from a list (as in the following example image), but if that is not our case, we can just provide the router with the direction of the service. That is all we will need to configure in our router.\n"
       })
       .add(
@@ -803,7 +803,7 @@ Source:
         id: 89,
         href: "/tutorials/dess/aws/4-prep-network-access/",
         title: "Preparing your instance for network access",
-        description: "Documentation\n",
+        description: "Preparing your instance for network access to private dess\n",
         content: "Assignment of Static IP #\rNext up, is to provide our instance with a static IP and linking our domain to it.\nWhen you click on your instance name, it will take you to the management console, which should look like this:\nThis is where you control hardware, connectivity and if needed can delete your instance.\nLets configure a static IP address for your new instance. Navigate to Networking and click on Create static IP:\nOur region and instance is selected, so the only thing left is to name our static IP. I selected the name atsign-static, but it can be any name you like.\nLets hit create:\nAnd voila, we now have a static IP address on the internet and it will not change. Now we can link our domain name with it.\nWhen you click on your instance name and navigate to Networking, the static IP is now assigned.\nAssignment of Domain name to your static IP #\rWe can now move on to linking our static IP address to our domain. This is done via the AWS console which can be accessed in the top right of Lightsail.\nVerify your email used for registering domain:\nBy now you should receive verification email that will confirm registration of your domain. Click this link before moving on.\nLinking domain with your static address:\nLets navigate to “Route 53” from Services menu.\nFrom your dashboard click on “Domain” which will take you to the “Registered Domains” tab.\nHere you can click on your registered domain which will take you to overview page with domain status and contacts.\nClick on “Manage DNS”\nAnd click on your domain name.\nThis will show you your DNS records for your domain. We now need to link A type record to your domain linking it to IP address of your instance.\nThis is done simply by typing your static IP address from previous step into field “Value” and clicking Create record:\nIf everything goes well you should see following in your domain dashboard:\nTo test if you are successful open command line and ping your domain. You should see your instance static IP address. It will not respond which is normal due to IPv4 firewall. It is actually good thing!\nAt this point we have created DNS record we will use to link our dess, we created instance name which will be running our dess and we have opened port range which is exposed to the internet and we can communicate with atSign root server and our apps with.\nSetting up Firewall #\rNext up we need to make sure we have ports open for our dess to communicate with root server and our apps. In Section networking go to section “IPv4 Firewall” and click “+ Add rule” Our rule will be “Custom” on TCP protocol with Port range in number higher then 1024. In my case I have selected port range 8000-8010. This will enable me to run up to 10 atSigns in parallel.\nClick create and verify that your new rule is in list:\n"
       })
       .add(
@@ -811,7 +811,7 @@ Source:
         id: 90,
         href: "/tutorials/dess/gcp/4-prep-network-access/",
         title: "Preparing your instance for network access",
-        description: "Documentation\n",
+        description: "Preparing your GCP instance for network access to private dess\n",
         content: "a) Assignment of Static IP #\rNext up our list of activities is providing our instance with static IP and linking our domain to it.\nGCP assigned ephemeral IP address to our newly created VM. We need to change it to static IP.\nIn search bar look for External IP addresses.\nYou should see your external IP address assigned to your VM\nIn column Type select ephemeral and change it to Static\nGive your static IP name and some description.\nType should now say Static\nb) Assignment of Domain name to your static IP #\rNext step is to point your domain to your virtual machine running dess.\nSearch for Cloud DNS\nOpen zone you have created in step 3.b Create Cloud DNS zone\nWe now need to link A type record to your domain linking it to IP address of your Virtual machine.\nThis is done simply press “Add record set”\nSelect Resource record type “A” and IPv4 address the address of your dess virtual machine.\nIf everything goes well you should see following in your domain dashboard:\nNext step is to update Google Name servers. You can follow Googles guide - step 5.\nhttps://cloud.google.com/dns/docs/tutorials/create-domain-tutorial#register-domain\nTo test if you are successful open command line and ping your domain. You should see your instance static IP address.\nAt this point we have created DNS record we will use to link our dess, we created instance name which will be running our dess and we have opened port range which is exposed to the internet and we can communicate with atSign root server and our apps with.\nc) Setting up Firewall #\rSearch for Firewall in search bar.\nClick on Create firewall rule\nLets create firewall rule that will enable the atSign root server communicate with our dess.\nImportant things to note:\nIngress translates to incoming traffic.\nSelecting IP range as 0.0.0.0/0 will allow traffic from anywhere on the internet.\nFor my use case I will enable port range 8000 – 8010 allowing me to register up to 10 atSigns.\nPress create and validate that your new rule appears in list of firewall rules.\nSecond we need to create firewall rule that will enable your dess server to communicate with certification authority.\nImportant things to note:\nIngress translates to incoming traffic.\nSelecting IP range as 0.0.0.0/0 will allow traffic from anywhere on the internet.\nYou need to enable port 80 for communication with Certification authority.\nPress create and validate that your new rule appears in list of firewall rules.\n"
       })
       .add(
@@ -835,7 +835,7 @@ Source:
         id: 93,
         href: "/tutorials/at-dude/_10_profile_screen/",
         title: "Profile Screen",
-        description: "Documentation\n",
+        description: "Documentation for \"Profile Screen\" in atDude app\n",
         content: ""
       })
       .add(
@@ -851,7 +851,7 @@ Source:
         id: 95,
         href: "/tutorials/dess/aws/6-registration/",
         title: "Registration of atSign in your private dess",
-        description: "Documentation\n",
+        description: "Registration of atSign in your private dess\n",
         content: "At this step you should already have your atSign registered at atsign.com. If not go do it!\nI have registered my own free atSign (@44likelycanary) which I will link to my dess.\nIn your instance console, navigate to dess folder. If you were following this guide it will be located in:\nWe now need to create the service that will host our atSign by executing the dess-create command:\n$ sudo dess-create @44likelycanary 4atsign.link 8000 \u0026lt;email address\u0026gt; likelycanary\nTo make it more understandable:\nI will be registering my atSign @44likelycanary.\nI will be using my domain 4atsign.link which I have registered through AWS.\nI am using port 8000 which I have opened in my instance firewall.\nMy registration email address is (this email is used to sign the SSL certificates).\nThe last likelycanary is the name that docker will use to track the service.\nIf everything is successful you should see output like this:\nAt this moment your atSign is registered on your dess.\n"
       })
       .add(
@@ -859,7 +859,7 @@ Source:
         id: 96,
         href: "/tutorials/dess/gcp/6-registration/",
         title: "Registration of atSign in your private dess",
-        description: "Documentation\n",
+        description: "Registration of atSign in your private dess\n",
         content: "At this step you should already have your atSign registered at atsign.com. If not go do it!\nI have registered my own free atSign (@44likelycanary) which I will link to my dess.\nIn your instance console, navigate to dess folder. If you were following this guide it will be located in:\nWe now need to create the service that will host our atSign by executing the dess-create command:\n$ sudo dess-create @44likelycanary 4atsign.link 8000 \u0026lt;email address\u0026gt; likelycanary\nTo make it more understandable:\nI will be registering my atSign @44likelycanary.\nI will be using my domain 4atsign.link which I have registered through AWS.\nI am using port 8000 which I have opened in my instance firewall.\nMy registration email address is (this email is used to sign the SSL certificates).\nThe last likelycanary is the name that docker will use to track the service.\nIf everything is successful you should see output like this:\nAt this moment your atSign is registered on your dess.\n"
       })
       .add(
@@ -867,7 +867,7 @@ Source:
         id: 97,
         href: "/tutorials/dess/rpi/6-registration/",
         title: "Registration of atSign in your private dess",
-        description: "Documentation\n",
+        description: "Registration of atSign in your private dess on Raspberry Pi\n",
         content: "Now, we will proceed to install dess, following the official instructions. Make sure curl is installed, we will use curl to pull the dess installation file:\nsudo apt install curl  Finally, run the dess installer:\ncurl -fsSL https://getdess.atsign.com | sudo bash  Once the installer is finished you should be prompted like so:\nDess installed, please move on to the sudo dess-create command.\nAt this step you should already have your atSign registered at atsign.com. If not go do it!\nI have registered my own free atSign (@44likelycanary) which I will link to my dess.\nIn your instance console, navigate to dess folder. If you were following this guide it will be located in:\nWe now need to create the service that will host our atSign by executing the dess-create command:\nsudo dess-create \u0026lt;@your-atSign\u0026gt; \u0026lt;your-domain\u0026gt; \u0026lt;opened-port\u0026gt; \u0026lt;email-address\u0026gt; \u0026lt;service-name: your atsign with no '@'\u0026gt;```  For instance: sudo dess-create @44likelycanary 4atsign.link 8000 tutorial@example.com likelycanary\nTo make it more understandable:\n  I will be registering my atSign @44likelycanary.\n  I will be using my domain 4atsign.link which I have registered.\n  I am using port 8000 which I have opened in my router firewall (typically 6464, but as we can see, it can be any other).\n  My registration email address is tutorial@example.com (this email is used to sign the SSL certificates).\n  The last likelycanary is the name that docker will use to track the service.\n  If everything is successful you should see output like this:\nAt this moment your atSign is registered on your dess.\n"
       })
       .add(
@@ -883,7 +883,7 @@ Source:
         id: 99,
         href: "/tutorials/at-dude/_8_send_dude_srcreen/",
         title: "Send Dude Screen",
-        description: "Documentation\n",
+        description: "Documentation for \"Send Dude Screen\"\n",
         content: ""
       })
       .add(
@@ -907,7 +907,7 @@ Source:
         id: 102,
         href: "/tutorials/dess/rpi/",
         title: "Setup dess on a Raspberry Pi",
-        description: "Learn how to setup dess on a Raspberry Pi\n",
+        description: "Learn how to setup atPlatform dess on a Raspberry Pi\n",
         content: ""
       })
       .add(
