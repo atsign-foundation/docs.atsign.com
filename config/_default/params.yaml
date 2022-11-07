@@ -1,3 +1,6 @@
+ProductionURLs:
+  - 'https://docs.atsign.com/'
+
 # Theme Color for Chrome Browser
 
 themeColor: '#fff'

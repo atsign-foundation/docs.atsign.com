@@ -1,5 +1,5 @@
 User-agent: *
-{{ if eq (.Site.BaseURL) "https://docs.atsign.com"  -}}
+{{ if in .Site.Params.ProductionURLs (string .Site.BaseURL) -}}
 Allow: /
 {{ else -}}
 Disallow: /

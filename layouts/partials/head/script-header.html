@@ -6,7 +6,7 @@
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>
 {{- end -}}
-{{ if eq (.Site.BaseURL) "https://docs.atsign.com" -}}
+{{ if in .Site.Params.ProductionURLs (string .Site.BaseURL) -}}
   {{ $matomo := resources.Get "js/matomo.js" | js.Build | minify -}}
   <script>{{ $matomo.Content | safeJS }}</script>
 {{ end -}}
