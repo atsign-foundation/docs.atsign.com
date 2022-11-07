@@ -1,0 +1,7 @@
+User-agent: *
+{{ if eq (.Site.BaseURL) "docs.atsign.com"  -}}
+Allow: /
+{{ else -}}
+Disallow: /
+{{ end }}
+Sitemap: {{ "sitemap.xml" | absURL -}}
