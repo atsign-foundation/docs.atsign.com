@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** Import Bootstrap functions */
 /** Import theme variables */
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -8899,7 +8900,12 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
     .codelab .codelab-drawer .codelab-steps ol li, .codelab .codelab-drawer .codelab-steps ol li a {
       color: #2D2A26; }
     .codelab .codelab-drawer .codelab-steps ol li[completed] {
-      text-decoration: line-through; }
+      font-style: italic; }
+    .codelab .codelab-drawer .codelab-steps ol li[completed]::after {
+      content: "✓";
+      font-style: normal;
+      color: #F05E3E;
+      font-weight: 900; }
     .codelab .codelab-drawer .codelab-steps ol li[selected], .codelab .codelab-drawer .codelab-steps ol li[selected] a {
       color: #F05E3E; }
   .codelab .codelab-nav-buttons {
@@ -8924,6 +8930,9 @@ nav.doks-subnavbar, [data-dark-mode] nav.doks-subnavbar {
       flex-grow: 1; }
     .codelab .fabs a[disappear] {
       transform: scale(0, 0); }
+
+[data-dark-mode] body .codelab .codelab-drawer .codelab-steps ol li[completed]::after {
+  color: #EFD282; }
 
 [data-dark-mode] body .codelab .codelab-drawer .codelab-steps ol li, [data-dark-mode] body .codelab .codelab-drawer .codelab-steps ol li a {
   color: #DDD; }
