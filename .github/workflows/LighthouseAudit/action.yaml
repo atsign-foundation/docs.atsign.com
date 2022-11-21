@@ -30,7 +30,7 @@ runs:
   using: composite
   steps:
     - name: Perform Lighthouse Audit
-      uses: jakejarvis/lighthouse-action@master
+      uses: jakejarvis/lighthouse-action@0b636dea27f28abdde0bd63eba7dc7cafc910d35
       with:
         url: ${{ inputs.url }}
 
