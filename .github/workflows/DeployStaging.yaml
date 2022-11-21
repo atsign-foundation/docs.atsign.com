@@ -40,7 +40,7 @@ jobs:
       - name: Deploy Staging
         uses: peaceiris/actions-gh-pages@de7ea6f8efb354206b205ef54722213d99067935 # v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.MY_GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
           cname: ${{ env.URL }}
