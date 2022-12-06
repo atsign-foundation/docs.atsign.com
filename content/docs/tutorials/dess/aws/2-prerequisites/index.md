@@ -16,7 +16,7 @@ order: 2 # Ordering of the steps
 
 #### 1. Registering your atSign
 
-This topic is already well documented. Please follow the guidance of Our FAQs and register via [the registrar site](https://atsign.com/get-an-sign/).
+This topic is already well documented. Please follow the guidance of Our FAQs and register via [the registrar site](https://my.atsign.com/go).
 
 #### 2. Sign-up for AWS account
 
