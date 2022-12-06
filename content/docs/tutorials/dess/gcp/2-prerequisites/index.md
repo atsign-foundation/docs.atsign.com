@@ -9,13 +9,13 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 2 # Ordering of the steps
 ---
 
-* Register Atsign at [atsign.com](http://atsign.com)
+* Register Atsign at [atsign.com](http://my.atsign.com/go)
 * Have google account
 * Have registered Fully Qualified Domain Name (FQDN)
 
 #### 1. Registering your atSign
 
-This topic is already well documented. Please follow the guidance of Our [FAQs](https://atsign.com/faqs/) and register via [the registrar site](https://atsign.com/get-an-sign/).
+This topic is already well documented. Please follow the guidance of Our [FAQs](https://atsign.com/faqs/) and register via [the registrar site](https://my.atsign.com/go).
 
 #### 2. Sign-up for GCP account
 
