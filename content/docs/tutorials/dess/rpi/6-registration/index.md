@@ -23,7 +23,7 @@ Once the installer is finished you should be prompted like so:
 
 
 
-At this step you should already have your atSign registered at [atsign.com](http://atsign.com). If not go do it!
+At this step you should already have your atSign registered at [atsign.com](http://my.atsign.com/go). If not go do it!
 
 I have registered my own free atSign (@44likelycanary) which I will link to my dess.
 
