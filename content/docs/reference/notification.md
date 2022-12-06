@@ -29,7 +29,7 @@ Monitor uses notifications.
 
 The monitor is used to receive notifications from the other secondary server.
 
-Read more {{< a href="https://github.com/atsign-foundation/at_client_sdk/blob/trunk/at_client/lib/src/manager/monitor.dart" target="_blank" rel="canonical" >}}here{{</ a >}}.
+Read more {{< a href="https://github.com/atsign-foundation/at_client_sdk/blob/trunk/packages/at_client/lib/src/manager/monitor.dart" target="_blank" rel="canonical" >}}here{{</ a >}}.
 
 ## atProtocol
 
