@@ -9,7 +9,7 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 6 # Ordering of the steps
 ---
 
-At this step you should already have your atSign registered at [atsign.com](http://atsign.com). If not go do it!
+At this step you should already have your atSign registered at [atsign.com](http://my.atsign.com/go). If not go do it!
 
 I have registered my own free atSign (@44likelycanary) which I will link to my dess.
 
