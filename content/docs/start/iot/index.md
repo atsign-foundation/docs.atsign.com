@@ -21,7 +21,7 @@ IoT–Internet of Things–is a system of interconnecting devices, mechanical or
 
 In simple terms, an IoT device is any device (such as a camera, a smart phone, a thermostat, a TV, a computer, etc) that is connected to the internet. IoT devices have sensors that are always collecting data and sending it through the Internet. However, these data are usually precious data that are valuable to the owner. For example, a person may own a camera connected to the internet which is constantly surveilling the living room of their house. It is important that outside parties have no access to this data and that the data the camera is collecting is sent securely over the internet. This is where the atPlatform comes in. The atPlatform adds security to this IoT camera device and sends the data securely to whomever the owner chooses.
 
-As said on our website [atsign.com](https://atsign.com/iot-internet-of-things/#overview), the atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.
+As said on our[website] (https://atsign.com/iot-internet-of-things/#overview), the atPlatform strips things down to the protocol level, creating both zero trust and zero configuration environments–completely without passwords–eliminating all attack surfaces created by over-complexity, and simplifying the administration of devices in the process.
 
 ## IoT Network Architecture
 
