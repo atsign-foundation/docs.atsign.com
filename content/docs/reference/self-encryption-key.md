@@ -26,8 +26,8 @@ The self-encryption key is generated during the [CRAM](/reference/cram) process 
 
 ## Related Resources
 
-{{< card/breadcrumb href="/atplatform/atsign" first="atSign" >}}
-{{< card/breadcrumb href="/atplatform/encryption" first="Encryption" >}}
-{{< card/breadcrumb href="/atplatform/public-private-keys" first="Public and Private Keys" >}}
+{{< card/breadcrumb href="/reference/atsign" first="atSign" >}}
+{{< card/breadcrumb href="/reference/encryption" first="Encryption" >}}
+{{< card/breadcrumb href="/reference/public-private-keys" first="Public and Private Keys" >}}
 {{< card/breadcrumb href="/reference/cram" first="CRAM" >}}
 {{< card/breadcrumb href="/reference/pkam" first="PKAM" >}}
