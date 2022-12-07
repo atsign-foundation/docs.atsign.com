@@ -33,19 +33,19 @@ The atPlatform, which has been created on top of the atProtocol consists of thre
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/atplatform/specification/</guid>
-      <description>Introduction #The atProtocol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the Root Server and Secondary Server. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.
+      <description>Introduction #The atProtocol is the underlying protocol that the atPlatform implements. It is a simple internet protocol for interacting with the atDirectory and atServer. The atPlatform builds on top of the atProtocol by taking full advantage of the features of the atProtocol.
 See our Protocol Specification on our GitHub page under our at_protocol repository.
 If you see a typo, mistake, or want to suggest a feature, please see our contributing guidelines.</description>
     </item>
     
     <item>
-      <title>Root Server</title>
+      <title>atDirectory</title>
       <link>https://dev3.atsign.wtf/atplatform/rootserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/atplatform/rootserver/</guid>
-      <description>atRoot servers are the only centralized part of the atProtocol and are centralized to provide a single namespace and a global dependable platform. No data beyond the atSign and responding authoritative atSecondary server is held on the root servers. This information is considered public and no authentication is required to look up the atSecondary server for a particular atSign.
-The atRoot servers have been designed to scale to billions of atSigns and handle the request for atSign lookups at near real-time, globally.</description>
+      <description>atDirectories are the only centralized part of the atProtocol and are centralized to provide a single namespace and a global dependable platform. No data beyond the atSign and responding authoritative atServer is held on the atDirecory. This information is considered public and no authentication is required to look up the atServers for a particular atSign.
+The atDirectory have been designed to scale to billions of atSigns and handle the request for atSign lookups at near real-time, globally.</description>
     </item>
     
     <item>
