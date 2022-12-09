@@ -241,18 +241,18 @@ Source:
       .add(
       {
         id: 19,
-        href: "/tutorials/dess/",
-        title: "dess",
-        description: "Learn about the atPlatform DESS, distributed edge secondary server",
-        content: ""
+        href: "/atplatform/secondaryserver/",
+        title: "atServer",
+        description: "Learn about atPlatform servers responsible for answering lookups for specific atSigns.",
+        content: "atServers (personal atSign) provide the second tier of the atProtocol architecture and are responsible for answering lookups for specific atSigns. atServers provide the lookup service for a particular atSign and one name only. This ensures that the atServer will not mix atSign data with any other atSign’s data. This is unlike web servers that can provide service to multiple websites at a time.\n"
       })
       .add(
       {
         id: 20,
-        href: "/atplatform/secondaryserver/",
-        title: "Secondary Server",
-        description: "Learn about atPlatform secondary edge servers",
-        content: "atSecondary (personal atSign) servers provide the second tier of the atProtocol architecture and are responsible for answering lookups for specific atSigns. atSecondary servers provide the lookup service for a particular atSign and one name only. This ensures that the atSecondary server will not mix atSign data with any other atSign’s data. This is unlike web servers that can provide service to multiple websites at a time.\n"
+        href: "/tutorials/dess/",
+        title: "dess",
+        description: "Learn about the atPlatform DESS, distributed edge secondary server",
+        content: ""
       })
       .add(
       {
