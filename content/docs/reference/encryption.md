@@ -20,7 +20,7 @@ Encryption is a means of achieving privacy. It is a part of cryptography which h
 
 ## Video
 
-Hate reading? Watch this [video](https://www.youtube.com/watch?v=A12jdKPa4WE) instead!
+Check out our video on Encryption [here](https://www.youtube.com/watch?v=A12jdKPa4WE)!
 
 {{< youtube src="https://www.youtube.com/embed/A12jdKPa4WE" >}}
 
