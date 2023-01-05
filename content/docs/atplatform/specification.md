@@ -210,11 +210,11 @@ Verbs are commands you can execute on a secondary server. Each verb interacts wi
 | `pkam` | Authentication |
 | `pol`  | Authentication |
 | `scan` | Data retrieval |
-| `update` | Data manipulation |
-| `update:meta` | Data manipulation |
 | `lookup` | Data retrieval |
 | `plookup` | Data retrieval |
 | `llookup` | Data retrieval |
+| `update` | Data manipulation |
+| `update:meta` | Data manipulation |
 | `delete` | Data manipulation |
 | `stats` | Misc |
 | `sync` | Data synchronization |
@@ -387,117 +387,6 @@ View all keys in the secondary server including hidden and filtered by a regex
 
 The atServer should return the keys within the atServer if the scan verb executed successfully. The atServer will respond accordingly to whether the atSign is authenticated or not.
 ```data:[<keys>]```
-
-### The `update` verb
-
-**Synopsis:**
-
-The `update` verb is used to insert key/value pairs into a Key Store. An update can only be run by the owner of an atServer on his/her own atServer.
-
-Following regex represents the syntax of the `update` verb:
-
-`r'^update:(?:ttl:(?<ttl>\d+):)?(?:ttb:(?<ttb>\d+):)?(?:ttr:(?<ttr>(-?)\d+):)?(ccd:(?<ccd>true|false):)?((?:public:)|(@(?<for@sign>[^@:\s]-):))?(?<atKey>[^:@]((?!:{2})[^@])+)(?:@(?<@sign>[^@\s]-))? (?<value>.+$)'`
-
-**Example:**
-
-Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value`.
-This operation will create a new key if it does not already exist. If it already exists, it will overwrite the existing value.
-
-`update:location@bob bob's location value`
-
-Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value but key expires in 10 minutes`. The time to live of this key is 10 minutes.
-
-`update:ttl:600000:location@bob bob's location value but key expires in 10 minutes`
-
-Put a shared key/value pair into the secondary server with key `@alice:phone@bob` (shared with @alice and shared by @bob) with value `bob's phone number shared to @alice`.
-
-`update:@alice:phone@bob bob's phone number shared to @alice`
-
-**Response:**
-
-The atServer should return the commit id from Commit Log if the update is successful.
-
-`data:<CommitId>`
-
-If the user provides the invalid update command, then it should respond with the following error and close the connection to the server
-
-`error:AT0003-Invalid Syntax`
-
-**Description:**
-
-The `update` verb should be used to perform create/update operations on the atServer. The `update` verb requires the owner of the atServer to authenticate himself/herself to the atServer using `from` and `cram` verbs.
-
-If a key has been created for another atSign user, the atServer should honor "autoNotify" configuration parameter.
-
-**Options:**
-
-`<ttl>` Required: No. Description: Time to live in milliseconds.
-
-`<ttb>` Required: No. Description: Time to birth in milliseconds.
-
-`<ttr>` Required: No. Description: Time to refresh in milliseconds.
-
-> -1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won't change forever.
-
-`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originally shared it deletes it.
-
-`<for@sign>` Required: Yes, (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.
-
-`<@sign>` Required: Yes. Description: atSign of the owner.
-
-`<value>` Required: Yes. Description: Value for the key.
-
-### The `update:meta` verb
-
-**Synopsis:**
-
-The `update:meta` verb should be used to update the metadata of a key atSign user without having to send or save the value again.
-
-Following is the regex for the `update:meta` verb
-
-`^update:meta:((?:public:)|((?<forAtSign>@?[^@\s]-):))?(?<atKey>((?!:{2})[^@])+)@(?<atSign>[^@:\s]-)(:ttl:(?<ttl>\d+))?(:ttb:(?<ttb>\d+))?(:ttr:(?<ttr>\d+))?(:ccd:(?<ccd>true|false))?(:isBinary:(?<isBinary>true|false))?(:isEncrypted:(?<isEncrypted>true|false))?$`
-
-**Example:**
-
-Update the metadata of key `phone@bob` setting `isBinary:true` while keeping all other metadata as it is.
-
-`update:meta:phone@bob:isBinary:true`
-
-Update the metadata of the shared key `@alicephone@bob` (shared with @alice & shared by @bob) setting `ttl:600000`, setting `isBinary:true` and `isEncrypted:true` while keeping all other metadata as it is.
-
-`update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true`
-
-**Response:**
-
-The atServer should return the commit id from Commit Log if the update is successful.
-
-`data:<CommitId>`
-
-If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the atServer.
-
-`error:AT0003-Invalid Syntax`
-
-**Description:**
-
-The `update:meta` verb should be used to perform create/update operations on the atServer. The `update:meta` verb requires the owner of the atServer to authenticate himself/herself to the atServer using `from` and `cram` verbs.
-
-The atServer should allow creation of keys with null values. If a key has been created for another atSign user, the atServer should honor "autoNotify" configuration parameter.
-
-**Options:**:
-
-`<ttl>` Required: No. Description: Time to live in milliseconds
-
-`<ttb>` Required: No. Description: Time to birth in milliseconds
-
-`<ttr>` Required: No. Description: Time to refresh in milliseconds
-
-> -1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won't change forever
-
-`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.
-
-`<for@sign>` Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.
-
-`<@sign>` Required: Yes. Description: atSign of the owner.
 
 ### The `lookup` verb
 
@@ -691,6 +580,117 @@ The `llookup` verb should be used to fetch the value of the key in the owner's a
 **Example:**
 
 If `phone@bob` is "1234" and `altphone@bob` is "atsign://phone@bob", then `lookup` of `altphone@bob` should return "1234" where as `llookup` of `altphone@bob` should return "atsign://phone@bob".
+
+### The `update` verb
+
+**Synopsis:**
+
+The `update` verb is used to insert key/value pairs into a Key Store. An update can only be run by the owner of an atServer on his/her own atServer.
+
+Following regex represents the syntax of the `update` verb:
+
+`r'^update:(?:ttl:(?<ttl>\d+):)?(?:ttb:(?<ttb>\d+):)?(?:ttr:(?<ttr>(-?)\d+):)?(ccd:(?<ccd>true|false):)?((?:public:)|(@(?<for@sign>[^@:\s]-):))?(?<atKey>[^:@]((?!:{2})[^@])+)(?:@(?<@sign>[^@\s]-))? (?<value>.+$)'`
+
+**Example:**
+
+Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value`.
+This operation will create a new key if it does not already exist. If it already exists, it will overwrite the existing value.
+
+`update:location@bob bob's location value`
+
+Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value but key expires in 10 minutes`. The time to live of this key is 10 minutes.
+
+`update:ttl:600000:location@bob bob's location value but key expires in 10 minutes`
+
+Put a shared key/value pair into the secondary server with key `@alice:phone@bob` (shared with @alice and shared by @bob) with value `bob's phone number shared to @alice`.
+
+`update:@alice:phone@bob bob's phone number shared to @alice`
+
+**Response:**
+
+The atServer should return the commit id from Commit Log if the update is successful.
+
+`data:<CommitId>`
+
+If the user provides the invalid update command, then it should respond with the following error and close the connection to the server
+
+`error:AT0003-Invalid Syntax`
+
+**Description:**
+
+The `update` verb should be used to perform create/update operations on the atServer. The `update` verb requires the owner of the atServer to authenticate himself/herself to the atServer using `from` and `cram` verbs.
+
+If a key has been created for another atSign user, the atServer should honor "autoNotify" configuration parameter.
+
+**Options:**
+
+`<ttl>` Required: No. Description: Time to live in milliseconds.
+
+`<ttb>` Required: No. Description: Time to birth in milliseconds.
+
+`<ttr>` Required: No. Description: Time to refresh in milliseconds.
+
+> -1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won't change forever.
+
+`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originally shared it deletes it.
+
+`<for@sign>` Required: Yes, (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.
+
+`<@sign>` Required: Yes. Description: atSign of the owner.
+
+`<value>` Required: Yes. Description: Value for the key.
+
+### The `update:meta` verb
+
+**Synopsis:**
+
+The `update:meta` verb should be used to update the metadata of a key atSign user without having to send or save the value again.
+
+Following is the regex for the `update:meta` verb
+
+`^update:meta:((?:public:)|((?<forAtSign>@?[^@\s]-):))?(?<atKey>((?!:{2})[^@])+)@(?<atSign>[^@:\s]-)(:ttl:(?<ttl>\d+))?(:ttb:(?<ttb>\d+))?(:ttr:(?<ttr>\d+))?(:ccd:(?<ccd>true|false))?(:isBinary:(?<isBinary>true|false))?(:isEncrypted:(?<isEncrypted>true|false))?$`
+
+**Example:**
+
+Update the metadata of key `phone@bob` setting `isBinary:true` while keeping all other metadata as it is.
+
+`update:meta:phone@bob:isBinary:true`
+
+Update the metadata of the shared key `@alicephone@bob` (shared with @alice & shared by @bob) setting `ttl:600000`, setting `isBinary:true` and `isEncrypted:true` while keeping all other metadata as it is.
+
+`update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true`
+
+**Response:**
+
+The atServer should return the commit id from Commit Log if the update is successful.
+
+`data:<CommitId>`
+
+If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the atServer.
+
+`error:AT0003-Invalid Syntax`
+
+**Description:**
+
+The `update:meta` verb should be used to perform create/update operations on the atServer. The `update:meta` verb requires the owner of the atServer to authenticate himself/herself to the atServer using `from` and `cram` verbs.
+
+The atServer should allow creation of keys with null values. If a key has been created for another atSign user, the atServer should honor "autoNotify" configuration parameter.
+
+**Options:**:
+
+`<ttl>` Required: No. Description: Time to live in milliseconds
+
+`<ttb>` Required: No. Description: Time to birth in milliseconds
+
+`<ttr>` Required: No. Description: Time to refresh in milliseconds
+
+> -1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won't change forever
+
+`<ccd>` Required: No. Description: A value of "true" indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.
+
+`<for@sign>` Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.
+
+`<@sign>` Required: Yes. Description: atSign of the owner.
 
 ### The `delete` verb
 
