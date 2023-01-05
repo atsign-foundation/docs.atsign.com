@@ -217,7 +217,7 @@ Verbs are commands you can execute on a secondary server. Each verb interacts wi
 | `llookup` | Data retrieval |
 | `delete` | Data manipulation |
 | `stats` | Misc |
-| `sync` | Data retrieval/manipulation |
+| `sync` | Data synchronization |
 | `notify` | Notifications |
 | `monitor` | Notifications |
 
