@@ -110,7 +110,7 @@ Putting a SelfKey Example #Learn how to create and put a SelfKey associated wit
       <guid>https://dev3.atsign.wtf/sdk/java/shared-key/</guid>
       <description>SharedKeys are for data you want to share with another atSign. The sharedBy atSign should be you. The sharedWith atSign should be the receiver.
 Putting SharedKey Example #Learn how to create a SharedKey in your secondary. The sharedBy atSign should be you, the authenticated creator of the key, while the sharedWith atSign should be the recipient of the key.
-// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR_SHARED_BY = &amp;#34;@bob&amp;#34;; // my atSign (sharedBy) String ATSIGN_STR_SHARED_WITH = &amp;#34;@alice&amp;#34;; // other atSign (sharedWith) boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; int ttl = 30 * 60 * 1000; // 30 minutes String VALUE = &amp;#34;I love cheese 12345&amp;#34;; // 2.</description>
+// 1. establish constants String ROOT_URL = &amp;#34;root.atsign.org:64&amp;#34;; String ATSIGN_STR_SHARED_BY = &amp;#34;@bob&amp;#34;; // my atSign (sharedBy) String ATSIGN_STR_SHARED_WITH = &amp;#34;@alice&amp;#34;; // other atSign (sharedWith) boolean VERBOSE = true; String KEY_NAME = &amp;#34;test&amp;#34;; int ttl = 30 * 60 * 1000; // 30 minutes String VALUE = &amp;#34;I like pizza&amp;#34;; // 2.</description>
     </item>
     
   </channel>
