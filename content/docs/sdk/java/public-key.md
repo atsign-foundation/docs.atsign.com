@@ -20,7 +20,7 @@ String ROOT_URL = "root.atsign.org:64"; // root url of the atsign server for fet
 String ATSIGN_STR = "@bob"; // atSign that we will pkam auth (must have keys in keys directory) 
 boolean VERBOSE = true; // true for more print logs 
 String KEY_NAME = "test"; // name of the key we will create and put
-String VALUE = "I love pineapple on pizza 12345"; // value we will associate with the key
+String VALUE = "I like pizza"; // value we will associate with the key
 
 // 2. create AtSign object
 AtSign atSign = new AtSign(ATSIGN_STR);
