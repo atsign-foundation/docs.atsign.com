@@ -201,14 +201,14 @@ A user of the atServer should be able to decide who is allowed to connect to the
 
 ## Verbs
 
-Verbs are commands you can execute on a secondary server. Each verb interacts with the secondary server in a different way. Some are for authentication, some are for data retrieval and some are for data manipulation. See the table below for more insight on which verb to use for what purpose.
+Verbs are commands you can execute on an atServer. Each verb interacts with the atServer in a different way. Some are for authentication, some are for data retrieval and some are for data manipulation. See the table below for more insight on which verb to use for what purpose.
 
 | Verb | Purpose |
 | ---- | ------- |
 | `from` | Authentication |
-| `cram` | Authentication |
-| `pkam` | Authentication |
-| `pol`  | Authentication |
+| `cram` | Client Authentication |
+| `pkam` | Client Authentication |
+| `pol`  | atServer Authentication |
 | `scan` | Data retrieval |
 | `lookup` | Data retrieval |
 | `plookup` | Data retrieval |
@@ -233,7 +233,7 @@ Following regex represents the syntax of the `from` verb:
 
 **Example**:
 
-Telling the secondary server that you are claiming to be `@bob`.
+Telling the atServer that you are claiming to be `@bob`.
 
 `from:@bob`
 
@@ -255,7 +255,7 @@ If the user is not allowed to connect to the atServer, then it should respond ba
 
 The `from` verb is used to tell the atServer what atSign you claim to be. With the `from` verb, one can connect to one's own atServer or someone else's atServer. In both cases, the atServer responds back with a challenge to prove that you are who you claim to be. This is part of the authentication mechanism of the atProtocol.
 
-This authentication mechanism varies based on whether you are connecting to your own atServer (cram) or someone else's atServer (pol).
+This authentication mechanism varies based on whether you are connecting to your own atServer (cram/pkam) or someone else's atServer (pol).
 
 **Options:**
 
@@ -265,7 +265,7 @@ This authentication mechanism varies based on whether you are connecting to your
 
 **Synopsis:**
 
-The `cram` verb is used to bootstrap authenticate one's own self as the owner of an atServer. It is intended to be used once until a set of PKI keys are cut on the owner's mobile device and from then on we use the `pkam` verb.
+The `cram` verb is used to bootstrap authenticate one's own client as the owner of an atServer. It is intended to be used once until a set of PKI keys are cut on the owner's mobile device and from then on we use the `pkam` verb.
 
 The following regex represents the syntax of the `cram` verb:
 
@@ -297,7 +297,7 @@ The `cram` verb follows the `from` verb. As an owner of the atServer, you should
 
 **Synopsis:**
 
-The `pkam` verb is used to authenticate one's own self as an owner of a Secondary Server using a PKI style authentication.
+The `pkam` verb is used to authenticate one's own client as an owner of an atServer using a PKI style authentication.
 
 Following regex represents the syntax of the `pkam` verb:
 
@@ -319,7 +319,7 @@ If the user gets the pkam authentication wrong, then it should respond back with
 
 **Description:**
 
-The `pkam` verb follows the `from` verb. As an owner of the Secondary Server, you should be able to take the challenge thrown by the `from` verb and encrypt using the private key of the RSA key pair with what the server has been bound with. Upon receiving the `cram` verb along with the digest, the server decrypts the digest using the public key and matches it with the challenge. If they are the same then the secondary lets you connect to the Secondary Server and changes the prompt to your atSign.
+The `pkam` verb follows the `from` verb. As an owner of the atServer, you should be able to take the challenge thrown by the `from` verb and encrypt using the private key of the RSA key pair with what the server has been bound with. Upon receiving the `cram` verb along with the digest, the server decrypts the digest using the public key and matches it with the challenge. If they are the same then the atServer lets you connect and changes the prompt to your atSign.
 
 **Options:**
 
@@ -329,7 +329,7 @@ The `pkam` verb follows the `from` verb. As an owner of the Secondary Server, yo
 
 **Synopsis**:
 
-The `pol` verb is part of the `pkam` process to authenticate oneself while connecting to someone else's atServer. The term 'pol' means 'proof of life' as it provides a near realtime assurance that the requestor is who it claims to be.
+The `pol` verb is part of the `pkam` process to authenticate oneself (as an atServer) while connecting to someone else's atServer. The term 'pol' means 'proof of life' as it provides a near realtime assurance that the requestor is who it claims to be.
 
 Following regex represents the syntax of the `pol` verb:
 
