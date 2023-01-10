@@ -367,19 +367,19 @@ Following regex represents the syntax of the `scan` verb:
 
 **Example:**
 
-View all keys in the secondary server excluding hidden
+View all keys in the atServer excluding hidden
 
 `scan`
 
-View all keys in the secondary server including hidden
+View all keys in the atServer including hidden
 
 `scan:showhidden:true`
 
-View all keys in the secondary server filtered by a regex
+View all keys in the atServer filtered by a regex
 
 `scan <regex>`
 
-View all keys in the secondary server including hidden and filtered by a regex
+View all keys in the atServer including hidden and filtered by a regex
 
 `scan:showhidden:true <regex>`
 
@@ -400,7 +400,7 @@ The following is the regex of the `lookup` verb:
 
 **Example:**
 
-Look up the value of the key `@<you>:phone@alice` (the key is created and shared by @alice and lives on their secondary server where the key is intentionally shared with you). 
+Look up the value of the key `@<you>:phone@alice` (the key is created and shared by @alice and lives on their atServer where the key is intentionally shared with you). 
 
 `lookup:phone@alice`
 
@@ -505,7 +505,7 @@ Following is the regex of the `plookup` verb:
 
 **Example:**
     
-Look up the value of the key `public:publickey@alice` (the key is created and shared by @alice and lives on their secondary server where the key is public).
+Look up the value of the key `public:publickey@alice` (the key is created and shared by @alice and lives on their atServer where the key is public).
 
 `plookup:publickey@alice`
 
@@ -517,7 +517,7 @@ Look up both the value and the metadata of the public key
 
 `plookup:all:publickey@alice`
 
-Look up the value and metadata of the public key while bypassing the cache (i.e. the value will be fetched directly from the secondary server instead of first checking for a cached key on your secondary).
+Look up the value and metadata of the public key while bypassing the cache (i.e. the value will be fetched directly from the atServer instead of first checking for a cached key on your secondary).
 
 `plookup:bypassCache:true:all:publickey@alice`
 
@@ -547,11 +547,11 @@ The following is the regex of the `llookup` verb:
 
 **Example:**
 
-Lookup the value of a public key that lives on your secondary server
+Lookup the value of a public key that lives on your atServer
 
 `llookup:public:publickey@<you>`
 
-Lookup both the value and the metadata of a self key that lives on your secondary server
+Lookup both the value and the metadata of a self key that lives on your atServer
 
 `llookup:all:phone@<you>`
 
@@ -593,16 +593,16 @@ Following regex represents the syntax of the `update` verb:
 
 **Example:**
 
-Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value`.
+Put a key/value pair into the atServer with key `location@bob` and value `bob's location value`.
 This operation will create a new key if it does not already exist. If it already exists, it will overwrite the existing value.
 
 `update:location@bob bob's location value`
 
-Put a key/value pair into the secondary server with key `location@bob` and value `bob's location value but key expires in 10 minutes`. The time to live of this key is 10 minutes.
+Put a key/value pair into the atServer with key `location@bob` and value `bob's location value but key expires in 10 minutes`. The time to live of this key is 10 minutes.
 
 `update:ttl:600000:location@bob bob's location value but key expires in 10 minutes`
 
-Put a shared key/value pair into the secondary server with key `@alice:phone@bob` (shared with @alice and shared by @bob) with value `bob's phone number shared to @alice`.
+Put a shared key/value pair into the atServer with key `@alice:phone@bob` (shared with @alice and shared by @bob) with value `bob's phone number shared to @alice`.
 
 `update:@alice:phone@bob bob's phone number shared to @alice`
 
@@ -696,17 +696,17 @@ The atServer should allow creation of keys with null values. If a key has been c
 
 **Synopsis:**
 
-The `delete` verb should be used to delete a key from the key store. Only the authenticated owner of the secondary server can delete keys that they created.
+The `delete` verb should be used to delete a key from the key store. Only the authenticated owner of the atServer can delete keys that they created.
 
 **Example:**
 
-Delete a key (that you created) from your secondary server. 
+Delete a key (that you created) from your atServer. 
 
 `delete:phone@<you>`
 
 **Response:**
 
-The Secondary Server returns the commit id of the operation. Note: no information about the key (if it was deleted or if it ever existed in the first place) is given.
+The atServer returns the commit id of the operation. Note: no information about the key (if it was deleted or if it ever existed in the first place) is given.
 
 `data:1234`
 
