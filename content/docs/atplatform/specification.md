@@ -341,17 +341,17 @@ Following regex represents the syntax of the `pol` verb:
 
 **Response:**:
 
-If the user gets the challenge right the prompt should change to the atSign of the user.
+If the atServer (you) gets the challenge right the prompt should change to the atSign of the user.
 
 `<@sign>@`
 
-If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.
+If the atServer (you) gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.
 
 `error:AT0401-Client authentication failed`
 
 **Description:**
 
-The `pol` verb follows the `from` verb. 'pol' indicates another atServer that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob's atServer, @alice's atServer should change the prompt to @bob.
+The `pol` verb follows the `from` verb. 'pol' indicates another atServer that the atServer (you) who is trying to connect is ready to authenticate. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob's atServer, @alice's atServer should change the prompt to @bob.
 
 **Options:**
 
