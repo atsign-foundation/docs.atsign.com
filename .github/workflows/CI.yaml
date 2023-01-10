@@ -9,7 +9,7 @@ on:
       - trunk
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
