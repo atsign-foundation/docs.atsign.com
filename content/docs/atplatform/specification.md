@@ -146,7 +146,7 @@ Metadata of a key should describe the following properties of the value being in
 | ttb | No | Time to birth in milliseconds. |
 | availableFrom | Yes | A Date and Time derived from the ttl (now + ttl). A Key should be only available after availableFrom |
 | isCached | No | True if the key is cached |
-| ttr | No | Time in milliseconds after which the cached key needs to be refreshed. ttr of null indicates non-cacheable. ttr of -1 indicates that the key can be cached forever. ttr of 0 indicates do not refresh. ttr of > 0 will refresh the key. |
+| ttr | No | Time in milliseconds after which the cached key needs to be refreshed. ttr of -1 indicates that the key can be cached forever. ttr of 0 indicates do not refresh. ttr of > 0 will refresh the key. ttr of null indicates the key is impossible to cache (which has the same effect as a ttr of 0). |
 | refreshAt | No | A Date and Time derived from the ttr. The time at which the key gets refreshed. |
 | ccd | No | Indicates if a cached key needs to be deleted when the atSign user who has originally shared it deletes it. |
 | isBinary | No | True if the value is a binary value. |
