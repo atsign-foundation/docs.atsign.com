@@ -10,6 +10,9 @@ on:
 
 jobs:
   ci:
+    strategy:
+      matrix:
+        command: ['build', 'build:staging']
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -20,7 +23,5 @@ jobs:
           node-version: '16'
       - name: clean install
         run: npm ci
-      - name: build
-        run: npm run build
-      - name: build staging
-        run: npm run build:staging
+      - name: ${{ matrix.command }}
+        run: npm run ${{ matrix.command }}
