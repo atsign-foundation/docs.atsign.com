@@ -115,3 +115,41 @@ ElevatedButton(
   },
 ),
 ```
+
+## Parameters
+
+### AtOnboarding.onboard
+
+| Type | Name | Description | Required? | Default Value |
+| ---- | ---- | ----------- | --------- | ------------- | 
+| {{< a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html" target="_blank" >}}BuildContext{{< /a >}} | context | The context of the widget that is calling the `.onboard` method. | true |
+| [AtOnboardingConfig](#atonboardingconfig) | config | The configuration object that contains the preferences for the onboarding widget. | true |
+| bool | isSwitchingAtSign | True - show the UI for switching a new atsign. `false` - checks if atSign is already onboarded (if already onboarded, does not show UI). | false | `false` |
+| String? | atSign | The new atSign name if switching atSigns (`isSwitchingAtSign` should be true) | false | `null` |
+
+
+### AtOnboardingConfig
+
+The `AtOnboardingConfig` object is used to configure the onboarding widget. It contains the following properties:
+
+| Type | Name | Description | Required? | Default Value |
+| ---- | ---- | ----------- | --------- | ------------- |
+| {{< a href="/sdk/flutter/at_client_preference/" target="_blank" >}}AtClientPreference{{< /a >}} | atClientPreference | object used to configure preferences in your atPlatform application such as the namespace, hiveStoragePath, and maxDataSize. | true | 
+| RootEnvironment (enum) | rootEnvironment | The set of servers your app will be running and talking to atSigns in (testing, staging, production) | true |
+| String? | domain | The domain of the atDirectoryServer (previously called root server) | false | `root.atsign.org` |
+| String? | appAPIKey | The API authentication key for getting free atsigns | 
+| bool | hideReferences | If true, hides the reference to web pages. | false | `false` |
+| bool | hideQrScan | If true, hides the QR functionality | false | `false` |
+
+### AtOnboardingResult
+
+This object is received when the `.onboard` method is called. It contains the following properties which can be used in your application:
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| AtOnboardingResultStatus (enum) | status | The status of the onboarding process. | 
+| String? | message | The message returned when the onboarding process fails. |
+| String? | errorCode | The error code when the onboarding process fails. |
+| String? | atSign | The atSign that was onboarded successfully. |
+
+
