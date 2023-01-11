@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   Onboarding on the atPlatform in Flutter and Dart
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 4 # Ordering of the steps
+order: 2 # Ordering of the steps
 ---
 
 ### Overview
