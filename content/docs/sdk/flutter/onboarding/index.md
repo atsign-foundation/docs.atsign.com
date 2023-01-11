@@ -26,11 +26,27 @@ Once the onboarding widget is opened, the user can click one of the four options
 
 The [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package provides a widget that can be used to onboard atSigns.
 
-First, add the package by running:
+1. Add the package by running the following command in your terminal:
 
 ```
 flutter pub add at_onboarding_flutter
 ```
+
+2. Or add it to your pubspec.yaml manually:
+
+Note: Be sure to check the updated version on [`pub.dev`](https://pub.dev/packages/at_onboarding_flutter).
+
+Also run `flutter pub get` to update your dependencies.
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  at_client_mobile: ^3.2.6
+  at_utils: ^3.0.11
+  at_onboarding_flutter: ^5.0.5
+```
+
 
 ## Usage
 
