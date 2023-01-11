@@ -25,3 +25,11 @@ jobs:
         run: npm ci
       - name: ${{ matrix.command }}
         run: npm run ${{ matrix.command }}
+      - name: ensure hugo_stats.json populated with > 100 lines
+        run: |
+          if [ $(wc -l < ./hugo_stats.json) -gt 100 ]; then
+            echo "hugo_stats.json populated with > 100 lines"
+          else
+            echo "hugo_stats.json not populated with > 100 lines"
+            exit 1
+          fi
