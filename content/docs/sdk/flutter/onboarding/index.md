@@ -11,7 +11,7 @@ order: 2 # Ordering of the steps
 
 ## Overview
 
-The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords. To improve developer experience, the atPlatform offers the [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package which handles secure management of these secret keys. If you are developing a new atPlatform app, we recommend that you use [at_app](https://pub.dev/packages/at_app) which can create atPlatform app template that already contains an example of using the [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) widget.
+The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords. To improve developer experience, the atPlatform offers the {{< a href="https://pub.dev/packages/at_onboarding_flutter" target="_blank">}}at_onboarding_flutter{{< /a >}} package which handles secure management of these secret keys. If you are developing a new atPlatform app, we recommend that you use {{< a href="https://pub.dev/packages/at_app" target="_blank">}}at_app{{< /a >}} which can create atPlatform app template that already contains an example of using the {{< a href="https://pub.dev/packages/at_onboarding_flutter" target="_blank">}}at_onboarding_flutter{{< /a >}} widget.
 
 {{< image type="page" src="onboarding.png" >}}
 
@@ -24,7 +24,7 @@ Once the onboarding widget is opened, the user can click one of the four options
 
 ## Installation
 
-The [at_onboarding_flutter](https://pub.dev/packages/at_onboarding_flutter) package provides a widget that can be used to onboard atSigns.
+The {{< a href="https://pub.dev/packages/at_onboarding_flutter" target="_blank">}}at_onboarding_flutter{{< /a >}} package provides a widget that can be used to onboard atSigns.
 
 1. Add the package by running the following command in your terminal:
 
@@ -34,7 +34,7 @@ flutter pub add at_onboarding_flutter
 
 2. Or add it to your pubspec.yaml manually:
 
-Note: Be sure to check the updated version on [`pub.dev`](https://pub.dev/packages/at_onboarding_flutter).
+Note: Be sure to check the updated version on {{< a href="https://pub.dev" target="_blank">}}pub.dev{{< /a >}}.
 
 Also run `flutter pub get` to update your dependencies.
 
