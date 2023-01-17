@@ -21,7 +21,7 @@ The above command will allow you to run the at_app scripts from the command line
 Next, let's create our atDude Flutter project by running the command below:
 
 ```
-at_app create --project-name "at_dude"
+at_app create . --project-name "at_dude"
 ```
 This command will create a Flutter project with the necessary packages required to build on the atPlatform.
 
