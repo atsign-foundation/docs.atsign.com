@@ -21,7 +21,7 @@
 <meta property="og:description" content="The specification of the atProtocol on the atPlatform">
 <meta property="og:url" content="https://dev3.atsign.wtf/atplatform/specification/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2023-01-18T10:44:14-05:00">
+<meta property="article:modified_time" content="2023-01-18T15:45:58+00:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -77,7 +77,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2023-01-18T10:44:14CET",
+      "dateModified": "2023-01-18T15:45:58CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/atplatform/specification/#/schema/breadcrumb/1"
       },
@@ -969,14 +969,15 @@
           <ul>
             <li><a href="#the-from-verb">The <code>from</code> verb</a></li>
             <li><a href="#the-cram-verb">The <code>cram</code> verb</a></li>
+            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
             <li><a href="#the-pol-verb">The <code>pol</code> verb</a></li>
             <li><a href="#the-scan-verb">The <code>scan</code> verb</a></li>
-            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
-            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
             <li><a href="#the-lookup-verb">The <code>lookup</code> verb</a></li>
             <li><a href="#the-plookup-verb">The <code>plookup</code> verb</a></li>
             <li><a href="#the-llookup-verb">The <code>llookup</code> verb</a></li>
-            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
+            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
+            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
+            <li><a href="#the-delete-verb">The <code>delete</code> verb</a></li>
             <li><a href="#the-stats-verb">The <code>stats</code> verb</a></li>
             <li><a href="#the-sync-verb">The <code>sync</code> verb</a></li>
             <li><a href="#the-notify-verb">The <code>notify</code> verb</a></li>
@@ -1019,14 +1020,15 @@
           <ul>
             <li><a href="#the-from-verb">The <code>from</code> verb</a></li>
             <li><a href="#the-cram-verb">The <code>cram</code> verb</a></li>
+            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
             <li><a href="#the-pol-verb">The <code>pol</code> verb</a></li>
             <li><a href="#the-scan-verb">The <code>scan</code> verb</a></li>
-            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
-            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
             <li><a href="#the-lookup-verb">The <code>lookup</code> verb</a></li>
             <li><a href="#the-plookup-verb">The <code>plookup</code> verb</a></li>
             <li><a href="#the-llookup-verb">The <code>llookup</code> verb</a></li>
-            <li><a href="#the-pkam-verb">The <code>pkam</code> verb</a></li>
+            <li><a href="#the-update-verb">The <code>update</code> verb</a></li>
+            <li><a href="#the-updatemeta-verb">The <code>update:meta</code> verb</a></li>
+            <li><a href="#the-delete-verb">The <code>delete</code> verb</a></li>
             <li><a href="#the-stats-verb">The <code>stats</code> verb</a></li>
             <li><a href="#the-sync-verb">The <code>sync</code> verb</a></li>
             <li><a href="#the-notify-verb">The <code>notify</code> verb</a></li>
@@ -1212,7 +1214,7 @@ TODO: Do we continue to use &ldquo;atSign user or atSign owner? Especially with 
 <tr>
 <td>ttr</td>
 <td>No</td>
-<td>Time in milliseconds after which the cached key needs to be refreshed. Ttr of -1 indicates that the key can be cached forever.</td>
+<td>Time in milliseconds after which the cached key needs to be refreshed. ttr of -1 indicates that the key can be cached forever. ttr of 0 indicates do not refresh. ttr of &gt; 0 will refresh the key. ttr of null indicates the key is impossible to cache (which has the same effect as a ttr of 0).</td>
 </tr>
 <tr>
 <td>refreshAt</td>
@@ -1319,28 +1321,100 @@ TODO: Do we continue to use &ldquo;atSign user or atSign owner? Especially with 
 <h2 id="block-list">Block List <a href="#block-list" class="anchor" aria-hidden="true">#</a></h2>
 <p>A user of the atServer should be able to decide who is allowed to connect to their atServer. The <code>config</code> verb should be used to configure this. Once added, an atServer should honor the list at the time of accepting new connections from an atSign user using the <code>from</code> verb.</p>
 <h2 id="verbs">Verbs <a href="#verbs" class="anchor" aria-hidden="true">#</a></h2>
+<p>Verbs are commands you can execute on an atServer. Each verb interacts with the atServer in a different way. Some are for authentication, some are for data retrieval and some are for data manipulation. See the table below for more insight on which verb to use for what purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>from</code></td>
+<td>Authentication</td>
+</tr>
+<tr>
+<td><code>cram</code></td>
+<td>Client Authentication</td>
+</tr>
+<tr>
+<td><code>pkam</code></td>
+<td>Client Authentication</td>
+</tr>
+<tr>
+<td><code>pol</code></td>
+<td>atServer Authentication</td>
+</tr>
+<tr>
+<td><code>scan</code></td>
+<td>Data retrieval</td>
+</tr>
+<tr>
+<td><code>lookup</code></td>
+<td>Data retrieval</td>
+</tr>
+<tr>
+<td><code>plookup</code></td>
+<td>Data retrieval</td>
+</tr>
+<tr>
+<td><code>llookup</code></td>
+<td>Data retrieval</td>
+</tr>
+<tr>
+<td><code>update</code></td>
+<td>Data manipulation</td>
+</tr>
+<tr>
+<td><code>update:meta</code></td>
+<td>Data manipulation</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>Data manipulation</td>
+</tr>
+<tr>
+<td><code>stats</code></td>
+<td>Misc</td>
+</tr>
+<tr>
+<td><code>sync</code></td>
+<td>Data synchronization</td>
+</tr>
+<tr>
+<td><code>notify</code></td>
+<td>Notifications</td>
+</tr>
+<tr>
+<td><code>monitor</code></td>
+<td>Notifications</td>
+</tr>
+</tbody>
+</table>
 <h3 id="the-from-verb">The <code>from</code> verb <a href="#the-from-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
 <p>The <code>from</code> verb is used to tell an atServer whom you claim to be.</p>
 <p>Following regex represents the syntax of the <code>from</code> verb:</p>
 <p><code>r'^from:(?&lt;@sign&gt;@?[^@\s]+$)'</code></p>
 <p><strong>Example</strong>:</p>
+<p>Telling the atServer that you are claiming to be <code>@bob</code>.</p>
 <p><code>from:@bob</code></p>
 <p><strong>Response</strong>:</p>
 <p>If the user who is trying to connect is the owner of the atServer, then the <code>from</code> verb should respond with the following response.</p>
-<p><code>key:&lt;sessionId@sign:uuid&gt;</code></p>
+<p><code>data:&lt;sessionId@sign:uuid&gt;</code></p>
 <p>If the user who is trying to connect is not the owner of the atServer, then the <code>from</code> verb should respond with the following response.</p>
 <p><code>proof:&lt;sessionId&gt;@&lt;@sign&gt;:&lt;UUID&gt;</code></p>
 <p>If the user is not allowed to connect to the atServer, then it should respond back with the following error and close the connection to the server.</p>
 <p><code>error:AT0013-Connection Exception</code></p>
 <p><strong>Description:</strong></p>
 <p>The <code>from</code> verb is used to tell the atServer what atSign you claim to be. With the <code>from</code> verb, one can connect to one&rsquo;s own atServer or someone else&rsquo;s atServer. In both cases, the atServer responds back with a challenge to prove that you are who you claim to be. This is part of the authentication mechanism of the atProtocol.</p>
-<p>This authentication mechanism varies based on whether you are connecting to your own atServer (cram) or someone else&rsquo;s atServer (pol).</p>
+<p>This authentication mechanism varies based on whether you are connecting to your own atServer (cram/pkam) or someone else&rsquo;s atServer (pol).</p>
 <p><strong>Options:</strong></p>
 <p><code>&lt;atSign&gt;</code> Required: Yes. atSign  with which you are connecting to an atServer</p>
 <h3 id="the-cram-verb">The <code>cram</code> verb <a href="#the-cram-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
-<p>The <code>cram</code> verb is used to bootstrap authenticate one&rsquo;s own self as the owner of an atServer. It is intended to be used once until a set of PKI keys are cut on the owner&rsquo;s mobile device and from then on we use the <code>pkam</code> verb.</p>
+<p>The <code>cram</code> verb is used to bootstrap authenticate one&rsquo;s own client as the owner of an atServer. It is intended to be used once until a set of PKI keys are cut on the owner&rsquo;s mobile device and from then on we use the <code>pkam</code> verb.</p>
 <p>The following regex represents the syntax of the <code>cram</code> verb:</p>
 <p><code>r'^cram:(?&lt;digest&gt;.+$)'</code></p>
 <p><strong>Example:</strong></p>
@@ -1354,20 +1428,36 @@ TODO: Do we continue to use &ldquo;atSign user or atSign owner? Especially with 
 <p>The <code>cram</code> verb follows the <code>from</code> verb. As an owner of the atServer, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the shared key that the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the server decrypts the digest using the shared key and matches it with the challenge. If they are the same, then you can connect to the atServer and change the prompt to your atSign.</p>
 <p><strong>Options:</strong></p>
 <p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
+<h3 id="the-pkam-verb">The <code>pkam</code> verb <a href="#the-pkam-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>pkam</code> verb is used to authenticate one&rsquo;s own client as an owner of an atServer using a PKI style authentication.</p>
+<p>Following regex represents the syntax of the <code>pkam</code> verb:</p>
+<p><code>^pkam:(?&lt;signature&gt;.+$)</code></p>
+<p><strong>Example:</strong></p>
+<p><code>pkam:&lt;digest&gt;</code></p>
+<p><strong>Response:</strong></p>
+<p>If the user gets the challenge right, the prompt should change to the atSign of the user.</p>
+<p><code>&lt;@sign&gt;@</code></p>
+<p>If the user gets the pkam authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
+<p><code>error:AT0401-Client authentication failed</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>pkam</code> verb follows the <code>from</code> verb. As an owner of the atServer, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the private key of the RSA key pair with what the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the server decrypts the digest using the public key and matches it with the challenge. If they are the same then the atServer lets you connect and changes the prompt to your atSign.</p>
+<p><strong>Options:</strong></p>
+<p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
 <h3 id="the-pol-verb">The <code>pol</code> verb <a href="#the-pol-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis</strong>:</p>
-<p>The <code>pol</code> verb is part of the <code>pkam</code> process to authenticate oneself while connecting to someone else&rsquo;s atServer. The term &lsquo;pol&rsquo; means &lsquo;proof of life&rsquo; as it provides a near realtime assurance that the requestor is who it claims to be.</p>
+<p>The <code>pol</code> verb is part of the <code>pkam</code> process to authenticate oneself (as an atServer) while connecting to someone else&rsquo;s atServer. The term &lsquo;pol&rsquo; means &lsquo;proof of life&rsquo; as it provides a near realtime assurance that the requestor is who it claims to be.</p>
 <p>Following regex represents the syntax of the <code>pol</code> verb:</p>
 <p><code>r'^pol$'</code></p>
 <p><strong>Example:</strong></p>
 <p><code>pol</code></p>
 <p><strong>Response:</strong>:</p>
-<p>If the user gets the challenge right the prompt should change to the atSign of the user.</p>
+<p>If the atServer (you) gets the challenge right the prompt should change to the atSign of the user.</p>
 <p><code>&lt;@sign&gt;@</code></p>
-<p>If the user gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
+<p>If the atServer (you) gets the cram authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
 <p><code>error:AT0401-Client authentication failed</code></p>
 <p><strong>Description:</strong></p>
-<p>The <code>pol</code> verb follows the <code>from</code> verb. &lsquo;pol&rsquo; indicates another atServer that the user who is trying to connect is ready to authenticate himself. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob&rsquo;s atServer, @alice&rsquo;s atServer should change the prompt to @bob.</p>
+<p>The <code>pol</code> verb follows the <code>from</code> verb. &lsquo;pol&rsquo; indicates to another atServer that the atServer (you) who is trying to connect is ready to authenticate. For example, if @bob is trying to connect to @alice, @bob would take the key and value from the proof response of the verb and create a public key and value which then can be looked up by @alice. After @alice looks up @bob&rsquo;s atServer, @alice&rsquo;s atServer should change the prompt to @bob.</p>
 <p><strong>Options:</strong></p>
 <p>NA</p>
 <h3 id="the-scan-verb">The <code>scan</code> verb <a href="#the-scan-verb" class="anchor" aria-hidden="true">#</a></h3>
@@ -1376,74 +1466,28 @@ TODO: Do we continue to use &ldquo;atSign user or atSign owner? Especially with 
 Following regex represents the syntax of the <code>scan</code> verb:
 <code>r'^scan$|scan(:showhidden:(?&lt;showhidden&gt;true|false))?(:(?&lt;forAtSign&gt;@[^:@\s]+))?(:page:(?&lt;page&gt;\d+))?( (?&lt;regex&gt;\S+))?$'</code></p>
 <p><strong>Example:</strong></p>
+<p>View all keys in the atServer excluding hidden</p>
 <p><code>scan</code></p>
+<p>View all keys in the atServer including hidden</p>
 <p><code>scan:showhidden:true</code></p>
-<p><code>scan: &lt;regex&gt;</code></p>
+<p>View all keys in the atServer filtered by a regex</p>
+<p><code>scan &lt;regex&gt;</code></p>
+<p>View all keys in the atServer including hidden and filtered by a regex</p>
+<p><code>scan:showhidden:true &lt;regex&gt;</code></p>
 <p><strong>Response:</strong></p>
 <p>The atServer should return the keys within the atServer if the scan verb executed successfully. The atServer will respond accordingly to whether the atSign is authenticated or not.
 <code>data:[&lt;keys&gt;]</code></p>
-<h3 id="the-update-verb">The <code>update</code> verb <a href="#the-update-verb" class="anchor" aria-hidden="true">#</a></h3>
-<p><strong>Synopsis:</strong></p>
-<p>The <code>update</code> verb is used to insert key/value pairs into a Key Store. An update can only be run by the owner of an atServer on his/her own atServer.</p>
-<p>Following regex represents the syntax of the <code>update</code> verb:</p>
-<p><code>r'^update:(?:ttl:(?&lt;ttl&gt;\d+):)?(?:ttb:(?&lt;ttb&gt;\d+):)?(?:ttr:(?&lt;ttr&gt;(-?)\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?((?:public:)|(@(?&lt;for@sign&gt;[^@:\s]-):))?(?&lt;atKey&gt;[^:@]((?!:{2})[^@])+)(?:@(?&lt;@sign&gt;[^@\s]-))? (?&lt;value&gt;.+$)'</code></p>
-<p><strong>Example:</strong></p>
-<p><code>update:location@bob bob's location value</code></p>
-<p><code>update:ttl:600000:location@bob bob's location value but key expires in 10 minutes</code></p>
-<p><code>update:@alice:phone@bob bob's phone number shared to @alice</code></p>
-<p><strong>Response:</strong></p>
-<p>The atServer should return the commit id from Commit Log if the update is successful.</p>
-<p><code>data:&lt;CommitId&gt;</code></p>
-<p>If the user provides the invalid update command, then it should respond with the following error and close the connection to the server</p>
-<p><code>error:AT0003-Invalid Syntax</code></p>
-<p><strong>Description:</strong></p>
-<p>The <code>update</code> verb should be used to perform create/update operations on the atServer. The <code>update</code> verb requires the owner of the atServer to authenticate himself/herself to the atServer using <code>from</code> and <code>cram</code> verbs.</p>
-<p>If a key has been created for another atSign user, the atServer should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
-<p><strong>Options:</strong></p>
-<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds.</p>
-<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds.</p>
-<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds.</p>
-<blockquote>
-<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever.</p>
-</blockquote>
-<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it deletes it.</p>
-<p><code>&lt;for@sign&gt;</code> Required: Yes, (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.</p>
-<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner.</p>
-<p><code>&lt;value&gt;</code> Required: Yes. Description: Value for the key.</p>
-<h3 id="the-updatemeta-verb">The <code>update:meta</code> verb <a href="#the-updatemeta-verb" class="anchor" aria-hidden="true">#</a></h3>
-<p><strong>Synopsis:</strong></p>
-<p>The <code>update:meta</code> verb should be used to update the metadata of a key atSign user without having to send or save the value again.</p>
-<p>Following is the regex for the <code>update:meta</code> verb</p>
-<p><code>^update:meta:((?:public:)|((?&lt;forAtSign&gt;@?[^@\s]-):))?(?&lt;atKey&gt;((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]-)(:ttl:(?&lt;ttl&gt;\d+))?(:ttb:(?&lt;ttb&gt;\d+))?(:ttr:(?&lt;ttr&gt;\d+))?(:ccd:(?&lt;ccd&gt;true|false))?(:isBinary:(?&lt;isBinary&gt;true|false))?(:isEncrypted:(?&lt;isEncrypted&gt;true|false))?$</code></p>
-<p><strong>Example:</strong></p>
-<p><code>update:meta:phone@bob:isBinary:true</code></p>
-<p><code>update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true</code></p>
-<p><strong>Response:</strong></p>
-<p>The atServer should return the commit id from Commit Log if the update is successful.</p>
-<p><code>data:&lt;CommitId&gt;</code></p>
-<p>If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the atServer.</p>
-<p><code>error:AT0003-Invalid Syntax</code></p>
-<p><strong>Description:</strong></p>
-<p>The <code>update:meta</code> verb should be used to perform create/update operations on the atServer. The <code>update:meta</code> verb requires the owner of the atServer to authenticate himself/herself to the atServer using <code>from</code> and <code>cram</code> verbs.</p>
-<p>The atServer should allow creation of keys with null values. If a key has been created for another atSign user, the atServer should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
-<p><strong>Options:</strong>:</p>
-<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds</p>
-<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds</p>
-<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds</p>
-<blockquote>
-<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever</p>
-</blockquote>
-<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.</p>
-<p><code>&lt;for@sign&gt;</code> Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.</p>
-<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner.</p>
 <h3 id="the-lookup-verb">The <code>lookup</code> verb <a href="#the-lookup-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis</strong>:</p>
 <p>The <code>lookup</code> verb should be used to lookup the value shared by another atSign user.</p>
 <p>The following is the regex of the <code>lookup</code> verb:</p>
 <p><code>lookup:((?&lt;operation&gt;meta|all):)?(?&lt;atKey&gt;(?:[^:]).+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
 <p><strong>Example:</strong></p>
+<p>Look up the value of the key <code>@&lt;you&gt;:phone@alice</code> (the key is created and shared by @alice and lives on their atServer where the key is intentionally shared with you).</p>
 <p><code>lookup:phone@alice</code></p>
+<p>Look up the metadata of the key <code>@&lt;you&gt;:phone@alice</code> (key shared by @alice and shared with you).</p>
 <p><code>lookup:meta:phone@alice</code></p>
+<p>Look up both the value and the metadata of the key <code>@&lt;you&gt;:phone@alice</code> (key shared by @alice and shared with you).</p>
 <p><code>lookup:all:phone@alice</code></p>
 <p><strong>Response</strong>:</p>
 <p>If the operation is not specified the atServer should just respond back with the value saved by the user as is.</p>
@@ -1509,9 +1553,14 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p>Following is the regex of the <code>plookup</code> verb:</p>
 <p><code>^plookup:((?&lt;operation&gt;meta|all):)?(?&lt;atKey&gt;[^@\s]+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
 <p><strong>Example:</strong></p>
+<p>Look up the value of the key <code>public:publickey@alice</code> (the key is created and shared by @alice and lives on their atServer where the key is public).</p>
 <p><code>plookup:publickey@alice</code></p>
+<p>Look up the metadata of the public key</p>
 <p><code>plookup:meta:publickey@alice</code></p>
+<p>Look up both the value and the metadata of the public key</p>
 <p><code>plookup:all:publickey@alice</code></p>
+<p>Look up the value and metadata of the public key while bypassing the cache (i.e. the value will be fetched directly from the atServer instead of first checking for a cached key on your secondary).</p>
+<p><code>plookup:bypassCache:true:all:publickey@alice</code></p>
 <p><strong>Response:</strong></p>
 <p>The atServer should return the value or metadata or the value and metadata together based on the option specified.</p>
 <p>The response structure should be exactly the same as the <code>lookup</code> verb.</p>
@@ -1525,8 +1574,12 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p>The following is the regex of the <code>llookup</code> verb:</p>
 <p><code>^llookup:((?&lt;operation&gt;meta|all):)?(?:cached:)?((?:public:)|(@(?&lt;for@sign&gt;[^@:\s]-):))?(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;@sign&gt;[^@\s]+)$</code></p>
 <p><strong>Example:</strong></p>
-<p><code>llookup:public:publickey@bob</code></p>
-<p><code>llookup:all:phone@bob</code></p>
+<p>Lookup the value of a public key that lives on your atServer</p>
+<p><code>llookup:public:publickey@&lt;you&gt;</code></p>
+<p>Lookup both the value and the metadata of a self key that lives on your atServer</p>
+<p><code>llookup:all:phone@&lt;you&gt;</code></p>
+<p>Lookup both the value and the metadata of a shared key (that is shared with @alice and created by @<you>)</p>
+<p><code>llookup:all:@alice:phone@&lt;you&gt;</code></p>
 <p><strong>Response:</strong></p>
 <p>The atServer should return the value or metadata or the value and metadata together based on the option specified.</p>
 <p>The response structure should be exactly the same as the <code>lookup</code> verb.</p>
@@ -1538,22 +1591,75 @@ Following regex represents the syntax of the <code>scan</code> verb:
 <p>The <code>llookup</code> verb should be used to fetch the value of the key in the owner&rsquo;s atServer store as is without resolving it. For example if a key contains a reference as a value, the <code>lookup</code> verb should resolve it to a value whereas <code>llookup</code> should return the value as is.</p>
 <p><strong>Example:</strong></p>
 <p>If <code>phone@bob</code> is &ldquo;1234&rdquo; and <code>altphone@bob</code> is &ldquo;atsign://phone@bob&rdquo;, then <code>lookup</code> of <code>altphone@bob</code> should return &ldquo;1234&rdquo; where as <code>llookup</code> of <code>altphone@bob</code> should return &ldquo;atsign://phone@bob&rdquo;.</p>
-<h3 id="the-pkam-verb">The <code>pkam</code> verb <a href="#the-pkam-verb" class="anchor" aria-hidden="true">#</a></h3>
+<h3 id="the-update-verb">The <code>update</code> verb <a href="#the-update-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
-<p>The <code>pkam</code> verb is used to authenticate one&rsquo;s own self as an owner of an atServer using a PKI style authentication.</p>
-<p>Following regex represents the syntax of the <code>pkam</code> verb:</p>
-<p><code>^pkam:(?&lt;signature&gt;.+$)</code></p>
+<p>The <code>update</code> verb is used to insert key/value pairs into a Key Store. An update can only be run by the owner of an atServer on his/her own atServer.</p>
+<p>Following regex represents the syntax of the <code>update</code> verb:</p>
+<p><code>r'^update:(?:ttl:(?&lt;ttl&gt;\d+):)?(?:ttb:(?&lt;ttb&gt;\d+):)?(?:ttr:(?&lt;ttr&gt;(-?)\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?((?:public:)|(@(?&lt;for@sign&gt;[^@:\s]-):))?(?&lt;atKey&gt;[^:@]((?!:{2})[^@])+)(?:@(?&lt;@sign&gt;[^@\s]-))? (?&lt;value&gt;.+$)'</code></p>
 <p><strong>Example:</strong></p>
-<p><code>pkam:&lt;digest&gt;</code></p>
+<p>Put a key/value pair into the atServer with key <code>location@bob</code> and value <code>bob's location value</code>.
+This operation will create a new key if it does not already exist. If it already exists, it will overwrite the existing value.</p>
+<p><code>update:location@bob bob's location value</code></p>
+<p>Put a key/value pair into the atServer with key <code>location@bob</code> and value <code>bob's location value but key expires in 10 minutes</code>. The time to live of this key is 10 minutes.</p>
+<p><code>update:ttl:600000:location@bob bob's location value but key expires in 10 minutes</code></p>
+<p>Put a shared key/value pair into the atServer with key <code>@alice:phone@bob</code> (shared with @alice and shared by @bob) with value <code>bob's phone number shared to @alice</code>.</p>
+<p><code>update:@alice:phone@bob bob's phone number shared to @alice</code></p>
 <p><strong>Response:</strong></p>
-<p>If the user gets the challenge right, the prompt should change to the atSign of the user.</p>
-<p><code>&lt;@sign&gt;@</code></p>
-<p>If the user gets the pkam authentication wrong, then it should respond back with the following error and close the connection to the server.</p>
-<p><code>error:AT0401-Client authentication failed</code></p>
+<p>The atServer should return the commit id from Commit Log if the update is successful.</p>
+<p><code>data:&lt;CommitId&gt;</code></p>
+<p>If the user provides the invalid update command, then it should respond with the following error and close the connection to the server</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
 <p><strong>Description:</strong></p>
-<p>The <code>pkam</code> verb follows the <code>from</code> verb. As an owner of the an atServer, you should be able to take the challenge thrown by the <code>from</code> verb and encrypt using the private key of the RSA key pair with what the server has been bound with. Upon receiving the <code>cram</code> verb along with the digest, the server decrypts the digest using the public key and matches it with the challenge. If they are the same then the atServer lets you connect to the atServer and changes the prompt to your atSign.</p>
+<p>The <code>update</code> verb should be used to perform create/update operations on the atServer. The <code>update</code> verb requires the owner of the atServer to authenticate himself/herself to the atServer using <code>from</code> and <code>cram</code> verbs.</p>
+<p>If a key has been created for another atSign user, the atServer should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
 <p><strong>Options:</strong></p>
-<p><code>&lt;digest&gt;</code> Required: Yes. Description: Encrypted challenge</p>
+<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds.</p>
+<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds.</p>
+<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds.</p>
+<blockquote>
+<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever.</p>
+</blockquote>
+<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it deletes it.</p>
+<p><code>&lt;for@sign&gt;</code> Required: Yes, (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.</p>
+<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner.</p>
+<p><code>&lt;value&gt;</code> Required: Yes. Description: Value for the key.</p>
+<h3 id="the-updatemeta-verb">The <code>update:meta</code> verb <a href="#the-updatemeta-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>update:meta</code> verb should be used to update the metadata of a key atSign user without having to send or save the value again.</p>
+<p>Following is the regex for the <code>update:meta</code> verb</p>
+<p><code>^update:meta:((?:public:)|((?&lt;forAtSign&gt;@?[^@\s]-):))?(?&lt;atKey&gt;((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]-)(:ttl:(?&lt;ttl&gt;\d+))?(:ttb:(?&lt;ttb&gt;\d+))?(:ttr:(?&lt;ttr&gt;\d+))?(:ccd:(?&lt;ccd&gt;true|false))?(:isBinary:(?&lt;isBinary&gt;true|false))?(:isEncrypted:(?&lt;isEncrypted&gt;true|false))?$</code></p>
+<p><strong>Example:</strong></p>
+<p>Update the metadata of key <code>phone@bob</code> setting <code>isBinary:true</code> while keeping all other metadata as it is.</p>
+<p><code>update:meta:phone@bob:isBinary:true</code></p>
+<p>Update the metadata of the shared key <code>@alicephone@bob</code> (shared with @alice &amp; shared by @bob) setting <code>ttl:600000</code>, setting <code>isBinary:true</code> and <code>isEncrypted:true</code> while keeping all other metadata as it is.</p>
+<p><code>update:meta:@alice:phone@bob:ttl:600000:isBinary:true:isEncrypted:true</code></p>
+<p><strong>Response:</strong></p>
+<p>The atServer should return the commit id from Commit Log if the update is successful.</p>
+<p><code>data:&lt;CommitId&gt;</code></p>
+<p>If the user provides the invalid update meta command, then it should respond with the following error and close the connection to the atServer.</p>
+<p><code>error:AT0003-Invalid Syntax</code></p>
+<p><strong>Description:</strong></p>
+<p>The <code>update:meta</code> verb should be used to perform create/update operations on the atServer. The <code>update:meta</code> verb requires the owner of the atServer to authenticate himself/herself to the atServer using <code>from</code> and <code>cram</code> verbs.</p>
+<p>The atServer should allow creation of keys with null values. If a key has been created for another atSign user, the atServer should honor &ldquo;autoNotify&rdquo; configuration parameter.</p>
+<p><strong>Options:</strong>:</p>
+<p><code>&lt;ttl&gt;</code> Required: No. Description: Time to live in milliseconds</p>
+<p><code>&lt;ttb&gt;</code> Required: No. Description: Time to birth in milliseconds</p>
+<p><code>&lt;ttr&gt;</code> Required: No. Description: Time to refresh in milliseconds</p>
+<blockquote>
+<p>-1 is a valid value which indicates that the user with whom the key has been shared can keep it forever and the value for this key won&rsquo;t change forever</p>
+</blockquote>
+<p><code>&lt;ccd&gt;</code> Required: No. Description: A value of &ldquo;true&rdquo; indicates that the cached key needs to be deleted when the atSign user who has originally shared it, deletes it.</p>
+<p><code>&lt;for@sign&gt;</code> Required: Yes (Not required when the key is a public key). Description: atSign of the user with whom the key has been shared.</p>
+<p><code>&lt;@sign&gt;</code> Required: Yes. Description: atSign of the owner.</p>
+<h3 id="the-delete-verb">The <code>delete</code> verb <a href="#the-delete-verb" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Synopsis:</strong></p>
+<p>The <code>delete</code> verb should be used to delete a key from the key store. Only the authenticated owner of the atServer can delete keys that they created.</p>
+<p><strong>Example:</strong></p>
+<p>Delete a key (that you created) from your atServer.</p>
+<p><code>delete:phone@&lt;you&gt;</code></p>
+<p><strong>Response:</strong></p>
+<p>The atServer returns the commit id of the operation. Note: no information about the key (if it was deleted or if it ever existed in the first place) is given.</p>
+<p><code>data:1234</code></p>
 <h3 id="the-stats-verb">The <code>stats</code> verb <a href="#the-stats-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
 <p>The <code>stats</code> verb should be used to get the statistics of an atSign.</p>
@@ -1586,10 +1692,14 @@ data: [{&#34;id&#34;:&#34;1&#34;,&#34;name&#34;:&#34;activeInboundConnections&#3
 <p><strong>Synopsis:</strong></p>
 <p>The <code>notify</code> verb enables us to notify the atSign user of some data event.</p>
 <p>The following is the regex for the <code>notify</code> verb</p>
-<pre tabindex="0"><code>notify:((?&lt;operation&gt;update|delete):)?(ttl:(?&lt;ttl&gt;\d+):)?(ttb:(?&lt;ttb&gt;\d+):)?(ttr:(?&lt;ttr&gt;(-)?\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?(@(?&lt;forAtSign&gt;[^@:\s]-)):(?&lt;atKey&gt;[^:]((?!:{2})[^@])+)@(?&lt;atSign&gt;[^@:\s]+)(:(?&lt;value&gt;.+))?
+<pre tabindex="0"><code>notify:((?&lt;operation&gt;update|delete):)?(messageType:(?&lt;messageType&gt;key|text):)?(priority:(?&lt;priority&gt;low|medium|high):)?(strategy:(?&lt;strategy&gt;all|latest):)?(latestN:(?&lt;latestN&gt;\d+):)?(notifier:(?&lt;notifier&gt;[^\s:]+):)?(ttln:(?&lt;ttln&gt;\d+):)?(ttl:(?&lt;ttl&gt;\d+):)?(ttb:(?&lt;ttb&gt;\d+):)?(ttr:(?&lt;ttr&gt;(-)?\d+):)?(ccd:(?&lt;ccd&gt;true|false):)?(@(?&lt;forAtSign&gt;[^@:\s]*)):(?&lt;atKey&gt;[^:@]((?!:{2})[^@])+)(@(?&lt;atSign&gt;[^@:\s]+))?(:(?&lt;value&gt;.+))?$
 </code></pre><p><strong>Example:</strong></p>
-<p><code>notify:update:@alice:test@bob</code></p>
-<p><code>notify:delete:@alice:test@bob</code></p>
+<p>Notify <code>@alice</code> that you have a shared key <code>@alice:test@&lt;you&gt;</code> with an updated value waiting for them to lookup.</p>
+<p><code>notify:update:@alice:test@&lt;you&gt;</code></p>
+<p>Notify <code>@alice</code> that you have a shared key <code>@alice:test@&lt;you&gt;</code> that was deleted.</p>
+<p><code>notify:delete:@alice:test@&lt;you&gt;</code></p>
+<p>Notify <code>@alice</code> with a message <code>my sample message to bob</code>.</p>
+<p><code>notify:messageType:text:@&lt;you&gt;:my sample message to bob</code></p>
 <p><strong>Response:</strong></p>
 <p>When a key is notified successfully, returns</p>
 <p><code>data:&lt;notificationId&gt;</code></p>
@@ -1602,6 +1712,7 @@ data: [{&#34;id&#34;:&#34;1&#34;,&#34;name&#34;:&#34;activeInboundConnections&#3
 <p>The following is the regex</p>
 <p><code>notify:(list (?&lt;regex&gt;.-)|list$)</code></p>
 <p><strong>Example:</strong></p>
+<p>List all notifications that you have received.</p>
 <p><code>notify:list</code></p>
 <p><strong>Response:</strong></p>
 <p>If the user is the owner, returns a list of received notifications. If a user is pol authenticated user, returns a list of sent notifications</p>
@@ -1612,16 +1723,30 @@ data: [{&#34;id&#34;:&#34;1&#34;,&#34;name&#34;:&#34;activeInboundConnections&#3
 <p>The following is the regex</p>
 <p><code>notify:(remove:(?&lt;notificationId&gt;[^:]+$))</code></p>
 <p><strong>Example:</strong></p>
+<p>Remove a notification that you received that has id <code>0e5e9e89-c9cb-423b-8972-8c5487215990</code>.</p>
 <p><code>notify:remove:0e5e9e89-c9cb-423b-8972-8c5487215990</code></p>
 <p><strong>Response:</strong></p>
 <p>If successful, returns</p>
 <p><code>data:success</code></p>
+<h4 id="notify-status">Notify Status <a href="#notify-status" class="anchor" aria-hidden="true">#</a></h4>
+<p><strong>Synopsis:</strong></p>
+<p>Notify status returns the status of a notification that was sent to another atSign user.</p>
+<p>The following is the regex</p>
+<p><code>notify:(status:(?&lt;notificationId&gt;[^:]+$))</code></p>
+<p><strong>Example::</strong></p>
+<p>Check the status of the notification that you sent with id <code>0e5e9e89-c9cb-423b-8972-8c5487215990</code>.</p>
+<p><code>notify:status:0e5e9e89-c9cb-423b-8972-8c5487215990</code></p>
+<p><strong>Response:</strong></p>
+<p>Returns the status of the notification</p>
+<p><code>data:delivered</code></p>
+<p><code>data:undelivered</code></p>
 <h3 id="the-monitor-verb">The <code>monitor</code> verb <a href="#the-monitor-verb" class="anchor" aria-hidden="true">#</a></h3>
 <p><strong>Synopsis:</strong></p>
 <p>The <code>monitor</code> verb streams received notifications.</p>
 <p>The following is the regex</p>
 <p><code>^monitor$|^monitor ?(?&lt;regex&gt;.-)?)$</code></p>
 <p><strong>Example:</strong></p>
+<p>Start monitoring all notifications in this current session.</p>
 <p><code>monitor</code></p>
 <p><strong>Response:</strong></p>
 <p>Returns a stream of notifications</p>
@@ -1711,8 +1836,8 @@ notification: {&#34;id&#34;:&#34;773e226d-dac2-4269-b1ee-64d7ce93a42f&#34;,&#34;
 </tr>
 <tr>
 <td>AT0021</td>
-<td>Unable to connect to the atServer</td>
-<td>This exception will occur when we are unable to connect to atServer.</td>
+<td>Unable to connect to secondary</td>
+<td>This exception will occur when we are unable to connect to secondary.</td>
 </tr>
 </tbody>
 </table>
@@ -1798,8 +1923,8 @@ notification: {&#34;id&#34;:&#34;773e226d-dac2-4269-b1ee-64d7ce93a42f&#34;,&#34;
         <p>
             For general inquiries, email us: <a href="mailto:info@atsign.com">info@atsign.com</a>
         </p>
-        <p>Last updated on 2023-01-18 10:44:14 -0500 -0500</p>
-        <p> By Xavier Chanthavong on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/bed6d70'>bed6d70</a></p>
+        <p>Last updated on 2023-01-18 15:45:58 &#43;0000 UTC</p>
+        <p> By Chris Swan on <a href='https://github.com/atsign-foundation/docs.atsign.com/commit/28ca4e1'>28ca4e1</a></p>
     </div>
     <div class="footer-social">
         <a target="_blank" href="https://github.com/atsign-foundation">
