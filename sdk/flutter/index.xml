@@ -55,8 +55,8 @@ AtKey Structure:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/sdk/flutter/onboarding/</guid>
-      <description>Overview #The atPlatform uses secret keys for authenticating an atSign as a cryptographically secure replacement for usernames and passwords. To make developers&amp;rsquo; lives easier, atPlatform offers the at_onboarding_flutter package, which handles secure management of secret keys. If you are developing a new atPlatform app, we recommend that you use at_app, which can create an atPlatform app template that already contains onboarding in it.
-Usage #Before using the onboarding widget, ensure that your AtClientPreference is properly assigned.</description>
+      <description>Overview #The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords. To improve developer experience, the atPlatform offers the at_onboarding_flutter package which handles secure management of these secret keys. If you are developing a new atPlatform app, we recommend that you use at_app which can create atPlatform app template that already contains an example of using the at_onboarding_flutter widget.
+Once the onboarding widget is opened, the user can click one of the four options:</description>
     </item>
     
   </channel>

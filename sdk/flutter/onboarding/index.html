@@ -23,7 +23,7 @@
 ">
 <meta property="og:url" content="https://dev3.atsign.wtf/sdk/flutter/onboarding/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2023-01-18T15:45:58+00:00">
+<meta property="article:modified_time" content="2023-01-18T15:50:00+00:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -80,7 +80,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2023-01-18T15:45:58CET",
+      "dateModified": "2023-01-18T15:50:00CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/sdk/flutter/onboarding/#/schema/breadcrumb/1"
       },
@@ -652,11 +652,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <div class="codelab-timer">
   
   ⏱
   
-  11 mins remaining
+  18 mins remaining
   
 </div>
 
@@ -681,27 +689,27 @@
           </span>
         </a>
       </li>
-        
-      <li  completed>
-        <a href="https://dev3.atsign.wtf/sdk/flutter/at_client_manager/">
+          
+      <li selected >
+        <a href="https://dev3.atsign.wtf/sdk/flutter/onboarding/">
           <span class="codelab-step">
-            <span>AtClientManager</span>
+            <span>Onboarding</span>
           </span>
         </a>
       </li>
         
-      <li  completed>
+      <li  >
         <a href="https://dev3.atsign.wtf/sdk/flutter/at_client_preference/">
           <span class="codelab-step">
             <span>AtClientPreference</span>
           </span>
         </a>
       </li>
-          
-      <li selected >
-        <a href="https://dev3.atsign.wtf/sdk/flutter/onboarding/">
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/sdk/flutter/at_client_manager/">
           <span class="codelab-step">
-            <span>Onboarding</span>
+            <span>AtClientManager</span>
           </span>
         </a>
       </li>
@@ -723,29 +731,232 @@
       <div class="codelab-step">
         <div class="codelab-instructions">
           <h2 class="codelab-step-title">Onboarding</h2>
-          <h3 id="overview">Overview <a href="#overview" class="anchor" aria-hidden="true">#</a></h3>
-<p>The atPlatform uses secret keys for authenticating an atSign as a cryptographically secure replacement for usernames and passwords. To make developers&rsquo; lives easier, atPlatform offers the <a href="https://pub.dev/packages/at_onboarding_flutter">at_onboarding_flutter</a> package, which handles secure management of secret keys. If you are developing a new atPlatform app, we recommend that you use <a href="https://pub.dev/packages/at_app">at_app</a>, which can create an atPlatform app template that already contains onboarding in it.</p>
-<h2 id="usage">Usage <a href="#usage" class="anchor" aria-hidden="true">#</a></h2>
-<p>Before using the onboarding widget, ensure that your <a href="https://docs.google.com/document/d/14PZ-FHV9djBJL1RR8G8aYd6qxiWErBJEvRW9hD0pfNQ/edit#heading=h.yept27gyvv8g">AtClientPreference</a> is properly assigned.
-If you need an appAPIKey please email us at: <a href="mailto://support@atsign.com">support@atsign.com</a></p>
-<pre tabindex="0"><code>AtOnboarding.onboard(
-  context: context,
-  config: AtOnboardingConfig(
-          atClientPreference: atClientPreference,
-          domain: AtEnv.rootDomain,
-          rootEnvironment: AtEnv.rootEnvironment,
-          appAPIKey: AtEnv.appApiKey,
-        ),
-  onboard: (value, atsign) {
-     _logger.finer(&#39;Successfully onboarded $atsign&#39;);
-  },
-  onError: (error) {
-     _logger.severe(&#39;Onboarding throws $error error&#39;);
-  });
-  },
-  child: const Text(&#39;Onboard an atSign&#39;),
-),
-</code></pre>
+          <h2 id="overview">Overview <a href="#overview" class="anchor" aria-hidden="true">#</a></h2>
+<p>The atPlatform uses secret keys for authenticating an atSign as cryptographically secure replacement for usernames and passwords. To improve developer experience, the atPlatform offers the <a target="_blank" rel="" href="https://pub.dev/packages/at_onboarding_flutter">at_onboarding_flutter</a> package which handles secure management of these secret keys. If you are developing a new atPlatform app, we recommend that you use <a target="_blank" rel="" href="https://pub.dev/packages/at_app">at_app</a> which can create atPlatform app template that already contains an example of using the <a target="_blank" rel="" href="https://pub.dev/packages/at_onboarding_flutter">at_onboarding_flutter</a> widget.</p>
+
+
+    
+    
+        <img class="img-contain " src="https://dev3.atsign.wtf/sdk/flutter/onboarding/onboarding.png" width="479" height="536">
+    
+
+
+<p>Once the onboarding widget is opened, the user can click one of the four options:</p>
+<ol>
+<li><strong>Upload backup key file</strong> - subsequent onboard: person possesses an activated and already onboarded atSign with the <code>.atKeys</code> file)</li>
+<li><strong>Generate Free atSign</strong> - need new atSign: person requires a new atSign and its <code>.atKeys</code> file.</li>
+<li><strong>Scan QR Code</strong> - one-time activation: person has an unactivated atSign (no <code>.atKeys</code> file) but possess the QR code containing the cram secret</li>
+<li><strong>Activate atSign</strong> one-time activation: person has an unactivated atSign (no <code>.atKeys</code> file) but possesses the <code>atSign</code> and access to the <code>email</code> associated with it to provide the OTP.</li>
+</ol>
+<h2 id="installation">Installation <a href="#installation" class="anchor" aria-hidden="true">#</a></h2>
+<p>The <a target="_blank" rel="" href="https://pub.dev/packages/at_onboarding_flutter">at_onboarding_flutter</a> package provides a widget that can be used to onboard atSigns.</p>
+<ol>
+<li>Add the package by running the following command in your terminal:</li>
+</ol>
+<pre tabindex="0"><code>flutter pub add at_onboarding_flutter
+</code></pre><ol start="2">
+<li>Or add it to your pubspec.yaml manually:</li>
+</ol>
+<p>Note: Be sure to check the updated version on <a target="_blank" rel="" href="https://pub.dev">pub.dev</a>.</p>
+<p>Also run <code>flutter pub get</code> to update your dependencies.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">dependencies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">flutter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sdk</span><span class="p">:</span><span class="w"> </span><span class="l">flutter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">at_client_mobile</span><span class="p">:</span><span class="w"> </span><span class="l">^3.2.6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">at_utils</span><span class="p">:</span><span class="w"> </span><span class="l">^3.0.11</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">at_onboarding_flutter</span><span class="p">:</span><span class="w"> </span><span class="l">^5.0.5</span><span class="w">
+</span></span></span></code></pre></div><h2 id="usage">Usage <a href="#usage" class="anchor" aria-hidden="true">#</a></h2>
+<p>Simply call the <code>.onboard</code> method whenever you want your app to open the onboarding widget.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">AtOnboarding</span><span class="p">.</span><span class="n">onboard</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span> <span class="c1">// BuildContext
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nl">config:</span> <span class="n">AtOnboardingConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">atClientPreference:</span> <span class="n">AtClientPreference</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">rootDomain</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span> <span class="c1">// access AtEnv from the `at_app_flutter` package
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">namespace</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appNamespace</span>
+</span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">hiveStoragePath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span>
+</span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">commitLogPath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span>
+</span></span><span class="line"><span class="cl">      <span class="p">..</span><span class="n">isLocalStoreRequired</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">rootEnvironment:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootEnvironment</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">domain:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">appAPIKey:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appApiKey</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>Notes:</p>
+<ul>
+<li><code>dir</code> is a variable from holding data retrieved from the <code>path_provider</code> package: <code>var dir = await getApplicationSupportDirectory();</code></li>
+<li><code>AtEnv</code> comes from <code>at_app_flutter</code> which helps with providing various arguments like accessing the <code>.env</code> file and providing the <code>rootDomain</code> and <code>appNamespace</code> constants.</li>
+</ul>
+<h2 id="example">Example <a href="#example" class="anchor" aria-hidden="true">#</a></h2>
+<p>The example below demonstrates the onboarding widget being opened upon pressing this <code>ElevatedButton</code> widget. Since the <code>.onboard</code> method returns a <code>AtOnboardingResult</code> object, we store it in a variable and use it to determine what to do next. If the onboarding process was successful, we move onto a different page using <code>Navigator</code>, otherwise, we display an error.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">ElevatedButton</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Onboard an @sign&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">dir</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">getApplicationSupportDirectory</span><span class="p">();</span> <span class="c1">// from the `path_provider` package
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">AtOnboardingResult</span> <span class="n">onboardingResult</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">AtOnboarding</span><span class="p">.</span><span class="n">onboard</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span> <span class="c1">// BuildContext
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">config:</span> <span class="n">AtOnboardingConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">atClientPreference:</span> <span class="n">AtClientPreference</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">          <span class="p">..</span><span class="n">rootDomain</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span> <span class="c1">// access AtEnv from the `at_app_flutter` package
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="p">..</span><span class="n">namespace</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appNamespace</span>
+</span></span><span class="line"><span class="cl">          <span class="p">..</span><span class="n">hiveStoragePath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span>
+</span></span><span class="line"><span class="cl">          <span class="p">..</span><span class="n">commitLogPath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span>
+</span></span><span class="line"><span class="cl">          <span class="p">..</span><span class="n">isLocalStoreRequired</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">rootEnvironment:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootEnvironment</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">domain:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">appAPIKey:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appApiKey</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">onboardingResult</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">success:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Navigator</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">MaterialPageRoute</span><span class="p">(</span><span class="nl">builder:</span> <span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kd">const</span> <span class="n">HomeScreen</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">error:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">showSnackBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">const</span> <span class="n">SnackBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nl">backgroundColor:</span> <span class="n">Colors</span><span class="p">.</span><span class="n">red</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nl">content:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;An error has occurred&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">cancel:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">),</span>
+</span></span></code></pre></div><h2 id="parameters">Parameters <a href="#parameters" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="atonboardingonboard">AtOnboarding.onboard <a href="#atonboardingonboard" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required?</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="" href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></td>
+<td>context</td>
+<td>The context of the widget that is calling the <code>.onboard</code> method.</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#atonboardingconfig">AtOnboardingConfig</a></td>
+<td>config</td>
+<td>The configuration object that contains the preferences for the onboarding widget.</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>bool</td>
+<td>isSwitchingAtSign</td>
+<td>True - show the UI for switching a new atsign. <code>false</code> - checks if atSign is already onboarded (if already onboarded, does not show UI).</td>
+<td>false</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>String?</td>
+<td>atSign</td>
+<td>The new atSign name if switching atSigns (<code>isSwitchingAtSign</code> should be true)</td>
+<td>false</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="atonboardingconfig">AtOnboardingConfig <a href="#atonboardingconfig" class="anchor" aria-hidden="true">#</a></h3>
+<p>The <code>AtOnboardingConfig</code> object is used to configure the onboarding widget. It contains the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required?</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="" href="https://dev3.atsign.wtf/sdk/flutter/at_client_preference/">AtClientPreference</a></td>
+<td>atClientPreference</td>
+<td>object used to configure preferences in your atPlatform application such as the namespace, hiveStoragePath, and maxDataSize.</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>RootEnvironment (enum)</td>
+<td>rootEnvironment</td>
+<td>The set of servers your app will be running and talking to atSigns in (testing, staging, production)</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>String?</td>
+<td>domain</td>
+<td>The domain of the atDirectoryServer (previously called root server)</td>
+<td>false</td>
+<td><code>root.atsign.org</code></td>
+</tr>
+<tr>
+<td>String?</td>
+<td>appAPIKey</td>
+<td>The API authentication key for getting free atsigns</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bool</td>
+<td>hideReferences</td>
+<td>If true, hides the reference to web pages.</td>
+<td>false</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>bool</td>
+<td>hideQrScan</td>
+<td>If true, hides the QR functionality</td>
+<td>false</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="atonboardingresult">AtOnboardingResult <a href="#atonboardingresult" class="anchor" aria-hidden="true">#</a></h3>
+<p>This object is received when the <code>.onboard</code> method is called. It contains the following properties which can be used in your application:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AtOnboardingResultStatus (enum)</td>
+<td>status</td>
+<td>The status of the onboarding process.</td>
+</tr>
+<tr>
+<td>String?</td>
+<td>message</td>
+<td>The message returned when the onboarding process fails.</td>
+</tr>
+<tr>
+<td>String?</td>
+<td>errorCode</td>
+<td>The error code when the onboarding process fails.</td>
+</tr>
+<tr>
+<td>String?</td>
+<td>atSign</td>
+<td>The atSign that was onboarded successfully.</td>
+</tr>
+</tbody>
+</table>
+
         </div>
       </div>
     </div>
@@ -766,24 +977,24 @@ If you need an appAPIKey please email us at: <a href="mailto://support@atsign.co
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -803,11 +1014,11 @@ If you need an appAPIKey please email us at: <a href="mailto://support@atsign.co
 <div class="codelab-controls">
   <div class="fabs">
     
-    <a href="https://dev3.atsign.wtf/sdk/flutter/at_client_preference/" id="previous-step" title="Previous step">Back</a>
+    <a href="https://dev3.atsign.wtf/sdk/flutter/introduction/" id="previous-step" title="Previous step">Back</a>
     
     <div class="spacer"></div>
     
-    <a href="https://dev3.atsign.wtf/sdk/flutter/key_basics/" id="next-step" title="Next step">Next</a>
+    <a href="https://dev3.atsign.wtf/sdk/flutter/at_client_preference/" id="next-step" title="Next step">Next</a>
     
   </div>
 </div>
