@@ -21,7 +21,7 @@
 <meta property="og:description" content="How to architect an app built on the atPlatform">
 <meta property="og:url" content="https://dev3.atsign.wtf/tutorials/at-dude/3-app_architecture/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2023-01-19T17:15:13+00:00">
+<meta property="article:modified_time" content="2023-01-20T16:23:20-05:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -77,7 +77,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2023-01-19T17:15:13CET",
+      "dateModified": "2023-01-20T16:23:20CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/tutorials/at-dude/3-app_architecture/#/schema/breadcrumb/1"
       },
@@ -270,7 +270,7 @@
               
               
               
-              <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">atDude Tutorial</a></li>
+              <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">atDude Tutorial</a></li>
             
           
             
@@ -689,11 +689,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="codelab-timer">
   
   ⏱
   
-  5 mins remaining
+  18 mins remaining
   
 </div>
 
@@ -702,7 +720,7 @@
     <h1>atDude Tutorial</h1>
     
     
-    <p class="lead">Learn how to build on the atPlatform</p>
+    <p class="lead">Learn how to build production app on the atPlatform</p>
     
   </div>
   
@@ -712,9 +730,9 @@
     <ol>
           
       <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">
           <span class="codelab-step">
-            <span>Send Dude Screen</span>
+            <span>Profile Screen</span>
           </span>
         </a>
       </li>
@@ -736,9 +754,9 @@
       </li>
         
       <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">
           <span class="codelab-step">
-            <span>Profile Screen</span>
+            <span>Send Dude Screen</span>
           </span>
         </a>
       </li>
@@ -747,14 +765,6 @@
         <a href="https://dev3.atsign.wtf/tutorials/at-dude/_9_history_screen/">
           <span class="codelab-step">
             <span>History Screen</span>
-          </span>
-        </a>
-      </li>
-        
-      <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_7_onboarding/">
-          <span class="codelab-step">
-            <span>Onboarding</span>
           </span>
         </a>
       </li>
@@ -779,6 +789,14 @@
         <a href="https://dev3.atsign.wtf/tutorials/at-dude/_3_navigation_service/">
           <span class="codelab-step">
             <span>Navigation Service</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_7_onboarding/">
+          <span class="codelab-step">
+            <span>Onboarding</span>
           </span>
         </a>
       </li>
@@ -814,6 +832,22 @@
           </span>
         </a>
       </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/5-reset-atsign/">
+          <span class="codelab-step">
+            <span>Reset atsign</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/6-send_dude-screen-app-bar/">
+          <span class="codelab-step">
+            <span>Send Dude Screen AppBar</span>
+          </span>
+        </a>
+      </li>
       
     </ol>
   </div>
@@ -843,12 +877,12 @@ mkdir lib/views/screens
 <pre tabindex="0"><code>mkdir lib/commands
 </code></pre><p>The controller files will be saved in this folder.</p>
 <h4 id="services">Services <a href="#services" class="anchor" aria-hidden="true">#</a></h4>
-<p>The services fetch data from the network or local storage and returns it to the controllers.</p>
+<p>The services fetch data from the network or local storage and return it to the commands.</p>
 <p>In your terminal type:</p>
 <pre tabindex="0"><code>mkdir lib/services
 </code></pre><p>The services files will be saved in this folder.</p>
 <h4 id="conclusion">Conclusion <a href="#conclusion" class="anchor" aria-hidden="true">#</a></h4>
-<p>The controllers will call the services to fetch data from the network and then send the fetched data to the model. The views are bound to the model using provider or an alternative. As the models are updated the views will be updated. Alternatively the controller can update the views directly.</p>
+<p>The commands will call the services to fetch data from the network and then send the fetched data to the model. The views are bound to the model using provider or an alternative. As the models are updated the views will be updated. Alternatively the commands can update the views directly.</p>
 <p>In the next step we&rsquo;ll explore this further as we implement onboarding on the atPlatform.</p>
 
         </div>
@@ -953,6 +987,22 @@ mkdir lib/views/screens
 
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

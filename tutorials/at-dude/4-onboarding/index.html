@@ -21,7 +21,7 @@
 <meta property="og:description" content="How to onboard or authenticate on any app built on the atPlatform">
 <meta property="og:url" content="https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2023-01-19T17:15:13+00:00">
+<meta property="article:modified_time" content="2023-01-20T16:23:20-05:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/logo.png"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -77,7 +77,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2023-01-19T17:15:13CET",
+      "dateModified": "2023-01-20T16:23:20CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/#/schema/breadcrumb/1"
       },
@@ -270,7 +270,7 @@
               
               
               
-              <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">atDude Tutorial</a></li>
+              <li><a class="docs-link rounded active" href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">atDude Tutorial</a></li>
             
           
             
@@ -685,11 +685,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="codelab-timer">
   
   ⏱
   
-  3 mins remaining
+  16 mins remaining
   
 </div>
 
@@ -698,7 +716,7 @@
     <h1>atDude Tutorial</h1>
     
     
-    <p class="lead">Learn how to build on the atPlatform</p>
+    <p class="lead">Learn how to build production app on the atPlatform</p>
     
   </div>
   
@@ -708,9 +726,9 @@
     <ol>
           
       <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">
           <span class="codelab-step">
-            <span>Send Dude Screen</span>
+            <span>Profile Screen</span>
           </span>
         </a>
       </li>
@@ -732,9 +750,9 @@
       </li>
         
       <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_10_profile_screen/">
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_8_send_dude_srcreen/">
           <span class="codelab-step">
-            <span>Profile Screen</span>
+            <span>Send Dude Screen</span>
           </span>
         </a>
       </li>
@@ -743,14 +761,6 @@
         <a href="https://dev3.atsign.wtf/tutorials/at-dude/_9_history_screen/">
           <span class="codelab-step">
             <span>History Screen</span>
-          </span>
-        </a>
-      </li>
-        
-      <li  completed>
-        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_7_onboarding/">
-          <span class="codelab-step">
-            <span>Onboarding</span>
           </span>
         </a>
       </li>
@@ -775,6 +785,14 @@
         <a href="https://dev3.atsign.wtf/tutorials/at-dude/_3_navigation_service/">
           <span class="codelab-step">
             <span>Navigation Service</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  completed>
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/_7_onboarding/">
+          <span class="codelab-step">
+            <span>Onboarding</span>
           </span>
         </a>
       </li>
@@ -810,6 +828,22 @@
           </span>
         </a>
       </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/5-reset-atsign/">
+          <span class="codelab-step">
+            <span>Reset atsign</span>
+          </span>
+        </a>
+      </li>
+        
+      <li  >
+        <a href="https://dev3.atsign.wtf/tutorials/at-dude/6-send_dude-screen-app-bar/">
+          <span class="codelab-step">
+            <span>Send Dude Screen AppBar</span>
+          </span>
+        </a>
+      </li>
       
     </ol>
   </div>
@@ -820,95 +854,367 @@
       <div class="codelab-step">
         <div class="codelab-instructions">
           <h2 class="codelab-step-title">Onboarding</h2>
-          <p>In this tutorial, we will build the onboarding screen for the dude app.</p>
-<p>With out further ado, lets get back to building the atDude app.</p>
-<p>At the end this step our app will look like this,</p>
+          <p>In this tutorial, we will build the onboarding screen for the dude app and modify the default onboarding function to make it compatible with our app architecture.</p>
+<p>With out further ado, let&rsquo;s get back to building the atDude app.</p>
+<p>At the end of this step our app will look like this,</p>
 
 
     
     
-        <img class="img-contain " src="https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/first_screen.png" width="296" height="640">
+        <img class="img-contain " src="https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/first_onboard_screen.png" width="296" height="640">
     
 
 
 <p><br>
 <br></p>
-<p>Before we get into the onboarding, lets make the UI changes to our app.</p>
+<p>Before we get into the onboarding, let&rsquo;s make the UI changes to our app.</p>
 <h4 id="update-appbar">Update AppBar <a href="#update-appbar" class="anchor" aria-hidden="true">#</a></h4>
 <p>The first thing we will do is change the App bar title to  &ldquo;atDude&rdquo; in <code>main.dart</code>.</p>
 <pre tabindex="0"><code>MaterialApp(
       // * The onboarding screen (first screen)
+      debugShowCheckedModeBanner: false, // New
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(&#39;atDude&#39;), # Changed
+          title: const Text(&#39;atDude&#39;), // Changed
         ),
       ),
     );
-</code></pre><p>The next step is to wrap our <code>ElevatedButton</code> widget with a Column widget and center its mainAxisAlignment.</p>
-<pre tabindex="0"><code>MaterialApp(
-      // * The onboarding screen (first screen)
-      home: ...
-      body: Builder(
-        builder: (context) =&gt; Center(
-          child: Column( # new
-            mainAxisAlignment: MainAxisAlignment.center, # new
-            children: [
-              ElevatedButton(
-                onPressed: ...
-                child: const Text(&#39;Onboard an @sign&#39;),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-</code></pre><h4 id="adding-iconbutton">Adding IconButton <a href="#adding-iconbutton" class="anchor" aria-hidden="true">#</a></h4>
-<p>Before add an <code>IconButton</code> widget with the dude logo as the icon property. We need to add the logo to our project.</p>
-<p>In your editor create a new folder called assets and inside the assets folder create a folder name images or type the following in your terminal:</p>
+</code></pre><p>The next step is to wrap our <code>ElevatedButton</code> widget with a <code>Column</code> widget and center its mainAxisAlignment.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">MaterialApp</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// * The onboarding screen (first screen)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">home:</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">body:</span> <span class="n">Builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">Center</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">              <span class="n">ElevatedButton</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="nl">onPressed:</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">                <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Onboard an @sign&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">              <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span></code></pre></div><h4 id="adding-iconbutton">Adding IconButton <a href="#adding-iconbutton" class="anchor" aria-hidden="true">#</a></h4>
+<p>Before we add an <code>IconButton</code> widget with the dude logo as the icon property. We need to add the logo to our project.</p>
+<p>Type the following in your terminal:</p>
 <pre tabindex="0"><code>mkdir -p assets/images/
-</code></pre><p>Open <code>pubspec.yaml</code> and add the location of the image folder as shown below.</p>
+open pubspec.yaml
+</code></pre><p>Add the location of the image folder as shown below.</p>
 <pre tabindex="0"><code>flutter:
   uses-material-design: true
   assets:
     - .env
-    - assets/images/ # new
+    - assets/images/ // new
 </code></pre><p>Let&rsquo;s create the <code>IconButton</code> as shown below.</p>
-<pre tabindex="0"><code>Column(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-    IconButton(  # new
-        iconSize: 200, # new
-        onPressed: () {}, # new
-        icon: Image.asset(&#39;assets/images/dude_logo.png&#39;), # new
-    ), # new
-    ElevatedButton(
-      onPressed: () async {...},
-      child: const Text(&#39;Onboard an @sign&#39;),
-    ),
-  ],
-),
-</code></pre><h4 id="onboarding">Onboarding <a href="#onboarding" class="anchor" aria-hidden="true">#</a></h4>
-<p>Before we get started with this section, lets define a few terms:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// IconButton New
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">IconButton</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">iconSize:</span> <span class="m">200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">icon:</span> <span class="n">Image</span><span class="p">.</span><span class="n">asset</span><span class="p">(</span><span class="s1">&#39;assets/images/dude_logo.png&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ElevatedButton</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">onPressed:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{...},</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Onboard an @sign&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">),</span>
+</span></span></code></pre></div><h4 id="refactoring-the-onboard-function">Refactoring the Onboard Function <a href="#refactoring-the-onboard-function" class="anchor" aria-hidden="true">#</a></h4>
+<p>Before we get started with this section, let&rsquo;s define a few terms:</p>
 <p><a href="../../../sdk/flutter/onboarding">Onboarding</a> - The process of activating an atSign and/or authenticating the atSign into its secondary server.</p>
-<p><a href="https://atsign.com/what-is-an-atsign/">atsign</a> - An atsign is your digital identity. It ensures that your data is owned and controlled by you. You can pair your device with any app to access but not store your data.</p>
-<p>To make the onboarding code reusable, we will remove it form the &ldquo;onboard an @sign&rdquo; button and move it into an authentication class.</p>
-<p>Copy the code inside the <code>onPressed</code> anonymous function of the ElevatedButton</p>
+<p><a href="https://atsign.com/what-is-an-atsign/">atsign</a> - An atsign is your digital identity; it ensures that your data is owned and controlled by you. You can pair your device with any app on the atPlatform to access but not store your data.</p>
+<p>We will make the onboarding code compatible with our architecture by removing it from the “onboard an @sign” button and moving it into an authentication class.</p>
 <p>In your terminal type:</p>
-<pre tabindex="0"><code>mkdir lib/services
-touch lib/services/authentication_service.dart
-</code></pre><p>Open <code>authentication_service.dart</code> file and add the following:</p>
-<pre tabindex="0"><code>class AuthenticationService {
-  static final AuthenticationService _singleton =
-      AuthenticationService._internal();
-  AuthenticationService._internal();
+<pre tabindex="0"><code>touch lib/services/authentication_service.dart
+open lib/services/authentication_service.dart
+</code></pre><p>Add the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">AuthenticationService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="kd">final</span> <span class="n">AuthenticationService</span> <span class="n">_singleton</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="n">AuthenticationService</span><span class="p">.</span><span class="n">_internal</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">AuthenticationService</span><span class="p">.</span><span class="n">_internal</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">factory</span> <span class="n">AuthenticationService</span><span class="p">.</span><span class="n">getInstance</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">_singleton</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The above code creates a <a href="https://flutterbyexample.com/lesson/singletons">singleton</a> of our class.</p>
+<p>Now we&rsquo;ll create an async method called <code>onboard</code> in our <code>AuthenticationService</code> class. We will then move the contents of the <code>onboardingResult</code> variable inside the  <code>ElevatedButton</code> <code>onPressed</code> anonymous function in <code>main.dart</code>, to the this method as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">AuthenticationService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="n">AtOnboardingResult</span><span class="o">&gt;</span> <span class="n">onboard</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kd">await</span> <span class="n">AtOnboarding</span><span class="p">.</span><span class="n">onboard</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">config:</span> <span class="n">AtOnboardingConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">atClientPreference:</span> <span class="kd">await</span> <span class="n">futurePreference</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">rootEnvironment:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootEnvironment</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">domain:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">appAPIKey:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appApiKey</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="fixing-undefined-name-errors">Fixing Undefined name errors <a href="#fixing-undefined-name-errors" class="anchor" aria-hidden="true">#</a></h4>
+<p>To fix the <code>Undefined name</code> errors we need to provide the <code>AtOnboarding.onboard()</code>method with a <code>BuildContext</code> and the <code>AtClientPreference</code> class as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_app_flutter/at_app_flutter.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_client_mobile/at_client_mobile.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_onboarding_flutter/at_onboarding_flutter.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:path_provider/path_provider.dart&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">show</span> <span class="n">getApplicationSupportDirectory</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">AuthenticationService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="n">AtOnboardingResult</span><span class="o">&gt;</span> <span class="n">onboard</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">dir</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">getApplicationSupportDirectory</span><span class="p">();</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">atClientPreference</span> <span class="o">=</span> <span class="n">AtClientPreference</span><span class="p">()</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">rootDomain</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">namespace</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appNamespace</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">hiveStoragePath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">commitLogPath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">..</span><span class="n">isLocalStoreRequired</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">AtOnboarding</span><span class="p">.</span><span class="n">onboard</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">config:</span> <span class="n">AtOnboardingConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">atClientPreference:</span> <span class="n">atClientPreference</span><span class="p">,</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nl">rootEnvironment:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootEnvironment</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">domain:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">appAPIKey:</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appApiKey</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We Now need access to the BuildContext, We&rsquo;ll create a separate class for this since we&rsquo;ll be reusing our BuildContext outside of the stateful and stateless widgets.</p>
+<p>In your terminal type:</p>
+<pre tabindex="0"><code>touch lib/services/navigation_service.dart
+</code></pre><p>Add the below code snippet in that file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">NavigationService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="n">GlobalKey</span><span class="o">&lt;</span><span class="n">NavigatorState</span><span class="o">&gt;</span> <span class="n">navKey</span> <span class="o">=</span> <span class="n">GlobalKey</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="n">GlobalKey</span><span class="o">&lt;</span><span class="n">NavigatorState</span><span class="o">&gt;</span> <span class="n">nestedNavKey</span> <span class="o">=</span> <span class="n">GlobalKey</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><pre tabindex="0"><code>touch lib/services/services.dart
+open lib/services/services.dart
+</code></pre><p>Add the below code to use one import statement to import all export files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">export</span> <span class="s1">&#39;authentication_service.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="s1">&#39;navigation_service.dart&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>In <code>main.dart</code> add the navigatorKey to the materialApp as shown below;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/services/services.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">MaterialApp</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// * The onboarding screen (first screen)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">navigatorKey:</span> <span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">,</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">home:</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>In <code>navigation_service.dart</code> add the below code to the <code>onboard()</code> method.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Future</span><span class="o">&lt;</span><span class="n">AtOnboardingResult</span><span class="o">&gt;</span> <span class="n">onboard</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kd">await</span> <span class="n">AtOnboarding</span><span class="p">.</span><span class="n">onboard</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">context:</span> <span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">.</span><span class="n">currentContext</span><span class="o">!</span><span class="p">,</span>  <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">config:</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>That&rsquo;s it, our <code>AuthenticatinService</code> can reach out to the atPlatform to return our <code>AtOnboardingResult</code>. We now need our command to call this service and decide what action to take depending on the returned <code>AtOnboardingResult</code>.</p>
+<h4 id="base-command">Base Command <a href="#base-command" class="anchor" aria-hidden="true">#</a></h4>
+<p>Remember, our commands contain our application logic; we’ll first create a base command that all other commands will extend from before creating our onboard command  In your terminal type:</p>
+<pre tabindex="0"><code>touch lib/commands/base_command.dart
+open lib/commands/base_command.dart
+</code></pre><p>Create the <code>BaseCommand</code> class with the needed imports as shown below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:provider/provider.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;../services/services.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BaseCommand</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Services
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">AuthenticationService</span> <span class="n">authenticationService</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">.</span><span class="n">currentContext</span><span class="o">!</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We need to provide the services to the widget tree in order for <code>BaseCommand</code> to successfully read the services from the BuildContext. To achieve this we&rsquo;ll make use of the <a href="https://pub.dev/packages/provider">provider package</a> as shown below:</p>
+<pre tabindex="0"><code>flutter pub add provider
+open lib/main.dart
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:provider/provider.dart&#39;</span><span class="p">;</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">_MyAppState</span> <span class="kd">extends</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">MyApp</span><span class="o">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">@</span><span class="n">override</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">MultiProvider</span><span class="p">(</span> <span class="c1">//new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">providers:</span> <span class="p">[</span><span class="n">Provider</span><span class="p">(</span><span class="nl">create:</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">AuthenticationService</span><span class="p">.</span><span class="n">getInstance</span><span class="p">())]</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nl">child:</span> <span class="n">MaterialApp</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>To learn more about state management using provider check out this <a href="https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple">flutter article</a></p>
+<h4 id="onboard-command">Onboard Command <a href="#onboard-command" class="anchor" aria-hidden="true">#</a></h4>
+<p>Now that we&rsquo;re all set, let&rsquo;s create our Onboard Command. This class method will contain the instructions required to onboard on the atPlatform. In your terminal type:</p>
+<pre tabindex="0"><code>touch lib/commands/onboard_command.dart
+open lib/commands/onboard_command.dart
+</code></pre><p>Add the below code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/commands/base_command.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">OnboardCommand</span> <span class="kd">extends</span> <span class="n">BaseCommand</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">run</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">onboardingResult</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">authenticationService</span><span class="p">.</span><span class="n">onboard</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Our Commands will only have one method called <code>run()</code>. This command return a <code>Future&lt;void&gt;</code>.</p>
+<p>Move the remaining code inside the <code>ElevatedButton onPressed</code> anonymous function in <code>main.dart</code>, to the <code>run()</code> method of the <code>OnboardCommand()</code> class as show below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/commands/base_command.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/services/navigation_service.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="s1">&#39;package:at_onboarding_flutter/at_onboarding_result.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;../home_screen.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">OnboardCommand</span> <span class="kd">extends</span> <span class="n">BaseCommand</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">run</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">onboardingResult</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">authenticationService</span><span class="p">.</span><span class="n">onboard</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Everything Below New
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="n">context</span> <span class="o">=</span> <span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">.</span><span class="n">currentContext</span><span class="o">!</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">onboardingResult</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">success:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Navigator</span><span class="p">.</span><span class="n">push</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">context</span><span class="p">,</span> <span class="n">MaterialPageRoute</span><span class="p">(</span><span class="nl">builder:</span> <span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kd">const</span> <span class="n">HomeScreen</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">error:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">showSnackBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">const</span> <span class="n">SnackBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nl">backgroundColor:</span> <span class="n">Colors</span><span class="p">.</span><span class="n">red</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nl">content:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;An error has occurred&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">cancel:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>If <code>authenticationService.onboard()</code> return <code>AtOnboardingResultStatus.success</code> we navigate to the HomeScreen, if it returns <code>AtOnboardingResultStatus.error</code> we display a <code>Snackbar</code> on the screen.</p>
+<p>We will be using the <code>Snackbar</code> widget often so let&rsquo;s extract it into its own method.</p>
+<h4 id="creating-snackbar-method">Creating Snackbar Method <a href="#creating-snackbar-method" class="anchor" aria-hidden="true">#</a></h4>
+<p>In your terminal type</p>
+<pre tabindex="0"><code>touch lib/views/widgets/snackbars.dart
+open lib/views/widgets/snackbars.dart
+</code></pre><p>Add the below code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/services/navigation_service.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Snackbars</span> <span class="kd">extends</span> <span class="n">StatelessWidget</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">const</span> <span class="n">Snackbars</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span> <span class="n">key</span><span class="p">})</span> <span class="o">:</span> <span class="k">super</span><span class="p">(</span><span class="nl">key:</span> <span class="n">key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="kt">void</span> <span class="n">errorSnackBar</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="n">required</span> <span class="kt">String</span> <span class="n">errorMessage</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">.</span><span class="n">currentContext</span><span class="o">!</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">showSnackBar</span><span class="p">(</span><span class="n">SnackBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">content:</span> <span class="n">Text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">errorMessage</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">textAlign:</span> <span class="n">TextAlign</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">backgroundColor:</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Theme</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">NavigationService</span><span class="p">.</span><span class="n">navKey</span><span class="p">.</span><span class="n">currentContext</span><span class="o">!</span><span class="p">).</span><span class="n">errorColor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">@</span><span class="n">override</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Container</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We created a class that extends <code>StatelessWidget</code>. This class contains a static void method named <code>errorSnackBar</code> that accepts an <code>errorMessage</code>.</p>
+<p>This method will save us from calling <code>ScaffoldMessenger.of(context).showSnackBar()</code> every time we want so show a snackbar.</p>
+<p>Let&rsquo;s replace our snackbar part of <code>OnboardCommand.run()</code> method as shown below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_dude/views/widgets/snackbars.dart&#39;</span><span class="p">;</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">OnboardCommand</span> <span class="kd">extends</span> <span class="n">BaseCommand</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">run</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">onboardingResult</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="p">...</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">error:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Snackbars</span><span class="p">.</span><span class="n">errorSnackBar</span><span class="p">(</span><span class="nl">errorMessage:</span> <span class="s1">&#39;An error has occurred&#39;</span><span class="p">);</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="n">AtOnboardingResultStatus</span><span class="p">.</span><span class="nl">cancel:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>All done!</p>
+<h4 id="cleaning-up-maindart">Cleaning up main.dart <a href="#cleaning-up-maindart" class="anchor" aria-hidden="true">#</a></h4>
+<p>Now we just have to clean up <code>main.dart</code>.
+Remove the code below from main.dart:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:at_onboarding_flutter/at_onboarding_flutter.dart&#39;</span><span class="p">;</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="s1">&#39;package:path_provider/path_provider.dart&#39;</span> <span class="err">//</span> <span class="n">remove</span>
+</span></span><span class="line"><span class="cl">     <span class="k">show</span> <span class="n">getApplicationSupportDirectory</span><span class="p">;</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">Future</span><span class="o">&lt;</span><span class="n">AtClientPreference</span><span class="o">&gt;</span> <span class="n">loadAtClientPreference</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="n">dir</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">getApplicationSupportDirectory</span><span class="p">();</span> <span class="c1">//remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">AtClientPreference</span><span class="p">()</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">..</span><span class="n">rootDomain</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">rootDomain</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">..</span><span class="n">namespace</span> <span class="o">=</span> <span class="n">AtEnv</span><span class="p">.</span><span class="n">appNamespace</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">..</span><span class="n">hiveStoragePath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">..</span><span class="n">commitLogPath</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">path</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">..</span><span class="n">isLocalStoreRequired</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// TODO
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// * By default, this configuration is suitable for most applications
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// * In advanced cases you may need to modify [AtClientPreference]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// * Read more here: https://pub.dev/documentation/at_client/latest/at_client/AtClientPreference-class.html
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">_MyAppState</span> <span class="kd">extends</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">MyApp</span><span class="o">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// * load the AtClientPreference in the background // remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Future</span><span class="o">&lt;</span><span class="n">AtClientPreference</span><span class="o">&gt;</span> <span class="n">futurePreference</span> <span class="o">=</span> <span class="n">loadAtClientPreference</span><span class="p">();</span> <span class="c1">// Remove
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Add the below code to <code>main.dart</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="err">@</span><span class="n">override</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">MultiProvider</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">...</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">child:</span> <span class="n">MaterialApp</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">home:</span> <span class="n">Scaffold</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">appBar:</span> <span class="p">...,</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">body:</span> <span class="n">Builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">Center</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">              <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="p">...</span>
+</span></span><span class="line"><span class="cl">                <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">...,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">ElevatedButton</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="nl">onPressed:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                      <span class="kd">await</span> <span class="n">OnboardCommand</span><span class="p">().</span><span class="n">run</span><span class="p">();</span> <span class="c1">// new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Onboard an @sign&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="p">],</span>
+</span></span><span class="line"><span class="cl">              <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>Run your flutter app and everything should work as before.</p>
+<pre tabindex="0"><code>flutter run
+</code></pre><h4 id="conclusion">Conclusion <a href="#conclusion" class="anchor" aria-hidden="true">#</a></h4>
+<p>Following an architecture is like having an organized room, it takes extra effort but it makes navigating and understand your codebase a whole lot easier and cleaner.</p>
+<p>Now that we&rsquo;ve completed the onboarding process, in the next step we&rsquo;ll complete the first screen by adding a reset atsign button and it&rsquo;s functionalities.</p>
 
-  factory AuthenticationService.getInstance() {
-    return _singleton;
-  }
-}
-</code></pre><p>The above code creates a <a href="https://flutterbyexample.com/lesson/singletons">singleton</a> of our class.</p>
-<p>Now we&rsquo;ll create a method called onboard in our <code>AuthenticationService</code> class whose content will be the code we copied a few steps above.</p>
-<pre tabindex="0"><code></code></pre>
         </div>
       </div>
     </div>
@@ -1027,6 +1333,22 @@ touch lib/services/authentication_service.dart
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="codelab-controls">
   <div class="fabs">
     
@@ -1034,7 +1356,7 @@ touch lib/services/authentication_service.dart
     
     <div class="spacer"></div>
     
-    <a href="https://dev3.atsign.wtf/tutorials" id="done" title="Codelab complete">Done</a>
+    <a href="https://dev3.atsign.wtf/tutorials/at-dude/5-reset-atsign/" id="next-step" title="Next step">Next</a>
     
   </div>
 </div>

@@ -109,12 +109,12 @@ NavigationService #import &amp;#39;package:flutter/material.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev3.atsign.wtf/tutorials/at-dude/4-onboarding/</guid>
-      <description>In this tutorial, we will build the onboarding screen for the dude app.
-With out further ado, lets get back to building the atDude app.
-At the end this step our app will look like this,
+      <description>In this tutorial, we will build the onboarding screen for the dude app and modify the default onboarding function to make it compatible with our app architecture.
+With out further ado, let&amp;rsquo;s get back to building the atDude app.
+At the end of this step our app will look like this,
 
-Before we get into the onboarding, lets make the UI changes to our app.
-Update AppBar #The first thing we will do is change the App bar title to &amp;ldquo;atDude&amp;rdquo; in main.dart.</description>
+Before we get into the onboarding, let&amp;rsquo;s make the UI changes to our app.
+Update AppBar #The first thing we will do is change the App bar title to &amp;ldquo;atDude&amp;rdquo; in main.</description>
     </item>
     
   </channel>
