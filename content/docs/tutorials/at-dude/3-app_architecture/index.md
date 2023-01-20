@@ -52,7 +52,7 @@ The controller files will be saved in this folder.
 
 #### Services
 
-The services fetch data from the network or local storage and returns it to the controllers.
+The services fetch data from the network or local storage and return it to the commands.
 
 In your terminal type:
 
@@ -65,6 +65,6 @@ The services files will be saved in this folder.
 
 #### Conclusion
 
-The controllers will call the services to fetch data from the network and then send the fetched data to the model. The views are bound to the model using provider or an alternative. As the models are updated the views will be updated. Alternatively the controller can update the views directly.
+The commands will call the services to fetch data from the network and then send the fetched data to the model. The views are bound to the model using provider or an alternative. As the models are updated the views will be updated. Alternatively the commands can update the views directly.
 
 In the next step we'll explore this further as we implement onboarding on the atPlatform.
