@@ -1,5 +1,4 @@
 # Basic configuration
-baseurl: https://atsign.dev/
 canonifyURLs: true
 disableAliases: true
 disableHugoGeneratorInject: true

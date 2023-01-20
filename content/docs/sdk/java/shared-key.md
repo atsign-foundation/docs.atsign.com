@@ -21,7 +21,7 @@ String ATSIGN_STR_SHARED_WITH = "@alice"; // other atSign (sharedWith)
 boolean VERBOSE = true;
 String KEY_NAME = "test";
 int ttl = 30 * 60 * 1000; // 30 minutes
-String VALUE = "I love cheese 12345";
+String VALUE = "I like pizza";
 // 2. create AtSign objects
 AtSign sharedBy = new AtSign(ATSIGN_STR_SHARED_BY);
 AtSign sharedWith = new AtSign(ATSIGN_STR_SHARED_WITH);

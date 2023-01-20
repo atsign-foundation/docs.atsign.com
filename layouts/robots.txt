@@ -1,0 +1,7 @@
+User-agent: *
+{{ if in .Site.Params.ProductionURLs (string .Site.BaseURL) -}}
+Allow: /
+{{ else -}}
+Disallow: /
+{{ end }}
+Sitemap: {{ "sitemap.xml" | absURL -}}

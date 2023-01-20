@@ -62,7 +62,7 @@
 
 {{ $js := $slice | resources.Concat "main.js" -}}
 
-{{ if ne (.Site.BaseURL) "docs.atsign.com" -}}
+{{ if not (in .Site.Params.ProductionURLs (string .Site.BaseURL)) -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.RelPermalink }}" defer></script>
   {{ end -}}

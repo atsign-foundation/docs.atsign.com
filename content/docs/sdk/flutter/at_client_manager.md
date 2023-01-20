@@ -6,7 +6,7 @@ description: | # SEO Description for this step
   The atPlatform AtClientManager in Flutter and Dart(for NotificationService, SyncService, Client application preferences and making client method calls)
 
 draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
-order: 2 # Ordering of the steps
+order: 4 # Ordering of the steps
 ---
 
 

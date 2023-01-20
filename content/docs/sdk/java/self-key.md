@@ -19,7 +19,7 @@ String ROOT_URL = "root.atsign.org:64";
 String ATSIGN_STR = "@bob";
 boolean VERBOSE = true;
 String KEY_NAME = "test";
-String VALUE = "I hate pineapple on pizza!!!";
+String VALUE = "I like pizza";
 int ttl = 30 * 60 * 1000;
     
 // 2. create AtSign object

@@ -67,7 +67,7 @@ A key in the atProtocol can be formed by using any alphanumeric and special char
 
    > The owner of the secondary should be allowed to update or delete the value of a user key.
 
-   **More context on shared keys**: We know that Atsign uses _[AES-256 & RSA-2048](reference/encryption)_ for symmetric and asymmetric encryption respectfully.
+   **More context on shared keys**: We know that Atsign uses [AES-256 & RSA-2048](https://docs.atsign.com/reference/encryption/) for symmetric and asymmetric encryption respectfully.
 
    - RSA-2048 can encrypt up to 214 bytes which does not constitute for a lot of data. However, because it is asymmetric, we can use it to ensure that you are you by verifying that you have your private key.
 
