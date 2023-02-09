@@ -1,9 +1,9 @@
 ProductionURLs:
-  - 'https://docs.atsign.com/'
+  - "https://docs.atsign.com/"
 
 # Theme Color for Chrome Browser
 
-themeColor: '#fff'
+themeColor: "#fff"
 
 # Alert Banner
 # Alert text also supports HTML
@@ -13,7 +13,6 @@ themeColor: '#fff'
 copyRight: |
   © 2022 Atsign - All Rights Reserved
 
-
 # Menu Config
 
 menu:
@@ -21,16 +20,14 @@ menu:
     auto: true
     collapsibleSidebar: true
 
-
 # Repository Information
 
 repoHost: GitHub
-docsRepo: 'https://github.com/atsign-foundation/atsign.dev-3.0'
+docsRepo: "https://github.com/atsign-foundation/atsign.dev-3.0"
 docsRepoBranch: trunk
-docsRepoSubPath: ''
+docsRepoSubPath: ""
 editPage: false
 lastMod: false # if true, ensure "enableGitInfo" is also true in config.yaml
-
 
 # Settings toggles
 
@@ -48,16 +45,14 @@ options:
   kaTex: false
   fullWidth: true
 
-
 # Disable Google's Sitelinks Search Box (Using flexsearch instead)
 
 siteLinksSearchBox: true
 
-
 # Image Config
 
 quality: 85
-bgColor: '#fff'
+bgColor: "#fff"
 landscapePhotoWidths:
   - 900
   - 800
@@ -70,13 +65,12 @@ portraitPhotoWidths:
   - 600
   - 500
 lqipWidth: 20x
-smallLimit: '300'
-
+smallLimit: "300"
 
 # Open Graph Config
 
 images:
-    - social-preview.jpg
+  - 2023-featured.png
 twitterSite: atsigncompany
 twitterCreator: atsigncompany
 # facebookAuthor: verlinde.henk
