@@ -9,7 +9,6 @@ draft: false # TODO CHANGE THIS TO FALSE WHEN YOU ARE READY TO PUBLISH THE PAGE
 order: 5 # Ordering of the steps
 ---
 
-
 ### Overview
 
 To store data, atPlatform utilizes a straightforward key-value method. A key serves as a unique identifier in key-value pairs.
@@ -68,21 +67,21 @@ A key in atProtocol has the structure described below.
 7. sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (\_), Just self)
 8. Reserved keys in protocol, private keys and hidden keys cannot be notified
    Ex: notify:\_secret@jagan:sitaram
-   9.Protocol prevents creation of a key with a owner/sharedBy using an atSign that’s not owned by the current user.
-9. Key cannot be a reserved key.
+9. Protocol prevents creation of a key with a owner/sharedBy using an atSign that’s not owned by the current user.
+10. Key cannot be a reserved key.
 
-List of reserved keys:
+    List of reserved keys:
 
-- privatekey:at_pkam_privatekey
-- privatekey:at_pkam_publickey
-- public:publickey
-- privatekey:privatekey
-- shared_key
-- privatekey:self_encryption_key
-- signing_privatekey
-- public:signing_publickey
-- privatekey:at_secret
-- privatekey:at_secret_deleted
+    - privatekey:at_pkam_privatekey
+    - privatekey:at_pkam_publickey
+    - public:publickey
+    - privatekey:privatekey
+    - shared_key
+    - privatekey:self_encryption_key
+    - signing_privatekey
+    - public:signing_publickey
+    - privatekey:at_secret
+    - privatekey:at_secret_deleted
 
 **atPlatform CRUD operations**
 
