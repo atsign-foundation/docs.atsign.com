@@ -62,7 +62,7 @@ If everything goes well you should see following in your domain dashboard:
 
 Next step is to update Google Name servers. You can follow Googles guide - step 5.
 
-https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial#register-domain
+{{< a href="https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial#register-domain" target="_blank">}}Link to tutorial{{< /a >}}
 
 To test if you are successful open command line and ping your domain. You should see your instance static IP address.
 
