@@ -23,7 +23,7 @@
 ">
 <meta property="og:url" content="https://dev3.atsign.wtf/sdk/flutter/key_basics/">
 <meta property="og:site_name" content="atPlatform">
-<meta property="article:modified_time" content="2023-06-10T11:26:12+01:00">
+<meta property="article:modified_time" content="2023-06-16T14:02:12-07:00">
   
   <meta property="og:image" content="https://dev3.atsign.wtf/2023-featured.jpg"/>
       <meta property="og:image:alt" content="atPlatform">
@@ -80,7 +80,7 @@
           "@id": "https://dev3.atsign.wtf/#/schema/person/1"
         },
       "datePublished": "0001-01-01T00:00:00CET",
-      "dateModified": "2023-06-10T11:26:12CET",
+      "dateModified": "2023-06-16T14:02:12CET",
       "breadcrumb": {
         "@id": "https://dev3.atsign.wtf/sdk/flutter/key_basics/#/schema/breadcrumb/1"
       },
@@ -867,18 +867,36 @@
 <p><code>&lt;Key Visibility&gt;|&lt;sharedWith&gt;:&lt;entity&gt;.&lt;namespace&gt;@&lt;sharedBy/owner&gt;</code></p>
 <p><a name="keyrules">A key in atProtocol should adhere to following rules:</a></p>
 <ol>
-<li>Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)</li>
-<li>Max of fifty five 7-bit characters for the atSign</li>
-<li>Allowed characters in an entity are: [\w._,-’”<emoji list>] <TO DO : Sitaram></li>
-<li>Namespace is mandatory in the current implementation of the protocol</li>
-<li>If cached then the owner of the key should not be same as current atSign</li>
-<li>sharedWith and sharedBy/owner cannot be same for a shared key</li>
-<li>sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (_), Just self)</li>
-<li>Reserved keys in protocol, private keys and hidden keys cannot be notified
-Ex: notify:_secret@jagan:sitaram
-9.Protocol prevents creation of a key with a owner/sharedBy using an atSign that’s not owned by the current user.</li>
-<li>Key cannot be a reserved key.</li>
-</ol>
+<li>
+<p>Length of a key should not be more than 240 characters (Limited by the current impl of the secondary. Not a protocol limitation)</p>
+</li>
+<li>
+<p>Max of fifty five 7-bit characters for the atSign</p>
+</li>
+<li>
+<p>Allowed characters in an entity are: [\w._,-’”<emoji list>] <TO DO : Sitaram></p>
+</li>
+<li>
+<p>Namespace is mandatory in the current implementation of the protocol</p>
+</li>
+<li>
+<p>If cached then the owner of the key should not be same as current atSign</p>
+</li>
+<li>
+<p>sharedWith and sharedBy/owner cannot be same for a shared key</p>
+</li>
+<li>
+<p>sharedWith and sharedBy/owner should be same for a self key (Private, Hidden (_), Just self)</p>
+</li>
+<li>
+<p>Reserved keys in protocol, private keys and hidden keys cannot be notified
+Ex: notify:_secret@jagan:sitaram</p>
+</li>
+<li>
+<p>Protocol prevents creation of a key with a owner/sharedBy using an atSign that’s not owned by the current user.</p>
+</li>
+<li>
+<p>Key cannot be a reserved key.</p>
 <p>List of reserved keys:</p>
 <ul>
 <li>privatekey:at_pkam_privatekey</li>
@@ -892,6 +910,8 @@ Ex: notify:_secret@jagan:sitaram
 <li>privatekey:at_secret</li>
 <li>privatekey:at_secret_deleted</li>
 </ul>
+</li>
+</ol>
 <p><strong>atPlatform CRUD operations</strong></p>
 <p><strong>Create/Update Data</strong>
 atPlatform SDK exposes two methods to create the data. They are:</p>
