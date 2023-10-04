@@ -23,7 +23,7 @@ menu:
 # Repository Information
 
 repoHost: GitHub
-docsRepo: "https://github.com/atsign-foundation/atsign.dev-3.0"
+docsRepo: "https://github.com/atsign-foundation/docs.atsign.com"
 docsRepoBranch: trunk
 docsRepoSubPath: ""
 editPage: false
@@ -70,7 +70,7 @@ smallLimit: "300"
 # Open Graph Config
 
 images:
-  - 2023-featured.jpg
+  - https://atsign.com/wp-content/uploads/2023/09/orange-nodes-bg-bottom.png
 twitterSite: atsigncompany
 twitterCreator: atsigncompany
 # facebookAuthor: verlinde.henk
